@@ -21,7 +21,9 @@ info:
   termsOfService: 'https://www.twitch.tv/p/en/legal/terms-of-service/'
 externalDocs:
   url: 'https://api-docs.igdb.com'
-security: []
+security:
+- Authorization_Key: []
+- Client-ID: []
 servers:
   - url: 'https://api.igdb.com/v4'
     description: The main base URL for the IGDB API
@@ -38,6 +40,9 @@ servers:
         default: hijklmn67890
 paths:
   /age_ratings:
+    security:
+    - Authorization_Key: []
+    - Client-ID: []
     post:
       summary: Age Rating according to various rating organizations
       description: ''
@@ -52,11 +57,6 @@ paths:
                 $ref: '#/components/schemas/AgeRating'
       tags:
         - Endpoints
-      requestBody:
-        required: false
-        content:
-          aaplication/json:
-            schema: {}
       callbacks: {}
 components:
   links: {}
@@ -490,8 +490,8 @@ components:
       in: header
       name: Authorization
       scheme: Bearer
-    Client_ID:
-      type: http
+    Client-ID:
+      type: apiKey
       name: Client-ID
       in: header
       scheme: basic
