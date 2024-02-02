@@ -62,6 +62,9 @@ components:
     AgeRating:
       type: object
       properties:
+        id:
+          type: number
+          description: The IGDB unique identifier
         category:
           $ref: "#/components/schemas/AgeRatingCategoryEnums"
         checksum:
@@ -81,7 +84,7 @@ components:
     AgeRatingCategoryEnums:
       description: The organization that has issued a specific rating
       type: number
-      oneOf:
+      anyOf:
         - enum:
             - 1
           description: ESRB
@@ -106,7 +109,7 @@ components:
     AgeRatingEnums:
       description: The age rating assigned by the organization
       type: number
-      oneOf:
+      anyOf:
         - enum:
             - 1
           description: Three
@@ -227,6 +230,9 @@ components:
     AgeRatingContentDescription:
       type: object
       properties:
+        id:
+          type: number
+          description: The IGDB unique identifier
         category:
           $ref: "#/components/schemas/AgeRatingContentDescriptionCategoryEnums"
         checksum:
@@ -238,7 +244,7 @@ components:
     AgeRatingContentDescriptionCategoryEnums:
       type: number
       description: The age rating content description enums
-      oneOf:
+      anyOf:
         - enum:
             - 1
           description: ESRB_alcohol_reference
@@ -498,6 +504,9 @@ components:
       type: object
       description: Alternative and international game titles
       properties:
+        id:
+          type: number
+          description: The IGDB unique identifier
         checksum:
           type: string
           description: Hash of the object
@@ -507,8 +516,7 @@ components:
             A description of what kind of alternative name it is. (Acronym,
             Working title, Japanese title etc)
         game:
-          type: number
-          description: The Game ID this alternative name is associated with
+          $ref: "#/components/schemas/Games/properties/id"
         name:
           type: string
           description: An alternative name
@@ -516,6 +524,9 @@ components:
       type: object
       description: Official artworks. Resolution and aspect ratio may vary
       properties:
+        id:
+          type: number
+          description: The IGDB unique identifier
         alpha_channel:
           type: boolean
         animated:
@@ -524,8 +535,7 @@ components:
           type: string
           description: Hash of the object
         game:
-          type: number
-          description: The game ID this artwork is associated with
+          $ref: "#/components/schemas/Games/properties/id"
         height:
           type: number
           description: The height of the image in pixels
@@ -542,6 +552,9 @@ components:
       type: object
       description: Video game characters
       properties:
+        id:
+          type: number
+          description: The IGDB unique identifier
         akas:
           type: array
           description: Alternative names for a character
@@ -561,7 +574,7 @@ components:
           type: array
           description: An array of game IDs
         gender:
-          $ref: "#/components/schemas/GenderGenderEnum"
+          $ref: "#/components/schemas/CharacterGenderEnum"
         mug_shot:
           $ref: "#/components/schemas/CharacterMugShot"
         name:
@@ -581,7 +594,7 @@ components:
     CharacterGenderEnum:
       type: number
       description: An Enum of the character's gender
-      oneOf:
+      anyOf:
         - enum:
             - 0
           description: Male
@@ -594,7 +607,7 @@ components:
     CharacterSpeciesEnum:
       type: number
       description: An enum of the Character's species
-      oneOf:
+      anyOf:
         - enum:
             - 1
           description: Human
@@ -614,6 +627,9 @@ components:
       type: object
       description: Images depicting game characters
       properties:
+        id:
+          type: number
+          description: The IGDB unique identifier
         alpha_channel:
           type: boolean
         animated:
@@ -637,6 +653,9 @@ components:
       type: object
       description: Collection, AKA Series
       properties:
+        id:
+          type: number
+          description: The IGDB unique identifier
         as_child_relations:
           $ref: "#/components/schemas/CollectionRelation"
         as_parent_relations:
@@ -670,6 +689,9 @@ components:
       type: object
       description: The collection memberships
       properties:
+        id:
+          type: number
+          description: The IGDB unique identifier
         checksum:
           type: string
           description: Hash of the object
@@ -680,8 +702,7 @@ components:
           type: number
           description: Date this was initally added to the IGDB database
         game:
-          type: number
-          description: The game that is associated with this membership
+          $ref: "#/components/schemas/Games/properties/id"
         type:
           $ref: "#/components/schemas/CollectionMembershipType"
         updated_at:
@@ -691,6 +712,9 @@ components:
       type: object
       description: Enums for collection membership type
       properties:
+        id:
+          type: number
+          description: The IGDB unique identifier
         allowed_collection_type:
           $ref: "#/components/schemas/CollectionType"
         checksum:
@@ -712,6 +736,9 @@ components:
       type: object
       description: Describes relationship between collections
       properties:
+        id:
+          type: number
+          description: The IGDB unique identifier
         checksum:
           type: string
           description: Hash of the object
@@ -734,6 +761,9 @@ components:
       type: object
       description: Enums for collection membership type
       properties:
+        id:
+          type: number
+          description: The IGDB unique identifier
         allowed_child_type:
           type: string
           description: The allowed child collection type
@@ -759,6 +789,9 @@ components:
       type: object
       description: Enums for collection membership type
       properties:
+        id:
+          type: number
+          description: The IGDB unique identifier
         checksum:
           type: string
           description: Hash of the object
@@ -778,6 +811,9 @@ components:
       type: object
       description: Video game companies, both publishers and developers
       properties:
+        id:
+          type: number
+          description: The IGDB unique identifier
         change_date:
           type: number
           description: The date when a compnay got a new ID
@@ -833,7 +869,7 @@ components:
     ChangeDateCategoryEnum:
       type: number
       description: An enum of the date format
-      oneOf:
+      anyOf:
         - enum:
             - 0
           description: YYYYMMMMDD
@@ -861,7 +897,7 @@ components:
     StartDateCategoryEnum:
       type: number
       description: An enum of the date format
-      oneOf:
+      anyOf:
         - enum:
             - 0
           description: YYYYMMMMDD
@@ -890,6 +926,9 @@ components:
       type: object
       description: The logos of developers and publishers
       properties:
+        id:
+          type: number
+          description: The IGDB unique identifier
         alpha_channel:
           type: boolean
         animated:
@@ -913,6 +952,9 @@ components:
       type: object
       description: A company's website links
       properties:
+        id:
+          type: number
+          description: The IGDB unique identifier
         category:
           $ref: "#/components/schemas/CompanyWebsiteEnums"
         checksum:
@@ -926,7 +968,7 @@ components:
     CompanyWebsiteEnums:
       type: number
       description: An enum of the date format
-      oneOf:
+      anyOf:
         - enum:
             - 1
           description: official
@@ -982,6 +1024,9 @@ components:
       type: object
       description: The cover art of games
       properties:
+        id:
+          type: number
+          description: The IGDB unique identifier
         alpha_channel:
           type: boolean
         animated:
@@ -990,7 +1035,7 @@ components:
           type: string
           description: Hash of the object
         game:
-          type: string
+          $ref: "#/components/schemas/Games/properties/id"
           description: The game this cover is associated with. If it is empty then this cover belongs to a game_localization, which can be found under game_localization field
         game_localization:
           type: string
@@ -1011,302 +1056,712 @@ components:
       type: object
       description: Gaming events like GamesCom, Tokyo Game Show, PAX, or GSL
       properties:
+        id:
+          type: number
+          description: The IGDB unique identifier
         checksum:
-            type: string
-            description: Hash of the object
+          type: string
+          description: Hash of the object
         created_at:
-            type: number
-            description: Date this was initially added to the IGDB database
+          type: number
+          description: Date this was initially added to the IGDB database
         description:
-            type: string
-            description: The description of the event
+          type: string
+          description: The description of the event
         end_time:
-            type: number
-            description: End time of the event in UTC
+          type: number
+          description: End time of the event in UTC
         event_logo:
-            type: string
-            description: Logo of the event.
+          type: string
+          description: Logo of the event.
         event_networks:
-            type: string
-            description: Urls associated with the event
+          type: string
+          description: Urls associated with the event
         games:
-            type: array
-            description: Games featured in the event
+          type: array
+          description: Games featured in the event
         live_stream_url:
-            type: string
-            description: URL to the livestream of the event.
+          type: string
+          description: URL to the livestream of the event.
         name:
-            type: string
-            description: The name of the event
+          type: string
+          description: The name of the event
         slug:
-            type: string
-            description: A url-safe, unique, lower-case version of the name
+          type: string
+          description: A url-safe, unique, lower-case version of the name
         start_time:
-            type: number
-            description: Start time of the event in UTC
+          type: number
+          description: Start time of the event in UTC
         time_zone:
-            type: string
-            description: Timezone the event is in.
+          type: string
+          description: Timezone the event is in.
         updated_at:
-            type: number
-            description: The last date this entry was updated in the IGDB database
+          type: number
+          description: The last date this entry was updated in the IGDB database
         videos:
-            type: array
-            description: Trailers featured in the event
+          type: array
+          description: Trailers featured in the event
     EventLogo:
       type: object
       description: Logo for the event
       properties:
+        id:
+          type: number
+          description: The IGDB unique identifier
         alpha_channel:
-            type: boolean
+          type: boolean
         animated:
-            type: boolean
+          type: boolean
         checksum:
-            type: string
-            description: Hash of the object
+          type: string
+          description: Hash of the object
         created_at:
-            type: number
-            description: Date this was initially added to the IGDB database
+          type: number
+          description: Date this was initially added to the IGDB database
         event:
-            type: string
-            description: The event associated with this logo.
+          type: string
+          description: The event associated with this logo.
         height:
-            type: number
-            description: The height of the image in pixels
+          type: number
+          description: The height of the image in pixels
         image_id:
-            type: string
-            description: The ID of the image used to construct an IGDB image link
+          type: string
+          description: The ID of the image used to construct an IGDB image link
         updated_at:
-            type: number
-            description: The last date this entry was updated in the IGDB database
+          type: number
+          description: The last date this entry was updated in the IGDB database
         url:
-            type: string
-            description: The website address (URL) of the item
+          type: string
+          description: The website address (URL) of the item
         width:
-            type: number
-            description: The width of the image in pixels
+          type: number
+          description: The width of the image in pixels
     EventNetwork:
       type: object
       description: URLs related to the event like Twitter, Facebook, and Youtube
       properties:
+        id:
+          type: number
+          description: The IGDB unique identifier
         checksum:
-            type: string
-            description: Hash of the object
+          type: string
+          description: Hash of the object
         created_at:
-            type: number
-            description: Date this was initially added to the IGDB database
+          type: number
+          description: Date this was initially added to the IGDB database
         event:
-            type: string
-            description: The event associated with this URL.
+          type: string
+          description: The event associated with this URL.
         network_type:
-            type: string
-            description: Network type
+          type: string
+          description: Network type
         updated_at:
-            type: number
-            description: The last date this entry was updated in the IGDB database
+          type: number
+          description: The last date this entry was updated in the IGDB database
         url:
-            type: string
-            description: The website address (URL) of the item
+          type: string
+          description: The website address (URL) of the item
     Franchise:
       type: object
       description: A list of video game franchises such as Star Wars
       properties:
+        id:
+          type: number
+          description: The IGDB unique identifier
         checksum:
-            type: string
-            description: Hash of the object
+          type: string
+          description: Hash of the object
         created_at:
-            type: number
-            description: Date this was initially added to the IGDB database
+          type: number
+          description: Date this was initially added to the IGDB database
         games:
-            type: array
-            description: The games that are associated with this franchise
+          type: array
+          description: The games that are associated with this franchise
         name:
-            type: string
-            description: The name of the franchise
+          type: string
+          description: The name of the franchise
         slug:
-            type: string
-            description: A url-safe, unique, lower-case version of the name
+          type: string
+          description: A url-safe, unique, lower-case version of the name
         updated_at:
-            type: number
-            description: The last date this entry was updated in the IGDB database
+          type: number
+          description: The last date this entry was updated in the IGDB database
         url:
-            type: string
-            description: The website address (URL) of the item
+          type: string
+          description: The website address (URL) of the item
     Games:
       type: object
       description: Video Games!
       properties:
+        id:
+          type: number
+          description: The IGDB unique identifier
         age_ratings:
-            $ref: "#/components/schemas/AgeRatingEnums"
+          $ref: "#/components/schemas/AgeRatingEnums"
         aggregated_rating:
-            type: number
-            description: Rating based on external critic scores
+          type: number
+          description: Rating based on external critic scores
         aggregated_rating_count:
-            type: number
-            description: Number of external critic scores
+          type: number
+          description: Number of external critic scores
         alternative_names:
-            type: array
-            description: Alternative names for this game
+          type: array
+          description: Alternative names for this game
         artworks:
-            type: array
-            description: Artworks of this game
+          type: array
+          description: Artworks of this game
         bundles:
-            type: array
-            description: The bundles this game is a part of
+          type: array
+          description: The bundles this game is a part of
         category:
-            $ref: "#/components/schemas/GameCategory"
+          $ref: "#/components/schemas/GameCategoryEnums"
         checksum:
-            type: string
-            description: Hash of the object
+          type: string
+          description: Hash of the object
         collection:
-            type: string
-            description: The series the game belongs to
+          type: string
+          description: The series the game belongs to
         collections:
-            type: array
-            description: The collections that this game is in.
+          type: array
+          description: The collections that this game is in.
         cover:
-            type: string
-            description: The cover of this game
+          type: string
+          description: The cover of this game
         created_at:
-            type: number
-            description: Date this was initially added to the IGDB database
+          type: number
+          description: Date this was initially added to the IGDB database
         dlcs:
-            type: array
-            description: DLCs for this game
+          type: array
+          description: DLCs for this game
         expanded_games:
-            type: array
-            description: Expanded games of this game
+          type: array
+          description: Expanded games of this game
         expansions:
-            type: array
-            description: Expansions of this game
+          type: array
+          description: Expansions of this game
         external_games:
-            type: array
-            description: External IDs this game has on other services
+          type: array
+          description: External IDs this game has on other services
         first_release_date:
-            type: number
-            description: The first release date for this game
+          type: number
+          description: The first release date for this game
         follows:
-            type: number
-            description: Number of people following a game
+          type: number
+          description: Number of people following a game
         forks:
-            type: array
-            description: Forks of this game
+          type: array
+          description: Forks of this game
         franchise:
-            type: string
-            description: The main franchise
+          type: string
+          description: The main franchise
         franchises:
-            type: array
-            description: Other franchises the game belongs to
+          type: array
+          description: Other franchises the game belongs to
         game_engines:
-            type: array
-            description: The game engine used in this game
+          type: array
+          description: The game engine used in this game
         game_localizations:
-            type: array
-            description: Supported game localizations for this game. A region can have at most one game localization for a given game
+          type: array
+          description: Supported game localizations for this game. A region can have at most one game localization for a given game
         game_modes:
-            type: array
-            description: Modes of gameplay
+          type: array
+          description: Modes of gameplay
         genres:
-            type: array
-            description: Genres of the game
+          type: array
+          description: Genres of the game
         hypes:
-            type: number
-            description: Number of follows a game gets before release
+          type: number
+          description: Number of follows a game gets before release
         involved_companies:
-            type: array
-            description: Companies who developed this game
+          type: array
+          description: Companies who developed this game
         keywords:
-            type: array
-            description: Associated keywords
+          type: array
+          description: Associated keywords
         language_supports:
-            type: array
-            description: Supported Languages for this game
+          type: array
+          description: Supported Languages for this game
         multiplayer_modes:
-            type: array
-            description: Multiplayer modes for this game
+          type: array
+          description: Multiplayer modes for this game
         name:
-            type: string
-            description: The name of the Game
+          type: string
+          description: The name of the Game
         parent_game:
-            type: string
-            description: If a DLC, expansion or part of a bundle, this is the main game or bundle
+          type: string
+          description: If a DLC, expansion or part of a bundle, this is the main game or bundle
         platforms:
-            type: string
-            description: Platforms this game was released on
+          type: string
+          description: Platforms this game was released on
         player_perspectives:
-            type: array
-            description: The main perspective of the player
+          type: array
+          description: The main perspective of the player
         ports:
-            type: array
-            description: Ports of this game
+          type: array
+          description: Ports of this game
         rating:
-            type: number
-            description: Average IGDB user rating
+          type: number
+          description: Average IGDB user rating
         rating_count:
-            type: number
-            description: Total number of IGDB user ratings
+          type: number
+          description: Total number of IGDB user ratings
         release_dates:
-            type: array
-            description: Release dates of this game
+          type: array
+          description: Release dates of this game
         remakes:
-            type: array
-            description: Remakes of this game
+          type: array
+          description: Remakes of this game
         remasters:
-            type: array
-            description: Remasters of this game
+          type: array
+          description: Remasters of this game
         screenshots:
-            type: array
-            description: Screenshots of this game
+          type: array
+          description: Screenshots of this game
         similar_games:
-            type: array
-            description: Similar games
+          type: array
+          description: Similar games
         slug:
-            type: string
-            description: A url-safe, unique, lower-case version of the name
+          type: string
+          description: A url-safe, unique, lower-case version of the name
         standalone_expansions:
-            type: array
-            description: Standalone expansions of this game
+          type: array
+          description: Standalone expansions of this game
         status:
-            $ref: "#/components/schemas/GameStatus"
+          $ref: "#/components/schemas/GameStatusEnums"
         storyline:
-            type: string
-            description: A short description of a games story
+          type: string
+          description: A short description of a games story
         summary:
-            type: string
-            description: A description of the game
+          type: string
+          description: A description of the game
         tags:
-            type: array
-            description: Related entities in the IGDB API
+          type: array
+          description: Related entities in the IGDB API
         themes:
-            type: array
-            description: Themes of the game
+          type: array
+          description: Themes of the game
         total_rating:
-            type: number
-            description: Average rating based on both IGDB user and external critic scores
+          type: number
+          description: Average rating based on both IGDB user and external critic scores
         total_rating_count:
-            type: number
-            description: Total number of user and external critic scores
+          type: number
+          description: Total number of user and external critic scores
         updated_at:
-            type: number
-            description: The last date this entry was updated in the IGDB database
+          type: number
+          description: The last date this entry was updated in the IGDB database
         url:
-            type: string
-            description: The website address (URL) of the item
+          type: string
+          description: The website address (URL) of the item
         version_parent:
-            type: string
-            description: If a version, this is the main game
+          type: string
+          description: If a version, this is the main game
         version_title:
-            type: string
-            description: Title of this version (i.e Gold edition)
+          type: string
+          description: Title of this version (i.e Gold edition)
         videos:
-            type: array
-            description: Videos of this game
+          type: array
+          description: Videos of this game
         websites:
-            type: array
-            description: Websites associated with this game
+          type: array
+          description: Websites associated with this game
+    GameCategoryEnums:
+      type: object
+      description: A game's category/catagories
+      anyOf:
+        - enum:
+            - 0
+          description: main_game
+        - enum:
+            - 1
+          description: dlc_addon
+        - enum:
+            - 2
+          description: expansion
+        - enum:
+            - 3
+          description: bundle
+        - enum:
+            - 4
+          description: standalone_expansion
+        - enum:
+            - 5
+          description: mod
+        - enum:
+            - 6
+          description: episode
+        - enum:
+            - 7
+          description: season
+        - enum:
+            - 8
+          description: remake
+        - enum:
+            - 9
+          description: remaster
+        - enum:
+            - 10
+          description: expanded_game
+        - enum:
+            - 11
+          description: port
+        - enum:
+            - 12
+          description: fork
+        - enum:
+            - 13
+          description: pack
+        - enum:
+            - 14
+          description: update
+    GameStatusEnums:
+      type: object
+      description: A game's status
+      anyOf:
+        - enum:
+            - 0
+          description: released
+        - enum:
+            - 2
+          description: alpha
+        - enum:
+            - 3
+          description: beta
+        - enum:
+            - 4
+          description: early_access
+        - enum:
+            - 5
+          description: offline
+        - enum:
+            - 6
+          description: cancelled
+        - enum:
+            - 7
+          description: rumored
+        - enum:
+            - 8
+          description: delisted
+    GameEngine:
+      type: object
+      description: Video game engines such as unreal engine
+      properties:
+        id:
+          type: number
+          description: The IGDB unique identifier
+        checksum:
+          type: string
+          description: Hash of the object
+        companies:
+          type: array
+          description: Companies who used this game engine
+        created_at:
+          type: number
+          description: Date this was initially added to the IGDB database
+        description:
+          type: string
+          description: Description of the game engine
+        logo:
+          type: string
+          description: Logo of the game engine
+        name:
+          type: string
+          description: Name of the game engine
+        platforms:
+          type: array
+          description: Platforms this game engine was deployed on
+        slug:
+          type: string
+          description: A url-safe, unique, lower-case version of the name
+        updated_at:
+          type: number
+          description: The last date this entry was updated in the IGDB database
+        url:
+          type: string
+          description: The website address (URL) of the item
+    GameEngineLogo:
+      type: object
+      description: The logos of developers and publishers
+      properties:
+        id:
+          type: number
+          description: The IGDB unique identifier
+        alpha_channel:
+          type: boolean
+        animated:
+          type: boolean
+        checksum:
+          type: string
+          description: Hash of the object
+        height:
+          type: number
+          description: The height of the image in pixels
+        image_id:
+          type: string
+          description: The ID of the image used to construct an IGDB image link
+        url:
+          type: string
+          description: The website address (URL) of the item
+        width:
+          type: number
+          description: The width of the image in pixels
+    ExternalGame:
+      type: object
+      description: Game IDs on other services
+      properties:
+        id:
+          type: number
+          description: The IGDB unique identifier
+        category:
+          $ref: "#/components/schemas/ExternalGameCategoryEnums"
+          description: The id of the other service
+        checksum:
+          type: string
+          description: Hash of the object
+        countries:
+          type: array
+          description: The ISO country code of the external game product.
+        created_at:
+          type: number
+          description: Date this was initially added to the IGDB database
+        game:
+          $ref: "#/components/schemas/Games/properties/id"
+        media:
+          $ref: "#/components/schemas/ExternalGameMediaEnums"
+          description: The media of the external game.
+        name:
+          type: string
+          description: The name of the game according to the other service
+        platform:
+          type: string
+          description: The platform of the external game product.
+        uid:
+          type: string
+          description: The other services ID for this game
+        updated_at:
+          type: number
+          description: The last date this entry was updated in the IGDB database
+        url:
+          type: string
+          description: The website address (URL) of the item
+        year:
+          type: number
+          description: The year in full (2018)
+    ExternalGameCategoryEnums:
+      type: object
+      description: The external platform the game is on
+      anyOf:
+        - enum:
+            - 1
+          description: steam
+        - enum:
+            - 5
+          description: gog
+        - enum:
+            - 10
+          description: youtube
+        - enum:
+            - 11
+          description: microsoft
+        - enum:
+            - 13
+          description: apple
+        - enum:
+            - 14
+          description: twitch
+        - enum:
+            - 15
+          description: android
+        - enum:
+            - 20
+          description: amazon_asin
+        - enum:
+            - 22
+          description: amazon_luna
+        - enum:
+            - 23
+          description: amazon_adg
+        - enum:
+            - 26
+          description: epic_game_store
+        - enum:
+            - 28
+          description: oculus
+        - enum:
+            - 29
+          description: utomik
+        - enum:
+            - 30
+          description: itch_io
+        - enum:
+            - 31
+          description: xbox_marketplace
+        - enum:
+            - 32
+          description: kartridge
+        - enum:
+            - 36
+          description: playstation_store_us
+        - enum:
+            - 37
+          description: focus_entertainment
+        - enum:
+            - 54
+          description: xbox_game_pass_ultimate_cloud
+        - enum:
+            - 55
+          description: gamejolt
+    ExternalGameMediaEnums:
+      type: object
+      description: The type of media
+      anyOf:
+        - enum:
+            - 1
+          description: digital
+        - enum:
+            - 2
+          description: physical
+    GameMode:
+      type: object
+      description: Single player, Multiplayer, etc.
+      properties:
+        id:
+          type: number
+          description: The IGDB unique identifier
+        checksum:
+          type: string
+          description: Hash of the object
+        created_at:
+          type: number
+          description: Date this was initially added to the IGDB database
+        name:
+          type: string
+          description: The name of the game mode
+        slug:
+          type: string
+          description: A url-safe, unique, lower-case version of the name
+        updated_at:
+          type: number
+          description: The last date this entry was updated in the IGDB database
+        url:
+          type: string
+          description: The website address (URL) of the item
+    GameVersionFeatures:
+      type: object
+      description: Features and descriptions of what makes each version/edition different from the main game
+      properties:
+        id:
+          type: number
+          description: The IGDB unique identifier
+        category:
+          $ref: "#/components/schemas/GameVersionFeatureCategoryEnums"
+          description: The category of the feature description
+        checksum:
+          type: string
+          description: Hash of the object
+        description:
+          type: string
+          description: The description of the feature
+        position:
+          type: number
+          description: Position of this feature in the list of features
+        title:
+          type: string
+          description: The title of the feature
+        values:
+          type: array
+          description: The bool/text value of the feature
+    GameVersionFeatureCategoryEnums:
+      type: object
+      description: The data type of feature description
+      anyOf:
+        - enum:
+            - 1
+          description: boolean
+        - enum:
+            - 2
+          description: description
+    GameVersionFeatureValue:
+      type: object
+      description: The bool/text value of the feature
+      properties:
+        id:
+          type: number
+          description: The IGDB unique identifier
+        checksum:
+          type: string
+          description: Hash of the object
+        game:
+          $ref: "#/components/schemas/Games/properties/id"
+        game_feature:
+          $ref: "#/components/schemas/GameVersionFeatures/properties/title"
+        included_feature:
+          $ref: "#/components/schemas/GameVersionIncludedFeatureEnums"
+        note:
+          type: string
+          description: The text value of this feature
+    GameVersionIncludedFeatureEnums:
+      type: object
+      description: The boole value of this feature
+      anyOf:
+        - enum:
+            - 0
+          description: NOT_INCLUDED
+        - enum:
+            - 1
+          description: INCLUDED
+        - enum:
+            - 2
+          description: PRE_ORDER_ONLY
+    Genre:
+      type: object
+      description: Genres of video games
+      properties:
+        id:
+          type: number
+          description: The IGDB unique identifier
+        checksum:
+          type: string
+          format: uuid
+          description: Hash of the object
+        created_at:
+          type: number
+          format: date
+          description: Date this was initially added to the IGDB database
+        name:
+          type: string
+          description: The name of the genre
+        slug:
+          type: string
+          description: A url-safe, unique, lower-case version of the name
+        updated_at:
+          type: number
+          format: date
+          description: The last date this entry was updated in the IGDB database
+        url:
+          type: string
+          format: url
+          description: The website address (URL) of the item
+    InvolvedCompany:
+      type: object
+      description: Involved companies
+      properties:
+        id:
+          type: number
+          description: The IGDB unique identifier
+        checksum:
+          type: string
+          format: uuid
+          description: Hash of the object
+        company:
+          $ref: "#/components/schemas/Company/properties/name"
+        created_at:
+          type: number
+          format: timestamp
+          description: Date this was initally added to the IGDB database
+        developer:
+          type: boolean
+          description: Is the company a/the developer?
 
-
-  
   securitySchemes:
     Authorization_Key:
       type: http
