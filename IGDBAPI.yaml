@@ -4,10 +4,10 @@ info:
   version: 4.0.0
   contact:
     name: IGDB Support
-    url: 'https://www.igdb.com/contact'
+    url: https://www.igdb.com/contact
     email: support@igdb.com
   license:
-    url: 'https://www.twitch.tv/p/legal/developer-agreement/'
+    url: https://www.twitch.tv/p/legal/developer-agreement/
     name: Twitch Developer Services Agreement
   description: >-
     One of the principles behind IGDB.com is accessibility of data. We wish to
@@ -18,14 +18,14 @@ info:
     This means that you are not only contributing to the value of IGDB but to
     thousands of other projects as well. We are looking forward to see what
     exciting game related projects you come up with. Happy coding!
-  termsOfService: 'https://www.twitch.tv/p/en/legal/terms-of-service/'
+  termsOfService: https://www.twitch.tv/p/en/legal/terms-of-service/
 externalDocs:
-  url: 'https://api-docs.igdb.com'
+  url: https://api-docs.igdb.com
 security:
-- Authorization_Key: []
-- Client-ID: []
+  - Authorization_Key: []
+  - Client-ID: []
 servers:
-  - url: 'https://api.igdb.com/v4'
+  - url: https://api.igdb.com/v4
     description: The main base URL for the IGDB API
     variables: {}
   - url: >-
@@ -41,449 +41,1272 @@ servers:
 paths:
   /age_ratings:
     security:
-    - Authorization_Key: []
-    - Client-ID: []
+      - Authorization_Key: []
+      - Client-ID: []
     post:
       summary: Age Rating according to various rating organizations
-      description: ''
+      description: ""
       parameters: []
       operationId: AgeRating
       responses:
-        '200':
+        "200":
           description: Success
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/AgeRating'
+                $ref: "#/components/schemas/AgeRating"
       tags:
         - Endpoints
-      callbacks: {}
 components:
-  links: {}
-  callbacks: {}
   schemas:
     AgeRating:
       type: object
       properties:
         category:
-              $ref: '#/components/schemas/AgeRatingCategoryEnums'
+          $ref: "#/components/schemas/AgeRatingCategoryEnums"
         checksum:
-            type: string
-            description: Hash of the object
+          type: string
+          description: Hash of the object
         content_descriptions:
-            $ref: '#/components/schemas/AgeRatingContentDescription'
+          type: array
+          description: Array of Age Rating Content Description IDs
         rating:
-            $ref: '#/components/schemas/AgeRatingEnums'
+          $ref: "#/components/schemas/AgeRatingEnums"
         rating_cover_url:
-            type: string
-            description: The url for the image of an age rating
+          type: string
+          description: The url for the image of an age rating
         synopsis:
-            type: string
-            description: A free text motivating a rating
+          type: string
+          description: A free text motivating a rating
     AgeRatingCategoryEnums:
-        description: The organization that has issued a specific rating
-        type: array
-        enum:
+      description: The organization that has issued a specific rating
+      type: number
+      oneOf:
+        - enum:
             - 1
+          description: ESRB
+        - enum:
             - 2
+          description: PEGI
+        - enum:
             - 3
+          description: CERO
+        - enum:
             - 4
+          description: USK
+        - enum:
             - 5
+          description: GRAC
+        - enum:
             - 6
+          description: CLASS_IND
+        - enum:
             - 7
+          description: ACB
     AgeRatingEnums:
-        description: The organization that has issued a specific rating
-        type: array
-        enum:
+      description: The age rating assigned by the organization
+      type: number
+      oneOf:
+        - enum:
             - 1
+          description: Three
+        - enum:
             - 2
+          description: Seven
+        - enum:
             - 3
+          description: Twelve
+        - enum:
             - 4
+          description: Sixteen
+        - enum:
             - 5
+          description: Eighteen
+        - enum:
             - 6
+          description: RP
+        - enum:
             - 7
+          description: EC
+        - enum:
             - 8
+          description: E
+        - enum:
             - 9
+          description: E10
+        - enum:
             - 10
+          description: T
+        - enum:
             - 11
+          description: M
+        - enum:
             - 12
+          description: AO
+        - enum:
             - 13
+          description: CERO_A
+        - enum:
             - 14
+          description: CERO_B
+        - enum:
             - 15
+          description: CERO_C
+        - enum:
             - 16
+          description: CERO_D
+        - enum:
             - 17
+          description: CERO_Z
+        - enum:
             - 18
+          description: USK_0
+        - enum:
             - 19
+          description: USK_6
+        - enum:
             - 20
+          description: USK_12
+        - enum:
             - 21
+          description: USK_16
+        - enum:
             - 22
+          description: USK_18
+        - enum:
             - 23
+          description: GRAC_ALL
+        - enum:
             - 24
+          description: GRAC_Twelve
+        - enum:
             - 25
+          description: GRAC_Fifteen
+        - enum:
             - 26
+          description: GRAC_Eighteen
+        - enum:
             - 27
+          description: GRAC_TESTING
+        - enum:
             - 28
+          description: CLASS_IND_L
+        - enum:
             - 29
+          description: CLASS_IND_Ten
+        - enum:
             - 30
+          description: CLASS_IND_Twelve
+        - enum:
             - 31
+          description: CLASS_IND_Fourteen
+        - enum:
             - 32
+          description: CLASS_IND_Sixteen
+        - enum:
             - 33
+          description: CLASS_IND_Eighteen
+        - enum:
             - 34
+          description: ACB_G
+        - enum:
             - 35
+          description: ACB_PG
+        - enum:
             - 36
+          description: ACB_M
+        - enum:
             - 37
+          description: ACB_MA15
+        - enum:
             - 38
+          description: ACB_R18
+        - enum:
             - 39
+          description: ACB_RC
     AgeRatingContentDescription:
-        type: object
-        properties:
-            category:
-                $ref: '#/components/schemas/AgeRatingContentDescriptionEnums'
-            checksum:
-                type: string
-                description: Hash of the object
-            description:
-                type: string
-                description: A string containing the age rating content descriptions
-    AgeRatingContentDescriptionEnums:
-        type: array
-        description: The age rating content description enums
-        enum:
+      type: object
+      properties:
+        category:
+          $ref: "#/components/schemas/AgeRatingContentDescriptionCategoryEnums"
+        checksum:
+          type: string
+          description: Hash of the object
+        description:
+          type: string
+          description: A string containing the age rating content descriptions
+    AgeRatingContentDescriptionCategoryEnums:
+      type: number
+      description: The age rating content description enums
+      oneOf:
+        - enum:
             - 1
+          description: ESRB_alcohol_reference
+        - enum:
             - 2
+          description: ESRB_animated_blood
+        - enum:
             - 3
+          description: ESRB_blood
+        - enum:
             - 4
+          description: ESRB_blood_and gore
+        - enum:
             - 5
+          description: ESRB_cartoon_violence
+        - enum:
             - 6
+          description: ESRB_comic_mischief
+        - enum:
             - 7
+          description: ESRB_crude_humor
+        - enum:
             - 8
+          description: ESRB_drug_reference
+        - enum:
             - 9
+          description: ESRB_fantasy_violence
+        - enum:
             - 10
+          description: ESRB_intense_violence
+        - enum:
             - 11
+          description: ESRB_language
+        - enum:
             - 12
+          description: ESRB_lyrics
+        - enum:
             - 13
+          description: ESRB_mature_humor
+        - enum:
             - 14
+          description: ESRB_nudity
+        - enum:
             - 15
+          description: ESRB_partial_nudity
+        - enum:
             - 16
+          description: ESRB_real_gambling
+        - enum:
             - 17
+          description: ESRB_sexual_content
+        - enum:
             - 18
+          description: ESRB_sexual_themes
+        - enum:
             - 19
+          description: ESRB_sexual_violence
+        - enum:
             - 20
+          description: ESRB_simulated_gambling
+        - enum:
             - 21
+          description: ESRB_strong_language
+        - enum:
             - 22
+          description: ESRB_strong_lyrics
+        - enum:
             - 23
+          description: ESRB_strong_sexual content
+        - enum:
             - 24
+          description: ESRB_suggestive_themes
+        - enum:
             - 25
+          description: ESRB_tobacco_reference
+        - enum:
             - 26
+          description: ESRB_use_of alcohol
+        - enum:
             - 27
+          description: ESRB_use_of drugs
+        - enum:
             - 28
+          description: ESRB_use_of tobacco
+        - enum:
             - 29
+          description: ESRB_violence
+        - enum:
             - 30
+          description: ESRB_violent_references
+        - enum:
             - 31
+          description: ESRB_animated_violence
+        - enum:
             - 32
+          description: ESRB_mild_language
+        - enum:
             - 33
+          description: ESRB_mild_violence
+        - enum:
             - 34
+          description: ESRB_use_of drugs and alcohol
+        - enum:
             - 35
+          description: ESRB_drug_and alcohol reference
+        - enum:
             - 36
+          description: ESRB_mild_suggestive themes
+        - enum:
             - 37
+          description: ESRB_mild_cartoon violence
+        - enum:
             - 38
+          description: ESRB_mild_blood
+        - enum:
             - 39
+          description: ESRB_realistic_blood and gore
+        - enum:
             - 40
+          description: ESRB_realistic_violence
+        - enum:
+            - 41
+          description: ESRB_alcohol_and tobacco reference
+        - enum:
+            - 42
+          description: ESRB_mature_sexual themes
+        - enum:
+            - 43
+          description: ESRB_mild_animated violence
+        - enum:
+            - 44
+          description: ESRB_mild_sexual themes
+        - enum:
+            - 45
+          description: ESRB_use_of alcohol and tobacco
+        - enum:
+            - 46
+          description: ESRB_animated_blood and gore
+        - enum:
+            - 47
+          description: ESRB_mild_fantasy violence
+        - enum:
+            - 48
+          description: ESRB_mild_lyrics
+        - enum:
+            - 49
+          description: ESRB_realistic_blood
+        - enum:
+            - 50
+          description: PEGI_violence
+        - enum:
+            - 51
+          description: PEGI_sex
+        - enum:
+            - 52
+          description: PEGI_drugs
+        - enum:
+            - 53
+          description: PEGI_fear
+        - enum:
+            - 54
+          description: PEGI_discrimination
+        - enum:
+            - 55
+          description: PEGI_bad_language
+        - enum:
+            - 56
+          description: PEGI_gambling
+        - enum:
+            - 57
+          description: PEGI_online_gameplay
+        - enum:
+            - 58
+          description: PEGI_in_game_purchases
+        - enum:
+            - 59
+          description: CERO_love
+        - enum:
+            - 60
+          description: CERO_sexual_content
+        - enum:
+            - 61
+          description: CERO_violence
+        - enum:
+            - 62
+          description: CERO_horror
+        - enum:
+            - 63
+          description: CERO_drinking_smoking
+        - enum:
+            - 64
+          description: CERO_gambling
+        - enum:
+            - 65
+          description: CERO_crime
+        - enum:
+            - 66
+          description: CERO_controlled_substances
+        - enum:
+            - 67
+          description: CERO_languages_and others
+        - enum:
+            - 68
+          description: GRAC_sexuality
+        - enum:
+            - 69
+          description: GRAC_violence
+        - enum:
+            - 70
+          description: GRAC_fear_horror_threatening
+        - enum:
+            - 71
+          description: GRAC_language
+        - enum:
+            - 72
+          description: GRAC_alcohol_tobacco_drug
+        - enum:
+            - 73
+          description: GRAC_crime_anti_social
+        - enum:
+            - 74
+          description: GRAC_gambling
+        - enum:
+            - 75
+          description: CLASS_IND_violencia
+        - enum:
+            - 76
+          description: CLASS_IND_violencia_extrema
+        - enum:
+            - 77
+          description: CLASS_IND_conteudo_sexual
+        - enum:
+            - 78
+          description: CLASS_IND_nudez
+        - enum:
+            - 79
+          description: CLASS_IND_sexo
+        - enum:
+            - 80
+          description: CLASS_IND_sexo_explicito
+        - enum:
+            - 81
+          description: CLASS_IND_drogas
+        - enum:
+            - 82
+          description: CLASS_IND_drogas_licitas
+        - enum:
+            - 83
+          description: CLASS_IND_drogas_ilicitas
+        - enum:
+            - 84
+          description: CLASS_IND_linguagem_impropria
+        - enum:
+            - 85
+          description: CLASS_IND_atos_criminosos
     AlternativeNames:
-        type: object
-        description: Alternative and international game titles
-        properties:
-            checksum:
-                type: string
-                description: Hash of the object
-            comment:
-                type: string
-                description: A description of what kind of alternative name it is. (Acronym, Working title, Japanese title etc)
-            game:
-                type: integer
-                description: The Game ID this alternative name is associated with
-            name:
-                type: string
-                description: An alternative name
+      type: object
+      description: Alternative and international game titles
+      properties:
+        checksum:
+          type: string
+          description: Hash of the object
+        comment:
+          type: string
+          description: >-
+            A description of what kind of alternative name it is. (Acronym,
+            Working title, Japanese title etc)
+        game:
+          type: number
+          description: The Game ID this alternative name is associated with
+        name:
+          type: string
+          description: An alternative name
     Artwork:
-        type: object
-        description: Official artworks. Resolution and aspect ratio may vary
-        properties:
-            alpha_channel:
-                type: boolean
-            animated:
-                type: boolean
-            checksum:
-                type: string
-                description: Hash of the object
-            game:
-                type: integer
-                description: The game ID this artwork is associated with
-            height:
-                type: integer
-                description: The height of the image in pixels
-            image_id:
-                type: string
-                description: The ID of the image used to construct an IGDB image link
-            url:
-                type: string
-                description: The website address (URL) of the item
-            width:
-                type: integer
-                description: The width of the image in pixels
+      type: object
+      description: Official artworks. Resolution and aspect ratio may vary
+      properties:
+        alpha_channel:
+          type: boolean
+        animated:
+          type: boolean
+        checksum:
+          type: string
+          description: Hash of the object
+        game:
+          type: number
+          description: The game ID this artwork is associated with
+        height:
+          type: number
+          description: The height of the image in pixels
+        image_id:
+          type: string
+          description: The ID of the image used to construct an IGDB image link
+        url:
+          type: string
+          description: The website address (URL) of the item
+        width:
+          type: number
+          description: The width of the image in pixels
     Character:
       type: object
       description: Video game characters
       properties:
         akas:
-            type: array
-            description: Alternative names for a character
+          type: array
+          description: Alternative names for a character
+        checksum:
+          type: string
+          description: Hash of the object
+        country_name:
+          type: string
+          description: A Character's country of origin
+        created_at:
+          type: number
+          description: Date this was initally added to the IGDB database
+        description:
+          type: string
+          description: Text describing a character
+        games:
+          type: array
+          description: An array of game IDs
+        gender:
+          $ref: "#/components/schemas/GenderGenderEnum"
+        mug_shot:
+          $ref: "#/components/schemas/CharacterMugShot"
+        name:
+          type: string
+          description: The character's name
+        slug:
+          type: string
+          description: A url-safe, unique, lower-case version of the name
+        species:
+          $ref: "#/components/schemas/CharacterSpeciesEnum"
+        updated_at:
+          type: number
+          description: The last date this entry was updated in the IGDB database
+        url:
+          type: string
+          description: The website address (URL) of the item
+    CharacterGenderEnum:
+      type: number
+      description: An Enum of the character's gender
+      oneOf:
+        - enum:
+            - 0
+          description: Male
+        - enum:
+            - 1
+          description: Female
+        - enum:
+            - 2
+          description: Other
+    CharacterSpeciesEnum:
+      type: number
+      description: An enum of the Character's species
+      oneOf:
+        - enum:
+            - 1
+          description: Human
+        - enum:
+            - 2
+          description: Alien
+        - enum:
+            - 3
+          description: Animal
+        - enum:
+            - 4
+          description: Android
+        - enum:
+            - 5
+          description: Unknown
+    CharacterMugShot:
+      type: object
+      description: Images depicting game characters
+      properties:
+        alpha_channel:
+          type: boolean
+        animated:
+          type: boolean
+        checksum:
+          type: string
+          description: Hash of the object
+        height:
+          type: number
+          description: The height of the image in pixels
+        image_id:
+          type: string
+          description: The ID of the image used to construct an IGDB image link
+        url:
+          type: string
+          description: The website address (URL) of the item
+        width:
+          type: number
+          description: The width of the image in pixels
+    Collection:
+      type: object
+      description: Collection, AKA Series
+      properties:
+        as_child_relations:
+          $ref: "#/components/schemas/CollectionRelation"
+        as_parent_relations:
+          $ref: "#/components/schemas/CollectionRelation"
+        checksum:
+          type: string
+          description: Hash of the object
+        created_at:
+          type: number
+          description: Date this was initally added to the IGDB database
+        games:
+          type: array
+          description: >-
+            An array of Game IDs. The games that are associated with this
+            collection
+        name:
+          type: string
+          description: Umbrella term for a collection of games
+        slug:
+          type: string
+          description: A url-safe, unique, lower-case version of the name
+        type:
+          $ref: "#/components/schemas/CollectionType"
+        updated_at:
+          type: number
+          description: The last date this entry was updated in the IGDB database
+        url:
+          type: string
+          description: The website address (URL) of the item
+    CollectionMembership:
+      type: object
+      description: The collection memberships
+      properties:
+        checksum:
+          type: string
+          description: Hash of the object
+        collection:
+          type: string
+          description: Reference ID for Collection
+        created_at:
+          type: number
+          description: Date this was initally added to the IGDB database
+        game:
+          type: number
+          description: The game that is associated with this membership
+        type:
+          $ref: "#/components/schemas/CollectionMembershipType"
+        updated_at:
+          type: number
+          description: The last date this entry was updated in the IGDB database
+    CollectionMembershipType:
+      type: object
+      description: Enums for collection membership type
+      properties:
+        allowed_collection_type:
+          $ref: "#/components/schemas/CollectionType"
+        checksum:
+          type: string
+          description: Hash of the object
+        created_at:
+          type: number
+          description: Date this was initally added to the IGDB database
+        description:
+          type: string
+          description: Description of the membership type
+        name:
+          type: string
+          description: The membership type name
+        updated_at:
+          type: number
+          description: The last date this entry was updated in the IGDB database
+    CollectionRelation:
+      type: object
+      description: Describes relationship between collections
+      properties:
+        checksum:
+          type: string
+          description: Hash of the object
+        child_collection:
+          type: string
+          description: The child collection of this collection
+        created_at:
+          type: number
+          description: Date this was initally added to the IGDB database
+        parent_collection:
+          type: string
+          description: The patent collection of this collection
+        type:
+          type: string
+          description: The collection relationship type
+        updated_at:
+          type: number
+          description: The last date this entry was updated in the IGDB database
+    CollectionRelationType:
+      type: object
+      description: Enums for collection membership type
+      properties:
+        allowed_child_type:
+          type: string
+          description: The allowed child collection type
+        allowed_parent_type:
+          type: string
+          description: The allowed parent collection type
+        checksum:
+          type: string
+          description: Hash of the object
+        created_at:
+          type: number
+          description: Date this was initally added to the IGDB database
+        description:
+          type: string
+          description: Description of the membership type
+        name:
+          type: string
+          description: The membership type name
+        updated_at:
+          type: number
+          description: The last date this entry was updated in the IGDB database
+    CollectionType:
+      type: object
+      description: Enums for collection membership type
+      properties:
+        checksum:
+          type: string
+          description: Hash of the object
+        created_at:
+          type: number
+          description: Date this was initally added to the IGDB database
+        description:
+          type: string
+          description: Description of the membership type
+        name:
+          type: string
+          description: The membership type name
+        updated_at:
+          type: number
+          description: The last date this entry was updated in the IGDB database
+    Company:
+      type: object
+      description: Video game companies, both publishers and developers
+      properties:
+        change_date:
+          type: number
+          description: The date when a compnay got a new ID
+        change_date_category:
+          $ref: "#/components/schemas/ChangeDateCategoryEnum"
+        changed_company_id:
+          type: string
+          description: The new ID for a company that has gone through a merger or restructuring
+        checksum:
+          type: string
+          description: Hash of the object
+        country:
+          type: number
+          description: ISO 3166-1 numeric country code
+        created_at:
+          type: number
+          description: Date this was initally added to the IGDB database
+        description:
+          type: string
+          description: A free text description of the company
+        developed:
+          type: array
+          description: An array of game IDs that the company has developed
+        logo:
+          type: string
+          description: Reference ID for the company's logo
+        name:
+          type: string
+          description: The name of the company
+        parent:
+          type: string
+          description: A company with a controlling interest ina specific comapny
+        published:
+          type: array
+          description: An array of Game IDs that the company has published
+        slug:
+          type: string
+          description: A url-safe, unique, lower-case version of the name
+        start_date:
+          type: number
+          description: The date that the company was founded
+        start_date_category:
+          $ref: "#/components/schemas/StartDateCategoryEnum"
+        updated_at:
+          type: number
+          description: The last date this entry was updated in the IGDB database
+        url:
+          type: string
+          description: The website address (URL) of the item
+        websites:
+          type: array
+          description: An array of company website URLs
+    ChangeDateCategoryEnum:
+      type: number
+      description: An enum of the date format
+      oneOf:
+        - enum:
+            - 0
+          description: YYYYMMMMDD
+        - enum:
+            - 1
+          description: YYYYMMMM
+        - enum:
+            - 2
+          description: YYYY
+        - enum:
+            - 3
+          description: YYYYQ1
+        - enum:
+            - 4
+          description: YYYYQ2
+        - enum:
+            - 5
+          description: YYYYQ3
+        - enum:
+            - 6
+          description: YYYYQ4
+        - enum:
+            - 7
+          description: TBD
+    StartDateCategoryEnum:
+      type: number
+      description: An enum of the date format
+      oneOf:
+        - enum:
+            - 0
+          description: YYYYMMMMDD
+        - enum:
+            - 1
+          description: YYYYMMMM
+        - enum:
+            - 2
+          description: YYYY
+        - enum:
+            - 3
+          description: YYYYQ1
+        - enum:
+            - 4
+          description: YYYYQ2
+        - enum:
+            - 5
+          description: YYYYQ3
+        - enum:
+            - 6
+          description: YYYYQ4
+        - enum:
+            - 7
+          description: TBD
+    CompanyLogo:
+      type: object
+      description: The logos of developers and publishers
+      properties:
+        alpha_channel:
+          type: boolean
+        animated:
+          type: boolean
+        checksum:
+          type: string
+          description: Hash of the object
+        height:
+          type: number
+          description: The height of the image in pixels
+        image_id:
+          type: string
+          description: The ID of the image used to construct an IGDB image link
+        url:
+          type: string
+          description: The website address (URL) of the item
+        width:
+          type: number
+          description: The width of the image in pixels
+    CompanyWebsite:
+      type: object
+      description: A company's website links
+      properties:
+        category:
+          $ref: "#/components/schemas/CompanyWebsiteEnums"
+        checksum:
+          type: string
+          description: Hash of the object
+        trusted:
+          type: boolean
+        url:
+          type: string
+          description: The website address (URL) of the item
+    CompanyWebsiteEnums:
+      type: number
+      description: An enum of the date format
+      oneOf:
+        - enum:
+            - 1
+          description: official
+        - enum:
+            - 2
+          description: wikia
+        - enum:
+            - 3
+          description: wikipedia
+        - enum:
+            - 4
+          description: facebook
+        - enum:
+            - 5
+          description: twitter
+        - enum:
+            - 6
+          description: twitch
+        - enum:
+            - 8
+          description: instagram
+        - enum:
+            - 9
+          description: youtube
+        - enum:
+            - 10
+          description: iphone
+        - enum:
+            - 11
+          description: ipad
+        - enum:
+            - 12
+          description: android
+        - enum:
+            - 13
+          description: steam
+        - enum:
+            - 14
+          description: reddit
+        - enum:
+            - 15
+          description: itch
+        - enum:
+            - 16
+          description: epicgames
+        - enum:
+            - 17
+          description: gog
+        - enum:
+            - 18
+          description: discord
+    Cover:
+      type: object
+      description: The cover art of games
+      properties:
+        alpha_channel:
+          type: boolean
+        animated:
+          type: boolean
+        checksum:
+          type: string
+          description: Hash of the object
+        game:
+          type: string
+          description: The game this cover is associated with. If it is empty then this cover belongs to a game_localization, which can be found under game_localization field
+        game_localization:
+          type: string
+          description: Reference ID for Game Localization this cover might be associated with
+        height:
+          type: number
+          description: The height of the image in pixels
+        image_id:
+          type: string
+          description: The ID of the image used to construct an IGDB image link
+        url:
+          type: string
+          description: The website address (URL) of the item
+        width:
+          type: number
+          description: The width of the image in pixels
+    Events:
+      type: object
+      description: Gaming events like GamesCom, Tokyo Game Show, PAX, or GSL
+      properties:
         checksum:
             type: string
-            description:  Hash of the object
-        country_name:
-            type: string
-            description: A Character's country of origin
+            description: Hash of the object
         created_at:
-            type: integer
-            description: Date this was initally added to the IGDB database
+            type: number
+            description: Date this was initially added to the IGDB database
         description:
             type: string
-            description: Text describing a character
+            description: The description of the event
+        end_time:
+            type: number
+            description: End time of the event in UTC
+        event_logo:
+            type: string
+            description: Logo of the event.
+        event_networks:
+            type: string
+            description: Urls associated with the event
         games:
             type: array
-            description: An array of game IDs
-        gender:
-            $ref: '#/components/schemas/GenderGenderEnum'
-        mug_shot:
-            $ref: '#/components/schemas/CharacterMugShot'
+            description: Games featured in the event
+        live_stream_url:
+            type: string
+            description: URL to the livestream of the event.
         name:
             type: string
-            description: The character's name
+            description: The name of the event
         slug:
             type: string
             description: A url-safe, unique, lower-case version of the name
-        species:
-            $ref: '#/components/schemas/CharacterSpeciesEnum'
+        start_time:
+            type: number
+            description: Start time of the event in UTC
+        time_zone:
+            type: string
+            description: Timezone the event is in.
         updated_at:
-            type: integer
+            type: number
+            description: The last date this entry was updated in the IGDB database
+        videos:
+            type: array
+            description: Trailers featured in the event
+    EventLogo:
+      type: object
+      description: Logo for the event
+      properties:
+        alpha_channel:
+            type: boolean
+        animated:
+            type: boolean
+        checksum:
+            type: string
+            description: Hash of the object
+        created_at:
+            type: number
+            description: Date this was initially added to the IGDB database
+        event:
+            type: string
+            description: The event associated with this logo.
+        height:
+            type: number
+            description: The height of the image in pixels
+        image_id:
+            type: string
+            description: The ID of the image used to construct an IGDB image link
+        updated_at:
+            type: number
             description: The last date this entry was updated in the IGDB database
         url:
             type: string
             description: The website address (URL) of the item
-    CharacterGenderEnum:
-        type: integer
-        description: An Enum of the character's gender
-        enum:
-            - 0
-            - 1
-            - 2
-    CharacterSpeciesEnum:
-        type: integer
-        description: An enum of the Character's species
-        enum:
-            - 1
-            - 2
-            - 3
-            - 4
-            - 5
-    CharacterMugShot:
-        type: object
-        description: Images depicting game characters
-        properties:
-            alpha_channel:
-                type: boolean
-            animated:
-                type: boolean
-            checksum:
-                type: string
-                description: Hash of the object
-            height:
-                type: integer
-                description: The height of the image in pixels
-            image_id:
-                type: string
-                description: The ID of the image used to construct an IGDB image link
-            url:
-                type: string
-                description: The website address (URL) of the item
-            width:
-                type: integer
-                description: The width of the image in pixels
-    Collection:
-        type: object
-        description: Collection, AKA Series
-        properties:
-            as_child_relations:
-                $ref: '#/components/schemas/CollectionRelation'
-            as_parent_relations:
-                $ref: '#/components/schemas/CollectionRelation'
-            checksum:
-                type: string
-                description: Hash of the object
-            created_at:
-                type: integer
-                description: Date this was initally added to the IGDB database
-            games:
-                type: array
-                description: An array of Game IDs. The games that are associated with this collection
-            name:
-                type: string
-                description: Umbrella term for a collection of games
-            slug:
-                type: string
-                description: A url-safe, unique, lower-case version of the name
-            type:
-                $ref: '#/components/schemas/CollectionType'
-            updated_at:
-                type: integer
-                description: The last date this entry was updated in the IGDB database
-            url:
-                type: string
-                description: The website address (URL) of the item
-    CollectionMembership:
-        type: object
-        description: The collection memberships
-        properties:
-            checksum:
-                type: string
-                description: Hash of the object
-            collection:
-                type: string
-                description: Reference ID for Collection
-            created_at:
-                type: integer
-                description: Date this was initally added to the IGDB database
-            game:
-                type: integer
-                description: The game that is associated with this membership
-            type:
-                $ref: '#/components/schemas/CollectionMembershipType'
-            updated_at:
-                type: integer
-                description: The last date this entry was updated in the IGDB database
-    CollectionMembershipType:
-        type: object
-        description: Enums for collection membership type
-        properties:
-            allowed_collection_type:
-                $ref: '#/components/schemas/CollectionType'
-            checksum:
-                type: string
-                description: Hash of the object
-            created_at:
-                type: integer
-                description: Date this was initally added to the IGDB database
-            description:
-                type: string
-                description: Description of the membership type
-            name:
-                type: string
-                description: The membership type name
-            updated_at:
-                type: integer
-                description: The last date this entry was updated in the IGDB database
-    CollectionRelation:
-        type: object
-        description: Describes relationship between collections
-        properties:
-            checksum:
-                type: string
-                description: Hash of the object
-            child_collection:
-                type: string
-                description: The child collection of this collection
-            created_at:
-                type: integer
-                description: Date this was initally added to the IGDB database
-            parent_collection:
-                type: string
-                description: The patent collection of this collection
-            type:
-                type: string
-                description: The collection relationship type
-            updated_at:
-                type: integer
-                description: The last date this entry was updated in the IGDB database
-    CollectionnRelationType:
-        type: object
-        description: Enums for collection membership type
-        properties:
-            allowed_child_type:
-                type: string
-                description: The allowed child collection type
-            allowed_parent_type:
-                type: string
-                description: The allowed parent collection type
-            checksum:
-                type: string
-                description: Hash of the object
-            created_at:
-                type: integer
-                description: Date this was initally added to the IGDB database
-            description:
-                type: string
-                description: Description of the membership type
-            name:
-                type: string
-                description: The membership type name
-            updated_at:
-                type: integer
-                description: The last date this entry was updated in the IGDB database
-    CollectionType:
-        type: object
-        description: Enums for collection membership type
-        properties:
-            checksum:
-                type: string
-                description: Hash of the object
-            created_at:
-                type: integer
-                description: Date this was initally added to the IGDB database
-            description:
-                type: string
-                description: Description of the membership type
-            name:
-                type: string
-                description: The membership type name
-            updated_at:
-                type: integer
-                description: The last date this entry was updated in the IGDB database
-    Game:
+        width:
+            type: number
+            description: The width of the image in pixels
+    EventNetwork:
       type: object
+      description: URLs related to the event like Twitter, Facebook, and Youtube
       properties:
-        id:
-          type: integer
-          description: The unique identifier of the game
+        checksum:
+            type: string
+            description: Hash of the object
+        created_at:
+            type: number
+            description: Date this was initially added to the IGDB database
+        event:
+            type: string
+            description: The event associated with this URL.
+        network_type:
+            type: string
+            description: Network type
+        updated_at:
+            type: number
+            description: The last date this entry was updated in the IGDB database
+        url:
+            type: string
+            description: The website address (URL) of the item
+    Franchise:
+      type: object
+      description: A list of video game franchises such as Star Wars
+      properties:
+        checksum:
+            type: string
+            description: Hash of the object
+        created_at:
+            type: number
+            description: Date this was initially added to the IGDB database
+        games:
+            type: array
+            description: The games that are associated with this franchise
         name:
-          type: string
-          description: The name of the game
+            type: string
+            description: The name of the franchise
+        slug:
+            type: string
+            description: A url-safe, unique, lower-case version of the name
+        updated_at:
+            type: number
+            description: The last date this entry was updated in the IGDB database
+        url:
+            type: string
+            description: The website address (URL) of the item
+    Games:
+      type: object
+      description: Video Games!
+      properties:
+        age_ratings:
+            $ref: "#/components/schemas/AgeRatingEnums"
+        aggregated_rating:
+            type: number
+            description: Rating based on external critic scores
+        aggregated_rating_count:
+            type: number
+            description: Number of external critic scores
+        alternative_names:
+            type: array
+            description: Alternative names for this game
+        artworks:
+            type: array
+            description: Artworks of this game
+        bundles:
+            type: array
+            description: The bundles this game is a part of
+        category:
+            $ref: "#/components/schemas/GameCategory"
+        checksum:
+            type: string
+            description: Hash of the object
+        collection:
+            type: string
+            description: The series the game belongs to
+        collections:
+            type: array
+            description: The collections that this game is in.
+        cover:
+            type: string
+            description: The cover of this game
+        created_at:
+            type: number
+            description: Date this was initially added to the IGDB database
+        dlcs:
+            type: array
+            description: DLCs for this game
+        expanded_games:
+            type: array
+            description: Expanded games of this game
+        expansions:
+            type: array
+            description: Expansions of this game
+        external_games:
+            type: array
+            description: External IDs this game has on other services
+        first_release_date:
+            type: number
+            description: The first release date for this game
+        follows:
+            type: number
+            description: Number of people following a game
+        forks:
+            type: array
+            description: Forks of this game
+        franchise:
+            type: string
+            description: The main franchise
+        franchises:
+            type: array
+            description: Other franchises the game belongs to
+        game_engines:
+            type: array
+            description: The game engine used in this game
+        game_localizations:
+            type: array
+            description: Supported game localizations for this game. A region can have at most one game localization for a given game
+        game_modes:
+            type: array
+            description: Modes of gameplay
         genres:
-            $ref: '#/components/schemas/Genre'
-        rating:
-          type: number
-          description: The rating of the game
-          format: double
-        release_dates:
-            $ref: '#/components/schemas/ReleaseDate'
-    Genre:
-      type: object
-      properties:
+            type: array
+            description: Genres of the game
+        hypes:
+            type: number
+            description: Number of follows a game gets before release
+        involved_companies:
+            type: array
+            description: Companies who developed this game
+        keywords:
+            type: array
+            description: Associated keywords
+        language_supports:
+            type: array
+            description: Supported Languages for this game
+        multiplayer_modes:
+            type: array
+            description: Multiplayer modes for this game
         name:
-          type: string
-          description: The name of the genre
-    ReleaseDate:
-      type: object
-      properties:
-        id:
-          type: integer
-          description: The unique identifier of the release date
-        date:
-          type: integer
-          description: The release date in UNIX time
-        platform:
-          type: integer
-          description: The platform id of the release date
+            type: string
+            description: The name of the Game
+        parent_game:
+            type: string
+            description: If a DLC, expansion or part of a bundle, this is the main game or bundle
+        platforms:
+            type: string
+            description: Platforms this game was released on
+        player_perspectives:
+            type: array
+            description: The main perspective of the player
+        ports:
+            type: array
+            description: Ports of this game
+        rating:
+            type: number
+            description: Average IGDB user rating
+        rating_count:
+            type: number
+            description: Total number of IGDB user ratings
+        release_dates:
+            type: array
+            description: Release dates of this game
+        remakes:
+            type: array
+            description: Remakes of this game
+        remasters:
+            type: array
+            description: Remasters of this game
+        screenshots:
+            type: array
+            description: Screenshots of this game
+        similar_games:
+            type: array
+            description: Similar games
+        slug:
+            type: string
+            description: A url-safe, unique, lower-case version of the name
+        standalone_expansions:
+            type: array
+            description: Standalone expansions of this game
+        status:
+            $ref: "#/components/schemas/GameStatus"
+        storyline:
+            type: string
+            description: A short description of a games story
+        summary:
+            type: string
+            description: A description of the game
+        tags:
+            type: array
+            description: Related entities in the IGDB API
+        themes:
+            type: array
+            description: Themes of the game
+        total_rating:
+            type: number
+            description: Average rating based on both IGDB user and external critic scores
+        total_rating_count:
+            type: number
+            description: Total number of user and external critic scores
+        updated_at:
+            type: number
+            description: The last date this entry was updated in the IGDB database
+        url:
+            type: string
+            description: The website address (URL) of the item
+        version_parent:
+            type: string
+            description: If a version, this is the main game
+        version_title:
+            type: string
+            description: Title of this version (i.e Gold edition)
+        videos:
+            type: array
+            description: Videos of this game
+        websites:
+            type: array
+            description: Websites associated with this game
+
+
+  
   securitySchemes:
     Authorization_Key:
       type: http
