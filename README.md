@@ -1,29 +1,19 @@
 # IMPORTANT: NOT COMPLETE
-I am hand crafting the OpenAPI spec from IGDB's docs, so there is a good chance there are mistakes.
+### The schemas have yet to be validated.
 
-The response types have yet to be validated.
-
-The Excel spreadsheets have been created to speed up the copy process, by auto-crafting the YAML properties of a component based on the copied table from IGDB's docs.
+The Excel spreadsheet have been created to speed up the copy process, by auto-crafting the YAML properties of enums based on the copied table from IGDB's docs.
 
 TODO:
-~~1. Finish component schemas~~
-2. Finish Paths
-3. Create JSON when in a "filled-out" state
-4. Enhance interlinking before GameVersionFeature (Ex: Reference ID for Game will $ref: /components/schemas/Game/properties/name)
-5. Add Format to data types above Genre
-5. Validate against API responses
+- [x] Finish component schemas
+- [ ] Finish Paths
+- [ ] Validate against API responses
+  - [ ] Enhance interlinking before GameVersionFeature (Ex: Reference ID for Game will $ref: /components/schemas/Game/properties/name)
+  - [ ] Add Format to data types above Genre
+  - [ ] Reorder based on API response
+- [ ] Create JSON when validated
+- [ ] Add websockets
 
-Below are data types that have been converted to match the OpenAPI specs Above Genre, because I am learning the OAI spec as I go
-
-| IGDB Type           	| OpenAPI Compatable Type 	|
-|---------------------	|-------------------------	|
-| uuid                	| string                  	|
-| array [of anything] 	| array of undefined type 	|
-| unix time stamp     	| number                  	|
-| date					| string					|
-| integer				| number					|
-
-Bug reports/Pull Requests are encouraged and very helpful!
+### Bug reports/Pull Requests are encouraged and very helpful!
 
 Once this is complete, you can use [Swagger Editor](https://editor-next.swagger.io/) or [OpenAPI Generators](https://openapi-generator.tech/docs/generators#client-generators) to generate the following native clients for the API. I may add some of these to releases, IDK yet.
 
