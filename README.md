@@ -6,13 +6,22 @@ The response types have yet to be validated.
 The Excel spreadsheets have been created to speed up the copy process, by auto-crafting the YAML properties of a component based on the copied table from IGDB's docs.
 
 TODO:
-1. Finish component schemas
+~~1. Finish component schemas~~
 2. Finish Paths
 3. Create JSON when in a "filled-out" state
 4. Enhance interlinking before GameVersionFeature (Ex: Reference ID for Game will $ref: /components/schemas/Game/properties/name)
-5. Validate against API responses (and fixing the formatting/order of schemas)
-6. Add webhooks info
+5. Add Format to data types above Genre
+5. Validate against API responses
 
+Below are data types that have been converted to match the OpenAPI specs Above Genre, because I am learning the OAI spec as I go
+
+| IGDB Type           	| OpenAPI Compatable Type 	|
+|---------------------	|-------------------------	|
+| uuid                	| string                  	|
+| array [of anything] 	| array of undefined type 	|
+| unix time stamp     	| number                  	|
+| date					| string					|
+| integer				| number					|
 
 Bug reports/Pull Requests are encouraged and very helpful!
 

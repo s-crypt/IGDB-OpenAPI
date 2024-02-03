@@ -10,7 +10,7 @@ info:
     url: https://www.twitch.tv/p/legal/developer-agreement/
     name: Twitch Developer Services Agreement
   description: >-
-    One of the principles behind IGDB.com is accessibility of data. We wish to
+    "One of the principles behind IGDB.com is accessibility of data. We wish to
     share the data with anyone who wants to build cool video game oriented
     websites, apps and services.
 
@@ -18,17 +18,16 @@ info:
     This means that you are not only contributing to the value of IGDB but to
     thousands of other projects as well. We are looking forward to see what
     exciting game related projects you come up with. Happy coding!
+    ''  
 
-    This OpenAPI documentation and schema project is unofficial and made by [s-crypt](https://github.com/s-crypt)
-    The source code is [available here](https://github.com/s-crypt/IGDB-OpenAPI)
+
+    This OpenAPI documentation and schema project is unofficial and made by [s-crypt.](https://github.com/s-crypt)
+    The source code is [available here](https://github.com/s-crypt/IGDB-OpenAPI)  
     Issues and pull requests are welcome!
 
   termsOfService: https://www.twitch.tv/p/en/legal/terms-of-service/
 externalDocs:
   url: https://api-docs.igdb.com
-security:
-  - Authorization_Key: []
-  - Client-ID: []
 servers:
   - url: https://api.igdb.com/v4
     description: The main base URL for the IGDB API
@@ -45,14 +44,23 @@ servers:
         default: hijklmn67890
 paths:
   /age_ratings:
-    security:
-      - Authorization_Key: []
-      - Client-ID: []
     post:
+      security:
+        - Authorization_Key: []
+        - Client-ID: []
       summary: Age Rating according to various rating organizations
-      description: ""
+      tags:
+        - Endpoints
       parameters: []
-      operationId: AgeRating
+      requestBody:
+        required: false
+        content:
+          text/plain:
+            schema:
+              type: string
+            example:
+              fields category,checksum,content_descriptions,rating,rating_cover_url,synopsis;
+      operationId: RetrieveAgeRating
       responses:
         "200":
           description: Success
@@ -60,8 +68,161 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/AgeRating"
+        "400":
+          $ref: "#/components/schemas/Responses/BadRequest"
+        "401":
+          $ref: "#/components/schemas/Responses/AuthFailure"
+        "403":
+          $ref: "#/components/schemas/Responses/Forbidden"
+        "404":
+          $ref: "#/components/schemas/Responses/NotFound"
+      externalDocs:
+        description: "Official documentation:"
+        url: https://api-docs.igdb.com/?shell#age-rating
+  /age_rating_content_descriptions:
+    post:
+      security:
+        - Authorization_Key: []
+        - Client-ID: []
+      summary: Age Rating Descriptors
       tags:
         - Endpoints
+      parameters: []
+      requestBody:
+        required: false
+        content:
+          text/plain:
+            schema:
+              type: string
+            example:
+              fields category,checksum,description;
+      operationId: RetrieveAgeRatingContentDescription
+      responses:
+        "200":
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/AgeRatingContentDescription"
+        "400":
+          $ref: "#/components/schemas/Responses/BadRequest"
+        "401":
+          $ref: "#/components/schemas/Responses/AuthFailure"
+        "403":
+          $ref: "#/components/schemas/Responses/Forbidden"
+        "404":
+          $ref: "#/components/schemas/Responses/NotFound"
+      externalDocs:
+        description: "Official documentation:"
+        url: https://api-docs.igdb.com/#age-rating-content-description
+  /alternative_names:
+    post:
+      security:
+        - Authorization_Key: []
+        - Client-ID: []
+      summary: Alternative and international game titles
+      tags:
+        - Endpoints
+      parameters: []
+      requestBody:
+        required: false
+        content:
+          text/plain:
+            schema:
+              type: string
+            example:
+              fields checksum,comment,game,name;
+      operationId: RetrieveAlternativeNames
+      responses:
+        "200":
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/AlternativeNames"
+        "400":
+          $ref: "#/components/schemas/Responses/BadRequest"
+        "401":
+          $ref: "#/components/schemas/Responses/AuthFailure"
+        "403":
+          $ref: "#/components/schemas/Responses/Forbidden"
+        "404":
+          $ref: "#/components/schemas/Responses/NotFound"
+      externalDocs:
+        description: "Official documentation:"
+        url: https://api-docs.igdb.com/#alternative-name
+  /artworks:
+    post:
+      security:
+        - Authorization_Key: []
+        - Client-ID: []
+      summary: Official artworks (resolution and aspect ratio may vary)
+      tags:
+        - Endpoints
+      parameters: []
+      requestBody:
+        required: false
+        content:
+          text/plain:
+            schema:
+              type: string
+            example:
+              fields alpha_channel,animated,checksum,game,height,image_id,url,width;
+      operationId: RetreiveArtwork
+      responses:
+        "200":
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Artwork"
+        "400":
+          $ref: "#/components/schemas/Responses/BadRequest"
+        "401":
+          $ref: "#/components/schemas/Responses/AuthFailure"
+        "403":
+          $ref: "#/components/schemas/Responses/Forbidden"
+        "404":
+          $ref: "#/components/schemas/Responses/NotFound"
+      externalDocs:
+        description: "Official documentation:"
+        url: https://api-docs.igdb.com/#artwork
+  /characters:
+    post:
+      security:
+        - Authorization_Key: []
+        - Client-ID: []
+      summary: Video game characters
+      tags:
+        - Endpoints
+      parameters: []
+      requestBody:
+        required: false
+        content:
+          text/plain:
+            schema:
+              type: string
+            example:
+              fields akas,checksum,country_name,created_at,description,games,gender,mug_shot,name,slug,species,updated_at,url;
+      operationId: RetreiveCharacter
+      responses:
+        "200":
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Character"
+        "400":
+          $ref: "#/components/schemas/Responses/BadRequest"
+        "401":
+          $ref: "#/components/schemas/Responses/AuthFailure"
+        "403":
+          $ref: "#/components/schemas/Responses/Forbidden"
+        "404":
+          $ref: "#/components/schemas/Responses/NotFound"
+      externalDocs:
+        description: "Official documentation:"
+        url: https://api-docs.igdb.com/#character
 components:
   schemas:
     AgeRating:
@@ -74,6 +235,7 @@ components:
           $ref: "#/components/schemas/AgeRatingCategoryEnums"
         checksum:
           type: string
+          format: uuid
           description: Hash of the object
         content_descriptions:
           type: array
@@ -2335,6 +2497,97 @@ components:
         url:
           type: string
           description: The website address (URL) of the item
+    Responses:
+      BadRequest:
+        description: Bad Request
+        content:
+          application/json:
+            schema:
+              type: object
+              description: Authorization Failure
+              properties:
+                title:
+                  type: string
+                status:
+                  type: number
+                cause:
+                  type: string
+              example:
+                title: Invalid Field
+                status: 400
+                example: "Invalid field name: 'checksums'"
+      AuthFailure:
+        description: Authorization Failure
+        content:
+          application/json:
+            schema:
+              type: object
+              description: Authorization Failure
+              properties:
+                message:
+                  type: string
+                "Tip 1":
+                  type: string
+                "Tip 2":
+                  type: string
+                "Tip 3":
+                  type: string
+                Docs:
+                  type: string
+                  format: url
+                Discord:
+                  type: string
+                  format: url
+              example:
+                message: "Authorization Failure. Have you tried:"
+                "Tip 1": "Ensure you are sending Authorization and Client-ID as headers."
+                "Tip 2": "Ensure Authorization value starts with 'Bearer ', including the space"
+                "Tip 3": "Ensure Authorization value ends with the App Access Token you generated, NOT your Client Secret."
+                Docs: "https://api-docs.igdb.com/#authentication"
+                Discord: "https://discord.gg/FrvfwQg"
+      Forbidden:
+        description: Forbidden
+        content:
+          application/json:
+            schema:
+              type: object
+              description: Forbidden
+              properties:
+                title:
+                  type: string
+                status:
+                  type: number
+                cause:
+                  type: string
+                details:
+                  type: string
+              example: 
+                title: Forbidden
+                status: 403
+                cause: Reqest limit too high
+                details: You typed in 2500 but your maximum is 500
+      NotFound:
+        description: Not Found
+        content:
+          application/json:
+            schema:
+              type: object
+              description: Not Found
+              properties:
+                title:
+                  type: string
+                status:
+                  type: number
+                type:
+                  type: string
+                details:
+                  type: string
+              example: 
+                title: Not Found
+                status: 404
+                type: https://javalin.io/documentation#notfoundresponse
+                details: {}
+              
     ReleaseDate:
       type: object
       description: A handy endpoint that extends platform release dates. Used to dig deeper into release dates, platforms and versions.
@@ -2625,6 +2878,5 @@ components:
       type: apiKey
       name: Client-ID
       in: header
-      scheme: basic
 tags:
   - name: Endpoints
