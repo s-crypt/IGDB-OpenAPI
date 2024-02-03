@@ -17,16 +17,8 @@
   <script>
     window.onload = () => {
       window.ui = SwaggerUIBundle({
-		urls: [
-			{url: "./IGDBAPI.yaml", name: "IGDB"}
-		],
-		urls_primaryName: "IGDB",
+        url: './IGDBAPI.yaml',
         dom_id: '#swagger-ui',
-		presets: [
-          SwaggerUIBundle.presets.apis,
-          SwaggerUIStandalonePreset
-        ],
-        layout: "StandaloneLayout",
       });
     };
   </script>
