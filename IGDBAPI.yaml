@@ -17,12 +17,14 @@ info:
 
     This means that you are not only contributing to the value of IGDB but to
     thousands of other projects as well. We are looking forward to see what
-    exciting game related projects you come up with. Happy coding!
-    ''  
+    exciting game related projects you come up with. Happy coding!"
 
 
-    This OpenAPI documentation and schema project is unofficial and made by [s-crypt.](https://github.com/s-crypt)
+    This OpenAPI documentation and schema project is unofficial and made by [s-crypt.](https://github.com/s-crypt)  
+
     The source code is [available here](https://github.com/s-crypt/IGDB-OpenAPI)  
+
+
     Issues and pull requests are welcome!
 
   termsOfService: https://www.twitch.tv/p/en/legal/terms-of-service/
@@ -58,8 +60,7 @@ paths:
           text/plain:
             schema:
               type: string
-            example:
-              fields category,checksum,content_descriptions,rating,rating_cover_url,synopsis;
+            example: fields category,checksum,content_descriptions,rating,rating_cover_url,synopsis;
       operationId: RetrieveAgeRating
       responses:
         "200":
@@ -94,8 +95,7 @@ paths:
           text/plain:
             schema:
               type: string
-            example:
-              fields category,checksum,description;
+            example: fields category,checksum,description;
       operationId: RetrieveAgeRatingContentDescription
       responses:
         "200":
@@ -130,8 +130,7 @@ paths:
           text/plain:
             schema:
               type: string
-            example:
-              fields checksum,comment,game,name;
+            example: fields checksum,comment,game,name;
       operationId: RetrieveAlternativeNames
       responses:
         "200":
@@ -166,8 +165,7 @@ paths:
           text/plain:
             schema:
               type: string
-            example:
-              fields alpha_channel,animated,checksum,game,height,image_id,url,width;
+            example: fields alpha_channel,animated,checksum,game,height,image_id,url,width;
       operationId: RetreiveArtwork
       responses:
         "200":
@@ -202,8 +200,7 @@ paths:
           text/plain:
             schema:
               type: string
-            example:
-              fields akas,checksum,country_name,created_at,description,games,gender,mug_shot,name,slug,species,updated_at,url;
+            example: fields akas,checksum,country_name,created_at,description,games,gender,mug_shot,name,slug,species,updated_at,url;
       operationId: RetreiveCharacter
       responses:
         "200":
@@ -223,6 +220,1686 @@ paths:
       externalDocs:
         description: "Official documentation:"
         url: https://api-docs.igdb.com/#character
+  /character_mug_shots:
+    post:
+      security:
+        - Authorization_Key: []
+        - Client-ID: []
+      summary: Images depicting game characters
+      tags:
+        - Endpoints
+      parameters: []
+      requestBody:
+        required: false
+        content:
+          text/plain:
+            schema:
+              type: string
+            example: fields alpha_channel,animated,checksum,height,image_id,url,width;
+      operationId: RetreiveCharacterMugShot
+      responses:
+        "200":
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/CharacterMugShot"
+        "400":
+          $ref: "#/components/schemas/Responses/BadRequest"
+        "401":
+          $ref: "#/components/schemas/Responses/AuthFailure"
+        "403":
+          $ref: "#/components/schemas/Responses/Forbidden"
+        "404":
+          $ref: "#/components/schemas/Responses/NotFound"
+      externalDocs:
+        description: "Official documentation:"
+        url: https://api-docs.igdb.com/#character-mug-shot
+  /collection:
+    post:
+      security:
+        - Authorization_Key: []
+        - Client-ID: []
+      summary: Collection, AKA Series
+      tags:
+        - Endpoints
+      parameters: []
+      requestBody:
+        required: false
+        content:
+          text/plain:
+            schema:
+              type: string
+            example: fields as_child_relations,as_parent_relations,checksum,created_at,games,name,slug,type,updated_at,url;
+      operationId: RetreiveCollection
+      responses:
+        "200":
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Collection"
+        "400":
+          $ref: "#/components/schemas/Responses/BadRequest"
+        "401":
+          $ref: "#/components/schemas/Responses/AuthFailure"
+        "403":
+          $ref: "#/components/schemas/Responses/Forbidden"
+        "404":
+          $ref: "#/components/schemas/Responses/NotFound"
+      externalDocs:
+        description: "Official documentation:"
+        url: https://api-docs.igdb.com/#collection
+  /collection_memberships:
+    post:
+      security:
+        - Authorization_Key: []
+        - Client-ID: []
+      summary: The Collection Memberships.
+      tags:
+        - Endpoints
+      parameters: []
+      requestBody:
+        required: false
+        content:
+          text/plain:
+            schema:
+              type: string
+            example: fields checksum,collection,created_at,game,type,updated_at;
+      operationId: RetreiveCollectionMembership
+      responses:
+        "200":
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/CollectionMembership"
+        "400":
+          $ref: "#/components/schemas/Responses/BadRequest"
+        "401":
+          $ref: "#/components/schemas/Responses/AuthFailure"
+        "403":
+          $ref: "#/components/schemas/Responses/Forbidden"
+        "404":
+          $ref: "#/components/schemas/Responses/NotFound"
+      externalDocs:
+        description: "Official documentation:"
+        url: https://api-docs.igdb.com/#collection-membership
+  /collection_membership_types:
+    post:
+      security:
+        - Authorization_Key: []
+        - Client-ID: []
+      summary: Enums for collection membership types.
+      tags:
+        - Endpoints
+      parameters: []
+      requestBody:
+        required: false
+        content:
+          text/plain:
+            schema:
+              type: string
+            example: fields checksum,collection,created_at,game,type,updated_at;
+      operationId: RetreiveCollectionMembershipType
+      responses:
+        "200":
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/CollectionMembershipType"
+        "400":
+          $ref: "#/components/schemas/Responses/BadRequest"
+        "401":
+          $ref: "#/components/schemas/Responses/AuthFailure"
+        "403":
+          $ref: "#/components/schemas/Responses/Forbidden"
+        "404":
+          $ref: "#/components/schemas/Responses/NotFound"
+      externalDocs:
+        description: "Official documentation:"
+        url: https://api-docs.igdb.com/#collection-membership-type
+  /collection_relations:
+    post:
+      security:
+        - Authorization_Key: []
+        - Client-ID: []
+      summary: Describes Relationship between Collections.
+      tags:
+        - Endpoints
+      parameters: []
+      requestBody:
+        required: false
+        content:
+          text/plain:
+            schema:
+              type: string
+            example: fields checksum,child_collection,created_at,parent_collection,type,updated_at;
+      operationId: RetreiveCollectionRelation
+      responses:
+        "200":
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/CollectionRelation"
+        "400":
+          $ref: "#/components/schemas/Responses/BadRequest"
+        "401":
+          $ref: "#/components/schemas/Responses/AuthFailure"
+        "403":
+          $ref: "#/components/schemas/Responses/Forbidden"
+        "404":
+          $ref: "#/components/schemas/Responses/NotFound"
+      externalDocs:
+        description: "Official documentation:"
+        url: https://api-docs.igdb.com/#collection-relation
+  /collection_relation_types:
+    post:
+      security:
+        - Authorization_Key: []
+        - Client-ID: []
+      summary: Collection Relation Types
+      tags:
+        - Endpoints
+      parameters: []
+      requestBody:
+        required: false
+        content:
+          text/plain:
+            schema:
+              type: string
+            example: fields allowed_child_type,allowed_parent_type,checksum,created_at,description,name,updated_at;
+      operationId: RetreiveCollectionRelationType
+      responses:
+        "200":
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/CollectionRelationType"
+        "400":
+          $ref: "#/components/schemas/Responses/BadRequest"
+        "401":
+          $ref: "#/components/schemas/Responses/AuthFailure"
+        "403":
+          $ref: "#/components/schemas/Responses/Forbidden"
+        "404":
+          $ref: "#/components/schemas/Responses/NotFound"
+      externalDocs:
+        description: "Official documentation:"
+        url: https://api-docs.igdb.com/#collection-relation-type
+  /collection_types:
+    post:
+      security:
+        - Authorization_Key: []
+        - Client-ID: []
+      summary: Enums for collection types.
+      tags:
+        - Endpoints
+      parameters: []
+      requestBody:
+        required: false
+        content:
+          text/plain:
+            schema:
+              type: string
+            example: fields checksum,created_at,description,name,updated_at;
+      operationId: RetreiveCollectionType
+      responses:
+        "200":
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/CollectionType"
+        "400":
+          $ref: "#/components/schemas/Responses/BadRequest"
+        "401":
+          $ref: "#/components/schemas/Responses/AuthFailure"
+        "403":
+          $ref: "#/components/schemas/Responses/Forbidden"
+        "404":
+          $ref: "#/components/schemas/Responses/NotFound"
+      externalDocs:
+        description: "Official documentation:"
+        url: https://api-docs.igdb.com/#collection-type
+  /companies:
+    post:
+      security:
+        - Authorization_Key: []
+        - Client-ID: []
+      summary: Video game companies. Both publishers & developers
+      tags:
+        - Endpoints
+      parameters: []
+      requestBody:
+        required: false
+        content:
+          text/plain:
+            schema:
+              type: string
+            example: fields change_date,change_date_category,changed_company_id,checksum,country,created_at,description,developed,logo,name,parent,published,slug,start_date,start_date_category,updated_at,url,websites;
+      operationId: RetreiveCompany
+      responses:
+        "200":
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Company"
+        "400":
+          $ref: "#/components/schemas/Responses/BadRequest"
+        "401":
+          $ref: "#/components/schemas/Responses/AuthFailure"
+        "403":
+          $ref: "#/components/schemas/Responses/Forbidden"
+        "404":
+          $ref: "#/components/schemas/Responses/NotFound"
+      externalDocs:
+        description: "Official documentation:"
+        url: https://api-docs.igdb.com/#company
+  /company_logo:
+    post:
+      security:
+        - Authorization_Key: []
+        - Client-ID: []
+      summary: The logos of developers and publishers
+      tags:
+        - Endpoints
+      parameters: []
+      requestBody:
+        required: false
+        content:
+          text/plain:
+            schema:
+              type: string
+            example: fields alpha_channel,animated,checksum,height,image_id,url,width;
+      operationId: RetreiveCompanyLogo
+      responses:
+        "200":
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/CompanyLogo"
+        "400":
+          $ref: "#/components/schemas/Responses/BadRequest"
+        "401":
+          $ref: "#/components/schemas/Responses/AuthFailure"
+        "403":
+          $ref: "#/components/schemas/Responses/Forbidden"
+        "404":
+          $ref: "#/components/schemas/Responses/NotFound"
+      externalDocs:
+        description: "Official documentation:"
+        url: https://api-docs.igdb.com/#company-logo
+  /company_websites:
+    post:
+      security:
+        - Authorization_Key: []
+        - Client-ID: []
+      summary: Company Websites
+      tags:
+        - Endpoints
+      parameters: []
+      requestBody:
+        required: false
+        content:
+          text/plain:
+            schema:
+              type: string
+            example: fields category,checksum,trusted,url;
+      operationId: RetreiveCompanyWebsite
+      responses:
+        "200":
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/CompanyWebsite"
+        "400":
+          $ref: "#/components/schemas/Responses/BadRequest"
+        "401":
+          $ref: "#/components/schemas/Responses/AuthFailure"
+        "403":
+          $ref: "#/components/schemas/Responses/Forbidden"
+        "404":
+          $ref: "#/components/schemas/Responses/NotFound"
+      externalDocs:
+        description: "Official documentation:"
+        url: https://api-docs.igdb.com/#company-website
+  /covers:
+    post:
+      security:
+        - Authorization_Key: []
+        - Client-ID: []
+      summary: The cover art of games
+      tags:
+        - Endpoints
+      parameters: []
+      requestBody:
+        required: false
+        content:
+          text/plain:
+            schema:
+              type: string
+            example: fields alpha_channel,animated,checksum,game,game_localization,height,image_id,url,width;
+      operationId: RetreiveCover
+      responses:
+        "200":
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Cover"
+        "400":
+          $ref: "#/components/schemas/Responses/BadRequest"
+        "401":
+          $ref: "#/components/schemas/Responses/AuthFailure"
+        "403":
+          $ref: "#/components/schemas/Responses/Forbidden"
+        "404":
+          $ref: "#/components/schemas/Responses/NotFound"
+      externalDocs:
+        description: "Official documentation:"
+        url: https://api-docs.igdb.com/#cover
+  /events:
+    post:
+      security:
+        - Authorization_Key: []
+        - Client-ID: []
+      summary: Gaming event like GamesCom, Tokyo Game Show, PAX or GSL
+      tags:
+        - Endpoints
+      parameters: []
+      requestBody:
+        required: false
+        content:
+          text/plain:
+            schema:
+              type: string
+            example: fields checksum,created_at,description,end_time,event_logo,event_networks,games,live_stream_url,name,slug,start_time,time_zone,updated_at,videos;
+      operationId: RetreiveEvents
+      responses:
+        "200":
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Events"
+        "400":
+          $ref: "#/components/schemas/Responses/BadRequest"
+        "401":
+          $ref: "#/components/schemas/Responses/AuthFailure"
+        "403":
+          $ref: "#/components/schemas/Responses/Forbidden"
+        "404":
+          $ref: "#/components/schemas/Responses/NotFound"
+      externalDocs:
+        description: "Official documentation:"
+        url: https://api-docs.igdb.com/#event
+  /event_logos:
+    post:
+      security:
+        - Authorization_Key: []
+        - Client-ID: []
+      summary: Logo for the event
+      tags:
+        - Endpoints
+      parameters: []
+      requestBody:
+        required: false
+        content:
+          text/plain:
+            schema:
+              type: string
+            example: fields alpha_channel,animated,checksum,created_at,event,height,image_id,updated_at,url,width;
+      operationId: RetreiveEventLogo
+      responses:
+        "200":
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/EventLogo"
+        "400":
+          $ref: "#/components/schemas/Responses/BadRequest"
+        "401":
+          $ref: "#/components/schemas/Responses/AuthFailure"
+        "403":
+          $ref: "#/components/schemas/Responses/Forbidden"
+        "404":
+          $ref: "#/components/schemas/Responses/NotFound"
+      externalDocs:
+        description: "Official documentation:"
+        url: https://api-docs.igdb.com/#event-logo
+  /event_networks:
+    post:
+      security:
+        - Authorization_Key: []
+        - Client-ID: []
+      summary: Urls related to the event like twitter, facebook and youtube
+      tags:
+        - Endpoints
+      parameters: []
+      requestBody:
+        required: false
+        content:
+          text/plain:
+            schema:
+              type: string
+            example: fields checksum,created_at,event,network_type,updated_at,url;
+      operationId: RetreiveEventNetwork
+      responses:
+        "200":
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/EventNetwork"
+        "400":
+          $ref: "#/components/schemas/Responses/BadRequest"
+        "401":
+          $ref: "#/components/schemas/Responses/AuthFailure"
+        "403":
+          $ref: "#/components/schemas/Responses/Forbidden"
+        "404":
+          $ref: "#/components/schemas/Responses/NotFound"
+      externalDocs:
+        description: "Official documentation:"
+        url: https://api-docs.igdb.com/#event-network
+  /franchises:
+    post:
+      security:
+        - Authorization_Key: []
+        - Client-ID: []
+      summary: A list of video game franchises such as Star Wars.
+      tags:
+        - Endpoints
+      parameters: []
+      requestBody:
+        required: false
+        content:
+          text/plain:
+            schema:
+              type: string
+            example: fields checksum,created_at,games,name,slug,updated_at,url;
+      operationId: RetreiveFranchise
+      responses:
+        "200":
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Franchise"
+        "400":
+          $ref: "#/components/schemas/Responses/BadRequest"
+        "401":
+          $ref: "#/components/schemas/Responses/AuthFailure"
+        "403":
+          $ref: "#/components/schemas/Responses/Forbidden"
+        "404":
+          $ref: "#/components/schemas/Responses/NotFound"
+      externalDocs:
+        description: "Official documentation:"
+        url: https://api-docs.igdb.com/#franchise
+  /games:
+    post:
+      security:
+        - Authorization_Key: []
+        - Client-ID: []
+      summary: Video Games!
+      tags:
+        - Endpoints
+      parameters: []
+      requestBody:
+        required: false
+        content:
+          text/plain:
+            schema:
+              type: string
+            example: fields age_ratings,aggregated_rating,aggregated_rating_count,alternative_names,artworks,bundles,category,checksum,collection,collections,cover,created_at,dlcs,expanded_games,expansions,external_games,first_release_date,follows,forks,franchise,franchises,game_engines,game_localizations,game_modes,genres,hypes,involved_companies,keywords,language_supports,multiplayer_modes,name,parent_game,platforms,player_perspectives,ports,rating,rating_count,release_dates,remakes,remasters,screenshots,similar_games,slug,standalone_expansions,status,storyline,summary,tags,themes,total_rating,total_rating_count,updated_at,url,version_parent,version_title,videos,websites;
+      operationId: RetreiveGames
+      responses:
+        "200":
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Games"
+        "400":
+          $ref: "#/components/schemas/Responses/BadRequest"
+        "401":
+          $ref: "#/components/schemas/Responses/AuthFailure"
+        "403":
+          $ref: "#/components/schemas/Responses/Forbidden"
+        "404":
+          $ref: "#/components/schemas/Responses/NotFound"
+      externalDocs:
+        description: "Official documentation:"
+        url: https://api-docs.igdb.com/#game
+  /game_engines:
+    post:
+      security:
+        - Authorization_Key: []
+        - Client-ID: []
+      summary: Video game engines such as unreal engine.
+      tags:
+        - Endpoints
+      parameters: []
+      requestBody:
+        required: false
+        content:
+          text/plain:
+            schema:
+              type: string
+            example: fields checksum,companies,created_at,description,logo,name,platforms,slug,updated_at,url;
+      operationId: RetreiveGameEngine
+      responses:
+        "200":
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/GameEngine"
+        "400":
+          $ref: "#/components/schemas/Responses/BadRequest"
+        "401":
+          $ref: "#/components/schemas/Responses/AuthFailure"
+        "403":
+          $ref: "#/components/schemas/Responses/Forbidden"
+        "404":
+          $ref: "#/components/schemas/Responses/NotFound"
+      externalDocs:
+        description: "Official documentation:"
+        url: https://api-docs.igdb.com/#game-engine
+  /game_engine_logos:
+    post:
+      security:
+        - Authorization_Key: []
+        - Client-ID: []
+      summary: The logos of game engines
+      tags:
+        - Endpoints
+      parameters: []
+      requestBody:
+        required: false
+        content:
+          text/plain:
+            schema:
+              type: string
+            example: fields alpha_channel,animated,checksum,height,image_id,url,width;
+      operationId: RetreiveGameEngineLogo
+      responses:
+        "200":
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/GameEngineLogo"
+        "400":
+          $ref: "#/components/schemas/Responses/BadRequest"
+        "401":
+          $ref: "#/components/schemas/Responses/AuthFailure"
+        "403":
+          $ref: "#/components/schemas/Responses/Forbidden"
+        "404":
+          $ref: "#/components/schemas/Responses/NotFound"
+      externalDocs:
+        description: "Official documentation:"
+        url: https://api-docs.igdb.com/#game-engine-logo
+  /external_games:
+    post:
+      security:
+        - Authorization_Key: []
+        - Client-ID: []
+      summary: Game IDs on other services
+      tags:
+        - Endpoints
+      parameters: []
+      requestBody:
+        required: false
+        content:
+          text/plain:
+            schema:
+              type: string
+            example: fields category,checksum,countries,created_at,game,media,name,platform,uid,updated_at,url,year;
+      operationId: RetreiveExternalGame
+      responses:
+        "200":
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ExternalGame"
+        "400":
+          $ref: "#/components/schemas/Responses/BadRequest"
+        "401":
+          $ref: "#/components/schemas/Responses/AuthFailure"
+        "403":
+          $ref: "#/components/schemas/Responses/Forbidden"
+        "404":
+          $ref: "#/components/schemas/Responses/NotFound"
+      externalDocs:
+        description: "Official documentation:"
+        url: https://api-docs.igdb.com/#external-game
+  /game_versions:
+    post:
+      security:
+        - Authorization_Key: []
+        - Client-ID: []
+      summary: Details about game editions and versions.
+      tags:
+        - Endpoints
+      parameters: []
+      requestBody:
+        required: false
+        content:
+          text/plain:
+            schema:
+              type: string
+            example: fields checksum,created_at,features,game,games,updated_at,url;
+      operationId: RetreiveGameVersion
+      responses:
+        "200":
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/GameVersion"
+        "400":
+          $ref: "#/components/schemas/Responses/BadRequest"
+        "401":
+          $ref: "#/components/schemas/Responses/AuthFailure"
+        "403":
+          $ref: "#/components/schemas/Responses/Forbidden"
+        "404":
+          $ref: "#/components/schemas/Responses/NotFound"
+      externalDocs:
+        description: "Official documentation:"
+        url: https://api-docs.igdb.com/#game-version
+  /game_modes:
+    post:
+      security:
+        - Authorization_Key: []
+        - Client-ID: []
+      summary: Single player, Multiplayer etc
+      tags:
+        - Endpoints
+      parameters: []
+      requestBody:
+        required: false
+        content:
+          text/plain:
+            schema:
+              type: string
+            example: fields checksum,created_at,name,slug,updated_at,url;
+      operationId: RetreiveGameMode
+      responses:
+        "200":
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/GameMode"
+        "400":
+          $ref: "#/components/schemas/Responses/BadRequest"
+        "401":
+          $ref: "#/components/schemas/Responses/AuthFailure"
+        "403":
+          $ref: "#/components/schemas/Responses/Forbidden"
+        "404":
+          $ref: "#/components/schemas/Responses/NotFound"
+      externalDocs:
+        description: "Official documentation:"
+        url: https://api-docs.igdb.com/#game-mode
+  /game_version_features:
+    post:
+      security:
+        - Authorization_Key: []
+        - Client-ID: []
+      summary: Features and descriptions of what makes each version/edition different from the main game
+      tags:
+        - Endpoints
+      parameters: []
+      requestBody:
+        required: false
+        content:
+          text/plain:
+            schema:
+              type: string
+            example: fields category,checksum,description,position,title,values;
+      operationId: RetreiveVersionFeatures
+      responses:
+        "200":
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/GameVersionFeatures"
+        "400":
+          $ref: "#/components/schemas/Responses/BadRequest"
+        "401":
+          $ref: "#/components/schemas/Responses/AuthFailure"
+        "403":
+          $ref: "#/components/schemas/Responses/Forbidden"
+        "404":
+          $ref: "#/components/schemas/Responses/NotFound"
+      externalDocs:
+        description: "Official documentation:"
+        url: https://api-docs.igdb.com/#game-version-feature
+  /game_version_feature_values:
+    post:
+      security:
+        - Authorization_Key: []
+        - Client-ID: []
+      summary: The bool/text value of the feature
+      tags:
+        - Endpoints
+      parameters: []
+      requestBody:
+        required: false
+        content:
+          text/plain:
+            schema:
+              type: string
+            example: fields checksum,game,game_feature,included_feature,note;
+      operationId: RetreiveVersionFeatureValue
+      responses:
+        "200":
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/GameVersionFeatureValue"
+        "400":
+          $ref: "#/components/schemas/Responses/BadRequest"
+        "401":
+          $ref: "#/components/schemas/Responses/AuthFailure"
+        "403":
+          $ref: "#/components/schemas/Responses/Forbidden"
+        "404":
+          $ref: "#/components/schemas/Responses/NotFound"
+      externalDocs:
+        description: "Official documentation:"
+        url: https://api-docs.igdb.com/#game-version-feature-value
+  /genres:
+    post:
+      security:
+        - Authorization_Key: []
+        - Client-ID: []
+      summary: Genres of video game
+      tags:
+        - Endpoints
+      parameters: []
+      requestBody:
+        required: false
+        content:
+          text/plain:
+            schema:
+              type: string
+            example: fields checksum,created_at,name,slug,updated_at,url;
+      operationId: RetreiveGenre
+      responses:
+        "200":
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Genre"
+        "400":
+          $ref: "#/components/schemas/Responses/BadRequest"
+        "401":
+          $ref: "#/components/schemas/Responses/AuthFailure"
+        "403":
+          $ref: "#/components/schemas/Responses/Forbidden"
+        "404":
+          $ref: "#/components/schemas/Responses/NotFound"
+      externalDocs:
+        description: "Official documentation:"
+        url: https://api-docs.igdb.com/#genre
+  /involved_companies:
+    post:
+      security:
+        - Authorization_Key: []
+        - Client-ID: []
+      summary: Companies involved with the game
+      tags:
+        - Endpoints
+      parameters: []
+      requestBody:
+        required: false
+        content:
+          text/plain:
+            schema:
+              type: string
+            example: fields checksum,company,created_at,developer,game,porting,publisher,supporting,updated_at;
+      operationId: RetreiveInvolvedCompany
+      responses:
+        "200":
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/InvolvedCompany"
+        "400":
+          $ref: "#/components/schemas/Responses/BadRequest"
+        "401":
+          $ref: "#/components/schemas/Responses/AuthFailure"
+        "403":
+          $ref: "#/components/schemas/Responses/Forbidden"
+        "404":
+          $ref: "#/components/schemas/Responses/NotFound"
+      externalDocs:
+        description: "Official documentation:"
+        url: https://api-docs.igdb.com/#involved-company
+  /game_videos:
+    post:
+      security:
+        - Authorization_Key: []
+        - Client-ID: []
+      summary: A video associated with a game
+      tags:
+        - Endpoints
+      parameters: []
+      requestBody:
+        required: false
+        content:
+          text/plain:
+            schema:
+              type: string
+            example: fields checksum,game,name,video_id;
+      operationId: RetreiveGameVideo
+      responses:
+        "200":
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/GameVideo"
+        "400":
+          $ref: "#/components/schemas/Responses/BadRequest"
+        "401":
+          $ref: "#/components/schemas/Responses/AuthFailure"
+        "403":
+          $ref: "#/components/schemas/Responses/Forbidden"
+        "404":
+          $ref: "#/components/schemas/Responses/NotFound"
+      externalDocs:
+        description: "Official documentation:"
+        url: https://api-docs.igdb.com/#game-video
+  /keywords:
+    post:
+      security:
+        - Authorization_Key: []
+        - Client-ID: []
+      summary: Keywords are words or phrases that get tagged to a game such as “world war 2” or “steampunk”.
+      tags:
+        - Endpoints
+      parameters: []
+      requestBody:
+        required: false
+        content:
+          text/plain:
+            schema:
+              type: string
+            example: fields checksum,created_at,name,slug,updated_at,url;
+      operationId: RetreiveKeyword
+      responses:
+        "200":
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Keyword"
+        "400":
+          $ref: "#/components/schemas/Responses/BadRequest"
+        "401":
+          $ref: "#/components/schemas/Responses/AuthFailure"
+        "403":
+          $ref: "#/components/schemas/Responses/Forbidden"
+        "404":
+          $ref: "#/components/schemas/Responses/NotFound"
+      externalDocs:
+        description: "Official documentation:"
+        url: https://api-docs.igdb.com/#keyword
+  /languages:
+    post:
+      security:
+        - Authorization_Key: []
+        - Client-ID: []
+      summary: Languages that are used in the Language Support endpoint.
+      tags:
+        - Endpoints
+      parameters: []
+      requestBody:
+        required: false
+        content:
+          text/plain:
+            schema:
+              type: string
+            example: fields checksum,created_at,locale,name,native_name,updated_at;
+      operationId: RetreiveLanguage
+      responses:
+        "200":
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Language"
+        "400":
+          $ref: "#/components/schemas/Responses/BadRequest"
+        "401":
+          $ref: "#/components/schemas/Responses/AuthFailure"
+        "403":
+          $ref: "#/components/schemas/Responses/Forbidden"
+        "404":
+          $ref: "#/components/schemas/Responses/NotFound"
+      externalDocs:
+        description: "Official documentation:"
+        url: https://api-docs.igdb.com/#language
+  /game_localizations:
+    post:
+      security:
+        - Authorization_Key: []
+        - Client-ID: []
+      summary: Game localization for a game
+      tags:
+        - Endpoints
+      parameters: []
+      requestBody:
+        required: false
+        content:
+          text/plain:
+            schema:
+              type: string
+            example: fields checksum,cover,created_at,game,name,region,updated_at;
+      operationId: RetreiveGameLocalization
+      responses:
+        "200":
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/GameLocalization"
+        "400":
+          $ref: "#/components/schemas/Responses/BadRequest"
+        "401":
+          $ref: "#/components/schemas/Responses/AuthFailure"
+        "403":
+          $ref: "#/components/schemas/Responses/Forbidden"
+        "404":
+          $ref: "#/components/schemas/Responses/NotFound"
+      externalDocs:
+        description: "Official documentation:"
+        url: https://api-docs.igdb.com/#game-localization
+  /language_support_types:
+    post:
+      security:
+        - Authorization_Key: []
+        - Client-ID: []
+      summary: Language Support Types contains the identifiers for the support types that Language Support uses.
+      tags:
+        - Endpoints
+      parameters: []
+      requestBody:
+        required: false
+        content:
+          text/plain:
+            schema:
+              type: string
+            example: fields checksum,created_at,name,updated_at;
+      operationId: RetreiveLanguageSupportType
+      responses:
+        "200":
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/LanguageSupportType"
+        "400":
+          $ref: "#/components/schemas/Responses/BadRequest"
+        "401":
+          $ref: "#/components/schemas/Responses/AuthFailure"
+        "403":
+          $ref: "#/components/schemas/Responses/Forbidden"
+        "404":
+          $ref: "#/components/schemas/Responses/NotFound"
+      externalDocs:
+        description: "Official documentation:"
+        url: https://api-docs.igdb.com/#language-support-type
+  /multiplayer_modes:
+    post:
+      security:
+        - Authorization_Key: []
+        - Client-ID: []
+      summary: Data about the supported multiplayer types
+      tags:
+        - Endpoints
+      parameters: []
+      requestBody:
+        required: false
+        content:
+          text/plain:
+            schema:
+              type: string
+            example: fields campaigncoop,checksum,dropin,game,lancoop,offlinecoop,offlinecoopmax,offlinemax,onlinecoop,onlinecoopmax,onlinemax,platform,splitscreen,splitscreenonline;
+      operationId: RetreiveMultiplayerMode
+      responses:
+        "200":
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/MultiplayerMode"
+        "400":
+          $ref: "#/components/schemas/Responses/BadRequest"
+        "401":
+          $ref: "#/components/schemas/Responses/AuthFailure"
+        "403":
+          $ref: "#/components/schemas/Responses/Forbidden"
+        "404":
+          $ref: "#/components/schemas/Responses/NotFound"
+      externalDocs:
+        description: "Official documentation:"
+        url: https://api-docs.igdb.com/#multiplayer-mode
+  /language_supports:
+    post:
+      security:
+        - Authorization_Key: []
+        - Client-ID: []
+      summary: Games can be played with different languages for voice acting, subtitles, or the interface language.
+      tags:
+        - Endpoints
+      parameters: []
+      requestBody:
+        required: false
+        content:
+          text/plain:
+            schema:
+              type: string
+            example: fields checksum,created_at,game,language,language_support_type,updated_at;
+      operationId: RetreiveLanguageSupport
+      responses:
+        "200":
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/LanguageSupport"
+        "400":
+          $ref: "#/components/schemas/Responses/BadRequest"
+        "401":
+          $ref: "#/components/schemas/Responses/AuthFailure"
+        "403":
+          $ref: "#/components/schemas/Responses/Forbidden"
+        "404":
+          $ref: "#/components/schemas/Responses/NotFound"
+      externalDocs:
+        description: "Official documentation:"
+        url: https://api-docs.igdb.com/#language-support
+  /network_types:
+    post:
+      security:
+        - Authorization_Key: []
+        - Client-ID: []
+      summary: Social networks related to the event like twitter, facebook and youtube
+      tags:
+        - Endpoints
+      parameters: []
+      requestBody:
+        required: false
+        content:
+          text/plain:
+            schema:
+              type: string
+            example: fields checksum,created_at,event_networks,name,updated_at;
+      operationId: RetreiveNetworkType
+      responses:
+        "200":
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/NetworkType"
+        "400":
+          $ref: "#/components/schemas/Responses/BadRequest"
+        "401":
+          $ref: "#/components/schemas/Responses/AuthFailure"
+        "403":
+          $ref: "#/components/schemas/Responses/Forbidden"
+        "404":
+          $ref: "#/components/schemas/Responses/NotFound"
+      externalDocs:
+        description: "Official documentation:"
+        url: https://api-docs.igdb.com/#network-type
+  /platform_families:
+    post:
+      security:
+        - Authorization_Key: []
+        - Client-ID: []
+      summary: A collection of closely related platforms
+      tags:
+        - Endpoints
+      parameters: []
+      requestBody:
+        required: false
+        content:
+          text/plain:
+            schema:
+              type: string
+            example: fields checksum,name,slug;
+      operationId: RetreivePlatformFamily
+      responses:
+        "200":
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/PlatformFamily"
+        "400":
+          $ref: "#/components/schemas/Responses/BadRequest"
+        "401":
+          $ref: "#/components/schemas/Responses/AuthFailure"
+        "403":
+          $ref: "#/components/schemas/Responses/Forbidden"
+        "404":
+          $ref: "#/components/schemas/Responses/NotFound"
+      externalDocs:
+        description: "Official documentation:"
+        url: https://api-docs.igdb.com/#platform-family
+  /platform_logos:
+    post:
+      security:
+        - Authorization_Key: []
+        - Client-ID: []
+      summary: Logo for a platform
+      tags:
+        - Endpoints
+      parameters: []
+      requestBody:
+        required: false
+        content:
+          text/plain:
+            schema:
+              type: string
+            example: fields alpha_channel,animated,checksum,height,image_id,url,width;
+      operationId: RetreivePlatformLogo
+      responses:
+        "200":
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/PlatformLogo"
+        "400":
+          $ref: "#/components/schemas/Responses/BadRequest"
+        "401":
+          $ref: "#/components/schemas/Responses/AuthFailure"
+        "403":
+          $ref: "#/components/schemas/Responses/Forbidden"
+        "404":
+          $ref: "#/components/schemas/Responses/NotFound"
+      externalDocs:
+        description: "Official documentation:"
+        url: https://api-docs.igdb.com/#platform-logo
+  /platform_versions:
+    post:
+      security:
+        - Authorization_Key: []
+        - Client-ID: []
+      summary: The platform's version
+      tags:
+        - Endpoints
+      parameters: []
+      requestBody:
+        required: false
+        content:
+          text/plain:
+            schema:
+              type: string
+            example: fields checksum,companies,connectivity,cpu,graphics,main_manufacturer,media,memory,name,online,os,output,platform_logo,platform_version_release_dates,resolutions,slug,sound,storage,summary,url;
+      operationId: RetreivePlatformVersion
+      responses:
+        "200":
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/PlatformVersion"
+        "400":
+          $ref: "#/components/schemas/Responses/BadRequest"
+        "401":
+          $ref: "#/components/schemas/Responses/AuthFailure"
+        "403":
+          $ref: "#/components/schemas/Responses/Forbidden"
+        "404":
+          $ref: "#/components/schemas/Responses/NotFound"
+      externalDocs:
+        description: "Official documentation:"
+        url: https://api-docs.igdb.com/#platform-version
+  /platform_version_companies:
+    post:
+      security:
+        - Authorization_Key: []
+        - Client-ID: []
+      summary: A platform developer
+      tags:
+        - Endpoints
+      parameters: []
+      requestBody:
+        required: false
+        content:
+          text/plain:
+            schema:
+              type: string
+            example: fields checksum,comment,company,developer,manufacturer;
+      operationId: RetreivePlatformVersionCompany
+      responses:
+        "200":
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/PlatformVersionCompany"
+        "400":
+          $ref: "#/components/schemas/Responses/BadRequest"
+        "401":
+          $ref: "#/components/schemas/Responses/AuthFailure"
+        "403":
+          $ref: "#/components/schemas/Responses/Forbidden"
+        "404":
+          $ref: "#/components/schemas/Responses/NotFound"
+      externalDocs:
+        description: "Official documentation:"
+        url: https://api-docs.igdb.com/#platform-version-company
+  /platforms:
+    post:
+      security:
+        - Authorization_Key: []
+        - Client-ID: []
+      summary: The hardware used to run the game or game delivery network
+      tags:
+        - Endpoints
+      parameters: []
+      requestBody:
+        required: false
+        content:
+          text/plain:
+            schema:
+              type: string
+            example: fields abbreviation,alternative_name,category,checksum,created_at,generation,name,platform_family,platform_logo,slug,summary,updated_at,url,versions,websites;
+      operationId: RetreivePlatform
+      responses:
+        "200":
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Platform"
+        "400":
+          $ref: "#/components/schemas/Responses/BadRequest"
+        "401":
+          $ref: "#/components/schemas/Responses/AuthFailure"
+        "403":
+          $ref: "#/components/schemas/Responses/Forbidden"
+        "404":
+          $ref: "#/components/schemas/Responses/NotFound"
+      externalDocs:
+        description: "Official documentation:"
+        url: https://api-docs.igdb.com/#platform
+  /platform_version_release_dates:
+    post:
+      security:
+        - Authorization_Key: []
+        - Client-ID: []
+      summary: A handy endpoint that extends platform release dates. Used to dig deeper into release dates, platforms and versions.
+      tags:
+        - Endpoints
+      parameters: []
+      requestBody:
+        required: false
+        content:
+          text/plain:
+            schema:
+              type: string
+            example: fields category,checksum,created_at,date,human,m,platform_version,region,updated_at,y;
+      operationId: RetreivePlatformVersionReleaseDate
+      responses:
+        "200":
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/PlatformVersionReleaseDate"
+        "400":
+          $ref: "#/components/schemas/Responses/BadRequest"
+        "401":
+          $ref: "#/components/schemas/Responses/AuthFailure"
+        "403":
+          $ref: "#/components/schemas/Responses/Forbidden"
+        "404":
+          $ref: "#/components/schemas/Responses/NotFound"
+      externalDocs:
+        description: "Official documentation:"
+        url: https://api-docs.igdb.com/#platform-version-release-date
+  /platform_website:
+    post:
+      security:
+        - Authorization_Key: []
+        - Client-ID: []
+      summary: The main website for the platform
+      tags:
+        - Endpoints
+      parameters: []
+      requestBody:
+        required: false
+        content:
+          text/plain:
+            schema:
+              type: string
+            example: fields category,checksum,trusted,url;
+      operationId: RetreivePlatformWebsite
+      responses:
+        "200":
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/PlatformWebsite"
+        "400":
+          $ref: "#/components/schemas/Responses/BadRequest"
+        "401":
+          $ref: "#/components/schemas/Responses/AuthFailure"
+        "403":
+          $ref: "#/components/schemas/Responses/Forbidden"
+        "404":
+          $ref: "#/components/schemas/Responses/NotFound"
+      externalDocs:
+        description: "Official documentation:"
+        url: https://api-docs.igdb.com/#platform-website
+  /player_perspectives:
+    post:
+      security:
+        - Authorization_Key: []
+        - Client-ID: []
+      summary: Player perspectives describe the view/perspective of the player in a video game.
+      tags:
+        - Endpoints
+      parameters: []
+      requestBody:
+        required: false
+        content:
+          text/plain:
+            schema:
+              type: string
+            example: fields checksum,created_at,name,slug,updated_at,url;
+      operationId: RetreivePlayerPerspective
+      responses:
+        "200":
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/PlayerPerspective"
+        "400":
+          $ref: "#/components/schemas/Responses/BadRequest"
+        "401":
+          $ref: "#/components/schemas/Responses/AuthFailure"
+        "403":
+          $ref: "#/components/schemas/Responses/Forbidden"
+        "404":
+          $ref: "#/components/schemas/Responses/NotFound"
+      externalDocs:
+        description: "Official documentation:"
+        url: https://api-docs.igdb.com/#player-perspective
+  /regions:
+    post:
+      security:
+        - Authorization_Key: []
+        - Client-ID: []
+      summary: Region for game localization
+      tags:
+        - Endpoints
+      parameters: []
+      requestBody:
+        required: false
+        content:
+          text/plain:
+            schema:
+              type: string
+            example: fields category,checksum,created_at,identifier,name,updated_at;
+      operationId: RetreiveRegion
+      responses:
+        "200":
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Region"
+        "400":
+          $ref: "#/components/schemas/Responses/BadRequest"
+        "401":
+          $ref: "#/components/schemas/Responses/AuthFailure"
+        "403":
+          $ref: "#/components/schemas/Responses/Forbidden"
+        "404":
+          $ref: "#/components/schemas/Responses/NotFound"
+      externalDocs:
+        description: "Official documentation:"
+        url: https://api-docs.igdb.com/#region
+  /release_dates:
+    post:
+      security:
+        - Authorization_Key: []
+        - Client-ID: []
+      summary: A handy endpoint that extends game release dates. Used to dig deeper into release dates, platforms and versions.
+      tags:
+        - Endpoints
+      parameters: []
+      requestBody:
+        required: false
+        content:
+          text/plain:
+            schema:
+              type: string
+            example: fields category,checksum,created_at,date,game,human,m,platform,region,status,updated_at,y;
+      operationId: RetreiveReleaseDate
+      responses:
+        "200":
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ReleaseDate"
+        "400":
+          $ref: "#/components/schemas/Responses/BadRequest"
+        "401":
+          $ref: "#/components/schemas/Responses/AuthFailure"
+        "403":
+          $ref: "#/components/schemas/Responses/Forbidden"
+        "404":
+          $ref: "#/components/schemas/Responses/NotFound"
+      externalDocs:
+        description: "Official documentation:"
+        url: https://api-docs.igdb.com/#release-date
+  /release_date_statuses:
+    post:
+      security:
+        - Authorization_Key: []
+        - Client-ID: []
+      summary: An endpoint to provide definition of all of the current release date statuses.
+      tags:
+        - Endpoints
+      parameters: []
+      requestBody:
+        required: false
+        content:
+          text/plain:
+            schema:
+              type: string
+            example: fields checksum,created_at,description,name,updated_at;
+      operationId: RetreiveReleaseDateStatus
+      responses:
+        "200":
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ReleaseDateStatus"
+        "400":
+          $ref: "#/components/schemas/Responses/BadRequest"
+        "401":
+          $ref: "#/components/schemas/Responses/AuthFailure"
+        "403":
+          $ref: "#/components/schemas/Responses/Forbidden"
+        "404":
+          $ref: "#/components/schemas/Responses/NotFound"
+      externalDocs:
+        description: "Official documentation:"
+        url: https://api-docs.igdb.com/#release-date-status
+  /screenshots:
+    post:
+      security:
+        - Authorization_Key: []
+        - Client-ID: []
+      summary: Screenshots of games
+      tags:
+        - Endpoints
+      parameters: []
+      requestBody:
+        required: false
+        content:
+          text/plain:
+            schema:
+              type: string
+            example: fields alpha_channel,animated,checksum,game,height,image_id,url,width;
+      operationId: RetreiveScreenshot
+      responses:
+        "200":
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Screenshot"
+        "400":
+          $ref: "#/components/schemas/Responses/BadRequest"
+        "401":
+          $ref: "#/components/schemas/Responses/AuthFailure"
+        "403":
+          $ref: "#/components/schemas/Responses/Forbidden"
+        "404":
+          $ref: "#/components/schemas/Responses/NotFound"
+      externalDocs:
+        description: "Official documentation:"
+        url: https://api-docs.igdb.com/#screenshot
+  /search:
+    post:
+      security:
+        - Authorization_Key: []
+        - Client-ID: []
+      summary: Search IGDB!
+      tags:
+        - Endpoints
+      parameters: []
+      requestBody:
+        required: false
+        content:
+          text/plain:
+            schema:
+              type: string
+            example: fields alternative_name,character,checksum,collection,company,description,game,name,platform,published_at,test_dummy,theme;
+      operationId: RetreiveSearch
+      responses:
+        "200":
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Search"
+        "400":
+          $ref: "#/components/schemas/Responses/BadRequest"
+        "401":
+          $ref: "#/components/schemas/Responses/AuthFailure"
+        "403":
+          $ref: "#/components/schemas/Responses/Forbidden"
+        "404":
+          $ref: "#/components/schemas/Responses/NotFound"
+      externalDocs:
+        description: "Official documentation:"
+        url: https://api-docs.igdb.com/#search
+  /themes:
+    post:
+      security:
+        - Authorization_Key: []
+        - Client-ID: []
+      summary: Video game themes
+      tags:
+        - Endpoints
+      parameters: []
+      requestBody:
+        required: false
+        content:
+          text/plain:
+            schema:
+              type: string
+            example: fields checksum,created_at,name,slug,updated_at,url;
+      operationId: RetreiveTheme
+      responses:
+        "200":
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Theme"
+        "400":
+          $ref: "#/components/schemas/Responses/BadRequest"
+        "401":
+          $ref: "#/components/schemas/Responses/AuthFailure"
+        "403":
+          $ref: "#/components/schemas/Responses/Forbidden"
+        "404":
+          $ref: "#/components/schemas/Responses/NotFound"
+      externalDocs:
+        description: "Official documentation:"
+        url: https://api-docs.igdb.com/#theme
+  /websites:
+    post:
+      security:
+        - Authorization_Key: []
+        - Client-ID: []
+      summary: A website url, usually associated with a game
+      tags:
+        - Endpoints
+      parameters: []
+      requestBody:
+        required: false
+        content:
+          text/plain:
+            schema:
+              type: string
+            example: fields category,checksum,game,trusted,url;
+      operationId: RetreiveWebsite
+      responses:
+        "200":
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Website"
+        "400":
+          $ref: "#/components/schemas/Responses/BadRequest"
+        "401":
+          $ref: "#/components/schemas/Responses/AuthFailure"
+        "403":
+          $ref: "#/components/schemas/Responses/Forbidden"
+        "404":
+          $ref: "#/components/schemas/Responses/NotFound"
+      externalDocs:
+        description: "Official documentation:"
+        url: https://api-docs.igdb.com/#website
 components:
   schemas:
     AgeRating:
@@ -1788,6 +3465,40 @@ components:
         - enum:
             - 2
           description: physical
+    GameVersion:
+      type: object
+      description: Details about game editions and versions.
+      properties:
+        id:
+          type: number
+          description: The IGDB object unique identifier
+        checksum:
+          type: string
+          format: uuid
+          description: Hash of the object
+        created_at:
+          type: number
+          format: timestamp
+          description: Date this was initially added to the IGDB database
+        features:
+          type: array
+          description: Features and descriptions of what makes each version/edition different from the main game
+          $ref: "#/components/schemas/Games/properties/id"
+        game:
+          type: string
+          description: The game these versions/editions are of
+        games:
+          type: array
+          description: Game Versions and Editions
+          $ref: "#/components/schemas/Games/properties/id"
+        updated_at:
+          type: number
+          format: timestamp
+          description: The last date this entry was updated in the IGDB database
+        url:
+          type: string
+          format: url
+          description: The website address (URL) of the item
     GameMode:
       type: object
       description: Single player, Multiplayer, etc.
@@ -1966,6 +3677,30 @@ components:
     Language:
       type: object
       description: Languages that are used in the Language Support endpoint.
+      properties:
+        checksum:
+          type: string
+          format: uuid
+          description: Hash of the object
+        cover:
+          $ref: "#/components/schemas/Cover/properties/id"
+        created_at:
+          type: number
+          format: date
+          description: Date this was initially added to the IGDB database
+        game:
+          $ref: "#/components/schemas/Games/properties/id"
+        region:
+          $ref: "#/components/schemas/Region/properties/id"
+        name:
+          type: string
+        updated_at:
+          type: number
+          format: timestamp
+          description: Date this was last updated in the IGDB database
+    GameLocalization:
+      type: object
+      description: Game localization for a game
       properties:
         checksum:
           type: string
@@ -2230,7 +3965,7 @@ components:
           type: string
           description: An abbreviation of the platform name
         alternative_name:
-          type: string 
+          type: string
           description: An alternative name for the platform
         category:
           $ref: "#/components/schemas/PlatformCategoryEnums"
@@ -2415,61 +4150,61 @@ components:
       type: object
       description: The platform website
       anyOf:
-        - enum: 
+        - enum:
             - 1
           description: official
-        - enum: 
+        - enum:
             - 2
           description: wikia
-        - enum: 
+        - enum:
             - 3
           description: wikipedia
-        - enum: 
+        - enum:
             - 4
           description: facebook
-        - enum: 
+        - enum:
             - 5
           description: twitter
-        - enum: 
+        - enum:
             - 6
           description: twitch
-        - enum: 
+        - enum:
             - 8
           description: instagram
-        - enum: 
+        - enum:
             - 9
           description: youtube
-        - enum: 
+        - enum:
             - 10
           description: iphone
-        - enum: 
+        - enum:
             - 11
           description: ipad
-        - enum: 
+        - enum:
             - 12
           description: android
-        - enum: 
+        - enum:
             - 13
           description: steam
-        - enum: 
+        - enum:
             - 14
           description: reddit
-        - enum: 
+        - enum:
             - 15
           description: discord
-        - enum: 
+        - enum:
             - 16
           description: google_plus
-        - enum: 
+        - enum:
             - 17
           description: tumblr
-        - enum: 
+        - enum:
             - 18
           description: linkedin
-        - enum: 
+        - enum:
             - 19
           description: pinterest
-        - enum: 
+        - enum:
             - 20
           description: soundcloud
     PlayerPerspective:
@@ -2561,7 +4296,7 @@ components:
                   type: string
                 details:
                   type: string
-              example: 
+              example:
                 title: Forbidden
                 status: 403
                 cause: Reqest limit too high
@@ -2582,12 +4317,33 @@ components:
                   type: string
                 details:
                   type: string
-              example: 
+              example:
                 title: Not Found
                 status: 404
                 type: https://javalin.io/documentation#notfoundresponse
                 details: {}
-              
+    Region:
+      type: object
+      description: Region for game localization
+      properties:
+        id:
+          type: number
+          description: The IGDB object unique identifier
+        checksum:
+          type: string
+          format: uuid
+          description: Hash of the object
+        created_at:
+          type: number
+          format: date
+          description: Date this was initially added to the IGDB database
+        identifier:
+          format: string
+          description: This is the identifier of each region
+        updated_at:
+          type: number
+          format: timestamp
+          description: Date this was last updated in the IGDB database
     ReleaseDate:
       type: object
       description: A handy endpoint that extends platform release dates. Used to dig deeper into release dates, platforms and versions.
@@ -2817,55 +4573,55 @@ components:
       type: object
       description: The platform website
       anyOf:
-        - enum: 
+        - enum:
             - 1
           description: official
-        - enum: 
+        - enum:
             - 2
           description: wikia
-        - enum: 
+        - enum:
             - 3
           description: wikipedia
-        - enum: 
+        - enum:
             - 4
           description: facebook
-        - enum: 
+        - enum:
             - 5
           description: twitter
-        - enum: 
+        - enum:
             - 6
           description: twitch
-        - enum: 
+        - enum:
             - 8
           description: instagram
-        - enum: 
+        - enum:
             - 9
           description: youtube
-        - enum: 
+        - enum:
             - 10
           description: iphone
-        - enum: 
+        - enum:
             - 11
           description: ipad
-        - enum: 
+        - enum:
             - 12
           description: android
-        - enum: 
+        - enum:
             - 13
           description: steam
-        - enum: 
+        - enum:
             - 14
           description: reddit
-        - enum: 
+        - enum:
             - 15
           description: itch
-        - enum: 
+        - enum:
             - 16
           description: epicgames
-        - enum: 
+        - enum:
             - 17
           description: gog
-        - enum: 
+        - enum:
             - 18
           description: discord
   securitySchemes:

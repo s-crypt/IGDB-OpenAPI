@@ -5,13 +5,16 @@ The Excel spreadsheet have been created to speed up the copy process, by auto-cr
 
 TODO:
 - [x] Finish component schemas
-- [ ] Finish Paths
+- [x] Finish Paths
 - [ ] Validate against API responses
   - [ ] Enhance interlinking before GameVersionFeature (Ex: Reference ID for Game will $ref: /components/schemas/Game/properties/name)
   - [ ] Add Format to data types above Genre
   - [ ] Reorder based on API response
-- [ ] Create JSON when validated
+  - [ ] Create examples based on response
 - [ ] Add websockets
+
+Future:
+- [ ] Organize with tags?
 
 ### Bug reports/Pull Requests are encouraged and very helpful!
 
