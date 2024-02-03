@@ -10,18 +10,9 @@ TODO:
 2. Finish Paths
 3. Create JSON when in a "filled-out" state
 4. Enhance interlinking before GameVersionFeature (Ex: Reference ID for Game will $ref: /components/schemas/Game/properties/name)
-5. Add Format to data types above Genre
-5. Validate against API responses
+5. Validate against API responses (and fixing the formatting/order of schemas)
+6. Add webhooks info
 
-Below are data types that have been converted to match the OpenAPI specs Above Genre, because I am learning the OAI spec as I go
-
-| IGDB Type           	| OpenAPI Compatable Type 	|
-|---------------------	|-------------------------	|
-| uuid                	| string                  	|
-| array [of anything] 	| array of undefined type 	|
-| unix time stamp     	| number                  	|
-| date					| string					|
-| integer				| number					|
 
 Bug reports/Pull Requests are encouraged and very helpful!
 

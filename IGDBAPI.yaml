@@ -18,6 +18,11 @@ info:
     This means that you are not only contributing to the value of IGDB but to
     thousands of other projects as well. We are looking forward to see what
     exciting game related projects you come up with. Happy coding!
+
+    This OpenAPI documentation and schema project is unofficial and made by [s-crypt](https://github.com/s-crypt)
+    The source code is [available here](https://github.com/s-crypt/IGDB-OpenAPI)
+    Issues and pull requests are welcome!
+
   termsOfService: https://www.twitch.tv/p/en/legal/terms-of-service/
 externalDocs:
   url: https://api-docs.igdb.com
@@ -64,7 +69,7 @@ components:
       properties:
         id:
           type: number
-          description: The IGDB unique identifier
+          description: The IGDB object unique identifier
         category:
           $ref: "#/components/schemas/AgeRatingCategoryEnums"
         checksum:
@@ -232,7 +237,7 @@ components:
       properties:
         id:
           type: number
-          description: The IGDB unique identifier
+          description: The IGDB object unique identifier
         category:
           $ref: "#/components/schemas/AgeRatingContentDescriptionCategoryEnums"
         checksum:
@@ -506,7 +511,7 @@ components:
       properties:
         id:
           type: number
-          description: The IGDB unique identifier
+          description: The IGDB object unique identifier
         checksum:
           type: string
           description: Hash of the object
@@ -526,7 +531,7 @@ components:
       properties:
         id:
           type: number
-          description: The IGDB unique identifier
+          description: The IGDB object unique identifier
         alpha_channel:
           type: boolean
         animated:
@@ -554,7 +559,7 @@ components:
       properties:
         id:
           type: number
-          description: The IGDB unique identifier
+          description: The IGDB object unique identifier
         akas:
           type: array
           description: Alternative names for a character
@@ -629,7 +634,7 @@ components:
       properties:
         id:
           type: number
-          description: The IGDB unique identifier
+          description: The IGDB object unique identifier
         alpha_channel:
           type: boolean
         animated:
@@ -655,7 +660,7 @@ components:
       properties:
         id:
           type: number
-          description: The IGDB unique identifier
+          description: The IGDB object unique identifier
         as_child_relations:
           $ref: "#/components/schemas/CollectionRelation"
         as_parent_relations:
@@ -691,7 +696,7 @@ components:
       properties:
         id:
           type: number
-          description: The IGDB unique identifier
+          description: The IGDB object unique identifier
         checksum:
           type: string
           description: Hash of the object
@@ -714,7 +719,7 @@ components:
       properties:
         id:
           type: number
-          description: The IGDB unique identifier
+          description: The IGDB object unique identifier
         allowed_collection_type:
           $ref: "#/components/schemas/CollectionType"
         checksum:
@@ -738,7 +743,7 @@ components:
       properties:
         id:
           type: number
-          description: The IGDB unique identifier
+          description: The IGDB object unique identifier
         checksum:
           type: string
           description: Hash of the object
@@ -763,7 +768,7 @@ components:
       properties:
         id:
           type: number
-          description: The IGDB unique identifier
+          description: The IGDB object unique identifier
         allowed_child_type:
           type: string
           description: The allowed child collection type
@@ -791,7 +796,7 @@ components:
       properties:
         id:
           type: number
-          description: The IGDB unique identifier
+          description: The IGDB object unique identifier
         checksum:
           type: string
           description: Hash of the object
@@ -813,7 +818,7 @@ components:
       properties:
         id:
           type: number
-          description: The IGDB unique identifier
+          description: The IGDB object unique identifier
         change_date:
           type: number
           description: The date when a compnay got a new ID
@@ -928,7 +933,7 @@ components:
       properties:
         id:
           type: number
-          description: The IGDB unique identifier
+          description: The IGDB object unique identifier
         alpha_channel:
           type: boolean
         animated:
@@ -954,7 +959,7 @@ components:
       properties:
         id:
           type: number
-          description: The IGDB unique identifier
+          description: The IGDB object unique identifier
         category:
           $ref: "#/components/schemas/CompanyWebsiteEnums"
         checksum:
@@ -1026,7 +1031,7 @@ components:
       properties:
         id:
           type: number
-          description: The IGDB unique identifier
+          description: The IGDB object unique identifier
         alpha_channel:
           type: boolean
         animated:
@@ -1058,7 +1063,7 @@ components:
       properties:
         id:
           type: number
-          description: The IGDB unique identifier
+          description: The IGDB object unique identifier
         checksum:
           type: string
           description: Hash of the object
@@ -1107,7 +1112,7 @@ components:
       properties:
         id:
           type: number
-          description: The IGDB unique identifier
+          description: The IGDB object unique identifier
         alpha_channel:
           type: boolean
         animated:
@@ -1142,7 +1147,7 @@ components:
       properties:
         id:
           type: number
-          description: The IGDB unique identifier
+          description: The IGDB object unique identifier
         checksum:
           type: string
           description: Hash of the object
@@ -1160,6 +1165,7 @@ components:
           description: The last date this entry was updated in the IGDB database
         url:
           type: string
+          format: url
           description: The website address (URL) of the item
     Franchise:
       type: object
@@ -1167,7 +1173,7 @@ components:
       properties:
         id:
           type: number
-          description: The IGDB unique identifier
+          description: The IGDB object unique identifier
         checksum:
           type: string
           description: Hash of the object
@@ -1195,7 +1201,7 @@ components:
       properties:
         id:
           type: number
-          description: The IGDB unique identifier
+          description: The IGDB object unique identifier
         age_ratings:
           $ref: "#/components/schemas/AgeRatingEnums"
         aggregated_rating:
@@ -1288,7 +1294,7 @@ components:
           type: string
           description: The name of the Game
         parent_game:
-          type: string
+          $ref: "#/components/schemas/Games/properties/id"
           description: If a DLC, expansion or part of a bundle, this is the main game or bundle
         platforms:
           type: string
@@ -1447,7 +1453,7 @@ components:
       properties:
         id:
           type: number
-          description: The IGDB unique identifier
+          description: The IGDB object unique identifier
         checksum:
           type: string
           description: Hash of the object
@@ -1484,7 +1490,7 @@ components:
       properties:
         id:
           type: number
-          description: The IGDB unique identifier
+          description: The IGDB object unique identifier
         alpha_channel:
           type: boolean
         animated:
@@ -1510,7 +1516,7 @@ components:
       properties:
         id:
           type: number
-          description: The IGDB unique identifier
+          description: The IGDB object unique identifier
         category:
           $ref: "#/components/schemas/ExternalGameCategoryEnums"
           description: The id of the other service
@@ -1626,7 +1632,7 @@ components:
       properties:
         id:
           type: number
-          description: The IGDB unique identifier
+          description: The IGDB object unique identifier
         checksum:
           type: string
           description: Hash of the object
@@ -1651,7 +1657,7 @@ components:
       properties:
         id:
           type: number
-          description: The IGDB unique identifier
+          description: The IGDB object unique identifier
         category:
           $ref: "#/components/schemas/GameVersionFeatureCategoryEnums"
           description: The category of the feature description
@@ -1686,7 +1692,7 @@ components:
       properties:
         id:
           type: number
-          description: The IGDB unique identifier
+          description: The IGDB object unique identifier
         checksum:
           type: string
           description: Hash of the object
@@ -1718,7 +1724,7 @@ components:
       properties:
         id:
           type: number
-          description: The IGDB unique identifier
+          description: The IGDB object unique identifier
         checksum:
           type: string
           format: uuid
@@ -1747,7 +1753,7 @@ components:
       properties:
         id:
           type: number
-          description: The IGDB unique identifier
+          description: The IGDB object unique identifier
         checksum:
           type: string
           format: uuid
@@ -1761,7 +1767,854 @@ components:
         developer:
           type: boolean
           description: Is the company a/the developer?
-
+    GameVideo:
+      type: object
+      description: A video associated with a game
+      properties:
+        id:
+          type: number
+          description: The IGDB object unique identifier
+        checksum:
+          type: string
+          format: uuid
+          description: Hash of the object
+        game:
+          $ref: "#/components/schemas/Games/properties/id"
+        name:
+          type: string
+          description: The name of the video
+        video_id:
+          type: string
+          description: The external ID of the video (usually youtube)
+    Keyword:
+      type: object
+      description: Keywords are words or phrases that get tagged to a game such as “world war 2” or “steampunk”.
+      properties:
+        checksum:
+          type: string
+          format: uuid
+          description: Hash of the object
+        created_at:
+          type: number
+          format: date
+          description: Date this was initially added to the IGDB database
+        name:
+          type: string
+          description: The keyword
+    Language:
+      type: object
+      description: Languages that are used in the Language Support endpoint.
+      properties:
+        checksum:
+          type: string
+          format: uuid
+          description: Hash of the object
+        created_at:
+          type: number
+          format: date
+          description: Date this was initially added to the IGDB database
+        locale:
+          type: string
+          description: The combination of Language code and Country code (en_US)
+        name:
+          type: string
+          description: The name of the localization
+        native_name:
+          type: string
+          description: The native name of the language
+        updated_at:
+          type: number
+          format: timestamp
+          description: Date this was last updated in the IGDB database
+    LanguageSupportType:
+      type: object
+      description: Language Support Types contains the identifiers for the support types that Language Support uses.
+      properties:
+        checksum:
+          type: string
+          format: uuid
+          description: Hash of the object
+        created_at:
+          type: number
+          format: date
+          description: Date this was initially added to the IGDB database
+        name:
+          type: string
+          description: The name of the language
+        updated_at:
+          type: number
+          format: timestamp
+          description: Date this was last updated in the IGDB database
+    MultiplayerMode:
+      type: object
+      description: Data about the supported multiplayer types
+      properties:
+        camapigncoop:
+          type: boolean
+          description: True if the game supports campaign coop
+        checksum:
+          type: string
+          format: uuid
+          description: Hash of the object
+        dropin:
+          type: boolean
+          description: True if the game supports drop in/out multiplayer
+        game:
+          $ref: "#/components/schemas/Games/properties/id"
+        lancoop:
+          type: boolean
+          description: True if the game supports LAN coop
+        offlinecoop:
+          type: boolean
+          description: True if the game supports offline coop
+        offliencoopmax:
+          type: number
+          description: Maximum number of offline players in offline coop
+        offlinemax:
+          type: number
+          description: Maximum number of players in offline multiplayer
+        onlinecoop:
+          type: boolean
+          description: True if the game supports online coop
+        onlinecoopmax:
+          type: number
+          description: Maximum number of online players in online coop
+        onlinemax:
+          type: number
+          description: Maximum number of online players in online coop
+        platform:
+          $ref: "#/components/schemas/Platform/properties/name"
+        splitscreen:
+          type: boolean
+          description: True if the game supports, split screen, offline multiplayer
+        splitscreenonline:
+          type: boolean
+          description: True if the game supports split screen, online multiplayer
+    LanguageSupport:
+      type: object
+      description: Games can be played with different languages for voice acting, subtitles, or the interface language.
+      properties:
+        checksum:
+          type: string
+          format: uuid
+          description: Hash of the object
+        created_at:
+          type: number
+          format: date
+          description: Date this was initially added to the IGDB database
+        game:
+          $ref: "#/components/schemas/Games/properties/id"
+        language:
+          $ref: "#/components/schemas/Language/properties/name"
+        updated_at:
+          type: number
+          format: timestamp
+          description: Date this was last updated in the IGDB database
+    NetworkType:
+      type: object
+      description: Social networks related to the event like twitter, facebook and youtube
+      properties:
+        checksum:
+          type: string
+          format: uuid
+          description: Hash of the object
+        created_at:
+          type: number
+          format: date
+          description: Date this was initially added to the IGDB database
+        event_networks:
+          type: array
+          $ref: "#/components/schemas/EventNetwork/properties/url"
+        name:
+          type: string
+          description: The name of the social network
+        updated_at:
+          type: number
+          format: timestamp
+          description: Date this was last updated in the IGDB database
+    PlatformFamily:
+      type: object
+      description: A collection of closely related platforms
+      properties:
+        id:
+          type: number
+          description: The IGDB object unique identifier
+        checksum:
+          type: string
+          format: uuid
+          description: Hash of the object
+        name:
+          type: string
+          description: The name of the platform family
+        slug:
+          type: string
+          description: A url-safe, unique, lower-case version of the name
+    PlatformLogo:
+      type: object
+      description: Logo for a platform
+      properties:
+        id:
+          type: number
+          description: The IGDB object unique identifier
+        alpha_channel:
+          type: boolean
+        animated:
+          type: boolean
+        checksum:
+          type: string
+          description: Hash of the object
+        height:
+          type: number
+          description: The height of the image in pixels
+        image_id:
+          type: string
+          description: The ID of the image used to construct an IGDB image link
+        url:
+          type: string
+          description: The website address (URL) of the item
+        width:
+          type: number
+          description: The width of the image in pixels
+    PlatformVersion:
+      type: object
+      description: The specific platform and the specifications (Xbox Series X, Playstation 5)
+      properties:
+        id:
+          type: number
+          description: The IGDB object unique identifier
+        checksum:
+          type: string
+          format: uuid
+          description: Hash of the object
+        companies:
+          type: array
+          format: string
+          $ref: "#/components/schemas/PlatformVersionCompany/properties/company"
+        connectivity:
+          type: string
+          description: The network capabilities
+        cpu:
+          type: string
+          description: The integrated central processing unit
+        graphics:
+          type: string
+          description: The graphics chipset
+        main_manufacturer:
+          $ref: "#/components/schemas/PlatformVersionCompany/properties/manufacturer"
+        media:
+          type: string
+          description: The type of media this version accepts
+        memory:
+          type: string
+          description: How much memory there is
+        name:
+          type: string
+          description: The name of the platform version
+        os:
+          type: string
+          description: The operating system installed on the platform version
+        output:
+          type: string
+          description: The output video rate
+        platform_logo:
+          $ref: "#/components/schemas/PlatformLogo/properties/id"
+        platform_version_release_dates:
+          $ref: "#/components/schemas/PlatformVersionReleaseDate/properties/id"
+        resolutions:
+          type: string
+          description: The maximum resolution
+        slug:
+          type: string
+          description: A url-safe, unique, lower-case version of the name
+        sound:
+          type: string
+          description: The sound chipset
+        storage:
+          type: string
+          description: How much storage there is
+        summary:
+          type: string
+          description: A short summary
+        url:
+          type: string
+          description: The website address (URL) of the item
+    PlatformVersionCompany:
+      type: object
+      description: A platform developer
+      properties:
+        checksum:
+          type: string
+          format: uuid
+          description: Hash of the object
+        comment:
+          type: string
+          description: Any notable comments about the developer
+        company:
+          $ref: "#/components/schemas/Company/properties/id"
+        developer:
+          type: boolean
+          description: If the company is the developer
+        manufacturer:
+          type: boolean
+          description: If the company is the manufactuer
+    Platform:
+      type: object
+      description: The hardware used to run the game or game delivery network
+      properties:
+        id:
+          type: number
+          description: The IGDB object unique identifier
+        abbreviation:
+          type: string
+          description: An abbreviation of the platform name
+        alternative_name:
+          type: string 
+          description: An alternative name for the platform
+        category:
+          $ref: "#/components/schemas/PlatformCategoryEnums"
+        checksum:
+          type: string
+          format: uuid
+          description: Hash of the object
+        created_at:
+          type: number
+          format: date
+          description: Date this was initially added to the IGDB database
+        generation:
+          type: number
+          description: The generation of the platform
+        name:
+          type: string
+          description: The name of the platform
+        platform_family:
+          $ref: "#/components/schemas/PlatformFamily/properties/id"
+        platform_logo:
+          $ref: "#/components/schemas/PlatformLogo/properties/id"
+        slug:
+          type: string
+          description: A url-safe, unique, lower-case version of the name
+        summary:
+          type: string
+          description: The summary of the first Version of this platform
+        updated_at:
+          type: number
+          format: timestamp
+          description: Date this was last updated in the IGDB database
+        url:
+          type: string
+          description: The website address (URL) of the item
+        versions:
+          type: array
+          $ref: "#/components/schemas/PlatformVersion/properties/id"
+        websites:
+          type: array
+          $ref: "#/components/schemas/PlatformWebsite/properties/id"
+    PlatformCategoryEnums:
+      type: object
+      description: The category of the platform
+      anyOf:
+        - enum:
+            - 1
+          description: console
+        - enum:
+            - 2
+          description: arcade
+        - enum:
+            - 3
+          description: platform
+        - enum:
+            - 4
+          description: operating_system
+        - enum:
+            - 5
+          description: portable_console
+        - enum:
+            - 6
+          description: computer
+    PlatformVersionReleaseDate:
+      type: object
+      description: A handy endpoint that extends platform release dates. Used to dig deeper into release dates, platforms and versions.
+      properties:
+        id:
+          type: number
+          description: The IGDB object unique identifier
+        category:
+          $ref: "#/components/schemas/PlatformVersionReleaseDateEnums"
+        checksum:
+          type: string
+          format: uuid
+          description: Hash of the object
+        created_at:
+          type: number
+          format: date
+          description: Date this was initially added to the IGDB database
+        date:
+          type: string
+          format: timestamp
+          description: The release date
+        human:
+          type: string
+          description: A human readable version of the release date
+        m:
+          type: number
+          description: The month as an integer starting at 1 (January)
+        platform_version:
+          $ref: "#/components/schemas/PlatformVersion/properties/id"
+        region:
+          $ref: "#/components/schemas/PlatformVersionReleaseDateRegionEnum"
+        updated_at:
+          type: number
+          format: timestamp
+          description: Date this was last updated in the IGDB database
+        y:
+          type: number
+          description: The year in full (2018)
+    PlatformVersionReleaseDateEnums:
+      type: number
+      description: An enum of the date format
+      anyOf:
+        - enum:
+            - 0
+          description: YYYYMMMMDD
+        - enum:
+            - 1
+          description: YYYYMMMM
+        - enum:
+            - 2
+          description: YYYY
+        - enum:
+            - 3
+          description: YYYYQ1
+        - enum:
+            - 4
+          description: YYYYQ2
+        - enum:
+            - 5
+          description: YYYYQ3
+        - enum:
+            - 6
+          description: YYYYQ4
+        - enum:
+            - 7
+          description: TBD
+    PlatformVersionReleaseDateRegionEnum:
+      type: number
+      description: An enum of the region for the release date
+      anyOf:
+        - enum:
+            - 1
+          description: europe
+        - enum:
+            - 2
+          description: north_america
+        - enum:
+            - 3
+          description: austrailia
+        - enum:
+            - 4
+          description: new_zealand
+        - enum:
+            - 5
+          description: japan
+        - enum:
+            - 6
+          description: china
+        - enum:
+            - 7
+          description: asia
+        - enum:
+            - 8
+          description: worldwide
+        - enum:
+            - 9
+          description: korea
+        - enum:
+            - 10
+          description: brazil
+    PlatformWebsite:
+      type: object
+      description: The main website for the platform
+      properties:
+        id:
+          type: number
+          description: The IGDB object unique identifier
+        category:
+          $ref: "#/components/schemas/PlatformWebsiteCategoryEnums"
+        checksum:
+          type: string
+          format: uuid
+          description: Hash of the object
+        trusted:
+          type: boolean
+        url:
+          type: string
+          description: The main platform address (URL) of the platform
+    PlatformWebsiteCategoryEnums:
+      type: object
+      description: The platform website
+      anyOf:
+        - enum: 
+            - 1
+          description: official
+        - enum: 
+            - 2
+          description: wikia
+        - enum: 
+            - 3
+          description: wikipedia
+        - enum: 
+            - 4
+          description: facebook
+        - enum: 
+            - 5
+          description: twitter
+        - enum: 
+            - 6
+          description: twitch
+        - enum: 
+            - 8
+          description: instagram
+        - enum: 
+            - 9
+          description: youtube
+        - enum: 
+            - 10
+          description: iphone
+        - enum: 
+            - 11
+          description: ipad
+        - enum: 
+            - 12
+          description: android
+        - enum: 
+            - 13
+          description: steam
+        - enum: 
+            - 14
+          description: reddit
+        - enum: 
+            - 15
+          description: discord
+        - enum: 
+            - 16
+          description: google_plus
+        - enum: 
+            - 17
+          description: tumblr
+        - enum: 
+            - 18
+          description: linkedin
+        - enum: 
+            - 19
+          description: pinterest
+        - enum: 
+            - 20
+          description: soundcloud
+    PlayerPerspective:
+      type: object
+      description: Player perspectives describe the view/perspective of the player in a video game.
+      properties:
+        checksum:
+          type: string
+          format: uuid
+          description: Hash of the object
+        created_at:
+          type: number
+          format: date
+          description: Date this was initially added to the IGDB database
+        name:
+          type: string
+          description: The perspective
+        slug:
+          type: string
+          description: A url-safe, unique, lower-case version of the name
+        updated_at:
+          type: number
+          format: timestamp
+          description: Date this was last updated in the IGDB database
+        url:
+          type: string
+          description: The website address (URL) of the item
+    ReleaseDate:
+      type: object
+      description: A handy endpoint that extends platform release dates. Used to dig deeper into release dates, platforms and versions.
+      properties:
+        category:
+          $ref: "#/components/schemas/ReleaseDateCategoryEnums"
+        checksum:
+          type: string
+          format: uuid
+          description: Hash of the object
+        created_at:
+          type: number
+          format: date
+          description: Date this was initially added to the IGDB database
+        date:
+          type: string
+          format: timestamp
+          description: The release date
+        game:
+          $ref: "#/components/schemas/Games/properties/id"
+        human:
+          type: string
+          description: A human readable version of the release date
+        m:
+          type: number
+          description: The month as an integer starting at 1 (January)
+        platform:
+          $ref: "#/components/schemas/Platform/properties/id"
+        region:
+          $ref: "#/components/schemas/ReleaseDateRegionEnum"
+        updated_at:
+          type: number
+          format: timestamp
+          description: Date this was last updated in the IGDB database
+        y:
+          type: number
+          description: The year in full (2018)
+    ReleaseDateCategoryEnums:
+      type: number
+      description: An enum of the date format
+      anyOf:
+        - enum:
+            - 0
+          description: YYYYMMMMDD
+        - enum:
+            - 1
+          description: YYYYMMMM
+        - enum:
+            - 2
+          description: YYYY
+        - enum:
+            - 3
+          description: YYYYQ1
+        - enum:
+            - 4
+          description: YYYYQ2
+        - enum:
+            - 5
+          description: YYYYQ3
+        - enum:
+            - 6
+          description: YYYYQ4
+        - enum:
+            - 7
+          description: TBD
+    ReleaseDateRegionEnum:
+      type: number
+      description: An enum of the region for the release date
+      anyOf:
+        - enum:
+            - 1
+          description: europe
+        - enum:
+            - 2
+          description: north_america
+        - enum:
+            - 3
+          description: austrailia
+        - enum:
+            - 4
+          description: new_zealand
+        - enum:
+            - 5
+          description: japan
+        - enum:
+            - 6
+          description: china
+        - enum:
+            - 7
+          description: asia
+        - enum:
+            - 8
+          description: worldwide
+        - enum:
+            - 9
+          description: korea
+        - enum:
+            - 10
+          description: brazil
+    ReleaseDateStatus:
+      type: object
+      description: An endpoint to provide definition of all of the current release date statuses.
+      properties:
+        checksum:
+          type: string
+          format: uuid
+          description: Hash of the object
+        created_at:
+          type: number
+          format: date
+          description: Date this was initially added to the IGDB database
+        description:
+          type: string
+          description: The description of the release date status.
+        name:
+          type: string
+          description: The name of the release date status
+        updated_at:
+          type: number
+          format: timestamp
+          description: Date this was last updated in the IGDB database
+    Screenshot:
+      type: object
+      description: Screenshots of games
+      properties:
+        id:
+          type: number
+          description: The IGDB object unique identifier
+        alpha_channel:
+          type: boolean
+        animated:
+          type: boolean
+        checksum:
+          type: string
+          description: Hash of the object
+        game:
+          $ref: "#/components/schemas/Games/properties/id"
+        height:
+          type: number
+          description: The height of the image in pixels
+        image_id:
+          type: string
+          description: The ID of the image used to construct an IGDB image link
+        url:
+          type: string
+          description: The website address (URL) of the item
+        width:
+          type: number
+          description: The width of the image in pixels
+    Search:
+      type: object
+      description: Search IGDB and get the IDs of items matching your search
+      properties:
+        alternative_name:
+          type: string
+        character:
+          $ref: "#/components/schemas/Character/properties/id"
+        checksum:
+          type: string
+          format: uuid
+          description: Hash of the object
+        collection:
+          $ref: "#/components/schemas/Collection/properties/id"
+        company:
+          $ref: "#/components/schemas/Company/properties/id"
+        description:
+          type: string
+        game:
+          $ref: "#/components/schemas/Games/properties/id"
+        name:
+          type: string
+        platform:
+          $ref: "#/components/schemas/Platform/properties/id"
+        published_at:
+          type: string
+          format: timestamp
+          description: The date this item was initally published by the third party
+        test_dummy:
+          type: number
+          description: Reference ID for Test Dummy
+        theme:
+          $ref: "#/components/schemas/Theme/properties/id"
+    Theme:
+      type: object
+      description: Video game themes
+      properties:
+        id:
+          type: number
+          description: The IGDB object unique identifier
+        checksum:
+          type: string
+          description: Hash of the object
+        name:
+          type: string
+          description: The name of the theme
+        slug:
+          type: string
+          description: A url-safe, unique, lower-case version of the name
+        updated_at:
+          type: number
+          format: timestamp
+          description: Date this was last updated in the IGDB database
+        url:
+          type: string
+          description: The website address (URL) of the item
+    Website:
+      type: object
+      description: A website URL, usually associated with a game
+      properties:
+        id:
+          type: number
+          description: The IGDB object unique identifier
+        category:
+          $ref: "#/components/schemas/WebsiteCategoryEnums"
+        checksum:
+          type: string
+          format: uuid
+          description: Hash of the object
+        game:
+          $ref: "#/components/schemas/Games/properties/id"
+        trusted:
+          type: boolean
+        url:
+          type: string
+          description: The main platform address (URL) of the platform
+    WebsiteCategoryEnums:
+      type: object
+      description: The platform website
+      anyOf:
+        - enum: 
+            - 1
+          description: official
+        - enum: 
+            - 2
+          description: wikia
+        - enum: 
+            - 3
+          description: wikipedia
+        - enum: 
+            - 4
+          description: facebook
+        - enum: 
+            - 5
+          description: twitter
+        - enum: 
+            - 6
+          description: twitch
+        - enum: 
+            - 8
+          description: instagram
+        - enum: 
+            - 9
+          description: youtube
+        - enum: 
+            - 10
+          description: iphone
+        - enum: 
+            - 11
+          description: ipad
+        - enum: 
+            - 12
+          description: android
+        - enum: 
+            - 13
+          description: steam
+        - enum: 
+            - 14
+          description: reddit
+        - enum: 
+            - 15
+          description: itch
+        - enum: 
+            - 16
+          description: epicgames
+        - enum: 
+            - 17
+          description: gog
+        - enum: 
+            - 18
+          description: discord
   securitySchemes:
     Authorization_Key:
       type: http
