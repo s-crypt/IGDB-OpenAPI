@@ -24,8 +24,9 @@ Future:
 
 ### Bug reports/Pull Requests are encouraged and very helpful!
 
-
-You can use [Swagger Editor](https://editor-next.swagger.io/) or [OpenAPI Generators](https://openapi-generator.tech/docs/generators#client-generators) to generate the following native clients for the API. I may add some of these to releases, IDK yet.
+# How do I use this?
+### You can use [Swagger Editor](https://editor-next.swagger.io/) or [OpenAPI Generators](https://openapi-generator.tech/docs/generators#client-generators) to generate the following native clients for the API.
+I may add some of these to releases, IDK yet.
 
 [Swagger Editor](https://editor-next.swagger.io/)
 * C# - C Sharp
