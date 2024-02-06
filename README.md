@@ -1,16 +1,16 @@
-# IMPORTANT: NOT COMPLETE
-### The schemas have yet to be validated.
+# Complete and ready for use!
+### I have validated the responses against the API. If you come across any discrepencies, please let me know!
 
 The Excel spreadsheet have been created to speed up the copy process, by auto-crafting the YAML properties of enums based on the copied table from IGDB's docs.
 
 TODO:
 - [x] Finish component schemas
 - [x] Finish Paths
-- [ ] Validate against API responses
-  - [ ] Enhance interlinking schemas before GameVersionFeature
-  - [ ] Add Format to data types above Genre
-  - [ ] Reorder based on API response
-- [ ] Add format to numbers above Game (oops)
+- [X] Validate against API responses
+  - [X] Enhance interlinking schemas
+  - [X] Add Format to data types
+  - [X] Reorder based on API response
+- [X] Add format to numbers (oops)
 
 Future:
 - [ ] More/better descriptions of schema items
