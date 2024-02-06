@@ -19,6 +19,7 @@ Future:
 - [ ] Create examples based on response
 - [ ] Add websockets
 - [ ] Organize with tags?
+- [ ] CORS proxy for Try It function (HELP NEEDED)
 
 ### Bug reports/Pull Requests are encouraged and very helpful!
 
