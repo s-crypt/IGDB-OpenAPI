@@ -70,13 +70,13 @@ paths:
               schema:
                 $ref: "#/components/schemas/AgeRating"
         "400":
-          $ref: "#/components/schemas/Responses/BadRequest"
+          $ref: "#/components/responses/BadRequest"
         "401":
-          $ref: "#/components/schemas/Responses/AuthFailure"
+          $ref: "#/components/responses/AuthFailure"
         "403":
-          $ref: "#/components/schemas/Responses/Forbidden"
+          $ref: "#/components/responses/Forbidden"
         "404":
-          $ref: "#/components/schemas/Responses/NotFound"
+          $ref: "#/components/responses/NotFound"
       externalDocs:
         description: "Official documentation:"
         url: https://api-docs.igdb.com/?shell#age-rating
@@ -105,13 +105,13 @@ paths:
               schema:
                 $ref: "#/components/schemas/AgeRatingContentDescription"
         "400":
-          $ref: "#/components/schemas/Responses/BadRequest"
+          $ref: "#/components/responses/BadRequest"
         "401":
-          $ref: "#/components/schemas/Responses/AuthFailure"
+          $ref: "#/components/responses/AuthFailure"
         "403":
-          $ref: "#/components/schemas/Responses/Forbidden"
+          $ref: "#/components/responses/Forbidden"
         "404":
-          $ref: "#/components/schemas/Responses/NotFound"
+          $ref: "#/components/responses/NotFound"
       externalDocs:
         description: "Official documentation:"
         url: https://api-docs.igdb.com/#age-rating-content-description
@@ -140,13 +140,13 @@ paths:
               schema:
                 $ref: "#/components/schemas/AlternativeNames"
         "400":
-          $ref: "#/components/schemas/Responses/BadRequest"
+          $ref: "#/components/responses/BadRequest"
         "401":
-          $ref: "#/components/schemas/Responses/AuthFailure"
+          $ref: "#/components/responses/AuthFailure"
         "403":
-          $ref: "#/components/schemas/Responses/Forbidden"
+          $ref: "#/components/responses/Forbidden"
         "404":
-          $ref: "#/components/schemas/Responses/NotFound"
+          $ref: "#/components/responses/NotFound"
       externalDocs:
         description: "Official documentation:"
         url: https://api-docs.igdb.com/#alternative-name
@@ -175,13 +175,13 @@ paths:
               schema:
                 $ref: "#/components/schemas/Artwork"
         "400":
-          $ref: "#/components/schemas/Responses/BadRequest"
+          $ref: "#/components/responses/BadRequest"
         "401":
-          $ref: "#/components/schemas/Responses/AuthFailure"
+          $ref: "#/components/responses/AuthFailure"
         "403":
-          $ref: "#/components/schemas/Responses/Forbidden"
+          $ref: "#/components/responses/Forbidden"
         "404":
-          $ref: "#/components/schemas/Responses/NotFound"
+          $ref: "#/components/responses/NotFound"
       externalDocs:
         description: "Official documentation:"
         url: https://api-docs.igdb.com/#artwork
@@ -210,13 +210,13 @@ paths:
               schema:
                 $ref: "#/components/schemas/Character"
         "400":
-          $ref: "#/components/schemas/Responses/BadRequest"
+          $ref: "#/components/responses/BadRequest"
         "401":
-          $ref: "#/components/schemas/Responses/AuthFailure"
+          $ref: "#/components/responses/AuthFailure"
         "403":
-          $ref: "#/components/schemas/Responses/Forbidden"
+          $ref: "#/components/responses/Forbidden"
         "404":
-          $ref: "#/components/schemas/Responses/NotFound"
+          $ref: "#/components/responses/NotFound"
       externalDocs:
         description: "Official documentation:"
         url: https://api-docs.igdb.com/#character
@@ -245,13 +245,13 @@ paths:
               schema:
                 $ref: "#/components/schemas/CharacterMugShot"
         "400":
-          $ref: "#/components/schemas/Responses/BadRequest"
+          $ref: "#/components/responses/BadRequest"
         "401":
-          $ref: "#/components/schemas/Responses/AuthFailure"
+          $ref: "#/components/responses/AuthFailure"
         "403":
-          $ref: "#/components/schemas/Responses/Forbidden"
+          $ref: "#/components/responses/Forbidden"
         "404":
-          $ref: "#/components/schemas/Responses/NotFound"
+          $ref: "#/components/responses/NotFound"
       externalDocs:
         description: "Official documentation:"
         url: https://api-docs.igdb.com/#character-mug-shot
@@ -280,13 +280,13 @@ paths:
               schema:
                 $ref: "#/components/schemas/Collection"
         "400":
-          $ref: "#/components/schemas/Responses/BadRequest"
+          $ref: "#/components/responses/BadRequest"
         "401":
-          $ref: "#/components/schemas/Responses/AuthFailure"
+          $ref: "#/components/responses/AuthFailure"
         "403":
-          $ref: "#/components/schemas/Responses/Forbidden"
+          $ref: "#/components/responses/Forbidden"
         "404":
-          $ref: "#/components/schemas/Responses/NotFound"
+          $ref: "#/components/responses/NotFound"
       externalDocs:
         description: "Official documentation:"
         url: https://api-docs.igdb.com/#collection
@@ -315,13 +315,13 @@ paths:
               schema:
                 $ref: "#/components/schemas/CollectionMembership"
         "400":
-          $ref: "#/components/schemas/Responses/BadRequest"
+          $ref: "#/components/responses/BadRequest"
         "401":
-          $ref: "#/components/schemas/Responses/AuthFailure"
+          $ref: "#/components/responses/AuthFailure"
         "403":
-          $ref: "#/components/schemas/Responses/Forbidden"
+          $ref: "#/components/responses/Forbidden"
         "404":
-          $ref: "#/components/schemas/Responses/NotFound"
+          $ref: "#/components/responses/NotFound"
       externalDocs:
         description: "Official documentation:"
         url: https://api-docs.igdb.com/#collection-membership
@@ -350,13 +350,13 @@ paths:
               schema:
                 $ref: "#/components/schemas/CollectionMembershipType"
         "400":
-          $ref: "#/components/schemas/Responses/BadRequest"
+          $ref: "#/components/responses/BadRequest"
         "401":
-          $ref: "#/components/schemas/Responses/AuthFailure"
+          $ref: "#/components/responses/AuthFailure"
         "403":
-          $ref: "#/components/schemas/Responses/Forbidden"
+          $ref: "#/components/responses/Forbidden"
         "404":
-          $ref: "#/components/schemas/Responses/NotFound"
+          $ref: "#/components/responses/NotFound"
       externalDocs:
         description: "Official documentation:"
         url: https://api-docs.igdb.com/#collection-membership-type
@@ -385,13 +385,13 @@ paths:
               schema:
                 $ref: "#/components/schemas/CollectionRelation"
         "400":
-          $ref: "#/components/schemas/Responses/BadRequest"
+          $ref: "#/components/responses/BadRequest"
         "401":
-          $ref: "#/components/schemas/Responses/AuthFailure"
+          $ref: "#/components/responses/AuthFailure"
         "403":
-          $ref: "#/components/schemas/Responses/Forbidden"
+          $ref: "#/components/responses/Forbidden"
         "404":
-          $ref: "#/components/schemas/Responses/NotFound"
+          $ref: "#/components/responses/NotFound"
       externalDocs:
         description: "Official documentation:"
         url: https://api-docs.igdb.com/#collection-relation
@@ -420,13 +420,13 @@ paths:
               schema:
                 $ref: "#/components/schemas/CollectionRelationType"
         "400":
-          $ref: "#/components/schemas/Responses/BadRequest"
+          $ref: "#/components/responses/BadRequest"
         "401":
-          $ref: "#/components/schemas/Responses/AuthFailure"
+          $ref: "#/components/responses/AuthFailure"
         "403":
-          $ref: "#/components/schemas/Responses/Forbidden"
+          $ref: "#/components/responses/Forbidden"
         "404":
-          $ref: "#/components/schemas/Responses/NotFound"
+          $ref: "#/components/responses/NotFound"
       externalDocs:
         description: "Official documentation:"
         url: https://api-docs.igdb.com/#collection-relation-type
@@ -455,13 +455,13 @@ paths:
               schema:
                 $ref: "#/components/schemas/CollectionType"
         "400":
-          $ref: "#/components/schemas/Responses/BadRequest"
+          $ref: "#/components/responses/BadRequest"
         "401":
-          $ref: "#/components/schemas/Responses/AuthFailure"
+          $ref: "#/components/responses/AuthFailure"
         "403":
-          $ref: "#/components/schemas/Responses/Forbidden"
+          $ref: "#/components/responses/Forbidden"
         "404":
-          $ref: "#/components/schemas/Responses/NotFound"
+          $ref: "#/components/responses/NotFound"
       externalDocs:
         description: "Official documentation:"
         url: https://api-docs.igdb.com/#collection-type
@@ -490,13 +490,13 @@ paths:
               schema:
                 $ref: "#/components/schemas/Company"
         "400":
-          $ref: "#/components/schemas/Responses/BadRequest"
+          $ref: "#/components/responses/BadRequest"
         "401":
-          $ref: "#/components/schemas/Responses/AuthFailure"
+          $ref: "#/components/responses/AuthFailure"
         "403":
-          $ref: "#/components/schemas/Responses/Forbidden"
+          $ref: "#/components/responses/Forbidden"
         "404":
-          $ref: "#/components/schemas/Responses/NotFound"
+          $ref: "#/components/responses/NotFound"
       externalDocs:
         description: "Official documentation:"
         url: https://api-docs.igdb.com/#company
@@ -525,13 +525,13 @@ paths:
               schema:
                 $ref: "#/components/schemas/CompanyLogo"
         "400":
-          $ref: "#/components/schemas/Responses/BadRequest"
+          $ref: "#/components/responses/BadRequest"
         "401":
-          $ref: "#/components/schemas/Responses/AuthFailure"
+          $ref: "#/components/responses/AuthFailure"
         "403":
-          $ref: "#/components/schemas/Responses/Forbidden"
+          $ref: "#/components/responses/Forbidden"
         "404":
-          $ref: "#/components/schemas/Responses/NotFound"
+          $ref: "#/components/responses/NotFound"
       externalDocs:
         description: "Official documentation:"
         url: https://api-docs.igdb.com/#company-logo
@@ -560,13 +560,13 @@ paths:
               schema:
                 $ref: "#/components/schemas/CompanyWebsite"
         "400":
-          $ref: "#/components/schemas/Responses/BadRequest"
+          $ref: "#/components/responses/BadRequest"
         "401":
-          $ref: "#/components/schemas/Responses/AuthFailure"
+          $ref: "#/components/responses/AuthFailure"
         "403":
-          $ref: "#/components/schemas/Responses/Forbidden"
+          $ref: "#/components/responses/Forbidden"
         "404":
-          $ref: "#/components/schemas/Responses/NotFound"
+          $ref: "#/components/responses/NotFound"
       externalDocs:
         description: "Official documentation:"
         url: https://api-docs.igdb.com/#company-website
@@ -595,13 +595,13 @@ paths:
               schema:
                 $ref: "#/components/schemas/Cover"
         "400":
-          $ref: "#/components/schemas/Responses/BadRequest"
+          $ref: "#/components/responses/BadRequest"
         "401":
-          $ref: "#/components/schemas/Responses/AuthFailure"
+          $ref: "#/components/responses/AuthFailure"
         "403":
-          $ref: "#/components/schemas/Responses/Forbidden"
+          $ref: "#/components/responses/Forbidden"
         "404":
-          $ref: "#/components/schemas/Responses/NotFound"
+          $ref: "#/components/responses/NotFound"
       externalDocs:
         description: "Official documentation:"
         url: https://api-docs.igdb.com/#cover
@@ -630,13 +630,13 @@ paths:
               schema:
                 $ref: "#/components/schemas/Event"
         "400":
-          $ref: "#/components/schemas/Responses/BadRequest"
+          $ref: "#/components/responses/BadRequest"
         "401":
-          $ref: "#/components/schemas/Responses/AuthFailure"
+          $ref: "#/components/responses/AuthFailure"
         "403":
-          $ref: "#/components/schemas/Responses/Forbidden"
+          $ref: "#/components/responses/Forbidden"
         "404":
-          $ref: "#/components/schemas/Responses/NotFound"
+          $ref: "#/components/responses/NotFound"
       externalDocs:
         description: "Official documentation:"
         url: https://api-docs.igdb.com/#event
@@ -665,13 +665,13 @@ paths:
               schema:
                 $ref: "#/components/schemas/EventLogo"
         "400":
-          $ref: "#/components/schemas/Responses/BadRequest"
+          $ref: "#/components/responses/BadRequest"
         "401":
-          $ref: "#/components/schemas/Responses/AuthFailure"
+          $ref: "#/components/responses/AuthFailure"
         "403":
-          $ref: "#/components/schemas/Responses/Forbidden"
+          $ref: "#/components/responses/Forbidden"
         "404":
-          $ref: "#/components/schemas/Responses/NotFound"
+          $ref: "#/components/responses/NotFound"
       externalDocs:
         description: "Official documentation:"
         url: https://api-docs.igdb.com/#event-logo
@@ -700,13 +700,13 @@ paths:
               schema:
                 $ref: "#/components/schemas/EventNetwork"
         "400":
-          $ref: "#/components/schemas/Responses/BadRequest"
+          $ref: "#/components/responses/BadRequest"
         "401":
-          $ref: "#/components/schemas/Responses/AuthFailure"
+          $ref: "#/components/responses/AuthFailure"
         "403":
-          $ref: "#/components/schemas/Responses/Forbidden"
+          $ref: "#/components/responses/Forbidden"
         "404":
-          $ref: "#/components/schemas/Responses/NotFound"
+          $ref: "#/components/responses/NotFound"
       externalDocs:
         description: "Official documentation:"
         url: https://api-docs.igdb.com/#event-network
@@ -735,13 +735,13 @@ paths:
               schema:
                 $ref: "#/components/schemas/Franchise"
         "400":
-          $ref: "#/components/schemas/Responses/BadRequest"
+          $ref: "#/components/responses/BadRequest"
         "401":
-          $ref: "#/components/schemas/Responses/AuthFailure"
+          $ref: "#/components/responses/AuthFailure"
         "403":
-          $ref: "#/components/schemas/Responses/Forbidden"
+          $ref: "#/components/responses/Forbidden"
         "404":
-          $ref: "#/components/schemas/Responses/NotFound"
+          $ref: "#/components/responses/NotFound"
       externalDocs:
         description: "Official documentation:"
         url: https://api-docs.igdb.com/#franchise
@@ -770,13 +770,13 @@ paths:
               schema:
                 $ref: "#/components/schemas/Games"
         "400":
-          $ref: "#/components/schemas/Responses/BadRequest"
+          $ref: "#/components/responses/BadRequest"
         "401":
-          $ref: "#/components/schemas/Responses/AuthFailure"
+          $ref: "#/components/responses/AuthFailure"
         "403":
-          $ref: "#/components/schemas/Responses/Forbidden"
+          $ref: "#/components/responses/Forbidden"
         "404":
-          $ref: "#/components/schemas/Responses/NotFound"
+          $ref: "#/components/responses/NotFound"
       externalDocs:
         description: "Official documentation:"
         url: https://api-docs.igdb.com/#game
@@ -805,13 +805,13 @@ paths:
               schema:
                 $ref: "#/components/schemas/GameEngine"
         "400":
-          $ref: "#/components/schemas/Responses/BadRequest"
+          $ref: "#/components/responses/BadRequest"
         "401":
-          $ref: "#/components/schemas/Responses/AuthFailure"
+          $ref: "#/components/responses/AuthFailure"
         "403":
-          $ref: "#/components/schemas/Responses/Forbidden"
+          $ref: "#/components/responses/Forbidden"
         "404":
-          $ref: "#/components/schemas/Responses/NotFound"
+          $ref: "#/components/responses/NotFound"
       externalDocs:
         description: "Official documentation:"
         url: https://api-docs.igdb.com/#game-engine
@@ -840,13 +840,13 @@ paths:
               schema:
                 $ref: "#/components/schemas/GameEngineLogo"
         "400":
-          $ref: "#/components/schemas/Responses/BadRequest"
+          $ref: "#/components/responses/BadRequest"
         "401":
-          $ref: "#/components/schemas/Responses/AuthFailure"
+          $ref: "#/components/responses/AuthFailure"
         "403":
-          $ref: "#/components/schemas/Responses/Forbidden"
+          $ref: "#/components/responses/Forbidden"
         "404":
-          $ref: "#/components/schemas/Responses/NotFound"
+          $ref: "#/components/responses/NotFound"
       externalDocs:
         description: "Official documentation:"
         url: https://api-docs.igdb.com/#game-engine-logo
@@ -875,13 +875,13 @@ paths:
               schema:
                 $ref: "#/components/schemas/ExternalGame"
         "400":
-          $ref: "#/components/schemas/Responses/BadRequest"
+          $ref: "#/components/responses/BadRequest"
         "401":
-          $ref: "#/components/schemas/Responses/AuthFailure"
+          $ref: "#/components/responses/AuthFailure"
         "403":
-          $ref: "#/components/schemas/Responses/Forbidden"
+          $ref: "#/components/responses/Forbidden"
         "404":
-          $ref: "#/components/schemas/Responses/NotFound"
+          $ref: "#/components/responses/NotFound"
       externalDocs:
         description: "Official documentation:"
         url: https://api-docs.igdb.com/#external-game
@@ -910,13 +910,13 @@ paths:
               schema:
                 $ref: "#/components/schemas/GameVersion"
         "400":
-          $ref: "#/components/schemas/Responses/BadRequest"
+          $ref: "#/components/responses/BadRequest"
         "401":
-          $ref: "#/components/schemas/Responses/AuthFailure"
+          $ref: "#/components/responses/AuthFailure"
         "403":
-          $ref: "#/components/schemas/Responses/Forbidden"
+          $ref: "#/components/responses/Forbidden"
         "404":
-          $ref: "#/components/schemas/Responses/NotFound"
+          $ref: "#/components/responses/NotFound"
       externalDocs:
         description: "Official documentation:"
         url: https://api-docs.igdb.com/#game-version
@@ -945,13 +945,13 @@ paths:
               schema:
                 $ref: "#/components/schemas/GameMode"
         "400":
-          $ref: "#/components/schemas/Responses/BadRequest"
+          $ref: "#/components/responses/BadRequest"
         "401":
-          $ref: "#/components/schemas/Responses/AuthFailure"
+          $ref: "#/components/responses/AuthFailure"
         "403":
-          $ref: "#/components/schemas/Responses/Forbidden"
+          $ref: "#/components/responses/Forbidden"
         "404":
-          $ref: "#/components/schemas/Responses/NotFound"
+          $ref: "#/components/responses/NotFound"
       externalDocs:
         description: "Official documentation:"
         url: https://api-docs.igdb.com/#game-mode
@@ -980,13 +980,13 @@ paths:
               schema:
                 $ref: "#/components/schemas/GameVersionFeatures"
         "400":
-          $ref: "#/components/schemas/Responses/BadRequest"
+          $ref: "#/components/responses/BadRequest"
         "401":
-          $ref: "#/components/schemas/Responses/AuthFailure"
+          $ref: "#/components/responses/AuthFailure"
         "403":
-          $ref: "#/components/schemas/Responses/Forbidden"
+          $ref: "#/components/responses/Forbidden"
         "404":
-          $ref: "#/components/schemas/Responses/NotFound"
+          $ref: "#/components/responses/NotFound"
       externalDocs:
         description: "Official documentation:"
         url: https://api-docs.igdb.com/#game-version-feature
@@ -1015,13 +1015,13 @@ paths:
               schema:
                 $ref: "#/components/schemas/GameVersionFeatureValue"
         "400":
-          $ref: "#/components/schemas/Responses/BadRequest"
+          $ref: "#/components/responses/BadRequest"
         "401":
-          $ref: "#/components/schemas/Responses/AuthFailure"
+          $ref: "#/components/responses/AuthFailure"
         "403":
-          $ref: "#/components/schemas/Responses/Forbidden"
+          $ref: "#/components/responses/Forbidden"
         "404":
-          $ref: "#/components/schemas/Responses/NotFound"
+          $ref: "#/components/responses/NotFound"
       externalDocs:
         description: "Official documentation:"
         url: https://api-docs.igdb.com/#game-version-feature-value
@@ -1050,13 +1050,13 @@ paths:
               schema:
                 $ref: "#/components/schemas/Genre"
         "400":
-          $ref: "#/components/schemas/Responses/BadRequest"
+          $ref: "#/components/responses/BadRequest"
         "401":
-          $ref: "#/components/schemas/Responses/AuthFailure"
+          $ref: "#/components/responses/AuthFailure"
         "403":
-          $ref: "#/components/schemas/Responses/Forbidden"
+          $ref: "#/components/responses/Forbidden"
         "404":
-          $ref: "#/components/schemas/Responses/NotFound"
+          $ref: "#/components/responses/NotFound"
       externalDocs:
         description: "Official documentation:"
         url: https://api-docs.igdb.com/#genre
@@ -1085,13 +1085,13 @@ paths:
               schema:
                 $ref: "#/components/schemas/InvolvedCompany"
         "400":
-          $ref: "#/components/schemas/Responses/BadRequest"
+          $ref: "#/components/responses/BadRequest"
         "401":
-          $ref: "#/components/schemas/Responses/AuthFailure"
+          $ref: "#/components/responses/AuthFailure"
         "403":
-          $ref: "#/components/schemas/Responses/Forbidden"
+          $ref: "#/components/responses/Forbidden"
         "404":
-          $ref: "#/components/schemas/Responses/NotFound"
+          $ref: "#/components/responses/NotFound"
       externalDocs:
         description: "Official documentation:"
         url: https://api-docs.igdb.com/#involved-company
@@ -1120,13 +1120,13 @@ paths:
               schema:
                 $ref: "#/components/schemas/GameVideo"
         "400":
-          $ref: "#/components/schemas/Responses/BadRequest"
+          $ref: "#/components/responses/BadRequest"
         "401":
-          $ref: "#/components/schemas/Responses/AuthFailure"
+          $ref: "#/components/responses/AuthFailure"
         "403":
-          $ref: "#/components/schemas/Responses/Forbidden"
+          $ref: "#/components/responses/Forbidden"
         "404":
-          $ref: "#/components/schemas/Responses/NotFound"
+          $ref: "#/components/responses/NotFound"
       externalDocs:
         description: "Official documentation:"
         url: https://api-docs.igdb.com/#game-video
@@ -1155,13 +1155,13 @@ paths:
               schema:
                 $ref: "#/components/schemas/Keyword"
         "400":
-          $ref: "#/components/schemas/Responses/BadRequest"
+          $ref: "#/components/responses/BadRequest"
         "401":
-          $ref: "#/components/schemas/Responses/AuthFailure"
+          $ref: "#/components/responses/AuthFailure"
         "403":
-          $ref: "#/components/schemas/Responses/Forbidden"
+          $ref: "#/components/responses/Forbidden"
         "404":
-          $ref: "#/components/schemas/Responses/NotFound"
+          $ref: "#/components/responses/NotFound"
       externalDocs:
         description: "Official documentation:"
         url: https://api-docs.igdb.com/#keyword
@@ -1190,13 +1190,13 @@ paths:
               schema:
                 $ref: "#/components/schemas/Language"
         "400":
-          $ref: "#/components/schemas/Responses/BadRequest"
+          $ref: "#/components/responses/BadRequest"
         "401":
-          $ref: "#/components/schemas/Responses/AuthFailure"
+          $ref: "#/components/responses/AuthFailure"
         "403":
-          $ref: "#/components/schemas/Responses/Forbidden"
+          $ref: "#/components/responses/Forbidden"
         "404":
-          $ref: "#/components/schemas/Responses/NotFound"
+          $ref: "#/components/responses/NotFound"
       externalDocs:
         description: "Official documentation:"
         url: https://api-docs.igdb.com/#language
@@ -1225,13 +1225,13 @@ paths:
               schema:
                 $ref: "#/components/schemas/GameLocalization"
         "400":
-          $ref: "#/components/schemas/Responses/BadRequest"
+          $ref: "#/components/responses/BadRequest"
         "401":
-          $ref: "#/components/schemas/Responses/AuthFailure"
+          $ref: "#/components/responses/AuthFailure"
         "403":
-          $ref: "#/components/schemas/Responses/Forbidden"
+          $ref: "#/components/responses/Forbidden"
         "404":
-          $ref: "#/components/schemas/Responses/NotFound"
+          $ref: "#/components/responses/NotFound"
       externalDocs:
         description: "Official documentation:"
         url: https://api-docs.igdb.com/#game-localization
@@ -1260,13 +1260,13 @@ paths:
               schema:
                 $ref: "#/components/schemas/LanguageSupportType"
         "400":
-          $ref: "#/components/schemas/Responses/BadRequest"
+          $ref: "#/components/responses/BadRequest"
         "401":
-          $ref: "#/components/schemas/Responses/AuthFailure"
+          $ref: "#/components/responses/AuthFailure"
         "403":
-          $ref: "#/components/schemas/Responses/Forbidden"
+          $ref: "#/components/responses/Forbidden"
         "404":
-          $ref: "#/components/schemas/Responses/NotFound"
+          $ref: "#/components/responses/NotFound"
       externalDocs:
         description: "Official documentation:"
         url: https://api-docs.igdb.com/#language-support-type
@@ -1295,13 +1295,13 @@ paths:
               schema:
                 $ref: "#/components/schemas/MultiplayerMode"
         "400":
-          $ref: "#/components/schemas/Responses/BadRequest"
+          $ref: "#/components/responses/BadRequest"
         "401":
-          $ref: "#/components/schemas/Responses/AuthFailure"
+          $ref: "#/components/responses/AuthFailure"
         "403":
-          $ref: "#/components/schemas/Responses/Forbidden"
+          $ref: "#/components/responses/Forbidden"
         "404":
-          $ref: "#/components/schemas/Responses/NotFound"
+          $ref: "#/components/responses/NotFound"
       externalDocs:
         description: "Official documentation:"
         url: https://api-docs.igdb.com/#multiplayer-mode
@@ -1330,13 +1330,13 @@ paths:
               schema:
                 $ref: "#/components/schemas/LanguageSupport"
         "400":
-          $ref: "#/components/schemas/Responses/BadRequest"
+          $ref: "#/components/responses/BadRequest"
         "401":
-          $ref: "#/components/schemas/Responses/AuthFailure"
+          $ref: "#/components/responses/AuthFailure"
         "403":
-          $ref: "#/components/schemas/Responses/Forbidden"
+          $ref: "#/components/responses/Forbidden"
         "404":
-          $ref: "#/components/schemas/Responses/NotFound"
+          $ref: "#/components/responses/NotFound"
       externalDocs:
         description: "Official documentation:"
         url: https://api-docs.igdb.com/#language-support
@@ -1365,13 +1365,13 @@ paths:
               schema:
                 $ref: "#/components/schemas/NetworkType"
         "400":
-          $ref: "#/components/schemas/Responses/BadRequest"
+          $ref: "#/components/responses/BadRequest"
         "401":
-          $ref: "#/components/schemas/Responses/AuthFailure"
+          $ref: "#/components/responses/AuthFailure"
         "403":
-          $ref: "#/components/schemas/Responses/Forbidden"
+          $ref: "#/components/responses/Forbidden"
         "404":
-          $ref: "#/components/schemas/Responses/NotFound"
+          $ref: "#/components/responses/NotFound"
       externalDocs:
         description: "Official documentation:"
         url: https://api-docs.igdb.com/#network-type
@@ -1400,13 +1400,13 @@ paths:
               schema:
                 $ref: "#/components/schemas/PlatformFamily"
         "400":
-          $ref: "#/components/schemas/Responses/BadRequest"
+          $ref: "#/components/responses/BadRequest"
         "401":
-          $ref: "#/components/schemas/Responses/AuthFailure"
+          $ref: "#/components/responses/AuthFailure"
         "403":
-          $ref: "#/components/schemas/Responses/Forbidden"
+          $ref: "#/components/responses/Forbidden"
         "404":
-          $ref: "#/components/schemas/Responses/NotFound"
+          $ref: "#/components/responses/NotFound"
       externalDocs:
         description: "Official documentation:"
         url: https://api-docs.igdb.com/#platform-family
@@ -1435,13 +1435,13 @@ paths:
               schema:
                 $ref: "#/components/schemas/PlatformLogo"
         "400":
-          $ref: "#/components/schemas/Responses/BadRequest"
+          $ref: "#/components/responses/BadRequest"
         "401":
-          $ref: "#/components/schemas/Responses/AuthFailure"
+          $ref: "#/components/responses/AuthFailure"
         "403":
-          $ref: "#/components/schemas/Responses/Forbidden"
+          $ref: "#/components/responses/Forbidden"
         "404":
-          $ref: "#/components/schemas/Responses/NotFound"
+          $ref: "#/components/responses/NotFound"
       externalDocs:
         description: "Official documentation:"
         url: https://api-docs.igdb.com/#platform-logo
@@ -1470,13 +1470,13 @@ paths:
               schema:
                 $ref: "#/components/schemas/PlatformVersion"
         "400":
-          $ref: "#/components/schemas/Responses/BadRequest"
+          $ref: "#/components/responses/BadRequest"
         "401":
-          $ref: "#/components/schemas/Responses/AuthFailure"
+          $ref: "#/components/responses/AuthFailure"
         "403":
-          $ref: "#/components/schemas/Responses/Forbidden"
+          $ref: "#/components/responses/Forbidden"
         "404":
-          $ref: "#/components/schemas/Responses/NotFound"
+          $ref: "#/components/responses/NotFound"
       externalDocs:
         description: "Official documentation:"
         url: https://api-docs.igdb.com/#platform-version
@@ -1505,13 +1505,13 @@ paths:
               schema:
                 $ref: "#/components/schemas/PlatformVersionCompany"
         "400":
-          $ref: "#/components/schemas/Responses/BadRequest"
+          $ref: "#/components/responses/BadRequest"
         "401":
-          $ref: "#/components/schemas/Responses/AuthFailure"
+          $ref: "#/components/responses/AuthFailure"
         "403":
-          $ref: "#/components/schemas/Responses/Forbidden"
+          $ref: "#/components/responses/Forbidden"
         "404":
-          $ref: "#/components/schemas/Responses/NotFound"
+          $ref: "#/components/responses/NotFound"
       externalDocs:
         description: "Official documentation:"
         url: https://api-docs.igdb.com/#platform-version-company
@@ -1540,13 +1540,13 @@ paths:
               schema:
                 $ref: "#/components/schemas/Platform"
         "400":
-          $ref: "#/components/schemas/Responses/BadRequest"
+          $ref: "#/components/responses/BadRequest"
         "401":
-          $ref: "#/components/schemas/Responses/AuthFailure"
+          $ref: "#/components/responses/AuthFailure"
         "403":
-          $ref: "#/components/schemas/Responses/Forbidden"
+          $ref: "#/components/responses/Forbidden"
         "404":
-          $ref: "#/components/schemas/Responses/NotFound"
+          $ref: "#/components/responses/NotFound"
       externalDocs:
         description: "Official documentation:"
         url: https://api-docs.igdb.com/#platform
@@ -1575,13 +1575,13 @@ paths:
               schema:
                 $ref: "#/components/schemas/PlatformVersionReleaseDate"
         "400":
-          $ref: "#/components/schemas/Responses/BadRequest"
+          $ref: "#/components/responses/BadRequest"
         "401":
-          $ref: "#/components/schemas/Responses/AuthFailure"
+          $ref: "#/components/responses/AuthFailure"
         "403":
-          $ref: "#/components/schemas/Responses/Forbidden"
+          $ref: "#/components/responses/Forbidden"
         "404":
-          $ref: "#/components/schemas/Responses/NotFound"
+          $ref: "#/components/responses/NotFound"
       externalDocs:
         description: "Official documentation:"
         url: https://api-docs.igdb.com/#platform-version-release-date
@@ -1610,13 +1610,13 @@ paths:
               schema:
                 $ref: "#/components/schemas/PlatformWebsite"
         "400":
-          $ref: "#/components/schemas/Responses/BadRequest"
+          $ref: "#/components/responses/BadRequest"
         "401":
-          $ref: "#/components/schemas/Responses/AuthFailure"
+          $ref: "#/components/responses/AuthFailure"
         "403":
-          $ref: "#/components/schemas/Responses/Forbidden"
+          $ref: "#/components/responses/Forbidden"
         "404":
-          $ref: "#/components/schemas/Responses/NotFound"
+          $ref: "#/components/responses/NotFound"
       externalDocs:
         description: "Official documentation:"
         url: https://api-docs.igdb.com/#platform-website
@@ -1645,13 +1645,13 @@ paths:
               schema:
                 $ref: "#/components/schemas/PlayerPerspective"
         "400":
-          $ref: "#/components/schemas/Responses/BadRequest"
+          $ref: "#/components/responses/BadRequest"
         "401":
-          $ref: "#/components/schemas/Responses/AuthFailure"
+          $ref: "#/components/responses/AuthFailure"
         "403":
-          $ref: "#/components/schemas/Responses/Forbidden"
+          $ref: "#/components/responses/Forbidden"
         "404":
-          $ref: "#/components/schemas/Responses/NotFound"
+          $ref: "#/components/responses/NotFound"
       externalDocs:
         description: "Official documentation:"
         url: https://api-docs.igdb.com/#player-perspective
@@ -1680,13 +1680,13 @@ paths:
               schema:
                 $ref: "#/components/schemas/Region"
         "400":
-          $ref: "#/components/schemas/Responses/BadRequest"
+          $ref: "#/components/responses/BadRequest"
         "401":
-          $ref: "#/components/schemas/Responses/AuthFailure"
+          $ref: "#/components/responses/AuthFailure"
         "403":
-          $ref: "#/components/schemas/Responses/Forbidden"
+          $ref: "#/components/responses/Forbidden"
         "404":
-          $ref: "#/components/schemas/Responses/NotFound"
+          $ref: "#/components/responses/NotFound"
       externalDocs:
         description: "Official documentation:"
         url: https://api-docs.igdb.com/#region
@@ -1715,13 +1715,13 @@ paths:
               schema:
                 $ref: "#/components/schemas/ReleaseDate"
         "400":
-          $ref: "#/components/schemas/Responses/BadRequest"
+          $ref: "#/components/responses/BadRequest"
         "401":
-          $ref: "#/components/schemas/Responses/AuthFailure"
+          $ref: "#/components/responses/AuthFailure"
         "403":
-          $ref: "#/components/schemas/Responses/Forbidden"
+          $ref: "#/components/responses/Forbidden"
         "404":
-          $ref: "#/components/schemas/Responses/NotFound"
+          $ref: "#/components/responses/NotFound"
       externalDocs:
         description: "Official documentation:"
         url: https://api-docs.igdb.com/#release-date
@@ -1750,13 +1750,13 @@ paths:
               schema:
                 $ref: "#/components/schemas/ReleaseDateStatus"
         "400":
-          $ref: "#/components/schemas/Responses/BadRequest"
+          $ref: "#/components/responses/BadRequest"
         "401":
-          $ref: "#/components/schemas/Responses/AuthFailure"
+          $ref: "#/components/responses/AuthFailure"
         "403":
-          $ref: "#/components/schemas/Responses/Forbidden"
+          $ref: "#/components/responses/Forbidden"
         "404":
-          $ref: "#/components/schemas/Responses/NotFound"
+          $ref: "#/components/responses/NotFound"
       externalDocs:
         description: "Official documentation:"
         url: https://api-docs.igdb.com/#release-date-status
@@ -1785,13 +1785,13 @@ paths:
               schema:
                 $ref: "#/components/schemas/Screenshot"
         "400":
-          $ref: "#/components/schemas/Responses/BadRequest"
+          $ref: "#/components/responses/BadRequest"
         "401":
-          $ref: "#/components/schemas/Responses/AuthFailure"
+          $ref: "#/components/responses/AuthFailure"
         "403":
-          $ref: "#/components/schemas/Responses/Forbidden"
+          $ref: "#/components/responses/Forbidden"
         "404":
-          $ref: "#/components/schemas/Responses/NotFound"
+          $ref: "#/components/responses/NotFound"
       externalDocs:
         description: "Official documentation:"
         url: https://api-docs.igdb.com/#screenshot
@@ -1820,13 +1820,13 @@ paths:
               schema:
                 $ref: "#/components/schemas/Search"
         "400":
-          $ref: "#/components/schemas/Responses/BadRequest"
+          $ref: "#/components/responses/BadRequest"
         "401":
-          $ref: "#/components/schemas/Responses/AuthFailure"
+          $ref: "#/components/responses/AuthFailure"
         "403":
-          $ref: "#/components/schemas/Responses/Forbidden"
+          $ref: "#/components/responses/Forbidden"
         "404":
-          $ref: "#/components/schemas/Responses/NotFound"
+          $ref: "#/components/responses/NotFound"
       externalDocs:
         description: "Official documentation:"
         url: https://api-docs.igdb.com/#search
@@ -1855,13 +1855,13 @@ paths:
               schema:
                 $ref: "#/components/schemas/Theme"
         "400":
-          $ref: "#/components/schemas/Responses/BadRequest"
+          $ref: "#/components/responses/BadRequest"
         "401":
-          $ref: "#/components/schemas/Responses/AuthFailure"
+          $ref: "#/components/responses/AuthFailure"
         "403":
-          $ref: "#/components/schemas/Responses/Forbidden"
+          $ref: "#/components/responses/Forbidden"
         "404":
-          $ref: "#/components/schemas/Responses/NotFound"
+          $ref: "#/components/responses/NotFound"
       externalDocs:
         description: "Official documentation:"
         url: https://api-docs.igdb.com/#theme
@@ -1890,17 +1890,107 @@ paths:
               schema:
                 $ref: "#/components/schemas/Website"
         "400":
-          $ref: "#/components/schemas/Responses/BadRequest"
+          $ref: "#/components/responses/BadRequest"
         "401":
-          $ref: "#/components/schemas/Responses/AuthFailure"
+          $ref: "#/components/responses/AuthFailure"
         "403":
-          $ref: "#/components/schemas/Responses/Forbidden"
+          $ref: "#/components/responses/Forbidden"
         "404":
-          $ref: "#/components/schemas/Responses/NotFound"
+          $ref: "#/components/responses/NotFound"
       externalDocs:
         description: "Official documentation:"
         url: https://api-docs.igdb.com/#website
 components:
+  responses:
+      BadRequest:
+        description: Bad Request
+        content:
+          application/json:
+            schema:
+              type: object
+              description: Authorization Failure
+              properties:
+                title:
+                  type: string
+                status:
+                  type: number
+                cause:
+                  type: string
+              example:
+                title: Invalid Field
+                status: 400
+                example: "Invalid field name: 'checksums'"
+      AuthFailure:
+        description: Authorization Failure
+        content:
+          application/json:
+            schema:
+              type: object
+              description: Authorization Failure
+              properties:
+                message:
+                  type: string
+                "Tip 1":
+                  type: string
+                "Tip 2":
+                  type: string
+                "Tip 3":
+                  type: string
+                Docs:
+                  type: string
+                  format: url
+                Discord:
+                  type: string
+                  format: url
+              example:
+                message: "Authorization Failure. Have you tried:"
+                "Tip 1": "Ensure you are sending Authorization and Client-ID as headers."
+                "Tip 2": "Ensure Authorization value starts with 'Bearer ', including the space"
+                "Tip 3": "Ensure Authorization value ends with the App Access Token you generated, NOT your Client Secret."
+                Docs: "https://api-docs.igdb.com/#authentication"
+                Discord: "https://discord.gg/FrvfwQg"
+      Forbidden:
+        description: Forbidden
+        content:
+          application/json:
+            schema:
+              type: object
+              description: Forbidden
+              properties:
+                title:
+                  type: string
+                status:
+                  type: number
+                cause:
+                  type: string
+                details:
+                  type: string
+              example:
+                title: Forbidden
+                status: 403
+                cause: Reqest limit too high
+                details: You typed in 2500 but your maximum is 500
+      NotFound:
+        description: Not Found
+        content:
+          application/json:
+            schema:
+              type: object
+              description: Not Found
+              properties:
+                title:
+                  type: string
+                status:
+                  type: number
+                type:
+                  type: string
+                details:
+                  type: string
+              example:
+                title: Not Found
+                status: 404
+                type: https://javalin.io/documentation#notfoundresponse
+                details: {}
   schemas:
     AgeRating:
       type: object
@@ -4521,96 +4611,6 @@ components:
           type: string
           format: uuid
           description: Hash of the object
-    Responses:
-      BadRequest:
-        description: Bad Request
-        content:
-          application/json:
-            schema:
-              type: object
-              description: Authorization Failure
-              properties:
-                title:
-                  type: string
-                status:
-                  type: number
-                cause:
-                  type: string
-              example:
-                title: Invalid Field
-                status: 400
-                example: "Invalid field name: 'checksums'"
-      AuthFailure:
-        description: Authorization Failure
-        content:
-          application/json:
-            schema:
-              type: object
-              description: Authorization Failure
-              properties:
-                message:
-                  type: string
-                "Tip 1":
-                  type: string
-                "Tip 2":
-                  type: string
-                "Tip 3":
-                  type: string
-                Docs:
-                  type: string
-                  format: url
-                Discord:
-                  type: string
-                  format: url
-              example:
-                message: "Authorization Failure. Have you tried:"
-                "Tip 1": "Ensure you are sending Authorization and Client-ID as headers."
-                "Tip 2": "Ensure Authorization value starts with 'Bearer ', including the space"
-                "Tip 3": "Ensure Authorization value ends with the App Access Token you generated, NOT your Client Secret."
-                Docs: "https://api-docs.igdb.com/#authentication"
-                Discord: "https://discord.gg/FrvfwQg"
-      Forbidden:
-        description: Forbidden
-        content:
-          application/json:
-            schema:
-              type: object
-              description: Forbidden
-              properties:
-                title:
-                  type: string
-                status:
-                  type: number
-                cause:
-                  type: string
-                details:
-                  type: string
-              example:
-                title: Forbidden
-                status: 403
-                cause: Reqest limit too high
-                details: You typed in 2500 but your maximum is 500
-      NotFound:
-        description: Not Found
-        content:
-          application/json:
-            schema:
-              type: object
-              description: Not Found
-              properties:
-                title:
-                  type: string
-                status:
-                  type: number
-                type:
-                  type: string
-                details:
-                  type: string
-              example:
-                title: Not Found
-                status: 404
-                type: https://javalin.io/documentation#notfoundresponse
-                details: {}
     Region:
       type: object
       description: Region for game localization
@@ -4950,8 +4950,6 @@ components:
   securitySchemes:
     Authorization_Key:
       type: http
-      in: header
-      name: Authorization
       scheme: Bearer
     Client-ID:
       type: apiKey
