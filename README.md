@@ -1,7 +1,9 @@
 # Complete and ready for use!
 ### I have validated the responses against the API. If you come across any discrepancies, please let me know!
 
-The Excel spreadsheet have been created to speed up the copy process, by auto-crafting the YAML properties of enums based on the copied table from IGDB's docs.
+You may use this spec however you like, but please credit me somehow as I spent a lot of time on this :)
+
+Want to test the IGDB API? You can import this schema into an API testbench like [Postman](https://www.postman.com) or [Hoppscotch](https://hoppscotch.io) to query the API with all the endpoints and configuration already set up!
 
 TODO:
 - [x] Finish component schemas
@@ -20,10 +22,8 @@ Future:
 
 ### Bug reports/Pull Requests are encouraged and very helpful!
 
-You may use this spec however you like, but please credit me somehow as I spent a lot of time on this :)
 
-Once this is complete, you can use [Swagger Editor](https://editor-next.swagger.io/) or [OpenAPI Generators](https://openapi-generator.tech/docs/generators#client-generators) to generate the following native clients for the API. I may add some of these to releases, IDK yet.
-You can also import this into an API testbench like [Postman](https://www.postman.com) or [Hoppscotch](https://hoppscotch.io) to test your API queries with all the endpoints already set up!
+You can use [Swagger Editor](https://editor-next.swagger.io/) or [OpenAPI Generators](https://openapi-generator.tech/docs/generators#client-generators) to generate the following native clients for the API. I may add some of these to releases, IDK yet.
 
 [Swagger Editor](https://editor-next.swagger.io/)
 * C# - C Sharp
@@ -122,3 +122,5 @@ You can also import this into an API testbench like [Postman](https://www.postma
 * typescript-rxjs
 * xojo-client
 * zapier (beta) 
+
+The Excel spreadsheet have been created to speed up the copy process, by auto-crafting the YAML properties of enums based on the copied table from IGDB's docs.
