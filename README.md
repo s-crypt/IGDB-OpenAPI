@@ -7,18 +7,23 @@ TODO:
 - [x] Finish component schemas
 - [x] Finish Paths
 - [ ] Validate against API responses
-  - [ ] Enhance interlinking before GameVersionFeature (Ex: Reference ID for Game will $ref: /components/schemas/Game/properties/name)
+  - [ ] Enhance interlinking schemas before GameVersionFeature
   - [ ] Add Format to data types above Genre
   - [ ] Reorder based on API response
-  - [ ] Create examples based on response
-- [ ] Add websockets
+- [ ] Add format to numbers above Game (oops)
 
 Future:
+- [ ] More/better descriptions of schema items
+- [ ] Create examples based on response
+- [ ] Add websockets
 - [ ] Organize with tags?
 
 ### Bug reports/Pull Requests are encouraged and very helpful!
 
+You may use this spec however you like, but please credit me somehow as I spent a lot of time on this :)
+
 Once this is complete, you can use [Swagger Editor](https://editor-next.swagger.io/) or [OpenAPI Generators](https://openapi-generator.tech/docs/generators#client-generators) to generate the following native clients for the API. I may add some of these to releases, IDK yet.
+You can also import this into an API testbench like [Postman](https://www.postman.com) or [Hoppscotch](https://hoppscotch.io) to test your API queries with all the endpoints already set up!
 
 [Swagger Editor](https://editor-next.swagger.io/)
 * C# - C Sharp
