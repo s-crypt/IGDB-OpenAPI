@@ -4,6 +4,7 @@
 You may use this spec however you like, but please credit me somehow as I spent a lot of time on this :)
 
 Want to test the IGDB API? You can import this schema into an API testbench like [Postman](https://www.postman.com) or [Hoppscotch](https://hoppscotch.io) to query the API with all the endpoints and configuration already set up!
+Want to *quickly* test the API? Use the [Scalar instance!](https://igdb-openapi.pages.dev/scalar) Its already set up and will proxy your requests to avoid CORS issues
 
 TODO:
 - [x] Finish component schemas
@@ -19,7 +20,7 @@ Future:
 - [ ] Create examples based on response
 - [ ] Add websockets
 - [ ] Organize with tags?
-- [ ] CORS proxy for Try It function (HELP NEEDED)
+- [X] CORS proxy for Try It function (HELP NEEDED) - Temp. Resolved with Scalar page and proxy
 
 ### Bug reports/Pull Requests are encouraged and very helpful!
 
