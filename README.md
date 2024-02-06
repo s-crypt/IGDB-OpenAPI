@@ -1,5 +1,5 @@
 # Complete and ready for use!
-### I have validated the responses against the API. If you come across any discrepencies, please let me know!
+### I have validated the responses against the API. If you come across any discrepancies, please let me know!
 
 The Excel spreadsheet have been created to speed up the copy process, by auto-crafting the YAML properties of enums based on the copied table from IGDB's docs.
 
