@@ -3218,7 +3218,7 @@ components:
           format: int32
           description: The IGDB object unique identifier
         age_ratings:
-          type: string
+          type: array
           items:
             $ref: "#/components/schemas/AgeRatingEnums"
         aggregated_rating:
