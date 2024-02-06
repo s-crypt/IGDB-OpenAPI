@@ -4306,10 +4306,16 @@
             "description": "The IGDB object unique identifier"
           },
           "as_child_relations": {
-            "$ref": "#/components/schemas/CollectionRelation"
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/CollectionRelation/properties/id"
+            }
           },
           "as_parent_relations": {
-            "$ref": "#/components/schemas/CollectionRelation"
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/CollectionRelation/properties/id"
+            }
           },
           "created_at": {
             "type": "number",
@@ -4396,7 +4402,7 @@
             "description": "The IGDB object unique identifier"
           },
           "allowed_collection_type": {
-            "$ref": "#/components/schemas/CollectionType"
+            "$ref": "#/components/schemas/CollectionType/properties/id"
           },
           "checksum": {
             "type": "string",
