@@ -77,16 +77,16 @@
             }
           },
           "400": {
-            "$ref": "#/components/schemas/Responses/BadRequest"
+            "$ref": "#/components/responses/BadRequest"
           },
           "401": {
-            "$ref": "#/components/schemas/Responses/AuthFailure"
+            "$ref": "#/components/responses/AuthFailure"
           },
           "403": {
-            "$ref": "#/components/schemas/Responses/Forbidden"
+            "$ref": "#/components/responses/Forbidden"
           },
           "404": {
-            "$ref": "#/components/schemas/Responses/NotFound"
+            "$ref": "#/components/responses/NotFound"
           }
         },
         "externalDocs": {
@@ -134,16 +134,16 @@
             }
           },
           "400": {
-            "$ref": "#/components/schemas/Responses/BadRequest"
+            "$ref": "#/components/responses/BadRequest"
           },
           "401": {
-            "$ref": "#/components/schemas/Responses/AuthFailure"
+            "$ref": "#/components/responses/AuthFailure"
           },
           "403": {
-            "$ref": "#/components/schemas/Responses/Forbidden"
+            "$ref": "#/components/responses/Forbidden"
           },
           "404": {
-            "$ref": "#/components/schemas/Responses/NotFound"
+            "$ref": "#/components/responses/NotFound"
           }
         },
         "externalDocs": {
@@ -191,16 +191,16 @@
             }
           },
           "400": {
-            "$ref": "#/components/schemas/Responses/BadRequest"
+            "$ref": "#/components/responses/BadRequest"
           },
           "401": {
-            "$ref": "#/components/schemas/Responses/AuthFailure"
+            "$ref": "#/components/responses/AuthFailure"
           },
           "403": {
-            "$ref": "#/components/schemas/Responses/Forbidden"
+            "$ref": "#/components/responses/Forbidden"
           },
           "404": {
-            "$ref": "#/components/schemas/Responses/NotFound"
+            "$ref": "#/components/responses/NotFound"
           }
         },
         "externalDocs": {
@@ -248,16 +248,16 @@
             }
           },
           "400": {
-            "$ref": "#/components/schemas/Responses/BadRequest"
+            "$ref": "#/components/responses/BadRequest"
           },
           "401": {
-            "$ref": "#/components/schemas/Responses/AuthFailure"
+            "$ref": "#/components/responses/AuthFailure"
           },
           "403": {
-            "$ref": "#/components/schemas/Responses/Forbidden"
+            "$ref": "#/components/responses/Forbidden"
           },
           "404": {
-            "$ref": "#/components/schemas/Responses/NotFound"
+            "$ref": "#/components/responses/NotFound"
           }
         },
         "externalDocs": {
@@ -305,16 +305,16 @@
             }
           },
           "400": {
-            "$ref": "#/components/schemas/Responses/BadRequest"
+            "$ref": "#/components/responses/BadRequest"
           },
           "401": {
-            "$ref": "#/components/schemas/Responses/AuthFailure"
+            "$ref": "#/components/responses/AuthFailure"
           },
           "403": {
-            "$ref": "#/components/schemas/Responses/Forbidden"
+            "$ref": "#/components/responses/Forbidden"
           },
           "404": {
-            "$ref": "#/components/schemas/Responses/NotFound"
+            "$ref": "#/components/responses/NotFound"
           }
         },
         "externalDocs": {
@@ -362,16 +362,16 @@
             }
           },
           "400": {
-            "$ref": "#/components/schemas/Responses/BadRequest"
+            "$ref": "#/components/responses/BadRequest"
           },
           "401": {
-            "$ref": "#/components/schemas/Responses/AuthFailure"
+            "$ref": "#/components/responses/AuthFailure"
           },
           "403": {
-            "$ref": "#/components/schemas/Responses/Forbidden"
+            "$ref": "#/components/responses/Forbidden"
           },
           "404": {
-            "$ref": "#/components/schemas/Responses/NotFound"
+            "$ref": "#/components/responses/NotFound"
           }
         },
         "externalDocs": {
@@ -419,16 +419,16 @@
             }
           },
           "400": {
-            "$ref": "#/components/schemas/Responses/BadRequest"
+            "$ref": "#/components/responses/BadRequest"
           },
           "401": {
-            "$ref": "#/components/schemas/Responses/AuthFailure"
+            "$ref": "#/components/responses/AuthFailure"
           },
           "403": {
-            "$ref": "#/components/schemas/Responses/Forbidden"
+            "$ref": "#/components/responses/Forbidden"
           },
           "404": {
-            "$ref": "#/components/schemas/Responses/NotFound"
+            "$ref": "#/components/responses/NotFound"
           }
         },
         "externalDocs": {
@@ -476,16 +476,16 @@
             }
           },
           "400": {
-            "$ref": "#/components/schemas/Responses/BadRequest"
+            "$ref": "#/components/responses/BadRequest"
           },
           "401": {
-            "$ref": "#/components/schemas/Responses/AuthFailure"
+            "$ref": "#/components/responses/AuthFailure"
           },
           "403": {
-            "$ref": "#/components/schemas/Responses/Forbidden"
+            "$ref": "#/components/responses/Forbidden"
           },
           "404": {
-            "$ref": "#/components/schemas/Responses/NotFound"
+            "$ref": "#/components/responses/NotFound"
           }
         },
         "externalDocs": {
@@ -533,16 +533,16 @@
             }
           },
           "400": {
-            "$ref": "#/components/schemas/Responses/BadRequest"
+            "$ref": "#/components/responses/BadRequest"
           },
           "401": {
-            "$ref": "#/components/schemas/Responses/AuthFailure"
+            "$ref": "#/components/responses/AuthFailure"
           },
           "403": {
-            "$ref": "#/components/schemas/Responses/Forbidden"
+            "$ref": "#/components/responses/Forbidden"
           },
           "404": {
-            "$ref": "#/components/schemas/Responses/NotFound"
+            "$ref": "#/components/responses/NotFound"
           }
         },
         "externalDocs": {
@@ -590,16 +590,16 @@
             }
           },
           "400": {
-            "$ref": "#/components/schemas/Responses/BadRequest"
+            "$ref": "#/components/responses/BadRequest"
           },
           "401": {
-            "$ref": "#/components/schemas/Responses/AuthFailure"
+            "$ref": "#/components/responses/AuthFailure"
           },
           "403": {
-            "$ref": "#/components/schemas/Responses/Forbidden"
+            "$ref": "#/components/responses/Forbidden"
           },
           "404": {
-            "$ref": "#/components/schemas/Responses/NotFound"
+            "$ref": "#/components/responses/NotFound"
           }
         },
         "externalDocs": {
@@ -647,16 +647,16 @@
             }
           },
           "400": {
-            "$ref": "#/components/schemas/Responses/BadRequest"
+            "$ref": "#/components/responses/BadRequest"
           },
           "401": {
-            "$ref": "#/components/schemas/Responses/AuthFailure"
+            "$ref": "#/components/responses/AuthFailure"
           },
           "403": {
-            "$ref": "#/components/schemas/Responses/Forbidden"
+            "$ref": "#/components/responses/Forbidden"
           },
           "404": {
-            "$ref": "#/components/schemas/Responses/NotFound"
+            "$ref": "#/components/responses/NotFound"
           }
         },
         "externalDocs": {
@@ -704,16 +704,16 @@
             }
           },
           "400": {
-            "$ref": "#/components/schemas/Responses/BadRequest"
+            "$ref": "#/components/responses/BadRequest"
           },
           "401": {
-            "$ref": "#/components/schemas/Responses/AuthFailure"
+            "$ref": "#/components/responses/AuthFailure"
           },
           "403": {
-            "$ref": "#/components/schemas/Responses/Forbidden"
+            "$ref": "#/components/responses/Forbidden"
           },
           "404": {
-            "$ref": "#/components/schemas/Responses/NotFound"
+            "$ref": "#/components/responses/NotFound"
           }
         },
         "externalDocs": {
@@ -761,16 +761,16 @@
             }
           },
           "400": {
-            "$ref": "#/components/schemas/Responses/BadRequest"
+            "$ref": "#/components/responses/BadRequest"
           },
           "401": {
-            "$ref": "#/components/schemas/Responses/AuthFailure"
+            "$ref": "#/components/responses/AuthFailure"
           },
           "403": {
-            "$ref": "#/components/schemas/Responses/Forbidden"
+            "$ref": "#/components/responses/Forbidden"
           },
           "404": {
-            "$ref": "#/components/schemas/Responses/NotFound"
+            "$ref": "#/components/responses/NotFound"
           }
         },
         "externalDocs": {
@@ -818,16 +818,16 @@
             }
           },
           "400": {
-            "$ref": "#/components/schemas/Responses/BadRequest"
+            "$ref": "#/components/responses/BadRequest"
           },
           "401": {
-            "$ref": "#/components/schemas/Responses/AuthFailure"
+            "$ref": "#/components/responses/AuthFailure"
           },
           "403": {
-            "$ref": "#/components/schemas/Responses/Forbidden"
+            "$ref": "#/components/responses/Forbidden"
           },
           "404": {
-            "$ref": "#/components/schemas/Responses/NotFound"
+            "$ref": "#/components/responses/NotFound"
           }
         },
         "externalDocs": {
@@ -875,16 +875,16 @@
             }
           },
           "400": {
-            "$ref": "#/components/schemas/Responses/BadRequest"
+            "$ref": "#/components/responses/BadRequest"
           },
           "401": {
-            "$ref": "#/components/schemas/Responses/AuthFailure"
+            "$ref": "#/components/responses/AuthFailure"
           },
           "403": {
-            "$ref": "#/components/schemas/Responses/Forbidden"
+            "$ref": "#/components/responses/Forbidden"
           },
           "404": {
-            "$ref": "#/components/schemas/Responses/NotFound"
+            "$ref": "#/components/responses/NotFound"
           }
         },
         "externalDocs": {
@@ -932,16 +932,16 @@
             }
           },
           "400": {
-            "$ref": "#/components/schemas/Responses/BadRequest"
+            "$ref": "#/components/responses/BadRequest"
           },
           "401": {
-            "$ref": "#/components/schemas/Responses/AuthFailure"
+            "$ref": "#/components/responses/AuthFailure"
           },
           "403": {
-            "$ref": "#/components/schemas/Responses/Forbidden"
+            "$ref": "#/components/responses/Forbidden"
           },
           "404": {
-            "$ref": "#/components/schemas/Responses/NotFound"
+            "$ref": "#/components/responses/NotFound"
           }
         },
         "externalDocs": {
@@ -989,16 +989,16 @@
             }
           },
           "400": {
-            "$ref": "#/components/schemas/Responses/BadRequest"
+            "$ref": "#/components/responses/BadRequest"
           },
           "401": {
-            "$ref": "#/components/schemas/Responses/AuthFailure"
+            "$ref": "#/components/responses/AuthFailure"
           },
           "403": {
-            "$ref": "#/components/schemas/Responses/Forbidden"
+            "$ref": "#/components/responses/Forbidden"
           },
           "404": {
-            "$ref": "#/components/schemas/Responses/NotFound"
+            "$ref": "#/components/responses/NotFound"
           }
         },
         "externalDocs": {
@@ -1046,16 +1046,16 @@
             }
           },
           "400": {
-            "$ref": "#/components/schemas/Responses/BadRequest"
+            "$ref": "#/components/responses/BadRequest"
           },
           "401": {
-            "$ref": "#/components/schemas/Responses/AuthFailure"
+            "$ref": "#/components/responses/AuthFailure"
           },
           "403": {
-            "$ref": "#/components/schemas/Responses/Forbidden"
+            "$ref": "#/components/responses/Forbidden"
           },
           "404": {
-            "$ref": "#/components/schemas/Responses/NotFound"
+            "$ref": "#/components/responses/NotFound"
           }
         },
         "externalDocs": {
@@ -1103,16 +1103,16 @@
             }
           },
           "400": {
-            "$ref": "#/components/schemas/Responses/BadRequest"
+            "$ref": "#/components/responses/BadRequest"
           },
           "401": {
-            "$ref": "#/components/schemas/Responses/AuthFailure"
+            "$ref": "#/components/responses/AuthFailure"
           },
           "403": {
-            "$ref": "#/components/schemas/Responses/Forbidden"
+            "$ref": "#/components/responses/Forbidden"
           },
           "404": {
-            "$ref": "#/components/schemas/Responses/NotFound"
+            "$ref": "#/components/responses/NotFound"
           }
         },
         "externalDocs": {
@@ -1160,16 +1160,16 @@
             }
           },
           "400": {
-            "$ref": "#/components/schemas/Responses/BadRequest"
+            "$ref": "#/components/responses/BadRequest"
           },
           "401": {
-            "$ref": "#/components/schemas/Responses/AuthFailure"
+            "$ref": "#/components/responses/AuthFailure"
           },
           "403": {
-            "$ref": "#/components/schemas/Responses/Forbidden"
+            "$ref": "#/components/responses/Forbidden"
           },
           "404": {
-            "$ref": "#/components/schemas/Responses/NotFound"
+            "$ref": "#/components/responses/NotFound"
           }
         },
         "externalDocs": {
@@ -1217,16 +1217,16 @@
             }
           },
           "400": {
-            "$ref": "#/components/schemas/Responses/BadRequest"
+            "$ref": "#/components/responses/BadRequest"
           },
           "401": {
-            "$ref": "#/components/schemas/Responses/AuthFailure"
+            "$ref": "#/components/responses/AuthFailure"
           },
           "403": {
-            "$ref": "#/components/schemas/Responses/Forbidden"
+            "$ref": "#/components/responses/Forbidden"
           },
           "404": {
-            "$ref": "#/components/schemas/Responses/NotFound"
+            "$ref": "#/components/responses/NotFound"
           }
         },
         "externalDocs": {
@@ -1274,16 +1274,16 @@
             }
           },
           "400": {
-            "$ref": "#/components/schemas/Responses/BadRequest"
+            "$ref": "#/components/responses/BadRequest"
           },
           "401": {
-            "$ref": "#/components/schemas/Responses/AuthFailure"
+            "$ref": "#/components/responses/AuthFailure"
           },
           "403": {
-            "$ref": "#/components/schemas/Responses/Forbidden"
+            "$ref": "#/components/responses/Forbidden"
           },
           "404": {
-            "$ref": "#/components/schemas/Responses/NotFound"
+            "$ref": "#/components/responses/NotFound"
           }
         },
         "externalDocs": {
@@ -1331,16 +1331,16 @@
             }
           },
           "400": {
-            "$ref": "#/components/schemas/Responses/BadRequest"
+            "$ref": "#/components/responses/BadRequest"
           },
           "401": {
-            "$ref": "#/components/schemas/Responses/AuthFailure"
+            "$ref": "#/components/responses/AuthFailure"
           },
           "403": {
-            "$ref": "#/components/schemas/Responses/Forbidden"
+            "$ref": "#/components/responses/Forbidden"
           },
           "404": {
-            "$ref": "#/components/schemas/Responses/NotFound"
+            "$ref": "#/components/responses/NotFound"
           }
         },
         "externalDocs": {
@@ -1388,16 +1388,16 @@
             }
           },
           "400": {
-            "$ref": "#/components/schemas/Responses/BadRequest"
+            "$ref": "#/components/responses/BadRequest"
           },
           "401": {
-            "$ref": "#/components/schemas/Responses/AuthFailure"
+            "$ref": "#/components/responses/AuthFailure"
           },
           "403": {
-            "$ref": "#/components/schemas/Responses/Forbidden"
+            "$ref": "#/components/responses/Forbidden"
           },
           "404": {
-            "$ref": "#/components/schemas/Responses/NotFound"
+            "$ref": "#/components/responses/NotFound"
           }
         },
         "externalDocs": {
@@ -1445,16 +1445,16 @@
             }
           },
           "400": {
-            "$ref": "#/components/schemas/Responses/BadRequest"
+            "$ref": "#/components/responses/BadRequest"
           },
           "401": {
-            "$ref": "#/components/schemas/Responses/AuthFailure"
+            "$ref": "#/components/responses/AuthFailure"
           },
           "403": {
-            "$ref": "#/components/schemas/Responses/Forbidden"
+            "$ref": "#/components/responses/Forbidden"
           },
           "404": {
-            "$ref": "#/components/schemas/Responses/NotFound"
+            "$ref": "#/components/responses/NotFound"
           }
         },
         "externalDocs": {
@@ -1502,16 +1502,16 @@
             }
           },
           "400": {
-            "$ref": "#/components/schemas/Responses/BadRequest"
+            "$ref": "#/components/responses/BadRequest"
           },
           "401": {
-            "$ref": "#/components/schemas/Responses/AuthFailure"
+            "$ref": "#/components/responses/AuthFailure"
           },
           "403": {
-            "$ref": "#/components/schemas/Responses/Forbidden"
+            "$ref": "#/components/responses/Forbidden"
           },
           "404": {
-            "$ref": "#/components/schemas/Responses/NotFound"
+            "$ref": "#/components/responses/NotFound"
           }
         },
         "externalDocs": {
@@ -1559,16 +1559,16 @@
             }
           },
           "400": {
-            "$ref": "#/components/schemas/Responses/BadRequest"
+            "$ref": "#/components/responses/BadRequest"
           },
           "401": {
-            "$ref": "#/components/schemas/Responses/AuthFailure"
+            "$ref": "#/components/responses/AuthFailure"
           },
           "403": {
-            "$ref": "#/components/schemas/Responses/Forbidden"
+            "$ref": "#/components/responses/Forbidden"
           },
           "404": {
-            "$ref": "#/components/schemas/Responses/NotFound"
+            "$ref": "#/components/responses/NotFound"
           }
         },
         "externalDocs": {
@@ -1616,16 +1616,16 @@
             }
           },
           "400": {
-            "$ref": "#/components/schemas/Responses/BadRequest"
+            "$ref": "#/components/responses/BadRequest"
           },
           "401": {
-            "$ref": "#/components/schemas/Responses/AuthFailure"
+            "$ref": "#/components/responses/AuthFailure"
           },
           "403": {
-            "$ref": "#/components/schemas/Responses/Forbidden"
+            "$ref": "#/components/responses/Forbidden"
           },
           "404": {
-            "$ref": "#/components/schemas/Responses/NotFound"
+            "$ref": "#/components/responses/NotFound"
           }
         },
         "externalDocs": {
@@ -1673,16 +1673,16 @@
             }
           },
           "400": {
-            "$ref": "#/components/schemas/Responses/BadRequest"
+            "$ref": "#/components/responses/BadRequest"
           },
           "401": {
-            "$ref": "#/components/schemas/Responses/AuthFailure"
+            "$ref": "#/components/responses/AuthFailure"
           },
           "403": {
-            "$ref": "#/components/schemas/Responses/Forbidden"
+            "$ref": "#/components/responses/Forbidden"
           },
           "404": {
-            "$ref": "#/components/schemas/Responses/NotFound"
+            "$ref": "#/components/responses/NotFound"
           }
         },
         "externalDocs": {
@@ -1730,16 +1730,16 @@
             }
           },
           "400": {
-            "$ref": "#/components/schemas/Responses/BadRequest"
+            "$ref": "#/components/responses/BadRequest"
           },
           "401": {
-            "$ref": "#/components/schemas/Responses/AuthFailure"
+            "$ref": "#/components/responses/AuthFailure"
           },
           "403": {
-            "$ref": "#/components/schemas/Responses/Forbidden"
+            "$ref": "#/components/responses/Forbidden"
           },
           "404": {
-            "$ref": "#/components/schemas/Responses/NotFound"
+            "$ref": "#/components/responses/NotFound"
           }
         },
         "externalDocs": {
@@ -1787,16 +1787,16 @@
             }
           },
           "400": {
-            "$ref": "#/components/schemas/Responses/BadRequest"
+            "$ref": "#/components/responses/BadRequest"
           },
           "401": {
-            "$ref": "#/components/schemas/Responses/AuthFailure"
+            "$ref": "#/components/responses/AuthFailure"
           },
           "403": {
-            "$ref": "#/components/schemas/Responses/Forbidden"
+            "$ref": "#/components/responses/Forbidden"
           },
           "404": {
-            "$ref": "#/components/schemas/Responses/NotFound"
+            "$ref": "#/components/responses/NotFound"
           }
         },
         "externalDocs": {
@@ -1844,16 +1844,16 @@
             }
           },
           "400": {
-            "$ref": "#/components/schemas/Responses/BadRequest"
+            "$ref": "#/components/responses/BadRequest"
           },
           "401": {
-            "$ref": "#/components/schemas/Responses/AuthFailure"
+            "$ref": "#/components/responses/AuthFailure"
           },
           "403": {
-            "$ref": "#/components/schemas/Responses/Forbidden"
+            "$ref": "#/components/responses/Forbidden"
           },
           "404": {
-            "$ref": "#/components/schemas/Responses/NotFound"
+            "$ref": "#/components/responses/NotFound"
           }
         },
         "externalDocs": {
@@ -1901,16 +1901,16 @@
             }
           },
           "400": {
-            "$ref": "#/components/schemas/Responses/BadRequest"
+            "$ref": "#/components/responses/BadRequest"
           },
           "401": {
-            "$ref": "#/components/schemas/Responses/AuthFailure"
+            "$ref": "#/components/responses/AuthFailure"
           },
           "403": {
-            "$ref": "#/components/schemas/Responses/Forbidden"
+            "$ref": "#/components/responses/Forbidden"
           },
           "404": {
-            "$ref": "#/components/schemas/Responses/NotFound"
+            "$ref": "#/components/responses/NotFound"
           }
         },
         "externalDocs": {
@@ -1958,16 +1958,16 @@
             }
           },
           "400": {
-            "$ref": "#/components/schemas/Responses/BadRequest"
+            "$ref": "#/components/responses/BadRequest"
           },
           "401": {
-            "$ref": "#/components/schemas/Responses/AuthFailure"
+            "$ref": "#/components/responses/AuthFailure"
           },
           "403": {
-            "$ref": "#/components/schemas/Responses/Forbidden"
+            "$ref": "#/components/responses/Forbidden"
           },
           "404": {
-            "$ref": "#/components/schemas/Responses/NotFound"
+            "$ref": "#/components/responses/NotFound"
           }
         },
         "externalDocs": {
@@ -2015,16 +2015,16 @@
             }
           },
           "400": {
-            "$ref": "#/components/schemas/Responses/BadRequest"
+            "$ref": "#/components/responses/BadRequest"
           },
           "401": {
-            "$ref": "#/components/schemas/Responses/AuthFailure"
+            "$ref": "#/components/responses/AuthFailure"
           },
           "403": {
-            "$ref": "#/components/schemas/Responses/Forbidden"
+            "$ref": "#/components/responses/Forbidden"
           },
           "404": {
-            "$ref": "#/components/schemas/Responses/NotFound"
+            "$ref": "#/components/responses/NotFound"
           }
         },
         "externalDocs": {
@@ -2072,16 +2072,16 @@
             }
           },
           "400": {
-            "$ref": "#/components/schemas/Responses/BadRequest"
+            "$ref": "#/components/responses/BadRequest"
           },
           "401": {
-            "$ref": "#/components/schemas/Responses/AuthFailure"
+            "$ref": "#/components/responses/AuthFailure"
           },
           "403": {
-            "$ref": "#/components/schemas/Responses/Forbidden"
+            "$ref": "#/components/responses/Forbidden"
           },
           "404": {
-            "$ref": "#/components/schemas/Responses/NotFound"
+            "$ref": "#/components/responses/NotFound"
           }
         },
         "externalDocs": {
@@ -2129,16 +2129,16 @@
             }
           },
           "400": {
-            "$ref": "#/components/schemas/Responses/BadRequest"
+            "$ref": "#/components/responses/BadRequest"
           },
           "401": {
-            "$ref": "#/components/schemas/Responses/AuthFailure"
+            "$ref": "#/components/responses/AuthFailure"
           },
           "403": {
-            "$ref": "#/components/schemas/Responses/Forbidden"
+            "$ref": "#/components/responses/Forbidden"
           },
           "404": {
-            "$ref": "#/components/schemas/Responses/NotFound"
+            "$ref": "#/components/responses/NotFound"
           }
         },
         "externalDocs": {
@@ -2186,16 +2186,16 @@
             }
           },
           "400": {
-            "$ref": "#/components/schemas/Responses/BadRequest"
+            "$ref": "#/components/responses/BadRequest"
           },
           "401": {
-            "$ref": "#/components/schemas/Responses/AuthFailure"
+            "$ref": "#/components/responses/AuthFailure"
           },
           "403": {
-            "$ref": "#/components/schemas/Responses/Forbidden"
+            "$ref": "#/components/responses/Forbidden"
           },
           "404": {
-            "$ref": "#/components/schemas/Responses/NotFound"
+            "$ref": "#/components/responses/NotFound"
           }
         },
         "externalDocs": {
@@ -2243,16 +2243,16 @@
             }
           },
           "400": {
-            "$ref": "#/components/schemas/Responses/BadRequest"
+            "$ref": "#/components/responses/BadRequest"
           },
           "401": {
-            "$ref": "#/components/schemas/Responses/AuthFailure"
+            "$ref": "#/components/responses/AuthFailure"
           },
           "403": {
-            "$ref": "#/components/schemas/Responses/Forbidden"
+            "$ref": "#/components/responses/Forbidden"
           },
           "404": {
-            "$ref": "#/components/schemas/Responses/NotFound"
+            "$ref": "#/components/responses/NotFound"
           }
         },
         "externalDocs": {
@@ -2300,16 +2300,16 @@
             }
           },
           "400": {
-            "$ref": "#/components/schemas/Responses/BadRequest"
+            "$ref": "#/components/responses/BadRequest"
           },
           "401": {
-            "$ref": "#/components/schemas/Responses/AuthFailure"
+            "$ref": "#/components/responses/AuthFailure"
           },
           "403": {
-            "$ref": "#/components/schemas/Responses/Forbidden"
+            "$ref": "#/components/responses/Forbidden"
           },
           "404": {
-            "$ref": "#/components/schemas/Responses/NotFound"
+            "$ref": "#/components/responses/NotFound"
           }
         },
         "externalDocs": {
@@ -2357,16 +2357,16 @@
             }
           },
           "400": {
-            "$ref": "#/components/schemas/Responses/BadRequest"
+            "$ref": "#/components/responses/BadRequest"
           },
           "401": {
-            "$ref": "#/components/schemas/Responses/AuthFailure"
+            "$ref": "#/components/responses/AuthFailure"
           },
           "403": {
-            "$ref": "#/components/schemas/Responses/Forbidden"
+            "$ref": "#/components/responses/Forbidden"
           },
           "404": {
-            "$ref": "#/components/schemas/Responses/NotFound"
+            "$ref": "#/components/responses/NotFound"
           }
         },
         "externalDocs": {
@@ -2414,16 +2414,16 @@
             }
           },
           "400": {
-            "$ref": "#/components/schemas/Responses/BadRequest"
+            "$ref": "#/components/responses/BadRequest"
           },
           "401": {
-            "$ref": "#/components/schemas/Responses/AuthFailure"
+            "$ref": "#/components/responses/AuthFailure"
           },
           "403": {
-            "$ref": "#/components/schemas/Responses/Forbidden"
+            "$ref": "#/components/responses/Forbidden"
           },
           "404": {
-            "$ref": "#/components/schemas/Responses/NotFound"
+            "$ref": "#/components/responses/NotFound"
           }
         },
         "externalDocs": {
@@ -2471,16 +2471,16 @@
             }
           },
           "400": {
-            "$ref": "#/components/schemas/Responses/BadRequest"
+            "$ref": "#/components/responses/BadRequest"
           },
           "401": {
-            "$ref": "#/components/schemas/Responses/AuthFailure"
+            "$ref": "#/components/responses/AuthFailure"
           },
           "403": {
-            "$ref": "#/components/schemas/Responses/Forbidden"
+            "$ref": "#/components/responses/Forbidden"
           },
           "404": {
-            "$ref": "#/components/schemas/Responses/NotFound"
+            "$ref": "#/components/responses/NotFound"
           }
         },
         "externalDocs": {
@@ -2528,16 +2528,16 @@
             }
           },
           "400": {
-            "$ref": "#/components/schemas/Responses/BadRequest"
+            "$ref": "#/components/responses/BadRequest"
           },
           "401": {
-            "$ref": "#/components/schemas/Responses/AuthFailure"
+            "$ref": "#/components/responses/AuthFailure"
           },
           "403": {
-            "$ref": "#/components/schemas/Responses/Forbidden"
+            "$ref": "#/components/responses/Forbidden"
           },
           "404": {
-            "$ref": "#/components/schemas/Responses/NotFound"
+            "$ref": "#/components/responses/NotFound"
           }
         },
         "externalDocs": {
@@ -2585,16 +2585,16 @@
             }
           },
           "400": {
-            "$ref": "#/components/schemas/Responses/BadRequest"
+            "$ref": "#/components/responses/BadRequest"
           },
           "401": {
-            "$ref": "#/components/schemas/Responses/AuthFailure"
+            "$ref": "#/components/responses/AuthFailure"
           },
           "403": {
-            "$ref": "#/components/schemas/Responses/Forbidden"
+            "$ref": "#/components/responses/Forbidden"
           },
           "404": {
-            "$ref": "#/components/schemas/Responses/NotFound"
+            "$ref": "#/components/responses/NotFound"
           }
         },
         "externalDocs": {
@@ -2642,16 +2642,16 @@
             }
           },
           "400": {
-            "$ref": "#/components/schemas/Responses/BadRequest"
+            "$ref": "#/components/responses/BadRequest"
           },
           "401": {
-            "$ref": "#/components/schemas/Responses/AuthFailure"
+            "$ref": "#/components/responses/AuthFailure"
           },
           "403": {
-            "$ref": "#/components/schemas/Responses/Forbidden"
+            "$ref": "#/components/responses/Forbidden"
           },
           "404": {
-            "$ref": "#/components/schemas/Responses/NotFound"
+            "$ref": "#/components/responses/NotFound"
           }
         },
         "externalDocs": {
@@ -2699,16 +2699,16 @@
             }
           },
           "400": {
-            "$ref": "#/components/schemas/Responses/BadRequest"
+            "$ref": "#/components/responses/BadRequest"
           },
           "401": {
-            "$ref": "#/components/schemas/Responses/AuthFailure"
+            "$ref": "#/components/responses/AuthFailure"
           },
           "403": {
-            "$ref": "#/components/schemas/Responses/Forbidden"
+            "$ref": "#/components/responses/Forbidden"
           },
           "404": {
-            "$ref": "#/components/schemas/Responses/NotFound"
+            "$ref": "#/components/responses/NotFound"
           }
         },
         "externalDocs": {
@@ -2756,16 +2756,16 @@
             }
           },
           "400": {
-            "$ref": "#/components/schemas/Responses/BadRequest"
+            "$ref": "#/components/responses/BadRequest"
           },
           "401": {
-            "$ref": "#/components/schemas/Responses/AuthFailure"
+            "$ref": "#/components/responses/AuthFailure"
           },
           "403": {
-            "$ref": "#/components/schemas/Responses/Forbidden"
+            "$ref": "#/components/responses/Forbidden"
           },
           "404": {
-            "$ref": "#/components/schemas/Responses/NotFound"
+            "$ref": "#/components/responses/NotFound"
           }
         },
         "externalDocs": {
@@ -2813,16 +2813,16 @@
             }
           },
           "400": {
-            "$ref": "#/components/schemas/Responses/BadRequest"
+            "$ref": "#/components/responses/BadRequest"
           },
           "401": {
-            "$ref": "#/components/schemas/Responses/AuthFailure"
+            "$ref": "#/components/responses/AuthFailure"
           },
           "403": {
-            "$ref": "#/components/schemas/Responses/Forbidden"
+            "$ref": "#/components/responses/Forbidden"
           },
           "404": {
-            "$ref": "#/components/schemas/Responses/NotFound"
+            "$ref": "#/components/responses/NotFound"
           }
         },
         "externalDocs": {
@@ -2870,16 +2870,16 @@
             }
           },
           "400": {
-            "$ref": "#/components/schemas/Responses/BadRequest"
+            "$ref": "#/components/responses/BadRequest"
           },
           "401": {
-            "$ref": "#/components/schemas/Responses/AuthFailure"
+            "$ref": "#/components/responses/AuthFailure"
           },
           "403": {
-            "$ref": "#/components/schemas/Responses/Forbidden"
+            "$ref": "#/components/responses/Forbidden"
           },
           "404": {
-            "$ref": "#/components/schemas/Responses/NotFound"
+            "$ref": "#/components/responses/NotFound"
           }
         },
         "externalDocs": {
@@ -2927,16 +2927,16 @@
             }
           },
           "400": {
-            "$ref": "#/components/schemas/Responses/BadRequest"
+            "$ref": "#/components/responses/BadRequest"
           },
           "401": {
-            "$ref": "#/components/schemas/Responses/AuthFailure"
+            "$ref": "#/components/responses/AuthFailure"
           },
           "403": {
-            "$ref": "#/components/schemas/Responses/Forbidden"
+            "$ref": "#/components/responses/Forbidden"
           },
           "404": {
-            "$ref": "#/components/schemas/Responses/NotFound"
+            "$ref": "#/components/responses/NotFound"
           }
         },
         "externalDocs": {
@@ -2984,16 +2984,16 @@
             }
           },
           "400": {
-            "$ref": "#/components/schemas/Responses/BadRequest"
+            "$ref": "#/components/responses/BadRequest"
           },
           "401": {
-            "$ref": "#/components/schemas/Responses/AuthFailure"
+            "$ref": "#/components/responses/AuthFailure"
           },
           "403": {
-            "$ref": "#/components/schemas/Responses/Forbidden"
+            "$ref": "#/components/responses/Forbidden"
           },
           "404": {
-            "$ref": "#/components/schemas/Responses/NotFound"
+            "$ref": "#/components/responses/NotFound"
           }
         },
         "externalDocs": {
@@ -3041,16 +3041,16 @@
             }
           },
           "400": {
-            "$ref": "#/components/schemas/Responses/BadRequest"
+            "$ref": "#/components/responses/BadRequest"
           },
           "401": {
-            "$ref": "#/components/schemas/Responses/AuthFailure"
+            "$ref": "#/components/responses/AuthFailure"
           },
           "403": {
-            "$ref": "#/components/schemas/Responses/Forbidden"
+            "$ref": "#/components/responses/Forbidden"
           },
           "404": {
-            "$ref": "#/components/schemas/Responses/NotFound"
+            "$ref": "#/components/responses/NotFound"
           }
         },
         "externalDocs": {
@@ -3061,6 +3061,138 @@
     }
   },
   "components": {
+    "responses": {
+      "BadRequest": {
+        "description": "Bad Request",
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "object",
+              "description": "Authorization Failure",
+              "properties": {
+                "title": {
+                  "type": "string"
+                },
+                "status": {
+                  "type": "number"
+                },
+                "cause": {
+                  "type": "string"
+                }
+              },
+              "example": {
+                "title": "Invalid Field",
+                "status": 400,
+                "example": "Invalid field name: 'checksums'"
+              }
+            }
+          }
+        }
+      },
+      "AuthFailure": {
+        "description": "Authorization Failure",
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "object",
+              "description": "Authorization Failure",
+              "properties": {
+                "message": {
+                  "type": "string"
+                },
+                "Tip 1": {
+                  "type": "string"
+                },
+                "Tip 2": {
+                  "type": "string"
+                },
+                "Tip 3": {
+                  "type": "string"
+                },
+                "Docs": {
+                  "type": "string",
+                  "format": "url"
+                },
+                "Discord": {
+                  "type": "string",
+                  "format": "url"
+                }
+              },
+              "example": {
+                "message": "Authorization Failure. Have you tried:",
+                "Tip 1": "Ensure you are sending Authorization and Client-ID as headers.",
+                "Tip 2": "Ensure Authorization value starts with 'Bearer ', including the space",
+                "Tip 3": "Ensure Authorization value ends with the App Access Token you generated, NOT your Client Secret.",
+                "Docs": "https://api-docs.igdb.com/#authentication",
+                "Discord": "https://discord.gg/FrvfwQg"
+              }
+            }
+          }
+        }
+      },
+      "Forbidden": {
+        "description": "Forbidden",
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "object",
+              "description": "Forbidden",
+              "properties": {
+                "title": {
+                  "type": "string"
+                },
+                "status": {
+                  "type": "number"
+                },
+                "cause": {
+                  "type": "string"
+                },
+                "details": {
+                  "type": "string"
+                }
+              },
+              "example": {
+                "title": "Forbidden",
+                "status": 403,
+                "cause": "Reqest limit too high",
+                "details": "You typed in 2500 but your maximum is 500"
+              }
+            }
+          }
+        }
+      },
+      "NotFound": {
+        "description": "Not Found",
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "object",
+              "description": "Not Found",
+              "properties": {
+                "title": {
+                  "type": "string"
+                },
+                "status": {
+                  "type": "number"
+                },
+                "type": {
+                  "type": "string"
+                },
+                "details": {
+                  "type": "string"
+                }
+              },
+              "example": {
+                "title": "Not Found",
+                "status": 404,
+                "type": "https://javalin.io/documentation#notfoundresponse",
+                "details": {}
+              }
+            }
+          }
+        }
+      }
+    },
     "schemas": {
       "AgeRating": {
         "type": "object",
@@ -5046,7 +5178,7 @@
             "description": "The IGDB object unique identifier"
           },
           "age_ratings": {
-            "type": "string",
+            "type": "array",
             "items": {
               "$ref": "#/components/schemas/AgeRatingEnums"
             }
@@ -7106,138 +7238,6 @@
           }
         }
       },
-      "Responses": {
-        "BadRequest": {
-          "description": "Bad Request",
-          "content": {
-            "application/json": {
-              "schema": {
-                "type": "object",
-                "description": "Authorization Failure",
-                "properties": {
-                  "title": {
-                    "type": "string"
-                  },
-                  "status": {
-                    "type": "number"
-                  },
-                  "cause": {
-                    "type": "string"
-                  }
-                },
-                "example": {
-                  "title": "Invalid Field",
-                  "status": 400,
-                  "example": "Invalid field name: 'checksums'"
-                }
-              }
-            }
-          }
-        },
-        "AuthFailure": {
-          "description": "Authorization Failure",
-          "content": {
-            "application/json": {
-              "schema": {
-                "type": "object",
-                "description": "Authorization Failure",
-                "properties": {
-                  "message": {
-                    "type": "string"
-                  },
-                  "Tip 1": {
-                    "type": "string"
-                  },
-                  "Tip 2": {
-                    "type": "string"
-                  },
-                  "Tip 3": {
-                    "type": "string"
-                  },
-                  "Docs": {
-                    "type": "string",
-                    "format": "url"
-                  },
-                  "Discord": {
-                    "type": "string",
-                    "format": "url"
-                  }
-                },
-                "example": {
-                  "message": "Authorization Failure. Have you tried:",
-                  "Tip 1": "Ensure you are sending Authorization and Client-ID as headers.",
-                  "Tip 2": "Ensure Authorization value starts with 'Bearer ', including the space",
-                  "Tip 3": "Ensure Authorization value ends with the App Access Token you generated, NOT your Client Secret.",
-                  "Docs": "https://api-docs.igdb.com/#authentication",
-                  "Discord": "https://discord.gg/FrvfwQg"
-                }
-              }
-            }
-          }
-        },
-        "Forbidden": {
-          "description": "Forbidden",
-          "content": {
-            "application/json": {
-              "schema": {
-                "type": "object",
-                "description": "Forbidden",
-                "properties": {
-                  "title": {
-                    "type": "string"
-                  },
-                  "status": {
-                    "type": "number"
-                  },
-                  "cause": {
-                    "type": "string"
-                  },
-                  "details": {
-                    "type": "string"
-                  }
-                },
-                "example": {
-                  "title": "Forbidden",
-                  "status": 403,
-                  "cause": "Reqest limit too high",
-                  "details": "You typed in 2500 but your maximum is 500"
-                }
-              }
-            }
-          }
-        },
-        "NotFound": {
-          "description": "Not Found",
-          "content": {
-            "application/json": {
-              "schema": {
-                "type": "object",
-                "description": "Not Found",
-                "properties": {
-                  "title": {
-                    "type": "string"
-                  },
-                  "status": {
-                    "type": "number"
-                  },
-                  "type": {
-                    "type": "string"
-                  },
-                  "details": {
-                    "type": "string"
-                  }
-                },
-                "example": {
-                  "title": "Not Found",
-                  "status": 404,
-                  "type": "https://javalin.io/documentation#notfoundresponse",
-                  "details": {}
-                }
-              }
-            }
-          }
-        }
-      },
       "Region": {
         "type": "object",
         "description": "Region for game localization",
@@ -7763,8 +7763,6 @@
     "securitySchemes": {
       "Authorization_Key": {
         "type": "http",
-        "in": "header",
-        "name": "Authorization",
         "scheme": "Bearer"
       },
       "Client-ID": {
