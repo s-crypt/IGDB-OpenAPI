@@ -34,22 +34,12 @@ servers:
   - url: https://api.igdb.com/v4
     description: The main base URL for the IGDB API
     variables: {}
-  - url: >-
-      https://id.twitch.tv/oauth2/token?client_id={client_id}&client_secret={client_secret}&grant_type=client_credentials
-    description: >-
-      Twitch Developer Authentication. Only used to obtain an access token for
-      the IGDB API
-    variables:
-      client_id:
-        default: abcdefg12345
-      client_secret:
-        default: hijklmn67890
 paths:
   /age_ratings:
     post:
       security:
-        - Authorization_Key: []
-        - Client-ID: []
+        - TwitchOAuth: []
+          Client-ID: []
       summary: Age Rating according to various rating organizations
       tags:
         - Endpoints
@@ -83,8 +73,8 @@ paths:
   /age_rating_content_descriptions:
     post:
       security:
-        - Authorization_Key: []
-        - Client-ID: []
+        - TwitchOAuth: []
+          Client-ID: []
       summary: Age Rating Descriptors
       tags:
         - Endpoints
@@ -118,8 +108,8 @@ paths:
   /alternative_names:
     post:
       security:
-        - Authorization_Key: []
-        - Client-ID: []
+        - TwitchOAuth: []
+          Client-ID: []
       summary: Alternative and international game titles
       tags:
         - Endpoints
@@ -153,8 +143,8 @@ paths:
   /artworks:
     post:
       security:
-        - Authorization_Key: []
-        - Client-ID: []
+        - TwitchOAuth: []
+          Client-ID: []
       summary: Official artworks (resolution and aspect ratio may vary)
       tags:
         - Endpoints
@@ -188,8 +178,8 @@ paths:
   /characters:
     post:
       security:
-        - Authorization_Key: []
-        - Client-ID: []
+        - TwitchOAuth: []
+          Client-ID: []
       summary: Video game characters
       tags:
         - Endpoints
@@ -223,8 +213,8 @@ paths:
   /character_mug_shots:
     post:
       security:
-        - Authorization_Key: []
-        - Client-ID: []
+        - TwitchOAuth: []
+          Client-ID: []
       summary: Images depicting game characters
       tags:
         - Endpoints
@@ -258,8 +248,8 @@ paths:
   /collections:
     post:
       security:
-        - Authorization_Key: []
-        - Client-ID: []
+        - TwitchOAuth: []
+          Client-ID: []
       summary: Collection, AKA Series
       tags:
         - Endpoints
@@ -293,8 +283,8 @@ paths:
   /collection_memberships:
     post:
       security:
-        - Authorization_Key: []
-        - Client-ID: []
+        - TwitchOAuth: []
+          Client-ID: []
       summary: The Collection Memberships.
       tags:
         - Endpoints
@@ -328,8 +318,8 @@ paths:
   /collection_membership_types:
     post:
       security:
-        - Authorization_Key: []
-        - Client-ID: []
+        - TwitchOAuth: []
+          Client-ID: []
       summary: Enums for collection membership types.
       tags:
         - Endpoints
@@ -363,8 +353,8 @@ paths:
   /collection_relations:
     post:
       security:
-        - Authorization_Key: []
-        - Client-ID: []
+        - TwitchOAuth: []
+          Client-ID: []
       summary: Describes Relationship between Collections.
       tags:
         - Endpoints
@@ -398,8 +388,8 @@ paths:
   /collection_relation_types:
     post:
       security:
-        - Authorization_Key: []
-        - Client-ID: []
+        - TwitchOAuth: []
+          Client-ID: []
       summary: Collection Relation Types
       tags:
         - Endpoints
@@ -433,8 +423,8 @@ paths:
   /collection_types:
     post:
       security:
-        - Authorization_Key: []
-        - Client-ID: []
+        - TwitchOAuth: []
+          Client-ID: []
       summary: Enums for collection types.
       tags:
         - Endpoints
@@ -468,8 +458,8 @@ paths:
   /companies:
     post:
       security:
-        - Authorization_Key: []
-        - Client-ID: []
+        - TwitchOAuth: []
+          Client-ID: []
       summary: Video game companies. Both publishers & developers
       tags:
         - Endpoints
@@ -503,8 +493,8 @@ paths:
   /company_logos:
     post:
       security:
-        - Authorization_Key: []
-        - Client-ID: []
+        - TwitchOAuth: []
+          Client-ID: []
       summary: The logos of developers and publishers
       tags:
         - Endpoints
@@ -538,8 +528,8 @@ paths:
   /company_websites:
     post:
       security:
-        - Authorization_Key: []
-        - Client-ID: []
+        - TwitchOAuth: []
+          Client-ID: []
       summary: Company Websites
       tags:
         - Endpoints
@@ -573,8 +563,8 @@ paths:
   /covers:
     post:
       security:
-        - Authorization_Key: []
-        - Client-ID: []
+        - TwitchOAuth: []
+          Client-ID: []
       summary: The cover art of games
       tags:
         - Endpoints
@@ -608,8 +598,8 @@ paths:
   /events:
     post:
       security:
-        - Authorization_Key: []
-        - Client-ID: []
+        - TwitchOAuth: []
+          Client-ID: []
       summary: Gaming event like GamesCom, Tokyo Game Show, PAX or GSL
       tags:
         - Endpoints
@@ -643,8 +633,8 @@ paths:
   /event_logos:
     post:
       security:
-        - Authorization_Key: []
-        - Client-ID: []
+        - TwitchOAuth: []
+          Client-ID: []
       summary: Logo for the event
       tags:
         - Endpoints
@@ -678,8 +668,8 @@ paths:
   /event_networks:
     post:
       security:
-        - Authorization_Key: []
-        - Client-ID: []
+        - TwitchOAuth: []
+          Client-ID: []
       summary: Urls related to the event like twitter, facebook and youtube
       tags:
         - Endpoints
@@ -713,8 +703,8 @@ paths:
   /franchises:
     post:
       security:
-        - Authorization_Key: []
-        - Client-ID: []
+        - TwitchOAuth: []
+          Client-ID: []
       summary: A list of video game franchises such as Star Wars.
       tags:
         - Endpoints
@@ -748,8 +738,8 @@ paths:
   /games:
     post:
       security:
-        - Authorization_Key: []
-        - Client-ID: []
+        - TwitchOAuth: []
+          Client-ID: []
       summary: Video Games!
       tags:
         - Endpoints
@@ -783,8 +773,8 @@ paths:
   /game_engines:
     post:
       security:
-        - Authorization_Key: []
-        - Client-ID: []
+        - TwitchOAuth: []
+          Client-ID: []
       summary: Video game engines such as unreal engine.
       tags:
         - Endpoints
@@ -818,8 +808,8 @@ paths:
   /game_engine_logos:
     post:
       security:
-        - Authorization_Key: []
-        - Client-ID: []
+        - TwitchOAuth: []
+          Client-ID: []
       summary: The logos of game engines
       tags:
         - Endpoints
@@ -853,8 +843,8 @@ paths:
   /external_games:
     post:
       security:
-        - Authorization_Key: []
-        - Client-ID: []
+        - TwitchOAuth: []
+          Client-ID: []
       summary: Game IDs on other services
       tags:
         - Endpoints
@@ -888,8 +878,8 @@ paths:
   /game_versions:
     post:
       security:
-        - Authorization_Key: []
-        - Client-ID: []
+        - TwitchOAuth: []
+          Client-ID: []
       summary: Details about game editions and versions.
       tags:
         - Endpoints
@@ -923,8 +913,8 @@ paths:
   /game_modes:
     post:
       security:
-        - Authorization_Key: []
-        - Client-ID: []
+        - TwitchOAuth: []
+          Client-ID: []
       summary: Single player, Multiplayer etc
       tags:
         - Endpoints
@@ -958,8 +948,8 @@ paths:
   /game_version_features:
     post:
       security:
-        - Authorization_Key: []
-        - Client-ID: []
+        - TwitchOAuth: []
+          Client-ID: []
       summary: Features and descriptions of what makes each version/edition different from the main game
       tags:
         - Endpoints
@@ -993,8 +983,8 @@ paths:
   /game_version_feature_values:
     post:
       security:
-        - Authorization_Key: []
-        - Client-ID: []
+        - TwitchOAuth: []
+          Client-ID: []
       summary: The bool/text value of the feature
       tags:
         - Endpoints
@@ -1028,8 +1018,8 @@ paths:
   /genres:
     post:
       security:
-        - Authorization_Key: []
-        - Client-ID: []
+        - TwitchOAuth: []
+          Client-ID: []
       summary: Genres of video game
       tags:
         - Endpoints
@@ -1063,8 +1053,8 @@ paths:
   /involved_companies:
     post:
       security:
-        - Authorization_Key: []
-        - Client-ID: []
+        - TwitchOAuth: []
+          Client-ID: []
       summary: Companies involved with the game
       tags:
         - Endpoints
@@ -1098,8 +1088,8 @@ paths:
   /game_videos:
     post:
       security:
-        - Authorization_Key: []
-        - Client-ID: []
+        - TwitchOAuth: []
+          Client-ID: []
       summary: A video associated with a game
       tags:
         - Endpoints
@@ -1133,8 +1123,8 @@ paths:
   /keywords:
     post:
       security:
-        - Authorization_Key: []
-        - Client-ID: []
+        - TwitchOAuth: []
+          Client-ID: []
       summary: Keywords are words or phrases that get tagged to a game such as “world war 2” or “steampunk”.
       tags:
         - Endpoints
@@ -1168,8 +1158,8 @@ paths:
   /languages:
     post:
       security:
-        - Authorization_Key: []
-        - Client-ID: []
+        - TwitchOAuth: []
+          Client-ID: []
       summary: Languages that are used in the Language Support endpoint.
       tags:
         - Endpoints
@@ -1203,8 +1193,8 @@ paths:
   /game_localizations:
     post:
       security:
-        - Authorization_Key: []
-        - Client-ID: []
+        - TwitchOAuth: []
+          Client-ID: []
       summary: Game localization for a game
       tags:
         - Endpoints
@@ -1238,8 +1228,8 @@ paths:
   /language_support_types:
     post:
       security:
-        - Authorization_Key: []
-        - Client-ID: []
+        - TwitchOAuth: []
+          Client-ID: []
       summary: Language Support Types contains the identifiers for the support types that Language Support uses.
       tags:
         - Endpoints
@@ -1273,8 +1263,8 @@ paths:
   /multiplayer_modes:
     post:
       security:
-        - Authorization_Key: []
-        - Client-ID: []
+        - TwitchOAuth: []
+          Client-ID: []
       summary: Data about the supported multiplayer types
       tags:
         - Endpoints
@@ -1308,8 +1298,8 @@ paths:
   /language_supports:
     post:
       security:
-        - Authorization_Key: []
-        - Client-ID: []
+        - TwitchOAuth: []
+          Client-ID: []
       summary: Games can be played with different languages for voice acting, subtitles, or the interface language.
       tags:
         - Endpoints
@@ -1343,8 +1333,8 @@ paths:
   /network_types:
     post:
       security:
-        - Authorization_Key: []
-        - Client-ID: []
+        - TwitchOAuth: []
+          Client-ID: []
       summary: Social networks related to the event like twitter, facebook and youtube
       tags:
         - Endpoints
@@ -1378,8 +1368,8 @@ paths:
   /platform_families:
     post:
       security:
-        - Authorization_Key: []
-        - Client-ID: []
+        - TwitchOAuth: []
+          Client-ID: []
       summary: A collection of closely related platforms
       tags:
         - Endpoints
@@ -1413,8 +1403,8 @@ paths:
   /platform_logos:
     post:
       security:
-        - Authorization_Key: []
-        - Client-ID: []
+        - TwitchOAuth: []
+          Client-ID: []
       summary: Logo for a platform
       tags:
         - Endpoints
@@ -1448,8 +1438,8 @@ paths:
   /platform_versions:
     post:
       security:
-        - Authorization_Key: []
-        - Client-ID: []
+        - TwitchOAuth: []
+          Client-ID: []
       summary: The platform's version
       tags:
         - Endpoints
@@ -1483,8 +1473,8 @@ paths:
   /platform_version_companies:
     post:
       security:
-        - Authorization_Key: []
-        - Client-ID: []
+        - TwitchOAuth: []
+          Client-ID: []
       summary: A platform developer
       tags:
         - Endpoints
@@ -1518,8 +1508,8 @@ paths:
   /platforms:
     post:
       security:
-        - Authorization_Key: []
-        - Client-ID: []
+        - TwitchOAuth: []
+          Client-ID: []
       summary: The hardware used to run the game or game delivery network
       tags:
         - Endpoints
@@ -1553,8 +1543,8 @@ paths:
   /platform_version_release_dates:
     post:
       security:
-        - Authorization_Key: []
-        - Client-ID: []
+        - TwitchOAuth: []
+          Client-ID: []
       summary: A handy endpoint that extends platform release dates. Used to dig deeper into release dates, platforms and versions.
       tags:
         - Endpoints
@@ -1588,8 +1578,8 @@ paths:
   /platform_websites:
     post:
       security:
-        - Authorization_Key: []
-        - Client-ID: []
+        - TwitchOAuth: []
+          Client-ID: []
       summary: The main website for the platform
       tags:
         - Endpoints
@@ -1623,8 +1613,8 @@ paths:
   /player_perspectives:
     post:
       security:
-        - Authorization_Key: []
-        - Client-ID: []
+        - TwitchOAuth: []
+          Client-ID: []
       summary: Player perspectives describe the view/perspective of the player in a video game.
       tags:
         - Endpoints
@@ -1658,8 +1648,8 @@ paths:
   /regions:
     post:
       security:
-        - Authorization_Key: []
-        - Client-ID: []
+        - TwitchOAuth: []
+          Client-ID: []
       summary: Region for game localization
       tags:
         - Endpoints
@@ -1693,8 +1683,8 @@ paths:
   /release_dates:
     post:
       security:
-        - Authorization_Key: []
-        - Client-ID: []
+        - TwitchOAuth: []
+          Client-ID: []
       summary: A handy endpoint that extends game release dates. Used to dig deeper into release dates, platforms and versions.
       tags:
         - Endpoints
@@ -1728,8 +1718,8 @@ paths:
   /release_date_statuses:
     post:
       security:
-        - Authorization_Key: []
-        - Client-ID: []
+        - TwitchOAuth: []
+          Client-ID: []
       summary: An endpoint to provide definition of all of the current release date statuses.
       tags:
         - Endpoints
@@ -1763,8 +1753,8 @@ paths:
   /screenshots:
     post:
       security:
-        - Authorization_Key: []
-        - Client-ID: []
+        - TwitchOAuth: []
+          Client-ID: []
       summary: Screenshots of games
       tags:
         - Endpoints
@@ -1798,8 +1788,8 @@ paths:
   /search:
     post:
       security:
-        - Authorization_Key: []
-        - Client-ID: []
+        - TwitchOAuth: []
+          Client-ID: []
       summary: Search IGDB!
       tags:
         - Endpoints
@@ -1833,8 +1823,8 @@ paths:
   /themes:
     post:
       security:
-        - Authorization_Key: []
-        - Client-ID: []
+        - TwitchOAuth: []
+          Client-ID: []
       summary: Video game themes
       tags:
         - Endpoints
@@ -1868,8 +1858,8 @@ paths:
   /websites:
     post:
       security:
-        - Authorization_Key: []
-        - Client-ID: []
+        - TwitchOAuth: []
+          Client-ID: []
       summary: A website url, usually associated with a game
       tags:
         - Endpoints
@@ -4952,9 +4942,14 @@ components:
             - 18
           description: discord
   securitySchemes:
-    Authorization_Key:
-      type: http
-      scheme: Bearer
+    TwitchOAuth:
+      type: oauth2
+      description: Retrieve/Refresh your Authorization Token from the Twitch OAuth service
+      flows:
+        clientCredentials:
+          tokenUrl: https://id.twitch.tv/oauth2/token
+          refreshUrl: https://id.twitch.tv/oauth2/token
+          scopes: {}
     Client-ID:
       type: apiKey
       name: Client-ID
