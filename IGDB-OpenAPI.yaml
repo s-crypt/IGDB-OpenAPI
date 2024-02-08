@@ -39,6 +39,7 @@ paths:
     post:
       security:
         - TwitchOAuth: []
+          Client-ID: []
       summary: Age Rating according to various rating organizations
       tags:
         - Endpoints
@@ -73,6 +74,7 @@ paths:
     post:
       security:
         - TwitchOAuth: []
+          Client-ID: []
       summary: Age Rating Descriptors
       tags:
         - Endpoints
@@ -107,6 +109,7 @@ paths:
     post:
       security:
         - TwitchOAuth: []
+          Client-ID: []
       summary: Alternative and international game titles
       tags:
         - Endpoints
@@ -141,6 +144,7 @@ paths:
     post:
       security:
         - TwitchOAuth: []
+          Client-ID: []
       summary: Official artworks (resolution and aspect ratio may vary)
       tags:
         - Endpoints
@@ -175,6 +179,7 @@ paths:
     post:
       security:
         - TwitchOAuth: []
+          Client-ID: []
       summary: Video game characters
       tags:
         - Endpoints
@@ -209,6 +214,7 @@ paths:
     post:
       security:
         - TwitchOAuth: []
+          Client-ID: []
       summary: Images depicting game characters
       tags:
         - Endpoints
@@ -243,6 +249,7 @@ paths:
     post:
       security:
         - TwitchOAuth: []
+          Client-ID: []
       summary: Collection, AKA Series
       tags:
         - Endpoints
@@ -277,6 +284,7 @@ paths:
     post:
       security:
         - TwitchOAuth: []
+          Client-ID: []
       summary: The Collection Memberships.
       tags:
         - Endpoints
@@ -311,6 +319,7 @@ paths:
     post:
       security:
         - TwitchOAuth: []
+          Client-ID: []
       summary: Enums for collection membership types.
       tags:
         - Endpoints
@@ -345,6 +354,7 @@ paths:
     post:
       security:
         - TwitchOAuth: []
+          Client-ID: []
       summary: Describes Relationship between Collections.
       tags:
         - Endpoints
@@ -379,6 +389,7 @@ paths:
     post:
       security:
         - TwitchOAuth: []
+          Client-ID: []
       summary: Collection Relation Types
       tags:
         - Endpoints
@@ -413,6 +424,7 @@ paths:
     post:
       security:
         - TwitchOAuth: []
+          Client-ID: []
       summary: Enums for collection types.
       tags:
         - Endpoints
@@ -447,6 +459,7 @@ paths:
     post:
       security:
         - TwitchOAuth: []
+          Client-ID: []
       summary: Video game companies. Both publishers & developers
       tags:
         - Endpoints
@@ -481,6 +494,7 @@ paths:
     post:
       security:
         - TwitchOAuth: []
+          Client-ID: []
       summary: The logos of developers and publishers
       tags:
         - Endpoints
@@ -515,6 +529,7 @@ paths:
     post:
       security:
         - TwitchOAuth: []
+          Client-ID: []
       summary: Company Websites
       tags:
         - Endpoints
@@ -549,6 +564,7 @@ paths:
     post:
       security:
         - TwitchOAuth: []
+          Client-ID: []
       summary: The cover art of games
       tags:
         - Endpoints
@@ -583,6 +599,7 @@ paths:
     post:
       security:
         - TwitchOAuth: []
+          Client-ID: []
       summary: Gaming event like GamesCom, Tokyo Game Show, PAX or GSL
       tags:
         - Endpoints
@@ -617,6 +634,7 @@ paths:
     post:
       security:
         - TwitchOAuth: []
+          Client-ID: []
       summary: Logo for the event
       tags:
         - Endpoints
@@ -651,6 +669,7 @@ paths:
     post:
       security:
         - TwitchOAuth: []
+          Client-ID: []
       summary: Urls related to the event like twitter, facebook and youtube
       tags:
         - Endpoints
@@ -685,6 +704,7 @@ paths:
     post:
       security:
         - TwitchOAuth: []
+          Client-ID: []
       summary: A list of video game franchises such as Star Wars.
       tags:
         - Endpoints
@@ -719,6 +739,7 @@ paths:
     post:
       security:
         - TwitchOAuth: []
+          Client-ID: []
       summary: Video Games!
       tags:
         - Endpoints
@@ -753,6 +774,7 @@ paths:
     post:
       security:
         - TwitchOAuth: []
+          Client-ID: []
       summary: Video game engines such as unreal engine.
       tags:
         - Endpoints
@@ -787,6 +809,7 @@ paths:
     post:
       security:
         - TwitchOAuth: []
+          Client-ID: []
       summary: The logos of game engines
       tags:
         - Endpoints
@@ -821,6 +844,7 @@ paths:
     post:
       security:
         - TwitchOAuth: []
+          Client-ID: []
       summary: Game IDs on other services
       tags:
         - Endpoints
@@ -855,6 +879,7 @@ paths:
     post:
       security:
         - TwitchOAuth: []
+          Client-ID: []
       summary: Details about game editions and versions.
       tags:
         - Endpoints
@@ -889,6 +914,7 @@ paths:
     post:
       security:
         - TwitchOAuth: []
+          Client-ID: []
       summary: Single player, Multiplayer etc
       tags:
         - Endpoints
@@ -923,6 +949,7 @@ paths:
     post:
       security:
         - TwitchOAuth: []
+          Client-ID: []
       summary: Features and descriptions of what makes each version/edition different from the main game
       tags:
         - Endpoints
@@ -957,6 +984,7 @@ paths:
     post:
       security:
         - TwitchOAuth: []
+          Client-ID: []
       summary: The bool/text value of the feature
       tags:
         - Endpoints
@@ -991,6 +1019,7 @@ paths:
     post:
       security:
         - TwitchOAuth: []
+          Client-ID: []
       summary: Genres of video game
       tags:
         - Endpoints
@@ -1025,6 +1054,7 @@ paths:
     post:
       security:
         - TwitchOAuth: []
+          Client-ID: []
       summary: Companies involved with the game
       tags:
         - Endpoints
@@ -1059,6 +1089,7 @@ paths:
     post:
       security:
         - TwitchOAuth: []
+          Client-ID: []
       summary: A video associated with a game
       tags:
         - Endpoints
@@ -1093,6 +1124,7 @@ paths:
     post:
       security:
         - TwitchOAuth: []
+          Client-ID: []
       summary: Keywords are words or phrases that get tagged to a game such as “world war 2” or “steampunk”.
       tags:
         - Endpoints
@@ -1127,6 +1159,7 @@ paths:
     post:
       security:
         - TwitchOAuth: []
+          Client-ID: []
       summary: Languages that are used in the Language Support endpoint.
       tags:
         - Endpoints
@@ -1161,6 +1194,7 @@ paths:
     post:
       security:
         - TwitchOAuth: []
+          Client-ID: []
       summary: Game localization for a game
       tags:
         - Endpoints
@@ -1195,6 +1229,7 @@ paths:
     post:
       security:
         - TwitchOAuth: []
+          Client-ID: []
       summary: Language Support Types contains the identifiers for the support types that Language Support uses.
       tags:
         - Endpoints
@@ -1229,6 +1264,7 @@ paths:
     post:
       security:
         - TwitchOAuth: []
+          Client-ID: []
       summary: Data about the supported multiplayer types
       tags:
         - Endpoints
@@ -1263,6 +1299,7 @@ paths:
     post:
       security:
         - TwitchOAuth: []
+          Client-ID: []
       summary: Games can be played with different languages for voice acting, subtitles, or the interface language.
       tags:
         - Endpoints
@@ -1297,6 +1334,7 @@ paths:
     post:
       security:
         - TwitchOAuth: []
+          Client-ID: []
       summary: Social networks related to the event like twitter, facebook and youtube
       tags:
         - Endpoints
@@ -1331,6 +1369,7 @@ paths:
     post:
       security:
         - TwitchOAuth: []
+          Client-ID: []
       summary: A collection of closely related platforms
       tags:
         - Endpoints
@@ -1365,6 +1404,7 @@ paths:
     post:
       security:
         - TwitchOAuth: []
+          Client-ID: []
       summary: Logo for a platform
       tags:
         - Endpoints
@@ -1399,6 +1439,7 @@ paths:
     post:
       security:
         - TwitchOAuth: []
+          Client-ID: []
       summary: The platform's version
       tags:
         - Endpoints
@@ -1433,6 +1474,7 @@ paths:
     post:
       security:
         - TwitchOAuth: []
+          Client-ID: []
       summary: A platform developer
       tags:
         - Endpoints
@@ -1467,6 +1509,7 @@ paths:
     post:
       security:
         - TwitchOAuth: []
+          Client-ID: []
       summary: The hardware used to run the game or game delivery network
       tags:
         - Endpoints
@@ -1501,6 +1544,7 @@ paths:
     post:
       security:
         - TwitchOAuth: []
+          Client-ID: []
       summary: A handy endpoint that extends platform release dates. Used to dig deeper into release dates, platforms and versions.
       tags:
         - Endpoints
@@ -1535,6 +1579,7 @@ paths:
     post:
       security:
         - TwitchOAuth: []
+          Client-ID: []
       summary: The main website for the platform
       tags:
         - Endpoints
@@ -1569,6 +1614,7 @@ paths:
     post:
       security:
         - TwitchOAuth: []
+          Client-ID: []
       summary: Player perspectives describe the view/perspective of the player in a video game.
       tags:
         - Endpoints
@@ -1603,6 +1649,7 @@ paths:
     post:
       security:
         - TwitchOAuth: []
+          Client-ID: []
       summary: Region for game localization
       tags:
         - Endpoints
@@ -1637,6 +1684,7 @@ paths:
     post:
       security:
         - TwitchOAuth: []
+          Client-ID: []
       summary: A handy endpoint that extends game release dates. Used to dig deeper into release dates, platforms and versions.
       tags:
         - Endpoints
@@ -1671,6 +1719,7 @@ paths:
     post:
       security:
         - TwitchOAuth: []
+          Client-ID: []
       summary: An endpoint to provide definition of all of the current release date statuses.
       tags:
         - Endpoints
@@ -1705,6 +1754,7 @@ paths:
     post:
       security:
         - TwitchOAuth: []
+          Client-ID: []
       summary: Screenshots of games
       tags:
         - Endpoints
@@ -1739,6 +1789,7 @@ paths:
     post:
       security:
         - TwitchOAuth: []
+          Client-ID: []
       summary: Search IGDB!
       tags:
         - Endpoints
@@ -1773,6 +1824,7 @@ paths:
     post:
       security:
         - TwitchOAuth: []
+          Client-ID: []
       summary: Video game themes
       tags:
         - Endpoints
@@ -1807,6 +1859,7 @@ paths:
     post:
       security:
         - TwitchOAuth: []
+          Client-ID: []
       summary: A website url, usually associated with a game
       tags:
         - Endpoints
@@ -4896,5 +4949,10 @@ components:
         clientCredentials:
           tokenUrl: https://id.twitch.tv/oauth2/token
           refreshUrl: https://id.twitch.tv/oauth2/token
+          scopes: {}
+    Client-ID:
+      type: apiKey
+      name: Client-ID
+      in: header
 tags:
   - name: Endpoints
