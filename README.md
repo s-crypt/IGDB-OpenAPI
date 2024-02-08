@@ -4,7 +4,9 @@
 You may use this spec however you like, but please credit me somehow as I spent a lot of time on this :)
 
 Want to test the IGDB API? You can import this schema into an API testbench like [Postman](https://www.postman.com) or [Hoppscotch](https://hoppscotch.io) to query the API with all the endpoints and configuration already set up!
-Want to *quickly* test the API? Use the [Scalar instance!](https://igdb-openapi.pages.dev/scalar) Its already set up and will proxy your requests to avoid CORS issues
+
+~~Want to *quickly* test the API? Use the [Scalar instance!](https://igdb-openapi.pages.dev/scalar) Its already set up and will proxy your requests to avoid CORS issues~~  
+Scalar does not currently work with OAuth, you can get around this by getting the auth key manually and using the non-oauth schema version of scalar [here](https://78b26702.igdb-openapi.pages.dev/scalar).
 
 TODO:
 - [x] Finish component schemas
@@ -14,6 +16,7 @@ TODO:
   - [X] Add Format to data types
   - [X] Reorder based on API response
 - [X] Add format to numbers (oops)
+- [X] Implement Oauth2
 
 Future:
 - [ ] More/better descriptions of schema items
@@ -25,7 +28,7 @@ Future:
 ### Bug reports/Pull Requests are encouraged and very helpful!
 
 # How do I use this?
-### You can use [Swagger Editor](https://editor-next.swagger.io/) or [OpenAPI Generators](https://openapi-generator.tech/docs/generators#client-generators) to generate the following native clients for the API.
+### You can use [Swagger Editor](https://editor-next.swagger.io/) or [OpenAPI Generators](https://openapi-generator.tech/docs/generators#client-generators) to generate the following native clients for the API.  
 I may add some of these to releases, IDK yet.
 
 [Swagger Editor](https://editor-next.swagger.io/)
