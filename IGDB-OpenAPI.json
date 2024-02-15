@@ -5266,11 +5266,6 @@
             "format": "timestamp",
             "description": "The first release date for this game"
           },
-          "follows": {
-            "type": "integer",
-            "format": "int32",
-            "description": "Number of people following a game"
-          },
           "forks": {
             "type": "array",
             "items": {
