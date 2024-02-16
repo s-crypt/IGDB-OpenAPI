@@ -1,7 +1,8 @@
 # Complete and ready for use!
 ### I have validated the responses against the API. If you come across any discrepancies, please let me know!
-
-You may use this spec however you like, but please credit me somehow as I spent a lot of time on this :)
+### However, this is STILL IN BETA. Please report any bugs  
+  
+You may use this spec however you like, but please credit me somehow as I spent a lot of time on this 😉
 
 
 TODO:
