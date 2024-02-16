@@ -1,10 +1,10 @@
 # Complete and ready for use!
-### I have validated the responses against the API. If you come across any discrepancies, please let me know!
-### However, this is STILL IN BETA. Please report any bugs  
+### I have validated the responses against the API. However, this is STILL IN BETA. Please report any bugs and if you come across any discrepancies, please let me know!  
   
-You may use this spec however you like, but please credit me somehow as I spent a lot of time on this 😉
-
-
+You may use this spec however you like, but please credit me somehow as I spent a lot of time on this 😉  
+  
+To test out the API with a built-in CORS proxy, go to the [redoc page](https://igdb-openapi.s-crypt.co/redoc) and select `https://corsproxy.io/?https://api.igdb.com/v4` as the server. Use at your own risk as I do not run the proxy, the people at corsproxy.io do.  
+  
 TODO:
 - [x] Finish component schemas
 - [x] Finish Paths
@@ -13,15 +13,15 @@ TODO:
   - [X] Add Format to data types
   - [X] Reorder based on API response
 - [X] Add format to numbers (oops)
-- [X] Implement Oauth2
-
+- [X] Implement Oauth2  
+  
 Future:
 - [ ] More/better descriptions of schema items
 - [ ] Create examples based on response
 - [ ] Add websockets
 - [ ] Themeing with IGDB colors
 - [ ] Organize with tags?
-- [ ] CORS proxy for Try It function (HELP NEEDED)
+- [X] CORS proxy for Try It function
 
 ### Bug reports/Pull Requests are encouraged and very helpful!
 

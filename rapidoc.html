@@ -1,0 +1,38 @@
+<!doctype html> <!-- Important: must specify -->
+<html>
+  <head>
+    <title>IGDB API</title>
+    <meta charset="utf-8"> <!-- Important: rapi-doc uses utf8 characters -->
+    <script type="module" src="https://cdn.jsdelivr.net/npm/rapidoc@9.3.4/dist/rapidoc-min.min.js"></script>
+    <link rel="icon" type="image/x-icon" href="./assets/favicon.ico">
+  </head>
+  <body>
+    <rapi-doc
+      spec-url = "https://raw.githubusercontent.com/s-crypt/IGDB-OpenAPI/v4/IGDB-OpenAPI.yaml"
+      heading-text = "API"
+      theme = "dark"
+      bg-color = "#2e3336"
+      header-color = "#9147ff"
+      primary-color = "#9147ff"
+      regular-font = "Open Sans"
+      mono-font = 'Ubuntu Mono'
+      font-size = "large"
+      show-method-in-nav-bar = "as-colored-block"
+      use-path-in-nav-bar = "true"
+      nav-bg-color = "#1e2224"
+      nav-item-spacing = "default"
+      render-style = "read"
+      show-components = "true"
+      allow-spec-url-load = "false"
+      allow-spec-file-load = "false"
+      allow-spec-file-download = "true"
+      show-curl-before-try = "true"
+      schema-style = "table"
+      schema-expand-level = "2"
+      default-schema-tab = "schema"
+      server-url = "https://corsproxy.io/?https://api.igdb.com/v4"
+    > 
+    <img slot="logo" src="./assets/igdb_logo-svg.svg" style="width:75px; height:75px; padding-inline: 20% 15%" />
+    </rapi-doc>
+  </body>
+</html>

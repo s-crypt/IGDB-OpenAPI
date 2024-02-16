@@ -30,7 +30,6 @@ externalDocs:
 servers:
   - url: https://api.igdb.com/v4
     description: The main base URL for the IGDB API
-    variables: {}
 paths:
   /age_ratings:
     post:
@@ -4938,6 +4937,7 @@ components:
     TwitchOAuth:
       type: oauth2
       description: Retrieve/Refresh your Authorization Token from the Twitch OAuth service
+      x-receive-token-in: request-body
       flows:
         clientCredentials:
           tokenUrl: https://id.twitch.tv/oauth2/token
