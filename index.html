@@ -1,26 +1,19 @@
+<!-- HTML for static distribution bundle build -->
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta
-      name="description"
-      content="SwaggerUI"
-    />
-    <title>SwaggerUI</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/swagger-ui/5.11.2/swagger-ui.min.css" />
+    <meta charset="UTF-8">
+    <title>IGDB OpenAPI Swagger-UI</title>
+    <link rel="stylesheet" type="text/css" href="./Swagger-UI/swagger-ui.css" />
+    <link rel="stylesheet" type="text/css" href="./Swagger-UI/index.css" />
+    <link rel="icon" type="image/png" href="./Swagger-UI/favicon-32x32.png" sizes="32x32" />
+    <link rel="icon" type="image/png" href="./Swagger-UI/favicon-16x16.png" sizes="16x16" />
   </head>
+
   <body>
-  <div id="swagger-ui"></div>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/swagger-ui/5.11.2/swagger-ui-bundle.js" crossorigin></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/swagger-ui/5.11.2/swagger-ui-standalone-preset.min.js" crossorigin></script>
-  <script>
-    window.onload = () => {
-      window.ui = SwaggerUIBundle({
-        url: './IGDB-OpenAPI.yaml',
-        dom_id: '#swagger-ui',
-      });
-    };
-  </script>
+    <div id="swagger-ui"></div>
+    <script src="./Swagger-UI/swagger-ui-bundle.js" charset="UTF-8"> </script>
+    <script src="./Swagger-UI/swagger-ui-standalone-preset.js" charset="UTF-8"> </script>
+    <script src="./Swagger-UI/swagger-initializer.js" charset="UTF-8"> </script>
   </body>
 </html>
