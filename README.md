@@ -3,7 +3,7 @@
   
 You may use this spec however you like, but please credit me somehow as I spent a lot of time on this 😉  
   
-To test out the API with a built-in CORS proxy, go to the [redoc page](https://igdb-openapi.s-crypt.co/redoc) and select `https://corsproxy.io/?https://api.igdb.com/v4` as the server. Use at your own risk as I do not run the proxy, the people at corsproxy.io do.  
+To test out the API with a built-in CORS proxy, go to the [rapidoc page](https://igdb-openapi.s-crypt.co/rapidoc) and select `https://corsproxy.io/?https://api.igdb.com/v4` as the server. Use at your own risk as I do not run the proxy, the people at corsproxy.io do.  
   
 TODO:
 - [x] Finish component schemas
