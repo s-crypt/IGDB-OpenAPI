@@ -5102,9 +5102,10 @@
               "$ref": "#/components/schemas/GameCategoryEnums"
             },
             "collection": {
-              "deprecated": true,
-              "description": "DEPRRICATED - Use collections field",
-              "$ref": "#/components/schemas/Collection/properties/id"
+              "type": "number",
+              "format": "int32",
+              "description": "DEPRRICATED - Use collections field. Reference ID for collection",
+              "deprecated": true
             },
             "collections": {
               "type": "array",
