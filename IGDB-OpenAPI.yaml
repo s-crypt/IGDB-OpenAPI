@@ -3234,6 +3234,8 @@ components:
         category:
           $ref: "#/components/schemas/GameCategoryEnums"
         collection:
+          deprecated: true
+          description: DEPRRICATED - Use collections field
           $ref: "#/components/schemas/Collection/properties/id"
         collections:
           type: array
@@ -3261,6 +3263,11 @@ components:
           type: array
           items:
             $ref: "#/components/schemas/ExternalGame/properties/id"
+        follows:
+          type: number
+          format: int32
+          description: DEPRECATED- TO BE REMOVED. The number of people following a game
+          deprecated: true
         first_release_date:
           type: number
           format: timestamp
