@@ -16,12 +16,18 @@ TODO:
 - [X] Implement Oauth2  
   
 Future:
+- [X] CORS proxy for Try It function - rapidoc
 - [ ] More/better descriptions of schema items
 - [ ] Create examples based on response
-- [ ] Add websockets
-- [ ] Themeing with IGDB colors
+- [ ] OAI 3.1 for Websocket support? (See [discussion](https://github.com/s-crypt/IGDB-OpenAPI/discussions/4))
+- [ ] Themeing with IGDB colors - In Progress with rapidoc
 - [ ] Organize with tags?
-- [X] CORS proxy for Try It function
+- [ ] Automate JSON generation (spec is written in YAML)
+- [ ] Releases?
+  - [ ] Static spec files
+  - [ ] Clients attached
+
+Anything else? Please open a discussion!
 
 ### Bug reports/Pull Requests are encouraged and very helpful!
 
@@ -29,7 +35,7 @@ Future:
 ### You can use [Swagger Editor](https://editor-next.swagger.io/) or [OpenAPI Generators](https://openapi-generator.tech/docs/generators#client-generators) to generate the following native clients for the API.  
 I may add some of these to releases, IDK yet.
 
-[Swagger Editor](https://editor-next.swagger.io/)
+#### [Swagger Editor](https://editor-next.swagger.io/)
 * C# - C Sharp
 * C# .Net2 - C Shart DotNet 2
 * Dart
@@ -53,7 +59,7 @@ I may add some of these to releases, IDK yet.
 * Typescript Axios
 * Typescript Fetch
 
-[OpenAPI Generators](https://openapi-generator.tech/docs/generators#client-generators)
+#### [OpenAPI Generators](https://openapi-generator.tech/docs/generators#client-generators)
 * ada
 * android
 * apex

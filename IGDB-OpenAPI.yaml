@@ -9,9 +9,11 @@ info:
   license:
     url: https://www.twitch.tv/p/legal/developer-agreement/
     name: Twitch Developer Services Agreement
-  description: >-
-    This OpenAPI documentation and schema project IS IN BETA and maintained by [s-crypt.](https://github.com/s-crypt)  
-    The source code and more information is [available in the GitHub repository](https://github.com/s-crypt/IGDB-OpenAPI)  
+  description: |
+    This OpenAPI documentation and schema project IS IN BETA and maintained by [s-crypt.](https://github.com/s-crypt)
+
+    The source code and more information is [available in the GitHub repository](https://github.com/s-crypt/IGDB-OpenAPI)
+
     Issues and pull requests are welcome! Please report any bugs or discrepancies you come across!
   termsOfService: https://www.twitch.tv/p/en/legal/terms-of-service/
 externalDocs:
@@ -1877,95 +1879,95 @@ paths:
         url: https://api-docs.igdb.com/#website
 components:
   responses:
-      BadRequest:
-        description: Bad Request
-        content:
-          application/json:
-            schema:
-              type: object
-              description: Authorization Failure
-              properties:
-                title:
-                  type: string
-                status:
-                  type: number
-                cause:
-                  type: string
-              example:
-                title: Invalid Field
-                status: 400
-                example: "Invalid field name: 'checksums'"
-      AuthFailure:
-        description: Authorization Failure
-        content:
-          application/json:
-            schema:
-              type: object
-              description: Authorization Failure
-              properties:
-                message:
-                  type: string
-                "Tip 1":
-                  type: string
-                "Tip 2":
-                  type: string
-                "Tip 3":
-                  type: string
-                Docs:
-                  type: string
-                  format: url
-                Discord:
-                  type: string
-                  format: url
-              example:
-                message: "Authorization Failure. Have you tried:"
-                "Tip 1": "Ensure you are sending Authorization and Client-ID as headers."
-                "Tip 2": "Ensure Authorization value starts with 'Bearer ', including the space"
-                "Tip 3": "Ensure Authorization value ends with the App Access Token you generated, NOT your Client Secret."
-                Docs: "https://api-docs.igdb.com/#authentication"
-                Discord: "https://discord.gg/FrvfwQg"
-      Forbidden:
-        description: Forbidden
-        content:
-          application/json:
-            schema:
-              type: object
-              description: Forbidden
-              properties:
-                title:
-                  type: string
-                status:
-                  type: number
-                cause:
-                  type: string
-                details:
-                  type: string
-              example:
-                title: Forbidden
-                status: 403
-                cause: Reqest limit too high
-                details: You typed in 2500 but your maximum is 500
-      NotFound:
-        description: Not Found
-        content:
-          application/json:
-            schema:
-              type: object
-              description: Not Found
-              properties:
-                title:
-                  type: string
-                status:
-                  type: number
-                type:
-                  type: string
-                details:
-                  type: string
-              example:
-                title: Not Found
-                status: 404
-                type: https://javalin.io/documentation#notfoundresponse
-                details: {}
+    BadRequest:
+      description: Bad Request
+      content:
+        application/json:
+          schema:
+            type: object
+            description: Authorization Failure
+            properties:
+              title:
+                type: string
+              status:
+                type: number
+              cause:
+                type: string
+            example:
+              title: Invalid Field
+              status: 400
+              example: "Invalid field name: 'checksums'"
+    AuthFailure:
+      description: Authorization Failure
+      content:
+        application/json:
+          schema:
+            type: object
+            description: Authorization Failure
+            properties:
+              message:
+                type: string
+              "Tip 1":
+                type: string
+              "Tip 2":
+                type: string
+              "Tip 3":
+                type: string
+              Docs:
+                type: string
+                format: url
+              Discord:
+                type: string
+                format: url
+            example:
+              message: "Authorization Failure. Have you tried:"
+              "Tip 1": "Ensure you are sending Authorization and Client-ID as headers."
+              "Tip 2": "Ensure Authorization value starts with 'Bearer ', including the space"
+              "Tip 3": "Ensure Authorization value ends with the App Access Token you generated, NOT your Client Secret."
+              Docs: "https://api-docs.igdb.com/#authentication"
+              Discord: "https://discord.gg/FrvfwQg"
+    Forbidden:
+      description: Forbidden
+      content:
+        application/json:
+          schema:
+            type: object
+            description: Forbidden
+            properties:
+              title:
+                type: string
+              status:
+                type: number
+              cause:
+                type: string
+              details:
+                type: string
+            example:
+              title: Forbidden
+              status: 403
+              cause: Reqest limit too high
+              details: You typed in 2500 but your maximum is 500
+    NotFound:
+      description: Not Found
+      content:
+        application/json:
+          schema:
+            type: object
+            description: Not Found
+            properties:
+              title:
+                type: string
+              status:
+                type: number
+              type:
+                type: string
+              details:
+                type: string
+            example:
+              title: Not Found
+              status: 404
+              type: https://javalin.io/documentation#notfoundresponse
+              details: {}
   schemas:
     AgeRating:
       type: object
@@ -2687,15 +2689,15 @@ components:
           format: int32
           description: The IGDB object unique identifier
         child_collection:
-          $ref: '#/components/schemas/Collection/properties/id'
+          $ref: "#/components/schemas/Collection/properties/id"
         created_at:
           type: number
           format: timestamp
           description: Date this was initally added to the IGDB database
         parent_collection:
-          $ref: '#/components/schemas/Collection/properties/id'
+          $ref: "#/components/schemas/Collection/properties/id"
         type:
-          $ref: '#/components/schemas/CollectionRelationType/properties/id'
+          $ref: "#/components/schemas/CollectionRelationType/properties/id"
         updated_at:
           type: number
           format: timestamp
@@ -2719,9 +2721,9 @@ components:
           type: string
           description: Description of the membership type
         allowed_child_type:
-          $ref: '#/components/schemas/CollectionType/properties/id'
+          $ref: "#/components/schemas/CollectionType/properties/id"
         allowed_parent_type:
-          $ref: '#/components/schemas/CollectionType/properties/id'
+          $ref: "#/components/schemas/CollectionType/properties/id"
         updated_at:
           type: number
           format: timestamp

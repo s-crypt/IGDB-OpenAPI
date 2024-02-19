@@ -12,7 +12,7 @@
       "url": "https://www.twitch.tv/p/legal/developer-agreement/",
       "name": "Twitch Developer Services Agreement"
     },
-    "description": "This OpenAPI documentation and schema project IS IN BETA and maintained by [s-crypt.](https://github.com/s-crypt)   The source code and more information is [available in the GitHub repository](https://github.com/s-crypt/IGDB-OpenAPI)   Issues and pull requests are welcome! Please report any bugs or discrepancies you come across!",
+    "description": "This OpenAPI documentation and schema project IS IN BETA and maintained by [s-crypt.](https://github.com/s-crypt)\n\nThe source code and more information is [available in the GitHub repository](https://github.com/s-crypt/IGDB-OpenAPI)\n\nIssues and pull requests are welcome! Please report any bugs or discrepancies you come across!\n",
     "termsOfService": "https://www.twitch.tv/p/en/legal/terms-of-service/"
   },
   "externalDocs": {
