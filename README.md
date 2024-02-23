@@ -2,11 +2,15 @@
 ### I have validated the responses against the API. However, this is STILL IN BETA. Please report any bugs and if you come across any discrepancies, please let me know!  
   
 You may use this spec however you like, but please credit me somehow as I spent a lot of time on this 😉  
-  
-The [rapidoc page](https://igdb-openapi.s-crypt.co/rapidoc) is intended to be a full replacement for the current documentation, with custom theming and all of the docs from the current documentation site.  
-The [swagger page](https://igdb-openapi.s-crypt.co/swagger) is for people who want to dig into the OpenAPI specification.
 
+---
+
+The [rapidoc page](https://igdb-openapi.s-crypt.co/rapidoc) is intended to be a full replacement for the current documentation, with custom theming and all of the docs from the current documentation site.  
+The [swagger page](https://igdb-openapi.s-crypt.co/swagger) is for people who want to dig into the OpenAPI specification.  
+  
 To test out the API with a built-in CORS proxy, go to the [rapidoc page](https://igdb-openapi.s-crypt.co/rapidoc) and select `https://corsproxy.io/?https://api.igdb.com/v4` as the server. Use at your own risk as I do not run the proxy, the people at corsproxy.io do.  
+  
+---
   
 TODO:
 - [x] Finish component schemas
@@ -30,14 +34,13 @@ Future:
   - [ ] Static spec files
   - [ ] Clients attached
 
-Anything else? Please open a discussion!
-
-### Bug reports/Pull Requests are encouraged and very helpful!
-
+Anything else? Please open a discussion!  
+  
+  
 # How do I use this?
 ### You can use [Swagger Editor](https://editor-next.swagger.io/) or [OpenAPI Generators](https://openapi-generator.tech/docs/generators#client-generators) to generate the following native clients for the API.  
-I may add some of these to releases, IDK yet.
-
+I may add some of these to releases, IDK yet.  
+  
 #### [Swagger Editor](https://editor-next.swagger.io/)
 * C# - C Sharp
 * C# .Net2 - C Sharp DotNet 2
