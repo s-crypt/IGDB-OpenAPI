@@ -3,6 +3,9 @@
   
 You may use this spec however you like, but please credit me somehow as I spent a lot of time on this 😉  
   
+The [rapidoc page](https://igdb-openapi.s-crypt.co/rapidoc) is intended to be a full replacement for the current documentation, with custom theming and all of the docs from the current documentation site.  
+The [swagger page](https://igdb-openapi.s-crypt.co/swagger) is for people who want to dig into the OpenAPI specification.
+
 To test out the API with a built-in CORS proxy, go to the [rapidoc page](https://igdb-openapi.s-crypt.co/rapidoc) and select `https://corsproxy.io/?https://api.igdb.com/v4` as the server. Use at your own risk as I do not run the proxy, the people at corsproxy.io do.  
   
 TODO:
@@ -20,7 +23,7 @@ Future:
 - [ ] More/better descriptions of schema items
 - [ ] Create examples based on response
 - [ ] OAI 3.1 for Websocket support? (See [discussion](https://github.com/s-crypt/IGDB-OpenAPI/discussions/4))
-- [ ] Themeing with IGDB colors - In Progress with rapidoc
+- [X] Theming with IGDB colors - On rapidoc
 - [ ] Organize with tags?
 - [ ] Automate JSON generation (spec is written in YAML)
 - [ ] Releases?
@@ -37,7 +40,7 @@ I may add some of these to releases, IDK yet.
 
 #### [Swagger Editor](https://editor-next.swagger.io/)
 * C# - C Sharp
-* C# .Net2 - C Shart DotNet 2
+* C# .Net2 - C Sharp DotNet 2
 * Dart
 * Dynamic HTML
 * Go - Golang
