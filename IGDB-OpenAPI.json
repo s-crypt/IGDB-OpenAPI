@@ -3112,292 +3112,64 @@
         }
       },
       "AgeRatingCategoryEnums": {
-        "description": "The organization that has issued a specific rating",
-        "type": "number",
-        "anyOf": [
-          {
-            "enum": [
-              1
-            ],
-            "description": "ESRB"
-          },
-          {
-            "enum": [
-              2
-            ],
-            "description": "PEGI"
-          },
-          {
-            "enum": [
-              3
-            ],
-            "description": "CERO"
-          },
-          {
-            "enum": [
-              4
-            ],
-            "description": "USK"
-          },
-          {
-            "enum": [
-              5
-            ],
-            "description": "GRAC"
-          },
-          {
-            "enum": [
-              6
-            ],
-            "description": "CLASS_IND"
-          },
-          {
-            "enum": [
-              7
-            ],
-            "description": "ACB"
-          }
-        ]
+        "type": "integer",
+        "format": "int32",
+        "enum": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "description": "The organization that has issued a specific rating  \n1: ESRB  \n2: PEGI  \n3: CERO  \n4: USK  \n5: GRAC  \n6: CLASS_IND  \n7: ACB  \n"
       },
       "AgeRatingEnums": {
-        "description": "The age rating assigned by the organization",
-        "type": "number",
-        "anyOf": [
-          {
-            "enum": [
-              1
-            ],
-            "description": "Three"
-          },
-          {
-            "enum": [
-              2
-            ],
-            "description": "Seven"
-          },
-          {
-            "enum": [
-              3
-            ],
-            "description": "Twelve"
-          },
-          {
-            "enum": [
-              4
-            ],
-            "description": "Sixteen"
-          },
-          {
-            "enum": [
-              5
-            ],
-            "description": "Eighteen"
-          },
-          {
-            "enum": [
-              6
-            ],
-            "description": "RP"
-          },
-          {
-            "enum": [
-              7
-            ],
-            "description": "EC"
-          },
-          {
-            "enum": [
-              8
-            ],
-            "description": "E"
-          },
-          {
-            "enum": [
-              9
-            ],
-            "description": "E10"
-          },
-          {
-            "enum": [
-              10
-            ],
-            "description": "T"
-          },
-          {
-            "enum": [
-              11
-            ],
-            "description": "M"
-          },
-          {
-            "enum": [
-              12
-            ],
-            "description": "AO"
-          },
-          {
-            "enum": [
-              13
-            ],
-            "description": "CERO_A"
-          },
-          {
-            "enum": [
-              14
-            ],
-            "description": "CERO_B"
-          },
-          {
-            "enum": [
-              15
-            ],
-            "description": "CERO_C"
-          },
-          {
-            "enum": [
-              16
-            ],
-            "description": "CERO_D"
-          },
-          {
-            "enum": [
-              17
-            ],
-            "description": "CERO_Z"
-          },
-          {
-            "enum": [
-              18
-            ],
-            "description": "USK_0"
-          },
-          {
-            "enum": [
-              19
-            ],
-            "description": "USK_6"
-          },
-          {
-            "enum": [
-              20
-            ],
-            "description": "USK_12"
-          },
-          {
-            "enum": [
-              21
-            ],
-            "description": "USK_16"
-          },
-          {
-            "enum": [
-              22
-            ],
-            "description": "USK_18"
-          },
-          {
-            "enum": [
-              23
-            ],
-            "description": "GRAC_ALL"
-          },
-          {
-            "enum": [
-              24
-            ],
-            "description": "GRAC_Twelve"
-          },
-          {
-            "enum": [
-              25
-            ],
-            "description": "GRAC_Fifteen"
-          },
-          {
-            "enum": [
-              26
-            ],
-            "description": "GRAC_Eighteen"
-          },
-          {
-            "enum": [
-              27
-            ],
-            "description": "GRAC_TESTING"
-          },
-          {
-            "enum": [
-              28
-            ],
-            "description": "CLASS_IND_L"
-          },
-          {
-            "enum": [
-              29
-            ],
-            "description": "CLASS_IND_Ten"
-          },
-          {
-            "enum": [
-              30
-            ],
-            "description": "CLASS_IND_Twelve"
-          },
-          {
-            "enum": [
-              31
-            ],
-            "description": "CLASS_IND_Fourteen"
-          },
-          {
-            "enum": [
-              32
-            ],
-            "description": "CLASS_IND_Sixteen"
-          },
-          {
-            "enum": [
-              33
-            ],
-            "description": "CLASS_IND_Eighteen"
-          },
-          {
-            "enum": [
-              34
-            ],
-            "description": "ACB_G"
-          },
-          {
-            "enum": [
-              35
-            ],
-            "description": "ACB_PG"
-          },
-          {
-            "enum": [
-              36
-            ],
-            "description": "ACB_M"
-          },
-          {
-            "enum": [
-              37
-            ],
-            "description": "ACB_MA15"
-          },
-          {
-            "enum": [
-              38
-            ],
-            "description": "ACB_R18"
-          },
-          {
-            "enum": [
-              39
-            ],
-            "description": "ACB_RC"
-          }
-        ]
+        "type": "integer",
+        "format": "int32",
+        "enum": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28,
+          29,
+          30,
+          31,
+          32,
+          33,
+          34,
+          35,
+          36,
+          37,
+          38,
+          39
+        ],
+        "description": "The age rating assigned by the organization  \n1: Three  \n2: Seven  \n3: Twelve  \n4: Sixteen  \n5: Eighteen  \n6: RP  \n7: EC  \n8: E  \n9: E10  \n10: T  \n11: M  \n12: AO  \n13: CERO_A  \n14: CERO_B  \n15: CERO_C  \n16: CERO_D  \n17: CERO_Z  \n18: USK_0  \n19: USK_6  \n20: USK_12  \n21: USK_16  \n22: USK_18  \n23: GRAC_ALL  \n24: GRAC_Twelve  \n25: GRAC_Fifteen  \n26: GRAC_Eighteen  \n27: GRAC_TESTING  \n28: CLASS_IND_L  \n29: CLASS_IND_Ten  \n30: CLASS_IND_Twelve  \n31: CLASS_IND_Fourteen  \n32: CLASS_IND_Sixteen  \n33: CLASS_IND_Eighteen  \n34: ACB_G  \n35: ACB_PG  \n36: ACB_M  \n37: ACB_MA15  \n38: ACB_R18  \n39: ACB_RC  \n"
       },
       "AgeRatingContentDescription": {
         "type": "object",
@@ -3421,520 +3193,96 @@
         }
       },
       "AgeRatingContentDescriptionCategoryEnums": {
-        "type": "number",
-        "description": "The age rating content description enums",
-        "anyOf": [
-          {
-            "enum": [
-              1
-            ],
-            "description": "ESRB_alcohol_reference"
-          },
-          {
-            "enum": [
-              2
-            ],
-            "description": "ESRB_animated_blood"
-          },
-          {
-            "enum": [
-              3
-            ],
-            "description": "ESRB_blood"
-          },
-          {
-            "enum": [
-              4
-            ],
-            "description": "ESRB_blood_and gore"
-          },
-          {
-            "enum": [
-              5
-            ],
-            "description": "ESRB_cartoon_violence"
-          },
-          {
-            "enum": [
-              6
-            ],
-            "description": "ESRB_comic_mischief"
-          },
-          {
-            "enum": [
-              7
-            ],
-            "description": "ESRB_crude_humor"
-          },
-          {
-            "enum": [
-              8
-            ],
-            "description": "ESRB_drug_reference"
-          },
-          {
-            "enum": [
-              9
-            ],
-            "description": "ESRB_fantasy_violence"
-          },
-          {
-            "enum": [
-              10
-            ],
-            "description": "ESRB_intense_violence"
-          },
-          {
-            "enum": [
-              11
-            ],
-            "description": "ESRB_language"
-          },
-          {
-            "enum": [
-              12
-            ],
-            "description": "ESRB_lyrics"
-          },
-          {
-            "enum": [
-              13
-            ],
-            "description": "ESRB_mature_humor"
-          },
-          {
-            "enum": [
-              14
-            ],
-            "description": "ESRB_nudity"
-          },
-          {
-            "enum": [
-              15
-            ],
-            "description": "ESRB_partial_nudity"
-          },
-          {
-            "enum": [
-              16
-            ],
-            "description": "ESRB_real_gambling"
-          },
-          {
-            "enum": [
-              17
-            ],
-            "description": "ESRB_sexual_content"
-          },
-          {
-            "enum": [
-              18
-            ],
-            "description": "ESRB_sexual_themes"
-          },
-          {
-            "enum": [
-              19
-            ],
-            "description": "ESRB_sexual_violence"
-          },
-          {
-            "enum": [
-              20
-            ],
-            "description": "ESRB_simulated_gambling"
-          },
-          {
-            "enum": [
-              21
-            ],
-            "description": "ESRB_strong_language"
-          },
-          {
-            "enum": [
-              22
-            ],
-            "description": "ESRB_strong_lyrics"
-          },
-          {
-            "enum": [
-              23
-            ],
-            "description": "ESRB_strong_sexual content"
-          },
-          {
-            "enum": [
-              24
-            ],
-            "description": "ESRB_suggestive_themes"
-          },
-          {
-            "enum": [
-              25
-            ],
-            "description": "ESRB_tobacco_reference"
-          },
-          {
-            "enum": [
-              26
-            ],
-            "description": "ESRB_use_of alcohol"
-          },
-          {
-            "enum": [
-              27
-            ],
-            "description": "ESRB_use_of drugs"
-          },
-          {
-            "enum": [
-              28
-            ],
-            "description": "ESRB_use_of tobacco"
-          },
-          {
-            "enum": [
-              29
-            ],
-            "description": "ESRB_violence"
-          },
-          {
-            "enum": [
-              30
-            ],
-            "description": "ESRB_violent_references"
-          },
-          {
-            "enum": [
-              31
-            ],
-            "description": "ESRB_animated_violence"
-          },
-          {
-            "enum": [
-              32
-            ],
-            "description": "ESRB_mild_language"
-          },
-          {
-            "enum": [
-              33
-            ],
-            "description": "ESRB_mild_violence"
-          },
-          {
-            "enum": [
-              34
-            ],
-            "description": "ESRB_use_of drugs and alcohol"
-          },
-          {
-            "enum": [
-              35
-            ],
-            "description": "ESRB_drug_and alcohol reference"
-          },
-          {
-            "enum": [
-              36
-            ],
-            "description": "ESRB_mild_suggestive themes"
-          },
-          {
-            "enum": [
-              37
-            ],
-            "description": "ESRB_mild_cartoon violence"
-          },
-          {
-            "enum": [
-              38
-            ],
-            "description": "ESRB_mild_blood"
-          },
-          {
-            "enum": [
-              39
-            ],
-            "description": "ESRB_realistic_blood and gore"
-          },
-          {
-            "enum": [
-              40
-            ],
-            "description": "ESRB_realistic_violence"
-          },
-          {
-            "enum": [
-              41
-            ],
-            "description": "ESRB_alcohol_and tobacco reference"
-          },
-          {
-            "enum": [
-              42
-            ],
-            "description": "ESRB_mature_sexual themes"
-          },
-          {
-            "enum": [
-              43
-            ],
-            "description": "ESRB_mild_animated violence"
-          },
-          {
-            "enum": [
-              44
-            ],
-            "description": "ESRB_mild_sexual themes"
-          },
-          {
-            "enum": [
-              45
-            ],
-            "description": "ESRB_use_of alcohol and tobacco"
-          },
-          {
-            "enum": [
-              46
-            ],
-            "description": "ESRB_animated_blood and gore"
-          },
-          {
-            "enum": [
-              47
-            ],
-            "description": "ESRB_mild_fantasy violence"
-          },
-          {
-            "enum": [
-              48
-            ],
-            "description": "ESRB_mild_lyrics"
-          },
-          {
-            "enum": [
-              49
-            ],
-            "description": "ESRB_realistic_blood"
-          },
-          {
-            "enum": [
-              50
-            ],
-            "description": "PEGI_violence"
-          },
-          {
-            "enum": [
-              51
-            ],
-            "description": "PEGI_sex"
-          },
-          {
-            "enum": [
-              52
-            ],
-            "description": "PEGI_drugs"
-          },
-          {
-            "enum": [
-              53
-            ],
-            "description": "PEGI_fear"
-          },
-          {
-            "enum": [
-              54
-            ],
-            "description": "PEGI_discrimination"
-          },
-          {
-            "enum": [
-              55
-            ],
-            "description": "PEGI_bad_language"
-          },
-          {
-            "enum": [
-              56
-            ],
-            "description": "PEGI_gambling"
-          },
-          {
-            "enum": [
-              57
-            ],
-            "description": "PEGI_online_gameplay"
-          },
-          {
-            "enum": [
-              58
-            ],
-            "description": "PEGI_in_game_purchases"
-          },
-          {
-            "enum": [
-              59
-            ],
-            "description": "CERO_love"
-          },
-          {
-            "enum": [
-              60
-            ],
-            "description": "CERO_sexual_content"
-          },
-          {
-            "enum": [
-              61
-            ],
-            "description": "CERO_violence"
-          },
-          {
-            "enum": [
-              62
-            ],
-            "description": "CERO_horror"
-          },
-          {
-            "enum": [
-              63
-            ],
-            "description": "CERO_drinking_smoking"
-          },
-          {
-            "enum": [
-              64
-            ],
-            "description": "CERO_gambling"
-          },
-          {
-            "enum": [
-              65
-            ],
-            "description": "CERO_crime"
-          },
-          {
-            "enum": [
-              66
-            ],
-            "description": "CERO_controlled_substances"
-          },
-          {
-            "enum": [
-              67
-            ],
-            "description": "CERO_languages_and others"
-          },
-          {
-            "enum": [
-              68
-            ],
-            "description": "GRAC_sexuality"
-          },
-          {
-            "enum": [
-              69
-            ],
-            "description": "GRAC_violence"
-          },
-          {
-            "enum": [
-              70
-            ],
-            "description": "GRAC_fear_horror_threatening"
-          },
-          {
-            "enum": [
-              71
-            ],
-            "description": "GRAC_language"
-          },
-          {
-            "enum": [
-              72
-            ],
-            "description": "GRAC_alcohol_tobacco_drug"
-          },
-          {
-            "enum": [
-              73
-            ],
-            "description": "GRAC_crime_anti_social"
-          },
-          {
-            "enum": [
-              74
-            ],
-            "description": "GRAC_gambling"
-          },
-          {
-            "enum": [
-              75
-            ],
-            "description": "CLASS_IND_violencia"
-          },
-          {
-            "enum": [
-              76
-            ],
-            "description": "CLASS_IND_violencia_extrema"
-          },
-          {
-            "enum": [
-              77
-            ],
-            "description": "CLASS_IND_conteudo_sexual"
-          },
-          {
-            "enum": [
-              78
-            ],
-            "description": "CLASS_IND_nudez"
-          },
-          {
-            "enum": [
-              79
-            ],
-            "description": "CLASS_IND_sexo"
-          },
-          {
-            "enum": [
-              80
-            ],
-            "description": "CLASS_IND_sexo_explicito"
-          },
-          {
-            "enum": [
-              81
-            ],
-            "description": "CLASS_IND_drogas"
-          },
-          {
-            "enum": [
-              82
-            ],
-            "description": "CLASS_IND_drogas_licitas"
-          },
-          {
-            "enum": [
-              83
-            ],
-            "description": "CLASS_IND_drogas_ilicitas"
-          },
-          {
-            "enum": [
-              84
-            ],
-            "description": "CLASS_IND_linguagem_impropria"
-          },
-          {
-            "enum": [
-              85
-            ],
-            "description": "CLASS_IND_atos_criminosos"
-          }
-        ]
+        "type": "integer",
+        "format": "int32",
+        "enum": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28,
+          29,
+          30,
+          31,
+          32,
+          33,
+          34,
+          35,
+          36,
+          37,
+          38,
+          39,
+          40,
+          41,
+          42,
+          43,
+          44,
+          45,
+          46,
+          47,
+          48,
+          49,
+          50,
+          51,
+          52,
+          53,
+          54,
+          55,
+          56,
+          57,
+          58,
+          59,
+          60,
+          61,
+          62,
+          63,
+          64,
+          65,
+          66,
+          67,
+          68,
+          69,
+          70,
+          71,
+          72,
+          73,
+          74,
+          75,
+          76,
+          77,
+          78,
+          79,
+          80,
+          81,
+          82,
+          83,
+          84,
+          85
+        ],
+        "description": "The age rating content description enums  \n1: ESRB_alcohol_reference  \n2: ESRB_animated_blood  \n3: ESRB_blood  \n4: ESRB_blood_and gore  \n5: ESRB_cartoon_violence  \n6: ESRB_comic_mischief  \n7: ESRB_crude_humor  \n8: ESRB_drug_reference  \n9: ESRB_fantasy_violence  \n10: ESRB_intense_violence  \n11: ESRB_language  \n12: ESRB_lyrics  \n13: ESRB_mature_humor  \n14: ESRB_nudity  \n15: ESRB_partial_nudity  \n16: ESRB_real_gambling  \n17: ESRB_sexual_content  \n18: ESRB_sexual_themes  \n19: ESRB_sexual_violence  \n20: ESRB_simulated_gambling  \n21: ESRB_strong_language  \n22: ESRB_strong_lyrics  \n23: ESRB_strong_sexual content  \n24: ESRB_suggestive_themes  \n25: ESRB_tobacco_reference  \n26: ESRB_use_of alcohol  \n27: ESRB_use_of drugs  \n28: ESRB_use_of tobacco  \n29: ESRB_violence  \n30: ESRB_violent_references  \n31: ESRB_animated_violence  \n32: ESRB_mild_language  \n33: ESRB_mild_violence  \n34: ESRB_use_of drugs and alcohol  \n35: ESRB_drug_and alcohol reference  \n36: ESRB_mild_suggestive themes  \n37: ESRB_mild_cartoon violence  \n38: ESRB_mild_blood  \n39: ESRB_realistic_blood and gore  \n40: ESRB_realistic_violence  \n41: ESRB_alcohol_and tobacco reference  \n42: ESRB_mature_sexual themes  \n43: ESRB_mild_animated violence  \n44: ESRB_mild_sexual themes  \n45: ESRB_use_of alcohol and tobacco  \n46: ESRB_animated_blood and gore  \n47: ESRB_mild_fantasy violence  \n48: ESRB_mild_lyrics  \n49: ESRB_realistic_blood  \n50: PEGI_violence  \n51: PEGI_sex  \n52: PEGI_drugs  \n53: PEGI_fear  \n54: PEGI_discrimination  \n55: PEGI_bad_language  \n56: PEGI_gambling  \n57: PEGI_online_gameplay  \n58: PEGI_in_game_purchases  \n59: CERO_love  \n60: CERO_sexual_content  \n61: CERO_violence  \n62: CERO_horror  \n63: CERO_drinking_smoking  \n64: CERO_gambling  \n65: CERO_crime  \n66: CERO_controlled_substances  \n67: CERO_languages_and others  \n68: GRAC_sexuality  \n69: GRAC_violence  \n70: GRAC_fear_horror_threatening  \n71: GRAC_language  \n72: GRAC_alcohol_tobacco_drug  \n73: GRAC_crime_anti_social  \n74: GRAC_gambling  \n75: CLASS_IND_violencia  \n76: CLASS_IND_violencia_extrema  \n77: CLASS_IND_conteudo_sexual  \n78: CLASS_IND_nudez  \n79: CLASS_IND_sexo  \n80: CLASS_IND_sexo_explicito  \n81: CLASS_IND_drogas  \n82: CLASS_IND_drogas_licitas  \n83: CLASS_IND_drogas_ilicitas  \n84: CLASS_IND_linguagem_impropria  \n85: CLASS_IND_atos_criminosos  \n"
       },
       "AlternativeNames": {
         "type": "object",
@@ -4077,64 +3425,19 @@
         }
       },
       "CharacterGenderEnum": {
-        "type": "number",
-        "description": "An Enum of the character's gender",
-        "anyOf": [
-          {
-            "enum": [
-              0
-            ],
-            "description": "Male"
-          },
-          {
-            "enum": [
-              1
-            ],
-            "description": "Female"
-          },
-          {
-            "enum": [
-              2
-            ],
-            "description": "Other"
-          }
-        ]
+        "type": "integer",
+        "format": "int32",
+        "enum": [
+          0,
+          1,
+          2
+        ],
+        "description": "An Enum of the character's gender  \n0: Male  \n1: Female  \n2: Other  \n"
       },
       "CharacterSpeciesEnum": {
-        "type": "number",
-        "description": "An enum of the Character's species",
-        "anyOf": [
-          {
-            "enum": [
-              1
-            ],
-            "description": "Human"
-          },
-          {
-            "enum": [
-              2
-            ],
-            "description": "Alien"
-          },
-          {
-            "enum": [
-              3
-            ],
-            "description": "Animal"
-          },
-          {
-            "enum": [
-              4
-            ],
-            "description": "Android"
-          },
-          {
-            "enum": [
-              5
-            ],
-            "description": "Unknown"
-          }
-        ]
+        "type": "integer",
+        "format": "int32",
+        "description": "An enum of the Character's species  \n1: Human  \n2: Alien  \n3: Animal  \n"
       },
       "CharacterMugShot": {
         "type": "object",
@@ -4509,112 +3812,34 @@
         }
       },
       "ChangeDateCategoryEnum": {
-        "type": "number",
-        "description": "An enum of the date format",
-        "anyOf": [
-          {
-            "enum": [
-              0
-            ],
-            "description": "YYYYMMMMDD"
-          },
-          {
-            "enum": [
-              1
-            ],
-            "description": "YYYYMMMM"
-          },
-          {
-            "enum": [
-              2
-            ],
-            "description": "YYYY"
-          },
-          {
-            "enum": [
-              3
-            ],
-            "description": "YYYYQ1"
-          },
-          {
-            "enum": [
-              4
-            ],
-            "description": "YYYYQ2"
-          },
-          {
-            "enum": [
-              5
-            ],
-            "description": "YYYYQ3"
-          },
-          {
-            "enum": [
-              6
-            ],
-            "description": "YYYYQ4"
-          },
-          {
-            "enum": [
-              7
-            ],
-            "description": "TBD"
-          }
-        ]
+        "type": "integer",
+        "format": "int32",
+        "enum": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "description": "An enum of the date format  \n0: YYYYMMMMDD  \n1: YYYYMMMM  \n2: YYYY  \n3: YYYYQ1  \n4: YYYYQ2  \n5: YYYYQ3  \n6: YYYYQ4  \n7: TBD  \n"
       },
       "StartDateCategoryEnum": {
-        "type": "number",
-        "description": "An enum of the date format",
-        "anyOf": [
-          {
-            "enum": [
-              0
-            ],
-            "description": "YYYYMMMMDD"
-          },
-          {
-            "enum": [
-              1
-            ],
-            "description": "YYYYMMMM"
-          },
-          {
-            "enum": [
-              2
-            ],
-            "description": "YYYY"
-          },
-          {
-            "enum": [
-              3
-            ],
-            "description": "YYYYQ1"
-          },
-          {
-            "enum": [
-              4
-            ],
-            "description": "YYYYQ2"
-          },
-          {
-            "enum": [
-              5
-            ],
-            "description": "YYYYQ3"
-          },
-          {
-            "enum": [
-              6
-            ],
-            "description": "YYYYQ4"
-          },
-          {
-            "enum": [
-              7
-            ],
-            "description": "TBD"
-          }
-        ]
+        "type": "integer",
+        "format": "int32",
+        "enum": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "description": "An enum of the date format  \n0: YYYYMMMMDD  \n1: YYYYMMMM  \n2: YYYY  \n3: YYYYQ1  \n4: YYYYQ2  \n5: YYYYQ3  \n6: YYYYQ4  \n7: TBD  \n"
       },
       "CompanyLogo": {
         "type": "object",
@@ -4685,112 +3910,28 @@
         }
       },
       "CompanyWebsiteEnums": {
-        "type": "number",
-        "description": "An enum of the date format",
-        "anyOf": [
-          {
-            "enum": [
-              1
-            ],
-            "description": "official"
-          },
-          {
-            "enum": [
-              2
-            ],
-            "description": "wikia"
-          },
-          {
-            "enum": [
-              3
-            ],
-            "description": "wikipedia"
-          },
-          {
-            "enum": [
-              4
-            ],
-            "description": "facebook"
-          },
-          {
-            "enum": [
-              5
-            ],
-            "description": "twitter"
-          },
-          {
-            "enum": [
-              6
-            ],
-            "description": "twitch"
-          },
-          {
-            "enum": [
-              8
-            ],
-            "description": "instagram"
-          },
-          {
-            "enum": [
-              9
-            ],
-            "description": "youtube"
-          },
-          {
-            "enum": [
-              10
-            ],
-            "description": "iphone"
-          },
-          {
-            "enum": [
-              11
-            ],
-            "description": "ipad"
-          },
-          {
-            "enum": [
-              12
-            ],
-            "description": "android"
-          },
-          {
-            "enum": [
-              13
-            ],
-            "description": "steam"
-          },
-          {
-            "enum": [
-              14
-            ],
-            "description": "reddit"
-          },
-          {
-            "enum": [
-              15
-            ],
-            "description": "itch"
-          },
-          {
-            "enum": [
-              16
-            ],
-            "description": "epicgames"
-          },
-          {
-            "enum": [
-              17
-            ],
-            "description": "gog"
-          },
-          {
-            "enum": [
-              18
-            ],
-            "description": "discord"
-          }
-        ]
+        "type": "integer",
+        "format": "int32",
+        "enum": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18
+        ],
+        "description": "An enum of the date format  \n1: official  \n2: wikia  \n3: wikipedia  \n4: facebook  \n5: twitter  \n6: twitch  \n8: instagram  \n9: youtube  \n10: iphone  \n11: ipad  \n12: android  \n13: steam  \n14: reddit  \n15: itch  \n16: epicgames  \n17: gog  \n18: discord  \n"
       },
       "Cover": {
         "type": "object",
@@ -5397,154 +4538,41 @@
         }
       },
       "GameCategoryEnums": {
-        "type": "object",
-        "description": "A game's category/catagories",
-        "anyOf": [
-          {
-            "enum": [
-              0
-            ],
-            "description": "main_game"
-          },
-          {
-            "enum": [
-              1
-            ],
-            "description": "dlc_addon"
-          },
-          {
-            "enum": [
-              2
-            ],
-            "description": "expansion"
-          },
-          {
-            "enum": [
-              3
-            ],
-            "description": "bundle"
-          },
-          {
-            "enum": [
-              4
-            ],
-            "description": "standalone_expansion"
-          },
-          {
-            "enum": [
-              5
-            ],
-            "description": "mod"
-          },
-          {
-            "enum": [
-              6
-            ],
-            "description": "episode"
-          },
-          {
-            "enum": [
-              7
-            ],
-            "description": "season"
-          },
-          {
-            "enum": [
-              8
-            ],
-            "description": "remake"
-          },
-          {
-            "enum": [
-              9
-            ],
-            "description": "remaster"
-          },
-          {
-            "enum": [
-              10
-            ],
-            "description": "expanded_game"
-          },
-          {
-            "enum": [
-              11
-            ],
-            "description": "port"
-          },
-          {
-            "enum": [
-              12
-            ],
-            "description": "fork"
-          },
-          {
-            "enum": [
-              13
-            ],
-            "description": "pack"
-          },
-          {
-            "enum": [
-              14
-            ],
-            "description": "update"
-          }
-        ]
+        "type": "integer",
+        "format": "int32",
+        "enum": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14
+        ],
+        "description": "A game's category/catagories  \n0: main_game  \n1: dlc_addon  \n2: expansion  \n3: bundle  \n4: standalone_expansion  \n5: mod  \n6: episode  \n7: season  \n8: remake  \n9: remaster  \n10: expanded_game  \n11: port  \n12: fork  \n13: pack  \n14: update  \n"
       },
       "GameStatusEnums": {
-        "type": "object",
-        "description": "A game's status",
-        "anyOf": [
-          {
-            "enum": [
-              0
-            ],
-            "description": "released"
-          },
-          {
-            "enum": [
-              2
-            ],
-            "description": "alpha"
-          },
-          {
-            "enum": [
-              3
-            ],
-            "description": "beta"
-          },
-          {
-            "enum": [
-              4
-            ],
-            "description": "early_access"
-          },
-          {
-            "enum": [
-              5
-            ],
-            "description": "offline"
-          },
-          {
-            "enum": [
-              6
-            ],
-            "description": "cancelled"
-          },
-          {
-            "enum": [
-              7
-            ],
-            "description": "rumored"
-          },
-          {
-            "enum": [
-              8
-            ],
-            "description": "delisted"
-          }
-        ]
+        "type": "integer",
+        "format": "int32",
+        "enum": [
+          0,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8
+        ],
+        "description": "A game's operational status  \n0: released  \n2: alpha  \n3: beta  \n4: early_access  \n5: offline  \n6: cancelled  \n7: rumored  \n8: delisted  \n"
       },
       "GameEngine": {
         "type": "object",
@@ -5715,148 +4743,18 @@
         }
       },
       "ExternalGameCategoryEnums": {
-        "type": "object",
-        "description": "The external platform the game is on",
-        "anyOf": [
-          {
-            "enum": [
-              1
-            ],
-            "description": "steam"
-          },
-          {
-            "enum": [
-              5
-            ],
-            "description": "gog"
-          },
-          {
-            "enum": [
-              10
-            ],
-            "description": "youtube"
-          },
-          {
-            "enum": [
-              11
-            ],
-            "description": "microsoft"
-          },
-          {
-            "enum": [
-              13
-            ],
-            "description": "apple"
-          },
-          {
-            "enum": [
-              14
-            ],
-            "description": "twitch"
-          },
-          {
-            "enum": [
-              15
-            ],
-            "description": "android"
-          },
-          {
-            "enum": [
-              20
-            ],
-            "description": "amazon_asin"
-          },
-          {
-            "enum": [
-              22
-            ],
-            "description": "amazon_luna"
-          },
-          {
-            "enum": [
-              23
-            ],
-            "description": "amazon_adg"
-          },
-          {
-            "enum": [
-              26
-            ],
-            "description": "epic_game_store"
-          },
-          {
-            "enum": [
-              28
-            ],
-            "description": "oculus"
-          },
-          {
-            "enum": [
-              29
-            ],
-            "description": "utomik"
-          },
-          {
-            "enum": [
-              30
-            ],
-            "description": "itch_io"
-          },
-          {
-            "enum": [
-              31
-            ],
-            "description": "xbox_marketplace"
-          },
-          {
-            "enum": [
-              32
-            ],
-            "description": "kartridge"
-          },
-          {
-            "enum": [
-              36
-            ],
-            "description": "playstation_store_us"
-          },
-          {
-            "enum": [
-              37
-            ],
-            "description": "focus_entertainment"
-          },
-          {
-            "enum": [
-              54
-            ],
-            "description": "xbox_game_pass_ultimate_cloud"
-          },
-          {
-            "enum": [
-              55
-            ],
-            "description": "gamejolt"
-          }
-        ]
+        "type": "integer",
+        "format": "int32",
+        "description": "The external platform the game is on  \n1: steam  \n5: gog  \n10: youtube  \n11: microsoft  \n13: apple  \n14: twitch  \n15: android  \n20: amazon_asin  \n22: amazon_luna  \n23: amazon_adg  \n26: epic_game_store  \n28: oculus  \n29: utomik  \n30: itch_io  \n31: xbox_marketplace  \n32: kartridge  \n36: playstation_store_us  \n37: focus_entertainment  \n54: xbox_game_pass_ultimate_cloud  \n55: gamejolt  \n"
       },
       "ExternalGameMediaEnums": {
-        "type": "object",
-        "description": "The type of media",
-        "anyOf": [
-          {
-            "enum": [
-              1
-            ],
-            "description": "digital"
-          },
-          {
-            "enum": [
-              2
-            ],
-            "description": "physical"
-          }
-        ]
+        "type": "integer",
+        "format": "int32",
+        "enum": [
+          1,
+          2
+        ],
+        "description": "The type of media  \n1: digital  \n2: physical  \n"
       },
       "GameVersion": {
         "type": "object",
@@ -5987,22 +4885,9 @@
         }
       },
       "GameVersionFeatureCategoryEnums": {
-        "type": "object",
-        "description": "The data type of feature description",
-        "anyOf": [
-          {
-            "enum": [
-              1
-            ],
-            "description": "boolean"
-          },
-          {
-            "enum": [
-              2
-            ],
-            "description": "description"
-          }
-        ]
+        "type": "integer",
+        "format": "int32",
+        "description": "The data type of feature description  \n0: boolean  \n1: description  \n"
       },
       "GameVersionFeatureValue": {
         "type": "object",
@@ -6034,28 +4919,14 @@
         }
       },
       "GameVersionIncludedFeatureEnums": {
-        "type": "object",
-        "description": "The boole value of this feature",
-        "anyOf": [
-          {
-            "enum": [
-              0
-            ],
-            "description": "NOT_INCLUDED"
-          },
-          {
-            "enum": [
-              1
-            ],
-            "description": "INCLUDED"
-          },
-          {
-            "enum": [
-              2
-            ],
-            "description": "PRE_ORDER_ONLY"
-          }
-        ]
+        "type": "integer",
+        "format": "int32",
+        "enum": [
+          0,
+          1,
+          2
+        ],
+        "description": "The value of this feature  \n0: NOT_INCLUDED  \n1: INCLUDED  \n2: PRE_ORDER_ONLY  \n"
       },
       "Genre": {
         "type": "object",
@@ -6728,46 +5599,17 @@
         }
       },
       "PlatformCategoryEnums": {
-        "type": "object",
-        "description": "The category of the platform",
-        "anyOf": [
-          {
-            "enum": [
-              1
-            ],
-            "description": "console"
-          },
-          {
-            "enum": [
-              2
-            ],
-            "description": "arcade"
-          },
-          {
-            "enum": [
-              3
-            ],
-            "description": "platform"
-          },
-          {
-            "enum": [
-              4
-            ],
-            "description": "operating_system"
-          },
-          {
-            "enum": [
-              5
-            ],
-            "description": "portable_console"
-          },
-          {
-            "enum": [
-              6
-            ],
-            "description": "computer"
-          }
-        ]
+        "type": "integer",
+        "format": "int32",
+        "enum": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "description": "The category of the platform  \n1: console  \n2: arcade  \n3: platform  \n4: operating_system  \n5: portable_console  \n6: computer  \n"
       },
       "PlatformVersionReleaseDate": {
         "type": "object",
@@ -6824,124 +5666,36 @@
         }
       },
       "PlatformVersionReleaseDateEnums": {
-        "type": "number",
-        "description": "An enum of the date format",
-        "anyOf": [
-          {
-            "enum": [
-              0
-            ],
-            "description": "YYYYMMMMDD"
-          },
-          {
-            "enum": [
-              1
-            ],
-            "description": "YYYYMMMM"
-          },
-          {
-            "enum": [
-              2
-            ],
-            "description": "YYYY"
-          },
-          {
-            "enum": [
-              3
-            ],
-            "description": "YYYYQ1"
-          },
-          {
-            "enum": [
-              4
-            ],
-            "description": "YYYYQ2"
-          },
-          {
-            "enum": [
-              5
-            ],
-            "description": "YYYYQ3"
-          },
-          {
-            "enum": [
-              6
-            ],
-            "description": "YYYYQ4"
-          },
-          {
-            "enum": [
-              7
-            ],
-            "description": "TBD"
-          }
-        ]
+        "type": "integer",
+        "format": "int32",
+        "enum": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "description": "An enum of the date format  \n0: YYYYMMMMDD  \n1: YYYYMMMM  \n2: YYYY  \n3: YYYYQ1  \n4: YYYYQ2  \n5: YYYYQ3  \n6: YYYYQ4  \n7: TBD  \n"
       },
       "PlatformVersionReleaseDateRegionEnum": {
-        "type": "number",
-        "description": "An enum of the region for the release date",
-        "anyOf": [
-          {
-            "enum": [
-              1
-            ],
-            "description": "europe"
-          },
-          {
-            "enum": [
-              2
-            ],
-            "description": "north_america"
-          },
-          {
-            "enum": [
-              3
-            ],
-            "description": "austrailia"
-          },
-          {
-            "enum": [
-              4
-            ],
-            "description": "new_zealand"
-          },
-          {
-            "enum": [
-              5
-            ],
-            "description": "japan"
-          },
-          {
-            "enum": [
-              6
-            ],
-            "description": "china"
-          },
-          {
-            "enum": [
-              7
-            ],
-            "description": "asia"
-          },
-          {
-            "enum": [
-              8
-            ],
-            "description": "worldwide"
-          },
-          {
-            "enum": [
-              9
-            ],
-            "description": "korea"
-          },
-          {
-            "enum": [
-              10
-            ],
-            "description": "brazil"
-          }
-        ]
+        "type": "integer",
+        "format": "int32",
+        "enum": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10
+        ],
+        "description": "An enum of the region for the release date  \n1: europe  \n2: north_america  \n3: australia  \n4: new_zealand  \n5: japan  \n6: china  \n7: asia  \n8: worldwide  \n9: korea  \n10: brazil  \n"
       },
       "PlatformWebsite": {
         "type": "object",
@@ -6971,124 +5725,30 @@
         }
       },
       "PlatformWebsiteCategoryEnums": {
-        "type": "object",
-        "description": "The platform website",
-        "anyOf": [
-          {
-            "enum": [
-              1
-            ],
-            "description": "official"
-          },
-          {
-            "enum": [
-              2
-            ],
-            "description": "wikia"
-          },
-          {
-            "enum": [
-              3
-            ],
-            "description": "wikipedia"
-          },
-          {
-            "enum": [
-              4
-            ],
-            "description": "facebook"
-          },
-          {
-            "enum": [
-              5
-            ],
-            "description": "twitter"
-          },
-          {
-            "enum": [
-              6
-            ],
-            "description": "twitch"
-          },
-          {
-            "enum": [
-              8
-            ],
-            "description": "instagram"
-          },
-          {
-            "enum": [
-              9
-            ],
-            "description": "youtube"
-          },
-          {
-            "enum": [
-              10
-            ],
-            "description": "iphone"
-          },
-          {
-            "enum": [
-              11
-            ],
-            "description": "ipad"
-          },
-          {
-            "enum": [
-              12
-            ],
-            "description": "android"
-          },
-          {
-            "enum": [
-              13
-            ],
-            "description": "steam"
-          },
-          {
-            "enum": [
-              14
-            ],
-            "description": "reddit"
-          },
-          {
-            "enum": [
-              15
-            ],
-            "description": "discord"
-          },
-          {
-            "enum": [
-              16
-            ],
-            "description": "google_plus"
-          },
-          {
-            "enum": [
-              17
-            ],
-            "description": "tumblr"
-          },
-          {
-            "enum": [
-              18
-            ],
-            "description": "linkedin"
-          },
-          {
-            "enum": [
-              19
-            ],
-            "description": "pinterest"
-          },
-          {
-            "enum": [
-              20
-            ],
-            "description": "soundcloud"
-          }
-        ]
+        "type": "integer",
+        "format": "int32",
+        "enum": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20
+        ],
+        "description": "The platform website  \n1: official  \n2: wikia  \n3: wikipedia  \n4: facebook  \n5: twitter  \n6: twitch  \n8: instagram  \n9: youtube  \n10: iphone  \n11: ipad  \n12: android  \n13: steam  \n14: reddit  \n15: discord  \n16: google_plus  \n17: tumblr  \n18: linkedin  \n19: pinterest  \n20: soundcloud  \n"
       },
       "PlayerPerspective": {
         "type": "object",
@@ -7229,124 +5889,36 @@
         }
       },
       "ReleaseDateCategoryEnums": {
-        "type": "number",
-        "description": "An enum of the date format",
-        "anyOf": [
-          {
-            "enum": [
-              0
-            ],
-            "description": "YYYYMMMMDD"
-          },
-          {
-            "enum": [
-              1
-            ],
-            "description": "YYYYMMMM"
-          },
-          {
-            "enum": [
-              2
-            ],
-            "description": "YYYY"
-          },
-          {
-            "enum": [
-              3
-            ],
-            "description": "YYYYQ1"
-          },
-          {
-            "enum": [
-              4
-            ],
-            "description": "YYYYQ2"
-          },
-          {
-            "enum": [
-              5
-            ],
-            "description": "YYYYQ3"
-          },
-          {
-            "enum": [
-              6
-            ],
-            "description": "YYYYQ4"
-          },
-          {
-            "enum": [
-              7
-            ],
-            "description": "TBD"
-          }
-        ]
+        "type": "integer",
+        "format": "int32",
+        "enum": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "description": "An enum of the date format  \n0: YYYYMMMMDD  \n1: YYYYMMMM  \n2: YYYY  \n3: YYYYQ1  \n4: YYYYQ2  \n5: YYYYQ3  \n6: YYYYQ4  \n7: TBD  \n"
       },
       "ReleaseDateRegionEnum": {
-        "type": "number",
-        "description": "An enum of the region for the release date",
-        "anyOf": [
-          {
-            "enum": [
-              1
-            ],
-            "description": "europe"
-          },
-          {
-            "enum": [
-              2
-            ],
-            "description": "north_america"
-          },
-          {
-            "enum": [
-              3
-            ],
-            "description": "austrailia"
-          },
-          {
-            "enum": [
-              4
-            ],
-            "description": "new_zealand"
-          },
-          {
-            "enum": [
-              5
-            ],
-            "description": "japan"
-          },
-          {
-            "enum": [
-              6
-            ],
-            "description": "china"
-          },
-          {
-            "enum": [
-              7
-            ],
-            "description": "asia"
-          },
-          {
-            "enum": [
-              8
-            ],
-            "description": "worldwide"
-          },
-          {
-            "enum": [
-              9
-            ],
-            "description": "korea"
-          },
-          {
-            "enum": [
-              10
-            ],
-            "description": "brazil"
-          }
-        ]
+        "type": "integer",
+        "format": "int32",
+        "enum": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10
+        ],
+        "description": "An enum of the region for the release date  \n1: europe  \n2: north_america  \n3: australia  \n4: new_zealand  \n5: japan  \n6: china  \n7: asia  \n8: worldwide  \n9: korea  \n10: brazil  \n"
       },
       "ReleaseDateStatus": {
         "type": "object",
@@ -7543,112 +6115,28 @@
         }
       },
       "WebsiteCategoryEnums": {
-        "type": "object",
-        "description": "The platform website",
-        "anyOf": [
-          {
-            "enum": [
-              1
-            ],
-            "description": "official"
-          },
-          {
-            "enum": [
-              2
-            ],
-            "description": "wikia"
-          },
-          {
-            "enum": [
-              3
-            ],
-            "description": "wikipedia"
-          },
-          {
-            "enum": [
-              4
-            ],
-            "description": "facebook"
-          },
-          {
-            "enum": [
-              5
-            ],
-            "description": "twitter"
-          },
-          {
-            "enum": [
-              6
-            ],
-            "description": "twitch"
-          },
-          {
-            "enum": [
-              8
-            ],
-            "description": "instagram"
-          },
-          {
-            "enum": [
-              9
-            ],
-            "description": "youtube"
-          },
-          {
-            "enum": [
-              10
-            ],
-            "description": "iphone"
-          },
-          {
-            "enum": [
-              11
-            ],
-            "description": "ipad"
-          },
-          {
-            "enum": [
-              12
-            ],
-            "description": "android"
-          },
-          {
-            "enum": [
-              13
-            ],
-            "description": "steam"
-          },
-          {
-            "enum": [
-              14
-            ],
-            "description": "reddit"
-          },
-          {
-            "enum": [
-              15
-            ],
-            "description": "itch"
-          },
-          {
-            "enum": [
-              16
-            ],
-            "description": "epicgames"
-          },
-          {
-            "enum": [
-              17
-            ],
-            "description": "gog"
-          },
-          {
-            "enum": [
-              18
-            ],
-            "description": "discord"
-          }
-        ]
+        "type": "integer",
+        "format": "int32",
+        "enum": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18
+        ],
+        "description": "The platform website  \n1: official  \n2: wikia  \n3: wikipedia  \n4: facebook  \n5: twitter  \n6: twitch  \n8: instagram  \n9: youtube  \n10: iphone  \n11: ipad  \n12: android  \n13: steam  \n14: reddit  \n15: itch  \n16: epicgames  \n17: gog  \n18: discord  \n"
       }
     },
     "securitySchemes": {
