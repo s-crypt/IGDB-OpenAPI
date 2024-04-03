@@ -309,7 +309,7 @@ info:
       ### How do I set up a proxy?
       <p>Proxies can be complex, but to get you started we have a simple guide to get you up and running quickly through AWS.</p>
       <p>We have provided a single link that will let you deploy an AWS Api Gateway in your own AWS account that will serve as a proxy. This Stack will also handle your Access Token rotations automatically for you, so you don’t need to think about that.</p>
-      <p> <img src="/assets/igdb_simple_proxy.png" alt="Simple Api Proxy Diagram" /> </p>
+      <p> <img src="/assets/igdb_proxy_diagram.png" alt="Simple Api Proxy Diagram" /> </p>
       
       ### What will it cost?
       <p> AWS has a <a href="https://aws.amazon.com/api-gateway/pricing/">very generous free-tier</a> for new users and the services used in the provided solution (<a href="https://aws.amazon.com/api-gateway/pricing/">Api Gateway</a>, <a href="https://aws.amazon.com/secretsmanager/pricing/">Secrets Manager</a>, <a href="https://aws.amazon.com/lambda/pricing/">Lambda</a>). Please use the <a href="https://calculator.aws/#/estimate">AWS Pricing Calculator</a> to gauge how much this will cost you before setting up your Stack. </p>

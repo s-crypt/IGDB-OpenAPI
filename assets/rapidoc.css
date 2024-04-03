@@ -31,5 +31,5 @@ a:active {
 }
 
 nav-bar-info {
-	border-left-width: 8px;
+	border-left-width: 8px !important;
 }
