@@ -26,25 +26,7 @@ info:
       <b>START USING US NOW, IT'S FREE!</b>
     </aside>
     
-    
-    
-    <hr>
-    
-    # Table of Contents
-    1. [Account Creation](#account-creation)
-    2. [Authentication](#authentication)
-    3. [Requests](#requests)
-    4. [Rate Limits](#rate-limits)
-    5. [Wrappers](#wrappers)
-    6. [Examples](#examples)
-    7. [Webhooks](#webhooks)
-    7. [Reference](#reference)
-    9. [Partnership](#partnership)
-    10. [FAQ](#faq)
-    11. [Support](#support)
-    12. [License](#license)
-    13. [Endpoints](#tag--Endpoints)
-    
+
     <hr>
     
     ## Account Creation
@@ -62,7 +44,7 @@ info:
     </aside>
     
     
-    
+    <br />
     <hr>
     
     ## Authentication
@@ -84,7 +66,7 @@ info:
     </aside>
     
     
-    
+    <br />
     <hr>
     
     ## Requests
@@ -108,13 +90,13 @@ info:
     
     
     
-    
+    <br />
     <hr>
     
     ## Rate Limits
     <p>There is a rate limit of <strong>4 requests per second</strong>. If you go over this limit you will receive a response with status code <code>429 Too Many Requests</code>.</p>
     <p>You are able to have up to 8 <em>open</em> requests at any moment in time. This can occur if requests take longer than 1 second to respond when multiple requests are being made.</p>
-    
+    <br />
     <hr>
     
     ## Wrappers
@@ -135,7 +117,7 @@ info:
       <li><a href="https://github.com/ad2games/ruby-apicalypse">Ruby</a></li>
       <li><a href="https://github.com/kamranayub/igdb-dotnet">C#/.NET</a></li>
     </ul>
-    
+    <br />
     <hr>
     
     # Examples
@@ -232,7 +214,7 @@ info:
       ### Get all games that are only released on playstation 4 AND PC
       <pre tabindex="0"><code>fields name,category,platforms;<br />where category = 0 &amp; platforms = {48,6};
           </code></pre>
-    
+    <br />
     <hr>
     
     # Webhooks
@@ -302,7 +284,7 @@ info:
       ### Handling Webhooks on your end
       <p>When recieveing the webhook message on your end what we expect is to recieve a <code>200 OK</code> back within <strong>15 seconds</strong>. If the endpoint takes longer than 15 seconds to respond the event will be deemed as a failed event, fail 5 times and the webhook will be set to inactive.</p>
       </div>
-      
+      <br />
       <hr>
       
       # CORS Proxy
@@ -369,7 +351,7 @@ info:
       <ul>
         <li>CORS: Setup a proxy using <a href="https://github.com/Rob--W/cors-anywhere">CORS Anywhere</a></li>
       </ul>
-      
+      <br />
       <hr>
       
       # Reference
@@ -737,7 +719,7 @@ info:
           <li> <code>limit 33; <br /> offset 22; </code> </li>
         </ul> </li>
       </ul>
-      
+      <br />
       <hr>
       
       # Protocol Buffers
@@ -749,7 +731,7 @@ info:
       
       ### Where?
       <p> To start recieving protobuf compatible responses from then api all you need to do is add <code>.pb</code> at the end of your request:<br /> <code>https://api.igdb.com/v4/games.pb</code><br /> Then use your generated files to parse the response into the expected object. </p>
-      
+      <br />
       <hr>
       
       # Tag Numbers
@@ -818,7 +800,7 @@ info:
         </ul> </li>
       </ul>
       </div>
-      
+      <br />
       <hr>
       
       # Multi-Query
@@ -869,7 +851,7 @@ info:
          </div>
         </div>
        </div>
-       
+       <br />
        <hr>
        
        # APICalypse
@@ -921,7 +903,7 @@ info:
         
         ### Other shorts
         <p>Null can be written <code>null</code> or <code>n</code>. Booleans can be written as <code>true</code> or <code>t</code> and <code>false</code> or <code>f</code></p>
-       
+       <br />
        <hr>
        
        # Partnership
@@ -959,7 +941,7 @@ info:
         <div class="highlight">
          <pre tabindex="0" style="color: #f8f8f2; background-color: #272822; -moz-tab-size: 4; -o-tab-size: 4; tab-size: 4"><code data-lang="yaml"><span style="display:flex;"><span><span style="color:#75715e"># Example response from /dumps/games</span> </span></span><span style="display:flex;"><span>{ </span></span><span style="display:flex;"><span> <span style="color:#f92672">&quot;s3_url&quot;: </span><span style="color:#e6db74">&quot;S3_DOWNLOAD_URL&quot;</span>, </span></span><span style="display:flex;"><span> <span style="color:#f92672">&quot;endpoint&quot;: </span><span style="color:#e6db74">&quot;games&quot;</span>, </span></span><span style="display:flex;"><span> <span style="color:#f92672">&quot;file_name&quot;: </span><span style="color:#e6db74">&quot;1234567890_games.csv&quot;</span>, </span></span><span style="display:flex;"><span> <span style="color:#f92672">&quot;size_bytes&quot;: </span><span style="color:#ae81ff">123456789</span>, </span></span><span style="display:flex;"><span> <span style="color:#f92672">&quot;updated_at&quot;: </span><span style="color:#ae81ff">1234567890</span>, </span></span><span style="display:flex;"><span> <span style="color:#f92672">&quot;schema_version&quot;: </span><span style="color:#e6db74">&quot;1234567890&quot;</span>, </span></span><span style="display:flex;"><span> <span style="color:#f92672">&quot;schema&quot;: </span>{ </span></span><span style="display:flex;"><span> <span style="color:#f92672">&quot;id&quot;: </span><span style="color:#e6db74">&quot;LONG&quot;</span>, </span></span><span style="display:flex;"><span> <span style="color:#f92672">&quot;name&quot;: </span><span style="color:#e6db74">&quot;STRING&quot;</span>, </span></span><span style="display:flex;"><span> <span style="color:#f92672">&quot;url&quot;: </span><span style="color:#e6db74">&quot;STRING&quot;</span>, </span></span><span style="display:flex;"><span> <span style="color:#f92672">&quot;franchises&quot;: </span><span style="color:#e6db74">&quot;LONG[]&quot;</span>, </span></span><span style="display:flex;"><span> <span style="color:#f92672">&quot;rating&quot;: </span><span style="color:#e6db74">&quot;DOUBLE&quot;</span>, </span></span><span style="display:flex;"><span> <span style="color:#f92672">&quot;created_at&quot;: </span><span style="color:#e6db74">&quot;TIMESTAMP&quot;</span>, </span></span><span style="display:flex;"><span> <span style="color:#f92672">&quot;checksum&quot;: </span><span style="color:#e6db74">&quot;UUID&quot;</span>, </span></span><span style="display:flex;"><span> } </span></span><span style="display:flex;"><span>} </span></span></code></pre>
         </div>
-       
+       <br />
        <hr>
        
        # FAQ
@@ -1014,7 +996,7 @@ info:
         <p>Currently there is no popularity endpoint or popularity field on the game. The main reason is because popularity is quite vague since they can be many different ways to order/define popularity.</p>
         <p><em>It used to be in v3 however we were not confident enough on the data so it was not moved on the V4 version.</em></p>
         <p>Furthermore, the popular games you can see in IGDB.com homepage is specifically within the context of the website. Popularity is different in different context.</p>
-       
+       <br />
        <hr>
        
        # Support
@@ -1024,13 +1006,13 @@ info:
        
        ### Reporting a bug
        <p>If you would like to report a bug with the API itself you can do so in Discord or use <a href="https://twitch.uservoice.com/forums/929953-igdb?category_id=389365">Uservoice</a></p>
-       
+       <br />
        <hr>
        
        # License
        <p> Any code examples or snippets found under <a href="https://api-docs.igdb.com/">api-docs.igdb.com</a> are made available under the <a rel="nofollow" href="https://www.twitch.tv/p/legal/developer-agreement/">Twitch Developer Services Agreement</a> as Program Materials. </p>
        
-      
+      <br />
       <hr>
       
   termsOfService: https://www.twitch.tv/p/en/legal/terms-of-service/
