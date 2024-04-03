@@ -104,7 +104,7 @@ info:
     ## Wrappers
     <p>Get setup quickly by using one of these wrappers!</p>
     
-    ## Apicalypse
+    ### Apicalypse
     <ul>
       <li><a href="https://github.com/igdb/node-apicalypse">NodeJS</a></li>
       <li><a href="https://github.com/husnjak/IGDB-API-JVM">JVM/Kotlin/Java</a></li>
@@ -112,7 +112,7 @@ info:
       <li><a href="https://github.com/twitchtv/igdb-api-python">Python</a></li>
     </ul>
     
-    ## Third Party
+    ### Third Party
     <ul>
       <li><a href="https://github.com/marcreichel/igdb-laravel">PHP/Laravel</a></li>
       <li><a href="https://github.com/Henry-Sarabia/apicalypse">GO</a></li>
@@ -781,7 +781,7 @@ info:
       <br />
       <hr>
       
-      # Protocol Buffers
+      ## Protocol Buffers
       <p> <a href="https://developers.google.com/protocol-buffers">Google Protocol Buffers</a> is a language neutral method for serializing structured data.<br /> The IGDB API supports responses in this format so you do not have to write your own serialization libraries, but instead you could just generate one.<br /> Since this is langage neutral it is supported by a variatey of languages. </p>
       
       ### How?
@@ -793,7 +793,7 @@ info:
       <br />
       <hr>
       
-      # Tag Numbers
+      ## Tag Numbers
       <p>Tag numbers are automatically generated numbers which provide a compact and fast way to do complex filtering on the IGDB API. The number calculation can be easily achieved with any programming language.</p>
       <p>The basis of the calculation is a 32bit integer, where the first 4 bits contain the object type ID, and the remaining 28 bits represent the ID of the object we are generating the tag number for.</p>
       <p>Using this method a flat index of custom object ‘hashes’ can be maintained in which index the search and filtering is faster than using conventional methods.</p>
@@ -862,7 +862,7 @@ info:
       <br />
       <hr>
       
-      # Multi-Query
+      ## Multi-Query
       <p>Multi-Query is a new way to request a huge amount of information in one request! With Multi-Query you can request multiple endpoints at once, it also works with multiple requests to a single endpoint as well.</p>
       <p>A Multi-Query is made by making a <code>POST</code> request to: <code>https://api.igdb.com/v4/multiquery</code>.</p>
       <div>
@@ -949,7 +949,7 @@ info:
        <br />
        <hr>
        
-       # APICalypse
+      ## APICalypse
        
       ### APICalypse cheatsheet
       <p>APICalypse is a new language used for this api which greatly simplifies how you can query your requests compared to the url parameters used in API V2.</p>
