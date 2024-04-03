@@ -31,12 +31,14 @@ info:
     
     ## Account Creation
     <p>In order to use our API, you must have a Twitch Account.</p>
-    1. Sign Up with [Twitch](https://dev.twitch.tv/login) for a free account
-    2. Ensure you have Two Factor Authentication [enabled](https://www.twitch.tv/settings/security)
-    3. Register your application in the [Twitch Developer Portal](https://dev.twitch.tv/console/apps/create)
-    4. [Manage](https://dev.twitch.tv/console/apps) your newly created application
-    5. Generate a Client Secret by pressing \[New Secret\]
-    6. Take note of the Client ID and Client Secret
+
+    1.  Sign Up with [Twitch](https://dev.twitch.tv/login) for a free account
+    2.  Ensure you have Two Factor Authentication [enabled](https://www.twitch.tv/settings/security)
+    3.  Register your application in the [Twitch Developer Portal](https://dev.twitch.tv/console/apps/create)
+    4.  [Manage](https://dev.twitch.tv/console/apps) your newly created application
+    5.  Generate a Client Secret by pressing `[New Secret]`
+    6.  Take note of the Client ID and Client Secret
+    
     <p> The IGDB.com API is free for <strong>non-commercial</strong> usage under the terms of the <a rel="“nofollow”" href="https://www.twitch.tv/p/legal/developer-agreement/">Twitch Developer Service Agreement</a>. </p>
     <aside class="info">
       <b>Note:</b> We offer commercial partnership for users with a commercial need in their projects. For more details on that process please reach out to
@@ -56,7 +58,7 @@ info:
     
     ## Example
     <p>If your Client ID is <code>abcdefg12345</code> and your Client Secret is <code>hijklmn67890</code>, the whole url should look like the following.</p>
-    <code><span style="display: flex"><span><span style="color: #f92672">POST</span>: <span style="color: #ae81ff">https://id.twitch.tv/oauth2/token?client_id=abcdefg12345&amp;client_secret=hijklmn67890&amp;grant_type=client_credentials</span> </span></span></code>
+    <pre><code><span style="display: flex"><span><span style="color: #f92672">POST</span>: <span style="color: #ae81ff">https://id.twitch.tv/oauth2/token?client_id=abcdefg12345&amp;client_secret=hijklmn67890&amp;grant_type=client_credentials</span> </span></span></code></pre>
     <p>The response from this will be a json object containing the access token and the number of second until the token expires.</p>
     <pre tabindex="0" style="color: #f8f8f2; background-color: #272822; -moz-tab-size: 4; -o-tab-size: 4; tab-size: 4"><br /><code data-lang="json"><span style="display:flex;"><span>{ </span></span><span style="display:flex;"><span> <span style="color:#f92672">&quot;access_token&quot;</span>: <span style="color:#e6db74">&quot;access12345token&quot;</span>, </span></span><span style="display:flex;"><span> <span style="color:#f92672">&quot;expires_in&quot;</span>: <span style="color:#ae81ff">5587808</span>, </span></span><span style="display:flex;"><span> <span style="color:#f92672">&quot;token_type&quot;</span>: <span style="color:#e6db74">&quot;bearer&quot;</span> </span></span><span style="display:flex;"><span>}</span></span><br /></code></pre>
     <aside>
