@@ -29,3 +29,7 @@ a:active {
 .header-link:active {
 	color: #d9d9d9 !important;
 }
+
+nav-bar-info {
+	border-left-width: 8px;
+}
