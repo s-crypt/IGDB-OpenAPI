@@ -38,7 +38,7 @@ info:
     4.  [Manage](https://dev.twitch.tv/console/apps) your newly created application
     5.  Generate a Client Secret by pressing `[New Secret]`
     6.  Take note of the Client ID and Client Secret
-    
+
     <p> The IGDB.com API is free for <strong>non-commercial</strong> usage under the terms of the <a rel="“nofollow”" href="https://www.twitch.tv/p/legal/developer-agreement/">Twitch Developer Service Agreement</a>. </p>
     <aside class="info">
       <b>Note:</b> We offer commercial partnership for users with a commercial need in their projects. For more details on that process please reach out to
@@ -384,18 +384,75 @@ info:
       <p><strong>Break down:</strong></p>
       <p><code>https://images.igdb.com/igdb/image/upload/t_{size}/{hash}.jpg</code></p>
       <p><code>size</code> is one of the interchangeable size types listed below. <code>hash</code> is the id of the image. The image sizes are all maximum size but by appending <code>_2x</code> to any size, you can get retina (DPR 2.0) sizes (<code>cover_small_2x</code>).</p>
-      | Name | Size | Extra |
-      | --- | --- | --- |
-      | cover\_small | 90 x 128 | Fit |
-      | screenshot\_med | 569 x 320 | Lfill, Center gravity |
-      | cover\_big | 264 x 374 | Fit |
-      | logo\_med | 284 x 160 | Fit |
-      | screenshot\_big | 889 x 500 | Lfill, Center gravity |
-      | screenshot\_huge | 1280 x 720 | Lfill, Center gravity |
-      | thumb | 90 x 90 | Thumb, Center gravity |
-      | micro | 35 x 35 | Thumb, Center gravity |
-      | 720p | 1280 x 720 | Fit, Center gravity |
-      | 1080p | 1920 x 1080 | Fit, Center gravity |
+      
+      <table>
+          <tr>
+              <td>Name</td>
+              <td>Size</td>
+              <td>Extra</td>
+              <td></td>
+          </tr>
+          <tr>
+              <td>cover\_small</td>
+              <td>90 x 128</td>
+              <td>Fit</td>
+              <td></td>
+          </tr>
+          <tr>
+              <td>screenshot\_med</td>
+              <td>569 x 320</td>
+              <td>Lfill, Center gravity</td>
+              <td></td>
+          </tr>
+          <tr>
+              <td>cover\_big</td>
+              <td>264 x 374</td>
+              <td>Fit</td>
+              <td></td>
+          </tr>
+          <tr>
+              <td>logo\_med</td>
+              <td>284 x 160</td>
+              <td>Fit</td>
+              <td></td>
+          </tr>
+          <tr>
+              <td>screenshot\_big</td>
+              <td>889 x 500</td>
+              <td>Lfill, Center gravity</td>
+              <td></td>
+          </tr>
+          <tr>
+              <td>screenshot\_huge</td>
+              <td>1280 x 720</td>
+              <td>Lfill, Center gravity</td>
+              <td></td>
+          </tr>
+          <tr>
+              <td>thumb</td>
+              <td>90 x 90</td>
+              <td>Thumb, Center gravity</td>
+              <td></td>
+          </tr>
+          <tr>
+              <td></td>
+              <td>micro</td>
+              <td>35 x 35</td>
+              <td>Thumb, Center gravity</td>
+          </tr>
+          <tr>
+              <td></td>
+              <td>720p</td>
+              <td>1280 x 720</td>
+              <td>Fit, Center gravity</td>
+          </tr>
+          <tr>
+              <td></td>
+              <td>1080p</td>
+              <td>1920 x 1080</td>
+              <td>Fit, Center gravity</td>
+          </tr>
+      </table>
       
       ## Fields
       
@@ -685,7 +742,7 @@ info:
         <li>Themes</li>
       </ul>
       
-      ## How?
+      ### How?
       <p>You specify which endpoint to search through in the Address field of your request. The search string is then entered in the body of the request by typing <code>search</code>, blank space followed by the string you wish to search for.</p>
       <ul>
         <li> Address:
@@ -781,11 +838,11 @@ info:
         <li> Address:
         <ul>
           <li><code>https://api.igdb.com/v4/games/</code></li>
-        </ul> </li>
+        </ul></li>
         <li> Body:
         <ul>
-          <li> <code>where tags = (268435461);<br /> </code> </li>
-        </ul> </li>
+          <li><code>where tags = (268435461);<br /></code></li>
+        </ul></li>
       </ul>
       <div class="highlight">
         <pre tabindex="0" style="color: #f8f8f2; background-color: #272822; -moz-tab-size: 4; -o-tab-size: 4; tab-size: 4"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e"># Python</span> </span></span><span style="display:flex;"><span>keywordTypeID: <span style="color:#ae81ff">2</span> <span style="color:#75715e"># The keyword's type ID from the table above/</span> </span></span><span style="display:flex;"><span>keywordID: <span style="color:#ae81ff">148</span> <span style="color:#75715e"># The ID of the 'moba' keyword</span> </span></span><span style="display:flex;"><span>tagNumber: keywordTypeID <span style="color:#f92672">&lt;&lt;</span> <span style="color:#ae81ff">28</span> <span style="color:#75715e"># Bit-shifting the keywords's type ID by 28 bits, ensuring that it will get into the first four bits. The result will be 536870912</span> </span></span><span style="display:flex;"><span>tagNumber <span style="color:#f92672">|=</span> keywordID <span style="color:#75715e"># Adding the keyword ID to the tag number with a bitwise OR operation. The result will be 536871060.</span> </span></span></code></pre>
@@ -812,45 +869,81 @@ info:
         <p><strong>Syntax Structure</strong> The Multi-Query syntax is made up of three pieces; “Endpoint name”, “Result Name (Given by you)”, and the APICalypse query inside the body {}.</p>
         <p><strong>important</strong> You can only run a maximum of 10 queries.</p>
         
-        ### Example 1:
-        <p>Get the count of platforms in the api.</p>
-        <pre tabindex="0"><code>query platforms/count &quot;Count of Platforms&quot; {
-    // here we can have additional filters
-    };
-    </code></pre>
-         <p>This above query will give us the following result:</p>
-         <div class="highlight">
-          <pre tabindex="0" style="color: #f8f8f2; background-color: #272822; -moz-tab-size: 4; -o-tab-size: 4; tab-size: 4"><code class="language-json" data-lang="json"><span style="display:flex;"><span>[ </span></span><span style="display:flex;"><span> { </span></span><span style="display:flex;"><span> <span style="color:#f92672">&quot;name&quot;</span>: <span style="color:#e6db74">&quot;Count of Platforms&quot;</span>, </span></span><span style="display:flex;"><span> <span style="color:#f92672">&quot;count&quot;</span>: <span style="color:#ae81ff">155</span> </span></span><span style="display:flex;"><span> } </span></span><span style="display:flex;"><span>] </span></span></code></pre>
-         </div>
+      ### Example 1:
+      <p>Get the count of platforms in the api.</p>
+      <pre tabindex="0"><code>query platforms/count &quot;Count of Platforms&quot; {
+      // here we can have additional filters
+      };</code></pre>
+      <p>This above query will give us the following result:</p>
+      <pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span>[
+      </span></span><span style="display:flex;"><span>  {
+      </span></span><span style="display:flex;"><span>    <span style="color:#f92672">&#34;name&#34;</span>: <span style="color:#e6db74">&#34;Count of Platforms&#34;</span>,
+      </span></span><span style="display:flex;"><span>    <span style="color:#f92672">&#34;count&#34;</span>: <span style="color:#ae81ff">155</span>
+      </span></span><span style="display:flex;"><span>  }
+      </span></span><span style="display:flex;"><span>]
+      </span></span></code></pre>
+      </div>
          
-         ### Example 2:
-         <p>Get Playstation 4 Exclusives</p>
-         <pre tabindex="0"><code>query games &quot;Playstation Games&quot; {
-      fields name,platforms.name;
-      where platforms !=n &amp; platforms = {48};
-      limit 1;
-    };
-    </code></pre>
-         <p>This above query will give us the following result:</p>
-         <div class="highlight">
-          <pre tabindex="0" style="color: #f8f8f2; background-color: #272822; -moz-tab-size: 4; -o-tab-size: 4; tab-size: 4"><code class="language-JSON" data-lang="JSON"><span style="display:flex;"><span>[ </span></span><span style="display:flex;"><span> { </span></span><span style="display:flex;"><span> <span style="color:#f92672">&quot;name&quot;</span>: <span style="color:#e6db74">&quot;Playstation Games&quot;</span>, </span></span><span style="display:flex;"><span> <span style="color:#f92672">&quot;result&quot;</span>: [ </span></span><span style="display:flex;"><span> { </span></span><span style="display:flex;"><span> <span style="color:#f92672">&quot;id&quot;</span>: <span style="color:#ae81ff">52826</span>, </span></span><span style="display:flex;"><span> <span style="color:#f92672">&quot;name&quot;</span>: <span style="color:#e6db74">&quot;Skate 4&quot;</span>, </span></span><span style="display:flex;"><span> <span style="color:#f92672">&quot;platforms&quot;</span>: [ </span></span><span style="display:flex;"><span> { </span></span><span style="display:flex;"><span> <span style="color:#f92672">&quot;id&quot;</span>: <span style="color:#ae81ff">48</span>, </span></span><span style="display:flex;"><span> <span style="color:#f92672">&quot;name&quot;</span>: <span style="color:#e6db74">&quot;PlayStation 4&quot;</span> </span></span><span style="display:flex;"><span> } </span></span><span style="display:flex;"><span> ] </span></span><span style="display:flex;"><span> } </span></span><span style="display:flex;"><span> ] </span></span><span style="display:flex;"><span> } </span></span><span style="display:flex;"><span>] </span></span></code></pre>
-         </div>
+      ### Example 2:
+      <p>Get Playstation 4 Exclusives</p>
+      <pre tabindex="0"><code>query games &quot;Playstation Games&quot; {
+        fields name,platforms.name;
+        where platforms !=n &amp; platforms = {48};
+        limit 1;
+      };</code></pre>
+      <p>This above query will give us the following result:</p>
+      <pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-JSON" data-lang="JSON"><span style="display:flex;"><span>[
+      </span></span><span style="display:flex;"><span>    {
+      </span></span><span style="display:flex;"><span>        <span style="color:#f92672">&#34;name&#34;</span>: <span style="color:#e6db74">&#34;Playstation Games&#34;</span>,
+      </span></span><span style="display:flex;"><span>        <span style="color:#f92672">&#34;result&#34;</span>: [
+      </span></span><span style="display:flex;"><span>            {
+      </span></span><span style="display:flex;"><span>                <span style="color:#f92672">&#34;id&#34;</span>: <span style="color:#ae81ff">52826</span>,
+      </span></span><span style="display:flex;"><span>                <span style="color:#f92672">&#34;name&#34;</span>: <span style="color:#e6db74">&#34;Skate 4&#34;</span>,
+      </span></span><span style="display:flex;"><span>                <span style="color:#f92672">&#34;platforms&#34;</span>: [
+      </span></span><span style="display:flex;"><span>                    {
+      </span></span><span style="display:flex;"><span>                        <span style="color:#f92672">&#34;id&#34;</span>: <span style="color:#ae81ff">48</span>,
+      </span></span><span style="display:flex;"><span>                        <span style="color:#f92672">&#34;name&#34;</span>: <span style="color:#e6db74">&#34;PlayStation 4&#34;</span>
+      </span></span><span style="display:flex;"><span>                    }
+      </span></span><span style="display:flex;"><span>                ]
+      </span></span><span style="display:flex;"><span>            }
+      </span></span><span style="display:flex;"><span>        ]
+      </span></span><span style="display:flex;"><span>    }
+      </span></span><span style="display:flex;"><span>]
+      </span></span></code></pre>
          
-         ### Example 3:
-         <p>Combining the queries of example 1 and 2.</p>
-         <pre tabindex="0"><code>query platforms/count &quot;Count of Platforms&quot; {
-      // here we can ahve additional filters
-    };
-    
-    query games &quot;Playstation Games&quot; {
-      fields name,platforms.name;
-      where platforms !=n &amp; platforms = {48};
-      limit 1;
-    };
-    </code></pre>
-         <div class="highlight">
-          <pre tabindex="0" style="color: #f8f8f2; background-color: #272822; -moz-tab-size: 4; -o-tab-size: 4; tab-size: 4"><code class="language-JSON" data-lang="JSON"><span style="display:flex;"><span>[ </span></span><span style="display:flex;"><span> { </span></span><span style="display:flex;"><span> <span style="color:#f92672">&quot;name&quot;</span>: <span style="color:#e6db74">&quot;Count of Platforms&quot;</span>, </span></span><span style="display:flex;"><span> <span style="color:#f92672">&quot;count&quot;</span>: <span style="color:#ae81ff">155</span> </span></span><span style="display:flex;"><span> }, </span></span><span style="display:flex;"><span> { </span></span><span style="display:flex;"><span> <span style="color:#f92672">&quot;name&quot;</span>: <span style="color:#e6db74">&quot;Playstation Games&quot;</span>, </span></span><span style="display:flex;"><span> <span style="color:#f92672">&quot;result&quot;</span>: [ </span></span><span style="display:flex;"><span> { </span></span><span style="display:flex;"><span> <span style="color:#f92672">&quot;id&quot;</span>: <span style="color:#ae81ff">52826</span>, </span></span><span style="display:flex;"><span> <span style="color:#f92672">&quot;name&quot;</span>: <span style="color:#e6db74">&quot;Skate 4&quot;</span>, </span></span><span style="display:flex;"><span> <span style="color:#f92672">&quot;platforms&quot;</span>: [ </span></span><span style="display:flex;"><span> { </span></span><span style="display:flex;"><span> <span style="color:#f92672">&quot;id&quot;</span>: <span style="color:#ae81ff">48</span>, </span></span><span style="display:flex;"><span> <span style="color:#f92672">&quot;name&quot;</span>: <span style="color:#e6db74">&quot;PlayStation 4&quot;</span> </span></span><span style="display:flex;"><span> } </span></span><span style="display:flex;"><span> ] </span></span><span style="display:flex;"><span> } </span></span><span style="display:flex;"><span> ] </span></span><span style="display:flex;"><span> } </span></span><span style="display:flex;"><span>] </span></span></code></pre>
-         </div>
+      ### Example 3:
+      <p>Combining the queries of example 1 and 2.</p>
+      <pre tabindex="0"><code>query platforms/count &#34;Count of Platforms&#34; {
+        // here we can ahve additional filters
+      };
+
+      query games &#34;Playstation Games&#34; {
+        fields name,platforms.name;
+        where platforms !=n &amp; platforms = {48};
+        limit 1;
+      };
+      </code></pre><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-JSON" data-lang="JSON"><span style="display:flex;"><span>[
+      </span></span><span style="display:flex;"><span>    {
+      </span></span><span style="display:flex;"><span>        <span style="color:#f92672">&#34;name&#34;</span>: <span style="color:#e6db74">&#34;Count of Platforms&#34;</span>,
+      </span></span><span style="display:flex;"><span>        <span style="color:#f92672">&#34;count&#34;</span>: <span style="color:#ae81ff">155</span>
+      </span></span><span style="display:flex;"><span>    },
+      </span></span><span style="display:flex;"><span>    {
+      </span></span><span style="display:flex;"><span>        <span style="color:#f92672">&#34;name&#34;</span>: <span style="color:#e6db74">&#34;Playstation Games&#34;</span>,
+      </span></span><span style="display:flex;"><span>        <span style="color:#f92672">&#34;result&#34;</span>: [
+      </span></span><span style="display:flex;"><span>            {
+      </span></span><span style="display:flex;"><span>                <span style="color:#f92672">&#34;id&#34;</span>: <span style="color:#ae81ff">52826</span>,
+      </span></span><span style="display:flex;"><span>                <span style="color:#f92672">&#34;name&#34;</span>: <span style="color:#e6db74">&#34;Skate 4&#34;</span>,
+      </span></span><span style="display:flex;"><span>                <span style="color:#f92672">&#34;platforms&#34;</span>: [
+      </span></span><span style="display:flex;"><span>                    {
+      </span></span><span style="display:flex;"><span>                        <span style="color:#f92672">&#34;id&#34;</span>: <span style="color:#ae81ff">48</span>,
+      </span></span><span style="display:flex;"><span>                        <span style="color:#f92672">&#34;name&#34;</span>: <span style="color:#e6db74">&#34;PlayStation 4&#34;</span>
+      </span></span><span style="display:flex;"><span>                    }
+      </span></span><span style="display:flex;"><span>                ]
+      </span></span><span style="display:flex;"><span>            }
+      </span></span><span style="display:flex;"><span>        ]
+      </span></span><span style="display:flex;"><span>    }
+      </span></span><span style="display:flex;"><span>]
+      </span></span></code></pre>
         </div>
        </div>
        <br />
@@ -858,149 +951,150 @@ info:
        
        # APICalypse
        
-        ### APICalypse cheatsheet
-        <p>APICalypse is a new language used for this api which greatly simplifies how you can query your requests compared to the url parameters used in API V2.</p>
-        
-        ### Fields
-        <p>Fields are used to select which fields you want back from your request to the api.</p>
-        <p>To select fields you need the APICalypse command <code>fields</code> or its shorthand <code>f</code>.</p>
-        <p>Popular wildcard is to add <code>*</code> instead of a field, this will give you all of the fields.</p>
-        <p> <code>fields name,release_dates,genres.name,rating;</code><br /> <code>f name,release_dates,genres.name,rating;</code> </p>
-        
-        ### Exclude
-        <p>Commonly used with selecting all fields with the wildcard <code>*</code> this command will exclude the fields that you select.</p>
-        <p>To exclude fields you don’t need the APICalypse command <code>exclude</code> or its shorthand <code>x</code>.</p>
-        <p> <code>fields *;</code><br /> <code>exclude tags,keywords;</code> </p>
-        <p> <code>f *;</code><br /> <code>x tags,keywords;</code> </p>
-        
-        ### Where
-        <p>Where is easiest described as a filter. With where you can filter on specific fields.</p>
-        <p>To filter your results use the APICalypse command <code>where</code> or its shorthand <code>w</code>.</p>
-        <p> <code>fields *;</code><br /> <code>where genres = 4;</code> </p>
-        <p> <code>f *;</code><br /> <code>w genres = 4;</code> </p>
-        
-        ### Limit
-        <p>Limit describes how many results you will get back from the api, the standard value is 10.</p>
-        <p>To set a new limit use the APICalypse command <code>limit</code> or it’s shorthand <code>l</code>.</p>
-        <p> <code>fields *;</code><br /> <code>limit 50;</code> </p>
-        <p> <code>f *;</code><br /> <code>l 50;</code> </p>
-        
-        ### Offset
-        <p>Offset describes how many results you will skip over, standard is 0.</p>
-        <p> To set a new offset use the APICalypse command <code>offset</code> or it’s shorthand <code>o</code>.<br /> Offset is often used together with Limit for pagination. </p>
-        <p> <code>limit 50;</code><br /> <code>offset 50;</code> </p>
-        <p> <code>l 50;</code><br /> <code>o 50;</code> </p>
-        
-        ### Sort
-        <p>Use Sort to order the results to your liking.</p>
-        <p> To order the results use the APICalypse command <code>sort</code> or it’s shorthand <code>s</code>.<br /> Sort has two accompaning commands for “direction”; <code>asc</code> Ascending order and <code>desc</code> Decending order. </p>
-        <p> <code>fields *;</code><br /> <code>sort rating asc;</code> </p>
-        <p> <code>f *;</code><br /> <code>s rating desc;</code> </p>
-        
-        ### Search
-        <p>To find a specific title you can use Search.</p>
-        <p>To use search use the APICalypse command <code>search</code>, it has no shorthand :(. Search has it’s own endpoint where it is good to use a filter for specific kinds of results, example <code>where game != null;</code> for only games.</p>
-        <p> <code>search &quot;Halo&quot;;</code><br /> <code>fields name;</code> </p>
-        <p> <code>search &quot;Halo&quot;;</code><br /> <code>f name;</code> </p>
-        
-        ### Other shorts
-        <p>Null can be written <code>null</code> or <code>n</code>. Booleans can be written as <code>true</code> or <code>t</code> and <code>false</code> or <code>f</code></p>
+      ### APICalypse cheatsheet
+      <p>APICalypse is a new language used for this api which greatly simplifies how you can query your requests compared to the url parameters used in API V2.</p>
+      
+      ### Fields
+      <p>Fields are used to select which fields you want back from your request to the api.</p>
+      <p>To select fields you need the APICalypse command <code>fields</code> or its shorthand <code>f</code>.</p>
+      <p>Popular wildcard is to add <code>*</code> instead of a field, this will give you all of the fields.</p>
+      <p> <code>fields name,release_dates,genres.name,rating;</code><br /> <code>f name,release_dates,genres.name,rating;</code> </p>
+      
+      ### Exclude
+      <p>Commonly used with selecting all fields with the wildcard <code>*</code> this command will exclude the fields that you select.</p>
+      <p>To exclude fields you don’t need the APICalypse command <code>exclude</code> or its shorthand <code>x</code>.</p>
+      <p> <code>fields *;</code><br /> <code>exclude tags,keywords;</code> </p>
+      <p> <code>f *;</code><br /> <code>x tags,keywords;</code> </p>
+      
+      ### Where
+      <p>Where is easiest described as a filter. With where you can filter on specific fields.</p>
+      <p>To filter your results use the APICalypse command <code>where</code> or its shorthand <code>w</code>.</p>
+      <p> <code>fields *;</code><br /> <code>where genres = 4;</code> </p>
+      <p> <code>f *;</code><br /> <code>w genres = 4;</code> </p>
+      
+      ### Limit
+      <p>Limit describes how many results you will get back from the api, the standard value is 10.</p>
+      <p>To set a new limit use the APICalypse command <code>limit</code> or it’s shorthand <code>l</code>.</p>
+      <p> <code>fields *;</code><br /> <code>limit 50;</code> </p>
+      <p> <code>f *;</code><br /> <code>l 50;</code> </p>
+      
+      ### Offset
+      <p>Offset describes how many results you will skip over, standard is 0.</p>
+      <p> To set a new offset use the APICalypse command <code>offset</code> or it’s shorthand <code>o</code>.<br /> Offset is often used together with Limit for pagination. </p>
+      <p> <code>limit 50;</code><br /> <code>offset 50;</code> </p>
+      <p> <code>l 50;</code><br /> <code>o 50;</code> </p>
+      
+      ### Sort
+      <p>Use Sort to order the results to your liking.</p>
+      <p> To order the results use the APICalypse command <code>sort</code> or it’s shorthand <code>s</code>.<br /> Sort has two accompaning commands for “direction”; <code>asc</code> Ascending order and <code>desc</code> Decending order. </p>
+      <p> <code>fields *;</code><br /> <code>sort rating asc;</code> </p>
+      <p> <code>f *;</code><br /> <code>s rating desc;</code> </p>
+      
+      ### Search
+      <p>To find a specific title you can use Search.</p>
+      <p>To use search use the APICalypse command <code>search</code>, it has no shorthand :(. Search has it’s own endpoint where it is good to use a filter for specific kinds of results, example <code>where game != null;</code> for only games.</p>
+      <p> <code>search &quot;Halo&quot;;</code><br /> <code>fields name;</code> </p>
+      <p> <code>search &quot;Halo&quot;;</code><br /> <code>f name;</code> </p>
+      
+      ### Other shorts
+      <p>Null can be written <code>null</code> or <code>n</code>. Booleans can be written as <code>true</code> or <code>t</code> and <code>false</code> or <code>f</code></p>
+       
        <br />
        <hr>
        
-       # Partnership
-        <p>Interested about using the API for a commercial project? No problem, we allow commercial usage. Get in touch with us about our partner program!</p>
-        
-        ### How?
-        <p>To register for a commertial agreement reach out to <a href="mailto:partner@igdb.com">partner@igdb.com</a></p>
-        
-        ### Exclusive Features
-        <p> Automatic data dumps every 24 hours.<br /> <em>More features coming soon.</em> </p>
-        
-        ## Data Dumps
-        <p>All <a href="#tag--Endpoints">endpoints</a> are available as CSV Data Dumps!</p>
-        <p>Daily updated CSV Data Dumps which can be used to kick start your projects or keep your data up to date (within 24 hours).</p>
-        <aside class="info">
-         <i>Please note that data dumps are exclusively available to our Data Partners.</i>
-        </aside>
-        <div class="highlight">
-         <pre tabindex="0" style="color: #f8f8f2; background-color: #272822; -moz-tab-size: 4; -o-tab-size: 4; tab-size: 4"><code data-lang="shell"><span style="display:flex;"><span>curl -X GET <span style="color:#e6db74">'https://api.igdb.com/v4/dumps'</span> <span style="color:#ae81ff">\ </span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>-H <span style="color:#e6db74">'Client-ID: Client ID'</span> <span style="color:#ae81ff">\ </span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>-H <span style="color:#e6db74">'Authorization: Bearer access_token'</span> </span></span></code></pre>
-        </div>
-        
-        ### Listing dumps
-        <p> To list the available data dumps make a GET request to <code>/dumps</code>.<br /> This will return a list of available Data Dumps describing the <code>endpoint</code>, <code>file name</code>, and <code>updated at</code>. </p>
-        <div class="highlight">
-         <pre tabindex="0" style="color: #f8f8f2; background-color: #272822; -moz-tab-size: 4; -o-tab-size: 4; tab-size: 4"><code data-lang="yaml"><span style="display:flex;"><span><span style="color:#75715e"># Example response from /dumps</span> </span></span><span style="display:flex;"><span>[ </span></span><span style="display:flex;"><span> { </span></span><span style="display:flex;"><span> <span style="color:#f92672">&quot;endpoint&quot;: </span><span style="color:#e6db74">&quot;games&quot;</span>, </span></span><span style="display:flex;"><span> <span style="color:#f92672">&quot;file_name&quot;: </span><span style="color:#e6db74">&quot;1234567890_games.csv&quot;</span>, </span></span><span style="display:flex;"><span> <span style="color:#f92672">&quot;updated_at&quot;: </span><span style="color:#ae81ff">1234567890</span> </span></span><span style="display:flex;"><span> } </span></span><span style="display:flex;"><span>] </span></span></code></pre>
-        </div>
-        <div class="highlight">
-         <pre tabindex="0" style="color: #f8f8f2; background-color: #272822; -moz-tab-size: 4; -o-tab-size: 4; tab-size: 4"><code data-lang="shell"><span style="display:flex;"><span>curl -X GET <span style="color:#e6db74">'https://api.igdb.com/v4/dumps/ENDPOINT'</span> <span style="color:#ae81ff">\ </span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>-H <span style="color:#e6db74">'Client-ID: Client ID'</span> <span style="color:#ae81ff">\ </span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>-H <span style="color:#e6db74">'Authorization: Bearer access_token'</span> </span></span></code></pre>
-        </div>
-        
-        ### Downloading CSV
-        <p>To get the download link for the csv files make a GET request to <code>/dumps/ENDPOINT</code> The response object will contain the download link for the CSV and the schema version &amp; schema JSON structure of the data.</p>
-        <p> <strong>S3 Download Url:</strong><br /> The download Url is a presigned S3 url that is valid for 5 minutes. </p>
-        <p> <strong>Schema</strong><br /> The <code>schema_version</code> and <code>schema</code> will reflect the current data structure and data type that the Dump is using.<br /> The schema version number will change when the <code>schema</code> changes, so if you are planning on an automated setup for this you will need to keep this in mind. </p>
-        <div class="highlight">
-         <pre tabindex="0" style="color: #f8f8f2; background-color: #272822; -moz-tab-size: 4; -o-tab-size: 4; tab-size: 4"><code data-lang="yaml"><span style="display:flex;"><span><span style="color:#75715e"># Example response from /dumps/games</span> </span></span><span style="display:flex;"><span>{ </span></span><span style="display:flex;"><span> <span style="color:#f92672">&quot;s3_url&quot;: </span><span style="color:#e6db74">&quot;S3_DOWNLOAD_URL&quot;</span>, </span></span><span style="display:flex;"><span> <span style="color:#f92672">&quot;endpoint&quot;: </span><span style="color:#e6db74">&quot;games&quot;</span>, </span></span><span style="display:flex;"><span> <span style="color:#f92672">&quot;file_name&quot;: </span><span style="color:#e6db74">&quot;1234567890_games.csv&quot;</span>, </span></span><span style="display:flex;"><span> <span style="color:#f92672">&quot;size_bytes&quot;: </span><span style="color:#ae81ff">123456789</span>, </span></span><span style="display:flex;"><span> <span style="color:#f92672">&quot;updated_at&quot;: </span><span style="color:#ae81ff">1234567890</span>, </span></span><span style="display:flex;"><span> <span style="color:#f92672">&quot;schema_version&quot;: </span><span style="color:#e6db74">&quot;1234567890&quot;</span>, </span></span><span style="display:flex;"><span> <span style="color:#f92672">&quot;schema&quot;: </span>{ </span></span><span style="display:flex;"><span> <span style="color:#f92672">&quot;id&quot;: </span><span style="color:#e6db74">&quot;LONG&quot;</span>, </span></span><span style="display:flex;"><span> <span style="color:#f92672">&quot;name&quot;: </span><span style="color:#e6db74">&quot;STRING&quot;</span>, </span></span><span style="display:flex;"><span> <span style="color:#f92672">&quot;url&quot;: </span><span style="color:#e6db74">&quot;STRING&quot;</span>, </span></span><span style="display:flex;"><span> <span style="color:#f92672">&quot;franchises&quot;: </span><span style="color:#e6db74">&quot;LONG[]&quot;</span>, </span></span><span style="display:flex;"><span> <span style="color:#f92672">&quot;rating&quot;: </span><span style="color:#e6db74">&quot;DOUBLE&quot;</span>, </span></span><span style="display:flex;"><span> <span style="color:#f92672">&quot;created_at&quot;: </span><span style="color:#e6db74">&quot;TIMESTAMP&quot;</span>, </span></span><span style="display:flex;"><span> <span style="color:#f92672">&quot;checksum&quot;: </span><span style="color:#e6db74">&quot;UUID&quot;</span>, </span></span><span style="display:flex;"><span> } </span></span><span style="display:flex;"><span>} </span></span></code></pre>
-        </div>
-       <br />
-       <hr>
-       
-       # FAQ
-       
-        ## Business related FAQ
-        
-        ### 1. I want to use the API for a commercial project, is it allowed?
-        <p>Yes, we offer commercial partnerships for users looking to integrate the API in monetized products. From our side, as part of the partnership, we ask for user facing attribution to IGDB.com from products integrating the IGDB API.</p>
-        <p>For more details on that process, please reach out to <a href="mailto:partner@igdb.com">partner@igdb.com</a></p>
-        
-        ### 2. What is the price of the API?
-        <p>The API is free for both non-commercial and commercial projects.</p>
-        
-        ### 3. Am I allowed to store/cache the data locally?
-        <p>Yes. In fact, we prefer if you store and serve the data to your end users. You remain in control over your user experience, while alleviating pressure on the API itself.</p>
-        
-        ### 4. Regarding user facing attribution (relating to the commercial partnership), any specific guidelines?
-        <p>Not really. We expect fair attribution, i.e. attribution that is visible to your users and located in a static location (e.g. not in a change log).</p>
-        
-        ### 5. What happens with the data retrieved, in the case of partnership termination?
-        <p>You are allowed to keep all data you retrieve from the API and we will not ask you to remove the data in case of partnership termination.</p>
-        
-        ### 6. We don’t wish to attribute IGDB.com as part of the partnership. Are there any other way?
-        <p>Yes. If you have data that we think will complete the overall IGDB data set and you are willing to share that data with us, we can opt for this approach instead. Please be aware, however, that we are only interested in publicly available data that we can re-distribute using this API.</p>
-        
-        ## Technical related FAQ
-        
-        ### 1. Can I use Twitch User Credentials to access the API?
-        <p>The IGDB API uses <code>Application Credentials</code> to authenticate, you <strong>cannot</strong> use user credentials to authenticate API requests</p>
-        <p>More information about authentication can be found in the documentation, <a href="#authentication">here</a></p>
-        
-        ### 2. The requested images are in the wrong format!
-        <p>Requesting images using the API returns a default image url using the <code>t_thumb</code> format. To request larger image sizes you should manually create your own image url using the <code>image_id</code> and the appropriate image size. example: <code>https://images.igdb.com/igdb/image/upload/t_{size}/{image_id}.png</code></p>
-        <p>More information about images and image sizes can be found in our documentation, <a href="#images">here</a></p>
-        
-        ### 3. Why am I recieving a CORS error?
-        <p>The IGDB API does not support browser requests, CORS, for security reasons. This is because the request would leak your access token! We suggest that you create a backend proxy which authenticates and queries the API directly, and can be set up as a trusted connection for your client application.</p>
-        <p>For more information see our documentation, <a href="#proxy">here</a></p>
-        
-        ### 4. My AccessToken stopped working, why?
-        <p>Your Access Token is only active for <strong>60 days</strong> and your application can only have <strong>25 active</strong> Access Tokens at one time, going over this limit starts to inactivate older tokens.</p>
-        
-        ### 5. Why am I only receiving IDs?
-        <p> An empty request will only yield a list of IDs. To request more information in a single request you should <em>expand</em> your request.<br /> Ex: <code>fields *, cover.*;</code> </p>
-        <p> More information about expanding requests, <a href="#expander">here</a><br /> More example requests, <a href="#examples">here</a> </p>
-        
-        ### 6. Why am I only receiving 10 items, how do I get more?
-        <p> The default item limit is set to 10. To edit this limit simply specify the limit in your request.<br /> Ex: <code>limit 50;</code><br /> The maximum limit is set to 500 items/request. </p>
-        <p>Read more about query syntax, <a href="#apicalypse-1">here</a></p>
-        
-        ### 7. How can I retrieve Popular Games?
-        <p>Currently there is no popularity endpoint or popularity field on the game. The main reason is because popularity is quite vague since they can be many different ways to order/define popularity.</p>
-        <p><em>It used to be in v3 however we were not confident enough on the data so it was not moved on the V4 version.</em></p>
-        <p>Furthermore, the popular games you can see in IGDB.com homepage is specifically within the context of the website. Popularity is different in different context.</p>
-       <br />
-       <hr>
-       
+      # Partnership
+      <p>Interested about using the API for a commercial project? No problem, we allow commercial usage. Get in touch with us about our partner program!</p>
+      
+      ### How?
+      <p>To register for a commertial agreement reach out to <a href="mailto:partner@igdb.com">partner@igdb.com</a></p>
+      
+      ### Exclusive Features
+      <p> Automatic data dumps every 24 hours.<br /> <em>More features coming soon.</em> </p>
+      
+      ## Data Dumps
+      <p>All <a href="#tag--Endpoints">endpoints</a> are available as CSV Data Dumps!</p>
+      <p>Daily updated CSV Data Dumps which can be used to kick start your projects or keep your data up to date (within 24 hours).</p>
+      <aside class="info">
+        <i>Please note that data dumps are exclusively available to our Data Partners.</i>
+      </aside>
+      <div class="highlight">
+        <pre tabindex="0" style="color: #f8f8f2; background-color: #272822; -moz-tab-size: 4; -o-tab-size: 4; tab-size: 4"><code data-lang="shell"><span style="display:flex;"><span>curl -X GET <span style="color:#e6db74">'https://api.igdb.com/v4/dumps'</span> <span style="color:#ae81ff">\ </span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>-H <span style="color:#e6db74">'Client-ID: Client ID'</span> <span style="color:#ae81ff">\ </span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>-H <span style="color:#e6db74">'Authorization: Bearer access_token'</span> </span></span></code></pre>
+      </div>
+      
+      ### Listing dumps
+      <p> To list the available data dumps make a GET request to <code>/dumps</code>.<br /> This will return a list of available Data Dumps describing the <code>endpoint</code>, <code>file name</code>, and <code>updated at</code>. </p>
+      <div class="highlight">
+        <pre tabindex="0" style="color: #f8f8f2; background-color: #272822; -moz-tab-size: 4; -o-tab-size: 4; tab-size: 4"><code data-lang="yaml"><span style="display:flex;"><span><span style="color:#75715e"># Example response from /dumps</span> </span></span><span style="display:flex;"><span>[ </span></span><span style="display:flex;"><span> { </span></span><span style="display:flex;"><span> <span style="color:#f92672">&quot;endpoint&quot;: </span><span style="color:#e6db74">&quot;games&quot;</span>, </span></span><span style="display:flex;"><span> <span style="color:#f92672">&quot;file_name&quot;: </span><span style="color:#e6db74">&quot;1234567890_games.csv&quot;</span>, </span></span><span style="display:flex;"><span> <span style="color:#f92672">&quot;updated_at&quot;: </span><span style="color:#ae81ff">1234567890</span> </span></span><span style="display:flex;"><span> } </span></span><span style="display:flex;"><span>] </span></span></code></pre>
+      </div>
+      <div class="highlight">
+        <pre tabindex="0" style="color: #f8f8f2; background-color: #272822; -moz-tab-size: 4; -o-tab-size: 4; tab-size: 4"><code data-lang="shell"><span style="display:flex;"><span>curl -X GET <span style="color:#e6db74">'https://api.igdb.com/v4/dumps/ENDPOINT'</span> <span style="color:#ae81ff">\ </span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>-H <span style="color:#e6db74">'Client-ID: Client ID'</span> <span style="color:#ae81ff">\ </span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>-H <span style="color:#e6db74">'Authorization: Bearer access_token'</span> </span></span></code></pre>
+      </div>
+      
+      ### Downloading CSV
+      <p>To get the download link for the csv files make a GET request to <code>/dumps/ENDPOINT</code> The response object will contain the download link for the CSV and the schema version &amp; schema JSON structure of the data.</p>
+      <p> <strong>S3 Download Url:</strong><br /> The download Url is a presigned S3 url that is valid for 5 minutes. </p>
+      <p> <strong>Schema</strong><br /> The <code>schema_version</code> and <code>schema</code> will reflect the current data structure and data type that the Dump is using.<br /> The schema version number will change when the <code>schema</code> changes, so if you are planning on an automated setup for this you will need to keep this in mind. </p>
+      <div class="highlight">
+        <pre tabindex="0" style="color: #f8f8f2; background-color: #272822; -moz-tab-size: 4; -o-tab-size: 4; tab-size: 4"><code data-lang="yaml"><span style="display:flex;"><span><span style="color:#75715e"># Example response from /dumps/games</span> </span></span><span style="display:flex;"><span>{ </span></span><span style="display:flex;"><span> <span style="color:#f92672">&quot;s3_url&quot;: </span><span style="color:#e6db74">&quot;S3_DOWNLOAD_URL&quot;</span>, </span></span><span style="display:flex;"><span> <span style="color:#f92672">&quot;endpoint&quot;: </span><span style="color:#e6db74">&quot;games&quot;</span>, </span></span><span style="display:flex;"><span> <span style="color:#f92672">&quot;file_name&quot;: </span><span style="color:#e6db74">&quot;1234567890_games.csv&quot;</span>, </span></span><span style="display:flex;"><span> <span style="color:#f92672">&quot;size_bytes&quot;: </span><span style="color:#ae81ff">123456789</span>, </span></span><span style="display:flex;"><span> <span style="color:#f92672">&quot;updated_at&quot;: </span><span style="color:#ae81ff">1234567890</span>, </span></span><span style="display:flex;"><span> <span style="color:#f92672">&quot;schema_version&quot;: </span><span style="color:#e6db74">&quot;1234567890&quot;</span>, </span></span><span style="display:flex;"><span> <span style="color:#f92672">&quot;schema&quot;: </span>{ </span></span><span style="display:flex;"><span> <span style="color:#f92672">&quot;id&quot;: </span><span style="color:#e6db74">&quot;LONG&quot;</span>, </span></span><span style="display:flex;"><span> <span style="color:#f92672">&quot;name&quot;: </span><span style="color:#e6db74">&quot;STRING&quot;</span>, </span></span><span style="display:flex;"><span> <span style="color:#f92672">&quot;url&quot;: </span><span style="color:#e6db74">&quot;STRING&quot;</span>, </span></span><span style="display:flex;"><span> <span style="color:#f92672">&quot;franchises&quot;: </span><span style="color:#e6db74">&quot;LONG[]&quot;</span>, </span></span><span style="display:flex;"><span> <span style="color:#f92672">&quot;rating&quot;: </span><span style="color:#e6db74">&quot;DOUBLE&quot;</span>, </span></span><span style="display:flex;"><span> <span style="color:#f92672">&quot;created_at&quot;: </span><span style="color:#e6db74">&quot;TIMESTAMP&quot;</span>, </span></span><span style="display:flex;"><span> <span style="color:#f92672">&quot;checksum&quot;: </span><span style="color:#e6db74">&quot;UUID&quot;</span>, </span></span><span style="display:flex;"><span> } </span></span><span style="display:flex;"><span>} </span></span></code></pre>
+      </div>
+      <br />
+      <hr>
+      
+      # FAQ
+      
+      ## Business related FAQ
+      
+      ### 1. I want to use the API for a commercial project, is it allowed?
+      <p>Yes, we offer commercial partnerships for users looking to integrate the API in monetized products. From our side, as part of the partnership, we ask for user facing attribution to IGDB.com from products integrating the IGDB API.</p>
+      <p>For more details on that process, please reach out to <a href="mailto:partner@igdb.com">partner@igdb.com</a></p>
+      
+      ### 2. What is the price of the API?
+      <p>The API is free for both non-commercial and commercial projects.</p>
+      
+      ### 3. Am I allowed to store/cache the data locally?
+      <p>Yes. In fact, we prefer if you store and serve the data to your end users. You remain in control over your user experience, while alleviating pressure on the API itself.</p>
+      
+      ### 4. Regarding user facing attribution (relating to the commercial partnership), any specific guidelines?
+      <p>Not really. We expect fair attribution, i.e. attribution that is visible to your users and located in a static location (e.g. not in a change log).</p>
+      
+      ### 5. What happens with the data retrieved, in the case of partnership termination?
+      <p>You are allowed to keep all data you retrieve from the API and we will not ask you to remove the data in case of partnership termination.</p>
+      
+      ### 6. We don’t wish to attribute IGDB.com as part of the partnership. Are there any other way?
+      <p>Yes. If you have data that we think will complete the overall IGDB data set and you are willing to share that data with us, we can opt for this approach instead. Please be aware, however, that we are only interested in publicly available data that we can re-distribute using this API.</p>
+      
+      ## Technical related FAQ
+      
+      ### 1. Can I use Twitch User Credentials to access the API?
+      <p>The IGDB API uses <code>Application Credentials</code> to authenticate, you <strong>cannot</strong> use user credentials to authenticate API requests</p>
+      <p>More information about authentication can be found in the documentation, <a href="#authentication">here</a></p>
+      
+      ### 2. The requested images are in the wrong format!
+      <p>Requesting images using the API returns a default image url using the <code>t_thumb</code> format. To request larger image sizes you should manually create your own image url using the <code>image_id</code> and the appropriate image size. example: <code>https://images.igdb.com/igdb/image/upload/t_{size}/{image_id}.png</code></p>
+      <p>More information about images and image sizes can be found in our documentation, <a href="#images">here</a></p>
+      
+      ### 3. Why am I recieving a CORS error?
+      <p>The IGDB API does not support browser requests, CORS, for security reasons. This is because the request would leak your access token! We suggest that you create a backend proxy which authenticates and queries the API directly, and can be set up as a trusted connection for your client application.</p>
+      <p>For more information see our documentation, <a href="#proxy">here</a></p>
+      
+      ### 4. My AccessToken stopped working, why?
+      <p>Your Access Token is only active for <strong>60 days</strong> and your application can only have <strong>25 active</strong> Access Tokens at one time, going over this limit starts to inactivate older tokens.</p>
+      
+      ### 5. Why am I only receiving IDs?
+      <p> An empty request will only yield a list of IDs. To request more information in a single request you should <em>expand</em> your request.<br /> Ex: <code>fields *, cover.*;</code> </p>
+      <p> More information about expanding requests, <a href="#expander">here</a><br /> More example requests, <a href="#examples">here</a> </p>
+      
+      ### 6. Why am I only receiving 10 items, how do I get more?
+      <p> The default item limit is set to 10. To edit this limit simply specify the limit in your request.<br /> Ex: <code>limit 50;</code><br /> The maximum limit is set to 500 items/request. </p>
+      <p>Read more about query syntax, <a href="#apicalypse-1">here</a></p>
+      
+      ### 7. How can I retrieve Popular Games?
+      <p>Currently there is no popularity endpoint or popularity field on the game. The main reason is because popularity is quite vague since they can be many different ways to order/define popularity.</p>
+      <p><em>It used to be in v3 however we were not confident enough on the data so it was not moved on the V4 version.</em></p>
+      <p>Furthermore, the popular games you can see in IGDB.com homepage is specifically within the context of the website. Popularity is different in different context.</p>
+      <br />
+      <hr>
+      
        # Support
        
        ### Have a question?
