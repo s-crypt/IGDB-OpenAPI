@@ -104,7 +104,7 @@ info:
     ## Wrappers
     <p>Get setup quickly by using one of these wrappers!</p>
     
-    ### Apicalypse
+    ### Apicalypse Wrapper
     <ul>
       <li><a href="https://github.com/igdb/node-apicalypse">NodeJS</a></li>
       <li><a href="https://github.com/husnjak/IGDB-API-JVM">JVM/Kotlin/Java</a></li>
@@ -112,7 +112,7 @@ info:
       <li><a href="https://github.com/twitchtv/igdb-api-python">Python</a></li>
     </ul>
     
-    ### Third Party
+    ### Third Party Wrappers
     <ul>
       <li><a href="https://github.com/marcreichel/igdb-laravel">PHP/Laravel</a></li>
       <li><a href="https://github.com/Henry-Sarabia/apicalypse">GO</a></li>
