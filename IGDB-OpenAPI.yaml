@@ -3894,6 +3894,14 @@ components:
       type: integer
       format: int32
       enum: [0, 1, 2]
+      x-enum-varnames:
+        - not_included
+        - included
+        - pre_order_only
+      x-enum-descriptions:
+        - 'not_included'
+        - 'included'
+        - 'pre_order_only'
       description: |
         The value of this feature  
         0: NOT_INCLUDED  
