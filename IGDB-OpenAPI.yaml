@@ -1999,6 +1999,22 @@ components:
       type: integer
       format: int32
       enum: [1, 2, 3, 4, 5, 6, 7]
+      x-enum-varnames:
+        - ESRB
+        - PEGI
+        - CERO
+        - USK
+        - GRAC
+        - CLASS_IND
+        - ACB
+      x-enum-descriptions:
+        - 'ESRB'
+        - 'PEGI'
+        - 'CERO'
+        - 'USK'
+        - 'GRAC'
+        - 'CLASS_IND'
+        - 'ACB'
       description: |
         The organization that has issued a specific rating  
         1: ESRB  
