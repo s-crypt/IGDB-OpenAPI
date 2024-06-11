@@ -2880,6 +2880,24 @@ components:
       type: integer
       format: int32
       enum: [0, 1, 2, 3, 4, 5, 6, 7]
+      x-enum-varnames:
+        - YYYYMMMMDD
+        - YYYYMMMM
+        - YYYY
+        - YYYYQ1
+        - YYYYQ2
+        - YYYYQ3
+        - YYYYQ4
+        - TBD
+      x-enum-descriptions:
+        - 'YYYYMMMMDD'
+        - 'YYYYMMMM'
+        - 'YYYY'
+        - 'YYYYQ1'
+        - 'YYYYQ2'
+        - 'YYYYQ3'
+        - 'YYYYQ4'
+        - 'TBD'
       description: |
         An enum of the date format  
         0: YYYYMMMMDD  
