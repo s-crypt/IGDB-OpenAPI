@@ -3858,6 +3858,13 @@ components:
     GameVersionFeatureCategoryEnums:
       type: integer
       format: int32
+      enum: [0, 1]
+      x-enum-varnames:
+        - boolean
+        - description
+      x-enum-descriptions:
+        - 'boolean'
+        - 'description'
       description: |
         The data type of feature description  
         0: boolean  
