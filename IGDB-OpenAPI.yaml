@@ -4955,6 +4955,42 @@ components:
       type: integer
       format: int32
       enum: [1, 2, 3, 4, 5, 6, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18]
+      x-enum-varnames:
+        - official
+        - wikia
+        - wikipedia
+        - facebook
+        - twitter
+        - twitch
+        - instagram
+        - youtube
+        - iphone
+        - ipad
+        - android
+        - steam
+        - reddit
+        - itch
+        - epicgames
+        - gog
+        - discord
+      x-enum-descriptions:
+        - 'official'
+        - 'wikia'
+        - 'wikipedia'
+        - 'facebook'
+        - 'twitter'
+        - 'twitch'
+        - 'instagram'
+        - 'youtube'
+        - 'iphone'
+        - 'ipad'
+        - 'android'
+        - 'steam'
+        - 'reddit'
+        - 'itch'
+        - 'epicgames'
+        - 'gog'
+        - 'discord'
       description: |
         The platform website  
         1: official  
