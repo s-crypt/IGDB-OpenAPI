@@ -3748,6 +3748,12 @@ components:
       type: integer
       format: int32
       enum: [1, 2]
+      x-enum-varnames:
+        - digital
+        - physical
+      x-enum-descriptions:
+        - 'digital'
+        - 'physical'
       description: |
         The type of media  
         1: digital  
