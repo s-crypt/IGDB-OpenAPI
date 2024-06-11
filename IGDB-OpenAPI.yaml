@@ -3679,6 +3679,49 @@ components:
     ExternalGameCategoryEnums:
       type: integer
       format: int32
+      enum: [1, 5, 10, 11, 13, 14, 15, 20, 22, 23, 26, 28, 29, 30, 31, 32, 36, 37, 54, 55]
+      x-enum-varnames:
+        - steam
+        - gog
+        - youtube
+        - microsoft
+        - apple
+        - twitch
+        - android
+        - amazon_asin
+        - amazon_luna
+        - amazon_adg
+        - epic_game_store
+        - oculus
+        - utomik
+        - itch_io
+        - xbox_marketplace
+        - kartridge
+        - playstation_store_us
+        - focus_entertainment
+        - xbox_game_pass_ultimate_cloud
+        - gamejolt
+      x-enum-descriptions:
+        - 'steam'
+        - 'gog'
+        - 'youtube'
+        - 'microsoft'
+        - 'apple'
+        - 'twitch'
+        - 'android'
+        - 'amazon_asin'
+        - 'amazon_luna'
+        - 'amazon_adg'
+        - 'epic_game_store'
+        - 'oculus'
+        - 'utomik'
+        - 'itch_io'
+        - 'xbox_marketplace'
+        - 'kartridge'
+        - 'playstation_store_us'
+        - 'focus_entertainment'
+        - 'xbox_game_pass_ultimate_cloud'
+        - 'gamejolt'
       description: |
         The external platform the game is on  
         1: steam  
