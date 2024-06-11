@@ -2028,6 +2028,86 @@ components:
       type: integer
       format: int32
       enum: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39]
+      x-enum-varnames:
+        - Three
+        - Seven
+        - Twelve
+        - Sixteen
+        - Eighteen
+        - RP
+        - EC
+        - E
+        - E10
+        - T
+        - M
+        - AO
+        - CERO_A
+        - CERO_B
+        - CERO_C
+        - CERO_D
+        - CERO_Z
+        - USK_0
+        - USK_6
+        - USK_12
+        - USK_16
+        - USK_18
+        - GRAC_ALL
+        - GRAC_Twelve
+        - GRAC_Fifteen
+        - GRAC_Eighteen
+        - GRAC_TESTING
+        - CLASS_IND_L
+        - CLASS_IND_Ten
+        - CLASS_IND_Twelve
+        - CLASS_IND_Fourteen
+        - CLASS_IND_Sixteen
+        - CLASS_IND_Eighteen
+        - ACB_G
+        - ACB_PG
+        - ACB_M
+        - ACB_MA15
+        - ACB_R18
+        - ACB_RC
+      x-enum-descriptions:
+        - 'Three'
+        - 'Seven'
+        - 'Twelve'
+        - 'Sixteen'
+        - 'Eighteen'
+        - 'RP'
+        - 'EC'
+        - 'E'
+        - 'E10'
+        - 'T'
+        - 'M'
+        - 'AO'
+        - 'CERO_A'
+        - 'CERO_B'
+        - 'CERO_C'
+        - 'CERO_D'
+        - 'CERO_Z'
+        - 'USK_0'
+        - 'USK_6'
+        - 'USK_12'
+        - 'USK_16'
+        - 'USK_18'
+        - 'GRAC_ALL'
+        - 'GRAC_Twelve'
+        - 'GRAC_Fifteen'
+        - 'GRAC_Eighteen'
+        - 'GRAC_TESTING'
+        - 'CLASS_IND_L'
+        - 'CLASS_IND_Ten'
+        - 'CLASS_IND_Twelve'
+        - 'CLASS_IND_Fourteen'
+        - 'CLASS_IND_Sixteen'
+        - 'CLASS_IND_Eighteen'
+        - 'ACB_G'
+        - 'ACB_PG'
+        - 'ACB_M'
+        - 'ACB_MA15'
+        - 'ACB_R18'
+        - 'ACB_RC'
       description: |
         The age rating assigned by the organization  
         1: Three  
