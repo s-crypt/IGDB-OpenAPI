@@ -4414,6 +4414,20 @@ components:
       type: integer
       format: int32
       enum: [1, 2, 3, 4, 5, 6]
+      x-enum-varnames:
+        - console
+        - arcade
+        - platform
+        - operating_system
+        - portable_console
+        - computer
+      x-enum-descriptions:
+        - 'console'
+        - 'arcade'
+        - 'platform'
+        - 'operating_system'
+        - 'portable_console'
+        - 'computer'
       description: |
         The category of the platform  
         1: console  
