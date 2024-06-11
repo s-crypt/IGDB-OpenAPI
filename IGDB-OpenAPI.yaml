@@ -4513,6 +4513,28 @@ components:
       type: integer
       format: int32
       enum: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+      x-enum-varnames:
+        - europe
+        - north_america
+        - australia
+        - new_zealand
+        - japan
+        - china
+        - asia
+        - worldwide
+        - korea
+        - brazil
+      x-enum-descriptions:
+        - 'europe'
+        - 'north_america'
+        - 'australia'
+        - 'new_zealand'
+        - 'japan'
+        - 'china'
+        - 'asia'
+        - 'worldwide'
+        - 'korea'
+        - 'brazil'
       description: |
         An enum of the region for the release date  
         1: europe  
