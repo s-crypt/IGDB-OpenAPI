@@ -2555,6 +2555,116 @@
         }
       }
     },
+    "/popularity_primatives": {
+      "post": {
+        "security": [
+          {
+            "TwitchOAuth": [],
+            "Client-ID": []
+          }
+        ],
+        "summary": "This endpoint lists available primitives with their source and popularity type.",
+        "tags": [
+          "Endpoints"
+        ],
+        "parameters": [],
+        "requestBody": {
+          "required": false,
+          "content": {
+            "text/plain": {
+              "schema": {
+                "type": "string"
+              },
+              "example": "fields calculated_at,checksum,created_at,game_id,popularity_source,popularity_type,updated_at,value;"
+            }
+          }
+        },
+        "operationId": "RetreivePopularityPrimatives",
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PopularityPrimatives"
+                }
+              }
+            }
+          },
+          "400": {
+            "$ref": "#/components/responses/BadRequest"
+          },
+          "401": {
+            "$ref": "#/components/responses/AuthFailure"
+          },
+          "403": {
+            "$ref": "#/components/responses/Forbidden"
+          },
+          "404": {
+            "$ref": "#/components/responses/NotFound"
+          }
+        },
+        "externalDocs": {
+          "description": "Official documentation:",
+          "url": "https://api-docs.igdb.com/#popularity-primitive"
+        }
+      }
+    },
+    "/popularity_types": {
+      "post": {
+        "security": [
+          {
+            "TwitchOAuth": [],
+            "Client-ID": []
+          }
+        ],
+        "summary": "This describes what type of popularity primitive or popularity indicator the popularity value is.",
+        "tags": [
+          "Endpoints"
+        ],
+        "parameters": [],
+        "requestBody": {
+          "required": false,
+          "content": {
+            "text/plain": {
+              "schema": {
+                "type": "string"
+              },
+              "example": "fields checksum,created_at,name,popularity_source,updated_at;"
+            }
+          }
+        },
+        "operationId": "RetreivePopularityType",
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PopularityTypes"
+                }
+              }
+            }
+          },
+          "400": {
+            "$ref": "#/components/responses/BadRequest"
+          },
+          "401": {
+            "$ref": "#/components/responses/AuthFailure"
+          },
+          "403": {
+            "$ref": "#/components/responses/Forbidden"
+          },
+          "404": {
+            "$ref": "#/components/responses/NotFound"
+          }
+        },
+        "externalDocs": {
+          "description": "Official documentation:",
+          "url": "https://api-docs.igdb.com/#popularity-type"
+        }
+      }
+    },
     "/regions": {
       "post": {
         "security": [
@@ -6417,6 +6527,107 @@
             "description": "Hash of the object"
           }
         }
+      },
+      "PopularityPrimatives": {
+        "type": "object",
+        "description": "Lists abailable primatives with their source and popularity type",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32",
+            "description": "The IGDB object unique identifier"
+          },
+          "game_id": {
+            "$ref": "#/components/schemas/Games/properties/id"
+          },
+          "popularity_type": {
+            "$ref": "#/components/schemas/PopularityTypes/properties/id"
+          },
+          "popularity_source": {
+            "$ref": "#/components/schemas/PopularityPrimitiveEnum"
+          },
+          "value": {
+            "type": "number",
+            "format": "int32",
+            "description": "The rating value"
+          },
+          "calculated_at": {
+            "type": "number",
+            "format": "timestamp",
+            "description": "Timestamp of when the primatives were calculated"
+          },
+          "created_at": {
+            "type": "number",
+            "format": "timestamp",
+            "description": "Date this was initially added to the IGDB database"
+          },
+          "updated_at": {
+            "type": "number",
+            "format": "timestamp",
+            "description": "Date this was last updated in the IGDB database"
+          }
+        }
+      },
+      "PopularityPrimitiveEnum": {
+        "type": "integer",
+        "format": "int32",
+        "enum": [
+          121
+        ],
+        "x-enum-varnames": [
+          "igdb"
+        ],
+        "x-enum-descriptions": [
+          "igdb"
+        ],
+        "description": "121: IGDB\n"
+      },
+      "PopularityTypes": {
+        "type": "object",
+        "description": "Describes what type of popularity primative or popularity indicator the popularity indicator the popularity value is",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32",
+            "description": "The IGDB object unique identifier"
+          },
+          "popularity_source": {
+            "$ref": "#/components/schemas/PopularityTypeEnum"
+          },
+          "name": {
+            "type": "string",
+            "description": "The name of the type of popularity from the source"
+          },
+          "created_at": {
+            "type": "number",
+            "format": "timestamp",
+            "description": "Date this was initially added to the IGDB database"
+          },
+          "updated_at": {
+            "type": "number",
+            "format": "timestamp",
+            "description": "Date this was last updated in the IGDB database"
+          },
+          "checksum": {
+            "type": "string",
+            "format": "uuid",
+            "description": "The IGDB object unique identifier"
+          }
+        }
+      },
+      "PopularityTypeEnum": {
+        "type": "integer",
+        "format": "int32",
+        "enum": [
+          121
+        ],
+        "x-enum-varnames": [
+          "igdb"
+        ],
+        "x-enum-descriptions": [
+          "igdb"
+        ],
+        "description": "121: IGDB\n"
       },
       "Region": {
         "type": "object",
