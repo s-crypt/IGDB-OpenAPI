@@ -1,4 +1,3 @@
-# Complete and ready for use!
 ### I have validated the responses against the API. However, this is STILL IN BETA. Please report any bugs and if you come across any discrepancies, please let me know!  
   
 You may use this spec however you like, but please credit me somehow as I spent a lot of time on this 😉  
@@ -24,22 +23,20 @@ TODO:
   
 Future:
 - [X] CORS proxy for Try It function - rapidoc
-- [ ] More/better descriptions of schema items
+- [x] More/better descriptions of schema items
 - [ ] Create examples based on response
 - [ ] OAI 3.1 for Websocket support? (See [discussion](https://github.com/s-crypt/IGDB-OpenAPI/discussions/4))
 - [X] Theming with IGDB colors - On rapidoc
 - [ ] Organize with tags?
 - [ ] Automate JSON generation (spec is written in YAML)
-- [ ] Releases?
-  - [ ] Static spec files
-  - [ ] Clients attached
+- [x] Releases?
+  - [x] Clients attached
 
 Anything else? Please open a discussion!  
   
   
 # How do I use this?
-### You can use [Swagger Editor](https://editor-next.swagger.io/) or [OpenAPI Generators](https://openapi-generator.tech/docs/generators#client-generators) to generate the following native clients for the API.  
-I may add some of these to releases, IDK yet.  
+### You can use [Swagger Editor](https://editor-next.swagger.io/) or [OpenAPI Generators](https://openapi-generator.tech/docs/generators#client-generators) to generate the following native clients for the API.
   
 #### [Swagger Editor](https://editor-next.swagger.io/)
 * C# - C Sharp
@@ -138,5 +135,3 @@ I may add some of these to releases, IDK yet.
 * typescript-rxjs
 * xojo-client
 * zapier (beta) 
-
-The Excel spreadsheet have been created to speed up the copy process, by auto-crafting the YAML properties of enums based on the copied table from IGDB's docs.
