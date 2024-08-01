@@ -45,7 +45,9 @@ paths:
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/AgeRating"
+                type: array
+                items:
+                  $ref: "#/components/schemas/AgeRating"
         "400":
           $ref: "#/components/responses/BadRequest"
         "401":
@@ -80,7 +82,9 @@ paths:
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/AgeRatingContentDescription"
+                type: array
+                items:
+                  $ref: "#/components/schemas/AgeRatingContentDescription"
         "400":
           $ref: "#/components/responses/BadRequest"
         "401":
@@ -115,7 +119,9 @@ paths:
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/AlternativeNames"
+                type: array
+                items:
+                  $ref: "#/components/schemas/AlternativeNames"
         "400":
           $ref: "#/components/responses/BadRequest"
         "401":
@@ -150,7 +156,9 @@ paths:
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/Artwork"
+                type: array
+                items:
+                  $ref: "#/components/schemas/Artwork"
         "400":
           $ref: "#/components/responses/BadRequest"
         "401":
@@ -185,7 +193,9 @@ paths:
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/Character"
+                type: array
+                items:
+                  $ref: "#/components/schemas/Character"
         "400":
           $ref: "#/components/responses/BadRequest"
         "401":
@@ -220,7 +230,9 @@ paths:
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/CharacterMugShot"
+                type: array
+                items:
+                  $ref: "#/components/schemas/CharacterMugShot"
         "400":
           $ref: "#/components/responses/BadRequest"
         "401":
@@ -255,7 +267,9 @@ paths:
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/Collection"
+                type: array
+                items:
+                  $ref: "#/components/schemas/Collection"
         "400":
           $ref: "#/components/responses/BadRequest"
         "401":
@@ -290,7 +304,9 @@ paths:
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/CollectionMembership"
+                type: array
+                items:
+                  $ref: "#/components/schemas/CollectionMembership"
         "400":
           $ref: "#/components/responses/BadRequest"
         "401":
@@ -325,7 +341,9 @@ paths:
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/CollectionMembershipType"
+                type: array
+                items:
+                  $ref: "#/components/schemas/CollectionMembershipType"
         "400":
           $ref: "#/components/responses/BadRequest"
         "401":
@@ -360,7 +378,9 @@ paths:
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/CollectionRelation"
+                type: array
+                items:
+                  $ref: "#/components/schemas/CollectionRelation"
         "400":
           $ref: "#/components/responses/BadRequest"
         "401":
@@ -395,7 +415,9 @@ paths:
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/CollectionRelationType"
+                type: array
+                items:
+                  $ref: "#/components/schemas/CollectionRelationType"
         "400":
           $ref: "#/components/responses/BadRequest"
         "401":
@@ -430,7 +452,9 @@ paths:
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/CollectionType"
+                type: array
+                items:
+                  $ref: "#/components/schemas/CollectionType"
         "400":
           $ref: "#/components/responses/BadRequest"
         "401":
@@ -465,7 +489,9 @@ paths:
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/Company"
+                type: array
+                items:
+                  $ref: "#/components/schemas/Company"
         "400":
           $ref: "#/components/responses/BadRequest"
         "401":
@@ -500,7 +526,9 @@ paths:
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/CompanyLogo"
+                type: array
+                items:
+                  $ref: "#/components/schemas/CompanyLogo"
         "400":
           $ref: "#/components/responses/BadRequest"
         "401":
@@ -535,7 +563,9 @@ paths:
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/CompanyWebsite"
+                type: array
+                items:
+                  $ref: "#/components/schemas/CompanyWebsite"
         "400":
           $ref: "#/components/responses/BadRequest"
         "401":
@@ -570,7 +600,9 @@ paths:
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/Cover"
+                type: array
+                items:
+                  $ref: "#/components/schemas/Cover"
         "400":
           $ref: "#/components/responses/BadRequest"
         "401":
@@ -605,7 +637,9 @@ paths:
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/Event"
+                type: array
+                items:
+                  $ref: "#/components/schemas/Event"
         "400":
           $ref: "#/components/responses/BadRequest"
         "401":
@@ -640,7 +674,9 @@ paths:
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/EventLogo"
+                type: array
+                items:
+                  $ref: "#/components/schemas/EventLogo"
         "400":
           $ref: "#/components/responses/BadRequest"
         "401":
@@ -675,7 +711,9 @@ paths:
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/EventNetwork"
+                type: array
+                items:
+                  $ref: "#/components/schemas/EventNetwork"
         "400":
           $ref: "#/components/responses/BadRequest"
         "401":
@@ -710,7 +748,9 @@ paths:
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/Franchise"
+                type: array
+                items:
+                  $ref: "#/components/schemas/Franchise"
         "400":
           $ref: "#/components/responses/BadRequest"
         "401":
@@ -745,7 +785,9 @@ paths:
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/Games"
+                type: array
+                items:
+                  $ref: "#/components/schemas/Games"
         "400":
           $ref: "#/components/responses/BadRequest"
         "401":
@@ -780,7 +822,9 @@ paths:
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/GameEngine"
+                type: array
+                items:
+                  $ref: "#/components/schemas/GameEngine"
         "400":
           $ref: "#/components/responses/BadRequest"
         "401":
@@ -815,7 +859,9 @@ paths:
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/GameEngineLogo"
+                type: array
+                items:
+                  $ref: "#/components/schemas/GameEngineLogo"
         "400":
           $ref: "#/components/responses/BadRequest"
         "401":
@@ -850,7 +896,9 @@ paths:
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/ExternalGame"
+                type: array
+                items:
+                  $ref: "#/components/schemas/ExternalGame"
         "400":
           $ref: "#/components/responses/BadRequest"
         "401":
@@ -885,7 +933,9 @@ paths:
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/GameVersion"
+                type: array
+                items:
+                  $ref: "#/components/schemas/GameVersion"
         "400":
           $ref: "#/components/responses/BadRequest"
         "401":
@@ -920,7 +970,9 @@ paths:
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/GameMode"
+                type: array
+                items:
+                  $ref: "#/components/schemas/GameMode"
         "400":
           $ref: "#/components/responses/BadRequest"
         "401":
@@ -955,7 +1007,9 @@ paths:
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/GameVersionFeatures"
+                type: array
+                items:
+                  $ref: "#/components/schemas/GameVersionFeatures"
         "400":
           $ref: "#/components/responses/BadRequest"
         "401":
@@ -990,7 +1044,9 @@ paths:
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/GameVersionFeatureValue"
+                type: array
+                items:
+                  $ref: "#/components/schemas/GameVersionFeatureValue"
         "400":
           $ref: "#/components/responses/BadRequest"
         "401":
@@ -1025,7 +1081,9 @@ paths:
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/Genre"
+                type: array
+                items:
+                  $ref: "#/components/schemas/Genre"
         "400":
           $ref: "#/components/responses/BadRequest"
         "401":
@@ -1060,7 +1118,9 @@ paths:
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/InvolvedCompany"
+                type: array
+                items:
+                  $ref: "#/components/schemas/InvolvedCompany"
         "400":
           $ref: "#/components/responses/BadRequest"
         "401":
@@ -1095,7 +1155,9 @@ paths:
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/GameVideo"
+                type: array
+                items:
+                  $ref: "#/components/schemas/GameVideo"
         "400":
           $ref: "#/components/responses/BadRequest"
         "401":
@@ -1130,7 +1192,9 @@ paths:
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/Keyword"
+                type: array
+                items:
+                  $ref: "#/components/schemas/Keyword"
         "400":
           $ref: "#/components/responses/BadRequest"
         "401":
@@ -1165,7 +1229,9 @@ paths:
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/Language"
+                type: array
+                items:
+                  $ref: "#/components/schemas/Language"
         "400":
           $ref: "#/components/responses/BadRequest"
         "401":
@@ -1200,7 +1266,9 @@ paths:
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/GameLocalization"
+                type: array
+                items:
+                  $ref: "#/components/schemas/GameLocalization"
         "400":
           $ref: "#/components/responses/BadRequest"
         "401":
@@ -1235,7 +1303,9 @@ paths:
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/LanguageSupportType"
+                type: array
+                items:
+                  $ref: "#/components/schemas/LanguageSupportType"
         "400":
           $ref: "#/components/responses/BadRequest"
         "401":
@@ -1270,7 +1340,9 @@ paths:
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/MultiplayerMode"
+                type: array
+                items:
+                  $ref: "#/components/schemas/MultiplayerMode"
         "400":
           $ref: "#/components/responses/BadRequest"
         "401":
@@ -1305,7 +1377,9 @@ paths:
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/LanguageSupport"
+                type: array
+                items:
+                  $ref: "#/components/schemas/LanguageSupport"
         "400":
           $ref: "#/components/responses/BadRequest"
         "401":
@@ -1340,7 +1414,9 @@ paths:
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/NetworkType"
+                type: array
+                items:
+                  $ref: "#/components/schemas/NetworkType"
         "400":
           $ref: "#/components/responses/BadRequest"
         "401":
@@ -1375,7 +1451,9 @@ paths:
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/PlatformFamily"
+                type: array
+                items:
+                  $ref: "#/components/schemas/PlatformFamily"
         "400":
           $ref: "#/components/responses/BadRequest"
         "401":
@@ -1410,7 +1488,9 @@ paths:
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/PlatformLogo"
+                type: array
+                items:
+                  $ref: "#/components/schemas/PlatformLogo"
         "400":
           $ref: "#/components/responses/BadRequest"
         "401":
@@ -1445,7 +1525,9 @@ paths:
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/PlatformVersion"
+                type: array
+                items:
+                  $ref: "#/components/schemas/PlatformVersion"
         "400":
           $ref: "#/components/responses/BadRequest"
         "401":
@@ -1480,7 +1562,9 @@ paths:
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/PlatformVersionCompany"
+                type: array
+                items:
+                  $ref: "#/components/schemas/PlatformVersionCompany"
         "400":
           $ref: "#/components/responses/BadRequest"
         "401":
@@ -1515,7 +1599,9 @@ paths:
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/Platform"
+                type: array
+                items:
+                  $ref: "#/components/schemas/Platform"
         "400":
           $ref: "#/components/responses/BadRequest"
         "401":
@@ -1550,7 +1636,9 @@ paths:
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/PlatformVersionReleaseDate"
+                type: array
+                items:
+                  $ref: "#/components/schemas/PlatformVersionReleaseDate"
         "400":
           $ref: "#/components/responses/BadRequest"
         "401":
@@ -1585,7 +1673,9 @@ paths:
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/PlatformWebsite"
+                type: array
+                items:
+                  $ref: "#/components/schemas/PlatformWebsite"
         "400":
           $ref: "#/components/responses/BadRequest"
         "401":
@@ -1620,7 +1710,9 @@ paths:
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/PlayerPerspective"
+                type: array
+                items:
+                  $ref: "#/components/schemas/PlayerPerspective"
         "400":
           $ref: "#/components/responses/BadRequest"
         "401":
@@ -1655,7 +1747,9 @@ paths:
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/PopularityPrimatives"
+                type: array
+                items:
+                  $ref: "#/components/schemas/PopularityPrimatives"
         "400":
           $ref: "#/components/responses/BadRequest"
         "401":
@@ -1690,7 +1784,9 @@ paths:
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/PopularityTypes"
+                type: array
+                items:
+                  $ref: "#/components/schemas/PopularityTypes"
         "400":
           $ref: "#/components/responses/BadRequest"
         "401":
@@ -1725,7 +1821,9 @@ paths:
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/Region"
+                type: array
+                items:
+                  $ref: "#/components/schemas/Region"
         "400":
           $ref: "#/components/responses/BadRequest"
         "401":
@@ -1760,7 +1858,9 @@ paths:
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/ReleaseDate"
+                type: array
+                items:
+                  $ref: "#/components/schemas/ReleaseDate"
         "400":
           $ref: "#/components/responses/BadRequest"
         "401":
@@ -1795,7 +1895,9 @@ paths:
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/ReleaseDateStatus"
+                type: array
+                items:
+                  $ref: "#/components/schemas/ReleaseDateStatus"
         "400":
           $ref: "#/components/responses/BadRequest"
         "401":
@@ -1830,7 +1932,9 @@ paths:
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/Screenshot"
+                type: array
+                items:
+                  $ref: "#/components/schemas/Screenshot"
         "400":
           $ref: "#/components/responses/BadRequest"
         "401":
@@ -1865,7 +1969,9 @@ paths:
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/Search"
+                type: array
+                items:
+                  $ref: "#/components/schemas/Search"
         "400":
           $ref: "#/components/responses/BadRequest"
         "401":
@@ -1900,7 +2006,9 @@ paths:
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/Theme"
+                type: array
+                items:
+                  $ref: "#/components/schemas/Theme"
         "400":
           $ref: "#/components/responses/BadRequest"
         "401":
@@ -1935,7 +2043,9 @@ paths:
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/Website"
+                type: array
+                items:
+                  $ref: "#/components/schemas/Website"
         "400":
           $ref: "#/components/responses/BadRequest"
         "401":
