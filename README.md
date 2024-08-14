@@ -29,8 +29,6 @@ Future:
 - [X] Theming with IGDB colors - On rapidoc
 - [ ] Organize with tags?
 - [ ] Automate JSON generation (spec is written in YAML)
-- [x] Releases?
-  - [x] Clients attached
 
 Anything else? Please open a discussion!  
   
