@@ -984,6 +984,43 @@ paths:
       externalDocs:
         description: "Official documentation:"
         url: https://api-docs.igdb.com/#game-mode
+  /game_time_to_beats:
+    post:
+      security:
+        - TwitchOAuth: []
+          Client-ID: []
+      summary: Single player, Multiplayer etc
+      tags:
+        - Endpoints
+      parameters: []
+      requestBody:
+        required: false
+        content:
+          text/plain:
+            schema:
+              type: string
+            example: fields checksum,completely,count,created_at,game_id,hastily,normally,updated_at;
+      operationId: RetreiveGameTimeToBeat
+      responses:
+        "200":
+          description: Success
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/GameTimeToBeat"
+        "400":
+          $ref: "#/components/responses/BadRequest"
+        "401":
+          $ref: "#/components/responses/AuthFailure"
+        "403":
+          $ref: "#/components/responses/Forbidden"
+        "404":
+          $ref: "#/components/responses/NotFound"
+      externalDocs:
+        description: "Official documentation:"
+        url: https://api-docs.igdb.com/#game-time-to-beat
   /game_version_features:
     post:
       security:
@@ -3430,11 +3467,6 @@ components:
             $ref: "#/components/schemas/Games/properties/id"
         category:
           $ref: "#/components/schemas/GameCategoryEnums"
-        collection:
-          type: number
-          format: int32
-          description: DEPRRICATED - Use collections field. Reference ID for collection
-          deprecated: true
         collections:
           type: array
           items:
@@ -3461,11 +3493,6 @@ components:
           type: array
           items:
             $ref: "#/components/schemas/ExternalGame/properties/id"
-        follows:
-          type: number
-          format: int32
-          description: DEPRECATED- TO BE REMOVED. The number of people following a game
-          deprecated: true
         first_release_date:
           type: number
           format: timestamp
@@ -4001,6 +4028,44 @@ components:
           type: string
           format: url
           description: The website address (URL) of the item
+        checksum:
+          type: string
+          format: uuid
+          description: Hash of the object
+    GameTimeToBeat:
+      type: object
+      description: Average time to beat times for a game.
+      properties:
+        id:
+          type: integer
+          format: int32
+          description: The IGDB object unique identifier
+        game_id:
+          $ref: "#/components/schemas/Games/properties/id"
+        hastily:
+          type: integer
+          format: int32
+          description: Average time (in seconds) to finish the game to its credits without spending notable time on extras such as side quests.
+        normally:
+          type: integer
+          format: int32
+          description: Average time (in seconds) to finish the game while mixing in some extras such as side quests without being overly thorough.
+        completely:
+          type: integer
+          format: int32
+          description: Average time (in seconds) to finish the game to 100% completion.
+        count:
+          type: integer
+          format: int32
+          description: Total number of time to beat submissions for this game
+        created_at:
+          type: number
+          format: timestamp
+          description: Date this was initially added to the IGDB database
+        updated_at:
+          type: number
+          format: timestamp
+          description: The last date this entry was updated in the IGDB database
         checksum:
           type: string
           format: uuid
