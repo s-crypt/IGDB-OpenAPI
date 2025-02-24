@@ -79,12 +79,129 @@
         },
         "externalDocs": {
           "description": "Official documentation:",
-          "url": "https://api-docs.igdb.com/?shell#age-rating"
+          "url": "https://api-docs.igdb.com/#age-rating"
+        }
+      }
+    },
+    "/age_rating_organizations": {
+      "post": {
+        "security": [
+          {
+            "TwitchOAuth": [],
+            "Client-ID": []
+          }
+        ],
+        "summary": "Age Rating according to various rating organisations",
+        "tags": [
+          "Endpoints"
+        ],
+        "parameters": [],
+        "requestBody": {
+          "required": false,
+          "content": {
+            "text/plain": {
+              "schema": {
+                "type": "string"
+              },
+              "example": "fields checksum,created_at,name,updated_at;"
+            }
+          }
+        },
+        "operationId": "RetrieveAgeRatingOrganization",
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/AgeRatingOrganization"
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "$ref": "#/components/responses/BadRequest"
+          },
+          "401": {
+            "$ref": "#/components/responses/AuthFailure"
+          },
+          "403": {
+            "$ref": "#/components/responses/Forbidden"
+          },
+          "404": {
+            "$ref": "#/components/responses/NotFound"
+          }
+        },
+        "externalDocs": {
+          "description": "Official documentation:",
+          "url": "https://api-docs.igdb.com/#age-rating-organization"
+        }
+      }
+    },
+    "/age_rating_categories": {
+      "post": {
+        "security": [
+          {
+            "TwitchOAuth": [],
+            "Client-ID": []
+          }
+        ],
+        "summary": "The rating category from the organization",
+        "tags": [
+          "Endpoints"
+        ],
+        "parameters": [],
+        "requestBody": {
+          "required": false,
+          "content": {
+            "text/plain": {
+              "schema": {
+                "type": "string"
+              },
+              "example": "fields checksum,created_at,organization,rating,updated_at;"
+            }
+          }
+        },
+        "operationId": "RetrieveAgeRatingCategory",
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/AgeRatingCategory"
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "$ref": "#/components/responses/BadRequest"
+          },
+          "401": {
+            "$ref": "#/components/responses/AuthFailure"
+          },
+          "403": {
+            "$ref": "#/components/responses/Forbidden"
+          },
+          "404": {
+            "$ref": "#/components/responses/NotFound"
+          }
+        },
+        "externalDocs": {
+          "description": "Official documentation:",
+          "url": "https://api-docs.igdb.com/#age-rating-category"
         }
       }
     },
     "/age_rating_content_descriptions": {
       "post": {
+        "deprecated": true,
         "security": [
           {
             "TwitchOAuth": [],
@@ -138,6 +255,64 @@
         "externalDocs": {
           "description": "Official documentation:",
           "url": "https://api-docs.igdb.com/#age-rating-content-description"
+        }
+      }
+    },
+    "/age_rating_content_descriptions_v2": {
+      "post": {
+        "security": [
+          {
+            "TwitchOAuth": [],
+            "Client-ID": []
+          }
+        ],
+        "summary": "Age Rating Descriptors",
+        "tags": [
+          "Endpoints"
+        ],
+        "parameters": [],
+        "requestBody": {
+          "required": false,
+          "content": {
+            "text/plain": {
+              "schema": {
+                "type": "string"
+              },
+              "example": "fields category,checksum,description;"
+            }
+          }
+        },
+        "operationId": "RetrieveAgeRatingContentDescriptionv2",
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/AgeRatingContentDescriptionV2"
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "$ref": "#/components/responses/BadRequest"
+          },
+          "401": {
+            "$ref": "#/components/responses/AuthFailure"
+          },
+          "403": {
+            "$ref": "#/components/responses/Forbidden"
+          },
+          "404": {
+            "$ref": "#/components/responses/NotFound"
+          }
+        },
+        "externalDocs": {
+          "description": "Official documentation:",
+          "url": "https://api-docs.igdb.com/#age-rating-content-description-v2"
         }
       }
     },
@@ -312,6 +487,122 @@
         "externalDocs": {
           "description": "Official documentation:",
           "url": "https://api-docs.igdb.com/#character"
+        }
+      }
+    },
+    "/character_genders": {
+      "post": {
+        "security": [
+          {
+            "TwitchOAuth": [],
+            "Client-ID": []
+          }
+        ],
+        "summary": "Character Genders",
+        "tags": [
+          "Endpoints"
+        ],
+        "parameters": [],
+        "requestBody": {
+          "required": false,
+          "content": {
+            "text/plain": {
+              "schema": {
+                "type": "string"
+              },
+              "example": "fields checksum,created_at,name,updated_at;'"
+            }
+          }
+        },
+        "operationId": "RetreiveCharacterGenders",
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/CharacterGender"
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "$ref": "#/components/responses/BadRequest"
+          },
+          "401": {
+            "$ref": "#/components/responses/AuthFailure"
+          },
+          "403": {
+            "$ref": "#/components/responses/Forbidden"
+          },
+          "404": {
+            "$ref": "#/components/responses/NotFound"
+          }
+        },
+        "externalDocs": {
+          "description": "Official documentation:",
+          "url": "https://api-docs.igdb.com/#character-gender"
+        }
+      }
+    },
+    "/character_species": {
+      "post": {
+        "security": [
+          {
+            "TwitchOAuth": [],
+            "Client-ID": []
+          }
+        ],
+        "summary": "Character Species",
+        "tags": [
+          "Endpoints"
+        ],
+        "parameters": [],
+        "requestBody": {
+          "required": false,
+          "content": {
+            "text/plain": {
+              "schema": {
+                "type": "string"
+              },
+              "example": "fields checksum,created_at,name,updated_at;'"
+            }
+          }
+        },
+        "operationId": "RetreiveCharacterGenders",
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/CharacterSpecies"
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "$ref": "#/components/responses/BadRequest"
+          },
+          "401": {
+            "$ref": "#/components/responses/AuthFailure"
+          },
+          "403": {
+            "$ref": "#/components/responses/Forbidden"
+          },
+          "404": {
+            "$ref": "#/components/responses/NotFound"
+          }
+        },
+        "externalDocs": {
+          "description": "Official documentation:",
+          "url": "https://api-docs.igdb.com/#character-specie"
         }
       }
     },
@@ -953,6 +1244,64 @@
         }
       }
     },
+    "/date_format": {
+      "post": {
+        "security": [
+          {
+            "TwitchOAuth": [],
+            "Client-ID": []
+          }
+        ],
+        "summary": "The Date Format",
+        "tags": [
+          "Endpoints"
+        ],
+        "parameters": [],
+        "requestBody": {
+          "required": false,
+          "content": {
+            "text/plain": {
+              "schema": {
+                "type": "string"
+              },
+              "example": "fields checksum,created_at,format,updated_at;"
+            }
+          }
+        },
+        "operationId": "RetreiveDateFormat",
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/DateFormat"
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "$ref": "#/components/responses/BadRequest"
+          },
+          "401": {
+            "$ref": "#/components/responses/AuthFailure"
+          },
+          "403": {
+            "$ref": "#/components/responses/Forbidden"
+          },
+          "404": {
+            "$ref": "#/components/responses/NotFound"
+          }
+        },
+        "externalDocs": {
+          "description": "Official documentation:",
+          "url": "https://api-docs.igdb.com/#date-format"
+        }
+      }
+    },
     "/events": {
       "post": {
         "security": [
@@ -1417,6 +1766,64 @@
         }
       }
     },
+    "/external_game_sources": {
+      "post": {
+        "security": [
+          {
+            "TwitchOAuth": [],
+            "Client-ID": []
+          }
+        ],
+        "summary": "Sources for the external games",
+        "tags": [
+          "Endpoints"
+        ],
+        "parameters": [],
+        "requestBody": {
+          "required": false,
+          "content": {
+            "text/plain": {
+              "schema": {
+                "type": "string"
+              },
+              "example": "fields checksum,created_at,name,updated_at;"
+            }
+          }
+        },
+        "operationId": "RetreiveExternalGameSource",
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/ExternalGameSource"
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "$ref": "#/components/responses/BadRequest"
+          },
+          "401": {
+            "$ref": "#/components/responses/AuthFailure"
+          },
+          "403": {
+            "$ref": "#/components/responses/Forbidden"
+          },
+          "404": {
+            "$ref": "#/components/responses/NotFound"
+          }
+        },
+        "externalDocs": {
+          "description": "Official documentation:",
+          "url": "https://api-docs.igdb.com/#external-game-source"
+        }
+      }
+    },
     "/game_versions": {
       "post": {
         "security": [
@@ -1509,6 +1916,64 @@
                   "type": "array",
                   "items": {
                     "$ref": "#/components/schemas/GameMode"
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "$ref": "#/components/responses/BadRequest"
+          },
+          "401": {
+            "$ref": "#/components/responses/AuthFailure"
+          },
+          "403": {
+            "$ref": "#/components/responses/Forbidden"
+          },
+          "404": {
+            "$ref": "#/components/responses/NotFound"
+          }
+        },
+        "externalDocs": {
+          "description": "Official documentation:",
+          "url": "https://api-docs.igdb.com/#game-mode"
+        }
+      }
+    },
+    "/game_release_formats": {
+      "post": {
+        "security": [
+          {
+            "TwitchOAuth": [],
+            "Client-ID": []
+          }
+        ],
+        "summary": "The format of the game release",
+        "tags": [
+          "Endpoints"
+        ],
+        "parameters": [],
+        "requestBody": {
+          "required": false,
+          "content": {
+            "text/plain": {
+              "schema": {
+                "type": "string"
+              },
+              "example": "fields checksum,created_at,name,slug,updated_at,url;"
+            }
+          }
+        },
+        "operationId": "RetreiveGameReleaseFormat",
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/GameReleaseFormat"
                   }
                 }
               }
@@ -2403,64 +2868,6 @@
         }
       }
     },
-    "/platform_versions": {
-      "post": {
-        "security": [
-          {
-            "TwitchOAuth": [],
-            "Client-ID": []
-          }
-        ],
-        "summary": "The platform's version",
-        "tags": [
-          "Endpoints"
-        ],
-        "parameters": [],
-        "requestBody": {
-          "required": false,
-          "content": {
-            "text/plain": {
-              "schema": {
-                "type": "string"
-              },
-              "example": "fields checksum,companies,connectivity,cpu,graphics,main_manufacturer,media,memory,name,online,os,output,platform_logo,platform_version_release_dates,resolutions,slug,sound,storage,summary,url;"
-            }
-          }
-        },
-        "operationId": "RetreivePlatformVersion",
-        "responses": {
-          "200": {
-            "description": "Success",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/PlatformVersion"
-                  }
-                }
-              }
-            }
-          },
-          "400": {
-            "$ref": "#/components/responses/BadRequest"
-          },
-          "401": {
-            "$ref": "#/components/responses/AuthFailure"
-          },
-          "403": {
-            "$ref": "#/components/responses/Forbidden"
-          },
-          "404": {
-            "$ref": "#/components/responses/NotFound"
-          }
-        },
-        "externalDocs": {
-          "description": "Official documentation:",
-          "url": "https://api-docs.igdb.com/#platform-version"
-        }
-      }
-    },
     "/platform_version_companies": {
       "post": {
         "security": [
@@ -2574,6 +2981,64 @@
         "externalDocs": {
           "description": "Official documentation:",
           "url": "https://api-docs.igdb.com/#platform"
+        }
+      }
+    },
+    "/platform_versions": {
+      "post": {
+        "security": [
+          {
+            "TwitchOAuth": [],
+            "Client-ID": []
+          }
+        ],
+        "summary": "Information about a particular platform's version/generation",
+        "tags": [
+          "Endpoints"
+        ],
+        "parameters": [],
+        "requestBody": {
+          "required": false,
+          "content": {
+            "text/plain": {
+              "schema": {
+                "type": "string"
+              },
+              "example": "ields checksum,companies,connectivity,cpu,graphics,main_manufacturer,media,memory,name,os,output,platform_logo,platform_version_release_dates,resolutions,slug,sound,storage,summary,url;'"
+            }
+          }
+        },
+        "operationId": "RetreivePlatformVersions",
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/PlatformVersion"
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "$ref": "#/components/responses/BadRequest"
+          },
+          "401": {
+            "$ref": "#/components/responses/AuthFailure"
+          },
+          "403": {
+            "$ref": "#/components/responses/Forbidden"
+          },
+          "404": {
+            "$ref": "#/components/responses/NotFound"
+          }
+        },
+        "externalDocs": {
+          "description": "Official documentation:",
+          "url": "https://api-docs.igdb.com/#platform-version"
         }
       }
     },
@@ -2775,7 +3240,7 @@
             }
           }
         },
-        "operationId": "RetreivePopularityPrimatives",
+        "operationId": "RetreivePopularityPrimative",
         "responses": {
           "200": {
             "description": "Success",
@@ -2784,7 +3249,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/PopularityPrimatives"
+                    "$ref": "#/components/schemas/PopularityPrimative"
                   }
                 }
               }
@@ -2842,7 +3307,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/PopularityTypes"
+                    "$ref": "#/components/schemas/PopularityType"
                   }
                 }
               }
@@ -2980,6 +3445,64 @@
         "externalDocs": {
           "description": "Official documentation:",
           "url": "https://api-docs.igdb.com/#release-date"
+        }
+      }
+    },
+    "/release_date_regions": {
+      "post": {
+        "security": [
+          {
+            "TwitchOAuth": [],
+            "Client-ID": []
+          }
+        ],
+        "summary": "Regions for release dates",
+        "tags": [
+          "Endpoints"
+        ],
+        "parameters": [],
+        "requestBody": {
+          "required": false,
+          "content": {
+            "text/plain": {
+              "schema": {
+                "type": "string"
+              },
+              "example": "fields checksum,created_at,region,updated_at;"
+            }
+          }
+        },
+        "operationId": "RetreiveReleaseDateRegion",
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/ReleaseDateRegion"
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "$ref": "#/components/responses/BadRequest"
+          },
+          "401": {
+            "$ref": "#/components/responses/AuthFailure"
+          },
+          "403": {
+            "$ref": "#/components/responses/Forbidden"
+          },
+          "404": {
+            "$ref": "#/components/responses/NotFound"
+          }
+        },
+        "externalDocs": {
+          "description": "Official documentation:",
+          "url": "https://api-docs.igdb.com/#release-date-region"
         }
       }
     },
@@ -3272,6 +3795,64 @@
           "url": "https://api-docs.igdb.com/#website"
         }
       }
+    },
+    "/website_types": {
+      "post": {
+        "security": [
+          {
+            "TwitchOAuth": [],
+            "Client-ID": []
+          }
+        ],
+        "summary": "A website type, usually the name of the website",
+        "tags": [
+          "Endpoints"
+        ],
+        "parameters": [],
+        "requestBody": {
+          "required": false,
+          "content": {
+            "text/plain": {
+              "schema": {
+                "type": "string"
+              },
+              "example": "fields checksum,created_at,type,updated_at;"
+            }
+          }
+        },
+        "operationId": "RetreiveWebsiteType",
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/WebsiteType"
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "$ref": "#/components/responses/BadRequest"
+          },
+          "401": {
+            "$ref": "#/components/responses/AuthFailure"
+          },
+          "403": {
+            "$ref": "#/components/responses/Forbidden"
+          },
+          "404": {
+            "$ref": "#/components/responses/NotFound"
+          }
+        },
+        "externalDocs": {
+          "description": "Official documentation:",
+          "url": "https://api-docs.igdb.com/#website-type"
+        }
+      }
     }
   },
   "components": {
@@ -3429,6 +4010,12 @@
           "rating": {
             "$ref": "#/components/schemas/AgeRatingEnums"
           },
+          "ratingcategory": {
+            "$ref": "#/components/schemas/AgeRatingCategory"
+          },
+          "organization": {
+            "$ref": "#/components/schemas/AgeRatingOrganization"
+          },
           "rating_cover_url": {
             "type": "string",
             "description": "The url for the image of an age rating"
@@ -3444,7 +4031,41 @@
           }
         }
       },
+      "AgeRatingCategory": {
+        "type": "object",
+        "description": "The rating category from the organization",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32",
+            "description": "The IGDB object unique identifier"
+          },
+          "rating": {
+            "type": "string",
+            "description": "The rating name"
+          },
+          "organization": {
+            "$ref": "#/components/schemas/AgeRatingOrganization/properties/id"
+          },
+          "updated_at": {
+            "type": "number",
+            "format": "timestamp",
+            "description": "The last date this entry was updated in the IGDB database"
+          },
+          "created_at": {
+            "type": "number",
+            "format": "timestamp",
+            "description": "Date this was initally added to the IGDB database"
+          },
+          "checksum": {
+            "type": "string",
+            "format": "uuid",
+            "description": "Hash of the object"
+          }
+        }
+      },
       "AgeRatingCategoryEnums": {
+        "deprecated": true,
         "type": "integer",
         "format": "int32",
         "enum": [
@@ -3476,7 +4097,38 @@
         ],
         "description": "The organization that has issued a specific rating  \n1: ESRB  \n2: PEGI  \n3: CERO  \n4: USK  \n5: GRAC  \n6: CLASS_IND  \n7: ACB  \n"
       },
+      "AgeRatingOrganization": {
+        "type": "object",
+        "description": "Age Rating according to various rating organisations",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32",
+            "description": "The IGDB object unique identifier"
+          },
+          "name": {
+            "type": "string",
+            "description": "The title of an age rating organization"
+          },
+          "updated_at": {
+            "type": "number",
+            "format": "timestamp",
+            "description": "The last date this entry was updated in the IGDB database"
+          },
+          "created_at": {
+            "type": "number",
+            "format": "timestamp",
+            "description": "Date this was initally added to the IGDB database"
+          },
+          "checksum": {
+            "type": "string",
+            "format": "uuid",
+            "description": "Hash of the object"
+          }
+        }
+      },
       "AgeRatingEnums": {
+        "deprecated": true,
         "type": "integer",
         "format": "int32",
         "enum": [
@@ -3605,6 +4257,7 @@
         "description": "The age rating assigned by the organization  \n1: Three  \n2: Seven  \n3: Twelve  \n4: Sixteen  \n5: Eighteen  \n6: RP  \n7: EC  \n8: E  \n9: E10  \n10: T  \n11: M  \n12: AO  \n13: CERO_A  \n14: CERO_B  \n15: CERO_C  \n16: CERO_D  \n17: CERO_Z  \n18: USK_0  \n19: USK_6  \n20: USK_12  \n21: USK_16  \n22: USK_18  \n23: GRAC_ALL  \n24: GRAC_Twelve  \n25: GRAC_Fifteen  \n26: GRAC_Eighteen  \n27: GRAC_TESTING  \n28: CLASS_IND_L  \n29: CLASS_IND_Ten  \n30: CLASS_IND_Twelve  \n31: CLASS_IND_Fourteen  \n32: CLASS_IND_Sixteen  \n33: CLASS_IND_Eighteen  \n34: ACB_G  \n35: ACB_PG  \n36: ACB_M  \n37: ACB_MA15  \n38: ACB_R18  \n39: ACB_RC  \n"
       },
       "AgeRatingContentDescription": {
+        "deprecated": true,
         "type": "object",
         "properties": {
           "id": {
@@ -3625,7 +4278,39 @@
           }
         }
       },
+      "AgeRatingContentDescriptionV2": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32",
+            "description": "The IGDB object unique identifier"
+          },
+          "organization": {
+            "$ref": "#/components/schemas/AgeRatingOrganization/properties/id"
+          },
+          "description": {
+            "type": "string",
+            "description": "A string containing the age rating content descriptions"
+          },
+          "updated_at": {
+            "type": "number",
+            "format": "timestamp",
+            "description": "The last date this entry was updated in the IGDB database"
+          },
+          "created_at": {
+            "type": "number",
+            "format": "timestamp",
+            "description": "Date this was initally added to the IGDB database"
+          },
+          "checksum": {
+            "format": "uuid",
+            "description": "Hash of the object"
+          }
+        }
+      },
       "AgeRatingContentDescriptionCategoryEnums": {
+        "deprecated": true,
         "type": "integer",
         "format": "int32",
         "enum": [
@@ -4000,6 +4685,9 @@
           "gender": {
             "$ref": "#/components/schemas/CharacterGenderEnum"
           },
+          "character_gender": {
+            "$ref": "#/components/schemas/CharacterGender/properties/id"
+          },
           "mug_shot": {
             "$ref": "#/components/schemas/CharacterMugShot/properties/id"
           },
@@ -4013,6 +4701,9 @@
           },
           "species": {
             "$ref": "#/components/schemas/CharacterSpeciesEnum"
+          },
+          "character_species": {
+            "$ref": "#/components/schemas/CharacterSpecies/properties/id"
           },
           "updated_at": {
             "type": "number",
@@ -4031,7 +4722,68 @@
           }
         }
       },
+      "CharacterGender": {
+        "type": "object",
+        "description": "Character Genders",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32",
+            "description": "The IGDB object unique identifier"
+          },
+          "name": {
+            "type": "string",
+            "description": "The gender"
+          },
+          "updated_at": {
+            "type": "number",
+            "format": "timestamp",
+            "description": "The last date this entry was updated in the IGDB database"
+          },
+          "created_at": {
+            "type": "number",
+            "format": "timestamp",
+            "description": "Date this was initally added to the IGDB database"
+          },
+          "checksum": {
+            "type": "string",
+            "format": "uuid",
+            "description": "Hash of the object"
+          }
+        }
+      },
+      "CharacterSpecies": {
+        "type": "object",
+        "description": "Character Species",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32",
+            "description": "The IGDB object unique identifier"
+          },
+          "name": {
+            "type": "string",
+            "description": "The species"
+          },
+          "updated_at": {
+            "type": "number",
+            "format": "timestamp",
+            "description": "The last date this entry was updated in the IGDB database"
+          },
+          "created_at": {
+            "type": "number",
+            "format": "timestamp",
+            "description": "Date this was initally added to the IGDB database"
+          },
+          "checksum": {
+            "type": "string",
+            "format": "uuid",
+            "description": "Hash of the object"
+          }
+        }
+      },
       "CharacterGenderEnum": {
+        "deprecated": true,
         "type": "integer",
         "format": "int32",
         "enum": [
@@ -4052,6 +4804,7 @@
         "description": "An Enum of the character's gender  \n0: Male  \n1: Female  \n2: Other  \n"
       },
       "CharacterSpeciesEnum": {
+        "deprecated": true,
         "type": "integer",
         "format": "int32",
         "enum": [
@@ -4193,7 +4946,7 @@
           },
           "updated_at": {
             "type": "number",
-            "format": "url",
+            "format": "timestamp",
             "description": "The last date this entry was updated in the IGDB database"
           },
           "created_at": {
@@ -4363,6 +5116,9 @@
           "change_date_category": {
             "$ref": "#/components/schemas/ChangeDateCategoryEnum"
           },
+          "change_date_format": {
+            "$ref": "#/components/schemas/DateFormat/properties/id"
+          },
           "change_date": {
             "type": "number",
             "format": "timestamp",
@@ -4420,6 +5176,9 @@
           "start_date_category": {
             "$ref": "#/components/schemas/StartDateCategoryEnum"
           },
+          "start_date_format": {
+            "$ref": "#/components/schemas/DateFormat/properties/id"
+          },
           "updated_at": {
             "type": "number",
             "format": "timestamp",
@@ -4444,6 +5203,7 @@
         }
       },
       "ChangeDateCategoryEnum": {
+        "deprecated": true,
         "type": "integer",
         "format": "int32",
         "enum": [
@@ -4479,6 +5239,7 @@
         "description": "An enum of the date format  \n0: YYYYMMMMDD  \n1: YYYYMMMM  \n2: YYYY  \n3: YYYYQ1  \n4: YYYYQ2  \n5: YYYYQ3  \n6: YYYYQ4  \n7: TBD  \n"
       },
       "StartDateCategoryEnum": {
+        "deprecated": true,
         "type": "integer",
         "format": "int32",
         "enum": [
@@ -4566,6 +5327,9 @@
           "category": {
             "$ref": "#/components/schemas/CompanyWebsiteEnums"
           },
+          "type": {
+            "$ref": "#/components/schemas/WebsiteType/properties/id"
+          },
           "trusted": {
             "type": "boolean"
           },
@@ -4582,6 +5346,7 @@
         }
       },
       "CompanyWebsiteEnums": {
+        "deprecated": true,
         "type": "integer",
         "format": "int32",
         "enum": [
@@ -4684,6 +5449,36 @@
             "type": "integer",
             "format": "int32",
             "description": "The width of the image in pixels"
+          },
+          "checksum": {
+            "type": "string",
+            "format": "uuid",
+            "description": "Hash of the object"
+          }
+        }
+      },
+      "DateFormat": {
+        "type": "object",
+        "description": "The date format",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32",
+            "description": "The IGDB object unique identifier"
+          },
+          "format": {
+            "type": "string",
+            "description": "The date format"
+          },
+          "updated_at": {
+            "type": "number",
+            "format": "timestamp",
+            "description": "The last date this entry was updated in the IGDB database"
+          },
+          "created_at": {
+            "type": "number",
+            "format": "timestamp",
+            "description": "Date this was initally added to the IGDB database"
           },
           "checksum": {
             "type": "string",
@@ -4952,6 +5747,9 @@
           "category": {
             "$ref": "#/components/schemas/GameCategoryEnums"
           },
+          "game_type": {
+            "$ref": "#/components/schemas/GameType/properties/id"
+          },
           "collections": {
             "type": "array",
             "items": {
@@ -5161,6 +5959,9 @@
           "status": {
             "$ref": "#/components/schemas/GameStatusEnums"
           },
+          "game_status": {
+            "$ref": "#/components/schemas/GameStatus/properties/id"
+          },
           "storyline": {
             "type": "string",
             "description": "A short description of a games story"
@@ -5235,7 +6036,68 @@
           }
         }
       },
+      "GameStatus": {
+        "type": "object",
+        "description": "The release status of the game",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32",
+            "description": "The IGDB object unique identifier"
+          },
+          "status": {
+            "type": "string",
+            "description": "The release status of the game"
+          },
+          "updated_at": {
+            "type": "number",
+            "format": "timestamp",
+            "description": "The last date this entry was updated in the IGDB database"
+          },
+          "created_at": {
+            "type": "number",
+            "format": "timestamp",
+            "description": "Date this was initally added to the IGDB database"
+          },
+          "checksum": {
+            "type": "string",
+            "format": "uuid",
+            "description": "Hash of the object"
+          }
+        }
+      },
+      "GameReleaseFormat": {
+        "type": "object",
+        "description": "The format/medium of the game release",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32",
+            "description": "The IGDB object unique identifier"
+          },
+          "format": {
+            "type": "string",
+            "description": "The format/medium of the game release"
+          },
+          "updated_at": {
+            "type": "number",
+            "format": "timestamp",
+            "description": "The last date this entry was updated in the IGDB database"
+          },
+          "created_at": {
+            "type": "number",
+            "format": "timestamp",
+            "description": "Date this was initally added to the IGDB database"
+          },
+          "checksum": {
+            "type": "string",
+            "format": "uuid",
+            "description": "Hash of the object"
+          }
+        }
+      },
       "GameCategoryEnums": {
+        "deprecated": true,
         "type": "integer",
         "format": "int32",
         "enum": [
@@ -5292,6 +6154,7 @@
         "description": "A game's category/catagories  \n0: main_game  \n1: dlc_addon  \n2: expansion  \n3: bundle  \n4: standalone_expansion  \n5: mod  \n6: episode  \n7: season  \n8: remake  \n9: remaster  \n10: expanded_game  \n11: port  \n12: fork  \n13: pack  \n14: update  \n"
       },
       "GameStatusEnums": {
+        "deprecated": true,
         "type": "integer",
         "format": "int32",
         "enum": [
@@ -5325,6 +6188,36 @@
           "delisted"
         ],
         "description": "A game's operational status  \n0: released  \n2: alpha  \n3: beta  \n4: early_access  \n5: offline  \n6: cancelled  \n7: rumored  \n8: delisted  \n"
+      },
+      "GameType": {
+        "type": "object",
+        "description": "The type that this game is",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32",
+            "description": "The IGDB object unique identifier"
+          },
+          "type": {
+            "type": "string",
+            "description": "The type that this game is"
+          },
+          "updated_at": {
+            "type": "number",
+            "format": "timestamp",
+            "description": "The last date this entry was updated in the IGDB database"
+          },
+          "created_at": {
+            "type": "number",
+            "format": "timestamp",
+            "description": "Date this was initally added to the IGDB database"
+          },
+          "checksum": {
+            "type": "string",
+            "format": "uuid",
+            "description": "Hash of the object"
+          }
+        }
       },
       "GameEngine": {
         "type": "object",
@@ -5440,6 +6333,9 @@
             "$ref": "#/components/schemas/ExternalGameCategoryEnums",
             "description": "The id of the other service"
           },
+          "external_game_source": {
+            "$ref": "#/components/schemas/ExternalGameSource/properties/id"
+          },
           "countries": {
             "type": "array",
             "items": {
@@ -5459,6 +6355,9 @@
           "media": {
             "$ref": "#/components/schemas/ExternalGameMediaEnums",
             "description": "The media of the external game."
+          },
+          "game_release_format": {
+            "$ref": "#/components/schemas/GameReleaseFormat/properties/id"
           },
           "name": {
             "type": "string",
@@ -5494,7 +6393,38 @@
           }
         }
       },
+      "ExternalGameSource": {
+        "type": "object",
+        "description": "Sources for the external games",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32",
+            "description": "The IGDB object unique identifier"
+          },
+          "name": {
+            "type": "string",
+            "description": "The game source"
+          },
+          "updated_at": {
+            "type": "number",
+            "format": "timestamp",
+            "description": "The last date this entry was updated in the IGDB database"
+          },
+          "created_at": {
+            "type": "number",
+            "format": "timestamp",
+            "description": "Date this was initally added to the IGDB database"
+          },
+          "checksum": {
+            "type": "string",
+            "format": "uuid",
+            "description": "Hash of the object"
+          }
+        }
+      },
       "ExternalGameCategoryEnums": {
+        "deprecated": true,
         "type": "integer",
         "format": "int32",
         "enum": [
@@ -5566,6 +6496,7 @@
         "description": "The external platform the game is on  \n1: steam  \n5: gog  \n10: youtube  \n11: microsoft  \n13: apple  \n14: twitch  \n15: android  \n20: amazon_asin  \n22: amazon_luna  \n23: amazon_adg  \n26: epic_game_store  \n28: oculus  \n29: utomik  \n30: itch_io  \n31: xbox_marketplace  \n32: kartridge  \n36: playstation_store_us  \n37: focus_entertainment  \n54: xbox_game_pass_ultimate_cloud  \n55: gamejolt  \n"
       },
       "ExternalGameMediaEnums": {
+        "deprecated": true,
         "type": "integer",
         "format": "int32",
         "enum": [
@@ -6251,6 +7182,36 @@
           }
         }
       },
+      "PlatformType": {
+        "type": "object",
+        "description": "TThe hardware used to run the game or game delivery network",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32",
+            "description": "The IGDB object unique identifier"
+          },
+          "name": {
+            "type": "string",
+            "description": "The hardware used to run the game or game delivery network"
+          },
+          "updated_at": {
+            "type": "number",
+            "format": "timestamp",
+            "description": "The last date this entry was updated in the IGDB database"
+          },
+          "created_at": {
+            "type": "number",
+            "format": "timestamp",
+            "description": "Date this was initally added to the IGDB database"
+          },
+          "checksum": {
+            "type": "string",
+            "format": "uuid",
+            "description": "Hash of the object"
+          }
+        }
+      },
       "PlatformLogo": {
         "type": "object",
         "description": "Logo for a platform",
@@ -6438,6 +7399,9 @@
           "category": {
             "$ref": "#/components/schemas/PlatformCategoryEnums"
           },
+          "platform_type": {
+            "$ref": "#/components/schemas/PlatformType/properties/id"
+          },
           "created_at": {
             "type": "number",
             "format": "timestamp",
@@ -6496,6 +7460,7 @@
         }
       },
       "PlatformCategoryEnums": {
+        "deprecated": true,
         "type": "integer",
         "format": "int32",
         "enum": [
@@ -6536,6 +7501,9 @@
           "category": {
             "$ref": "#/components/schemas/PlatformVersionReleaseDateEnums"
           },
+          "date_format": {
+            "$ref": "#/components/schemas/DateFormat/properties/id"
+          },
           "created_at": {
             "type": "number",
             "format": "timestamp",
@@ -6561,6 +7529,9 @@
           "region": {
             "$ref": "#/components/schemas/PlatformVersionReleaseDateRegionEnum"
           },
+          "release_region": {
+            "$ref": "#/components/schemas/ReleaseDateRegion/properties/id"
+          },
           "updated_at": {
             "type": "number",
             "format": "timestamp",
@@ -6579,6 +7550,7 @@
         }
       },
       "PlatformVersionReleaseDateEnums": {
+        "deprecated": true,
         "type": "integer",
         "format": "int32",
         "enum": [
@@ -6614,6 +7586,7 @@
         "description": "An enum of the date format  \n0: YYYYMMMMDD  \n1: YYYYMMMM  \n2: YYYY  \n3: YYYYQ1  \n4: YYYYQ2  \n5: YYYYQ3  \n6: YYYYQ4  \n7: TBD  \n"
       },
       "PlatformVersionReleaseDateRegionEnum": {
+        "deprecated": true,
         "type": "integer",
         "format": "int32",
         "enum": [
@@ -6788,7 +7761,7 @@
           }
         }
       },
-      "PopularityPrimatives": {
+      "PopularityPrimative": {
         "type": "object",
         "description": "Lists abailable primatives with their source and popularity type",
         "properties": {
@@ -6801,10 +7774,13 @@
             "$ref": "#/components/schemas/Games/properties/id"
           },
           "popularity_type": {
-            "$ref": "#/components/schemas/PopularityTypes/properties/id"
+            "$ref": "#/components/schemas/PopularityType/properties/id"
           },
           "popularity_source": {
             "$ref": "#/components/schemas/PopularityPrimitiveEnum"
+          },
+          "external_popularity_source": {
+            "$ref": "#/components/schemas/ExternalGameSource/properties/id"
           },
           "value": {
             "type": "number",
@@ -6829,6 +7805,7 @@
         }
       },
       "PopularityPrimitiveEnum": {
+        "deprecated": true,
         "type": "integer",
         "format": "int32",
         "enum": [
@@ -6842,7 +7819,7 @@
         ],
         "description": "121: IGDB\n"
       },
-      "PopularityTypes": {
+      "PopularityType": {
         "type": "object",
         "description": "Describes what type of popularity primative or popularity indicator the popularity indicator the popularity value is",
         "properties": {
@@ -6853,6 +7830,9 @@
           },
           "popularity_source": {
             "$ref": "#/components/schemas/PopularityTypeEnum"
+          },
+          "external_popularity_source": {
+            "$ref": "#/components/schemas/ExternalGameSource/properties/id"
           },
           "name": {
             "type": "string",
@@ -6876,6 +7856,7 @@
         }
       },
       "PopularityTypeEnum": {
+        "deprecated": true,
         "type": "integer",
         "format": "int32",
         "enum": [
@@ -6943,6 +7924,9 @@
           "category": {
             "$ref": "#/components/schemas/ReleaseDateCategoryEnums"
           },
+          "date_format": {
+            "$ref": "#/components/schemas/DateFormat/properties/id"
+          },
           "created_at": {
             "type": "number",
             "format": "timestamp",
@@ -6971,6 +7955,9 @@
           "region": {
             "$ref": "#/components/schemas/ReleaseDateRegionEnum"
           },
+          "release_region": {
+            "$ref": "#/components/schemas/ReleaseDateRegion/properties/id"
+          },
           "updated_at": {
             "type": "number",
             "format": "timestamp",
@@ -6989,6 +7976,7 @@
         }
       },
       "ReleaseDateCategoryEnums": {
+        "deprecated": true,
         "type": "integer",
         "format": "int32",
         "enum": [
@@ -7024,6 +8012,7 @@
         "description": "An enum of the date format  \n0: YYYYMMMMDD  \n1: YYYYMMMM  \n2: YYYY  \n3: YYYYQ1  \n4: YYYYQ2  \n5: YYYYQ3  \n6: YYYYQ4  \n7: TBD  \n"
       },
       "ReleaseDateRegionEnum": {
+        "deprecated": true,
         "type": "integer",
         "format": "int32",
         "enum": [
@@ -7080,6 +8069,36 @@
           "description": {
             "type": "string",
             "description": "The description of the release date status."
+          },
+          "created_at": {
+            "type": "number",
+            "format": "date",
+            "description": "Date this was initially added to the IGDB database"
+          },
+          "updated_at": {
+            "type": "number",
+            "format": "timestamp",
+            "description": "Date this was last updated in the IGDB database"
+          },
+          "checksum": {
+            "type": "string",
+            "format": "uuid",
+            "description": "Hash of the object"
+          }
+        }
+      },
+      "ReleaseDateRegion": {
+        "type": "object",
+        "description": "An endpoint to provide definition of all of the current release date statuses.",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32",
+            "description": "The IGDB object unique identifier"
+          },
+          "region": {
+            "type": "string",
+            "description": "Regions for release dates"
           },
           "created_at": {
             "type": "number",
@@ -7240,6 +8259,9 @@
           "category": {
             "$ref": "#/components/schemas/WebsiteCategoryEnums"
           },
+          "type": {
+            "$ref": "#/components/schemas/WebsiteType/properties/id"
+          },
           "game": {
             "$ref": "#/components/schemas/Games/properties/id"
           },
@@ -7258,7 +8280,38 @@
           }
         }
       },
+      "WebsiteType": {
+        "type": "object",
+        "description": "A website type, usually the name of the website",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32",
+            "description": "The IGDB object unique identifier"
+          },
+          "type": {
+            "type": "string",
+            "description": "The website type"
+          },
+          "updated_at": {
+            "type": "number",
+            "format": "timestamp",
+            "description": "The last date this entry was updated in the IGDB database"
+          },
+          "created_at": {
+            "type": "number",
+            "format": "timestamp",
+            "description": "Date this was initally added to the IGDB database"
+          },
+          "checksum": {
+            "type": "string",
+            "format": "uuid",
+            "description": "Hash of the object"
+          }
+        }
+      },
       "WebsiteCategoryEnums": {
+        "deprecated": true,
         "type": "integer",
         "format": "int32",
         "enum": [
