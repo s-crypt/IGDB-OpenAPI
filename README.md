@@ -8,7 +8,7 @@ The [rapidoc page](https://igdb-openapi.s-crypt.co/rapidoc) is intended to be a 
 The [swagger page](https://igdb-openapi.s-crypt.co/swagger) is for people who want to dig into the OpenAPI specification.  
   
 To test out the API with a built-in CORS proxy, go to the [rapidoc page](https://igdb-openapi.s-crypt.co/rapidoc) and select `https://corsproxy.io/?https://api.igdb.com/v4` as the server. Use at your own risk as I do not run the proxy, the people at corsproxy.io do.  
-  
+   
 ---
   
 TODO:
