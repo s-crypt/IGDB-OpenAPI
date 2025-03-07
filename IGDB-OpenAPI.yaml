@@ -372,7 +372,7 @@ paths:
             schema:
               type: string
             example: fields checksum,created_at,name,updated_at;'
-      operationId: RetreiveCharacterGenders
+      operationId: RetreiveCharacterSpecies
       responses:
         "200":
           description: Success

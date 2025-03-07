@@ -572,7 +572,7 @@
             }
           }
         },
-        "operationId": "RetreiveCharacterGenders",
+        "operationId": "RetreiveCharacterSpecies",
         "responses": {
           "200": {
             "description": "Success",
