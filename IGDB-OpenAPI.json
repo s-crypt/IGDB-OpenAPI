@@ -4010,7 +4010,7 @@
           "rating": {
             "$ref": "#/components/schemas/AgeRatingEnums"
           },
-          "rating_category": {
+          "ratingcategory": {
             "$ref": "#/components/schemas/AgeRatingCategory"
           },
           "organization": {
@@ -4018,6 +4018,7 @@
           },
           "rating_cover_url": {
             "type": "string",
+            "format": "url",
             "description": "The url for the image of an age rating"
           },
           "synopsis": {
@@ -6269,7 +6270,7 @@
           },
           "url": {
             "type": "string",
-            "format": "uuid",
+            "format": "url",
             "description": "The website address (URL) of the item"
           },
           "checksum": {

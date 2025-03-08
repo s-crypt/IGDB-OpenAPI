@@ -2579,6 +2579,7 @@ components:
           $ref: "#/components/schemas/AgeRatingOrganization"
         rating_cover_url:
           type: string
+          format: url
           description: The url for the image of an age rating
         synopsis:
           type: string
@@ -4404,7 +4405,7 @@ components:
           description: The last date this entry was updated in the IGDB database
         url:
           type: string
-          format: uuid
+          format: url
           description: The website address (URL) of the item
         checksum:
           type: string
