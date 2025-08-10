@@ -282,6 +282,43 @@ paths:
       externalDocs:
         description: "Official documentation:"
         url: https://api-docs.igdb.com/#artwork
+  /artwork_types:
+    post:
+      security:
+        - TwitchOAuth: []
+          Client-ID: []
+      summary: Artwork Types
+      tags:
+        - Endpoints
+      parameters: []
+      requestBody:
+        required: false
+        content:
+          text/plain:
+            schema:
+              type: string
+            example: fields checksum,created_at,name,slug,updated_at;
+      operationId: RetreiveArtworkTypes
+      responses:
+        "200":
+          description: Success
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/ArtworkTypes"
+        "400":
+          $ref: "#/components/responses/BadRequest"
+        "401":
+          $ref: "#/components/responses/AuthFailure"
+        "403":
+          $ref: "#/components/responses/Forbidden"
+        "404":
+          $ref: "#/components/responses/NotFound"
+      externalDocs:
+        description: "Official documentation:"
+        url: https://api-docs.igdb.com/#artwork-type
   /characters:
     post:
       security:
@@ -3146,6 +3183,28 @@ components:
           type: integer
           format: int32
           description: The width of the image in pixels
+        checksum:
+          type: string
+          format: uuid
+          description: Hash of the object
+    ArtworkTypes:
+      type: object
+      description: Official artworks. Resolution and aspect ratio may vary
+      properties:
+        created_at:
+          type: number
+          format: timestamp
+          description: Date this was initally added to the IGDB database
+        name:
+          type: string
+          description: The artwork type
+        slug:
+          type: string
+          description: A url-safe, unique, lower-case version of the name
+        updated_at:
+          type: number
+          format: timestamp
+          description: The last date this entry was updated in the IGDB database
         checksum:
           type: string
           format: uuid
