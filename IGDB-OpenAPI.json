@@ -4506,7 +4506,7 @@
           "ESRB_mild_sexual_themes",
           "ESRB_use_of_alcohol_and_tobacco",
           "ESRB_animated_blood_and_gore",
-          "ESRB_mild_fantasy violence",
+          "ESRB_mild_fantasy_violence",
           "ESRB_mild_lyrics",
           "ESRB_realistic_blood",
           "PEGI_violence",
@@ -4526,7 +4526,7 @@
           "CERO_gambling",
           "CERO_crime",
           "CERO_controlled_substances",
-          "CERO_languages_and others",
+          "CERO_languages_and_others",
           "GRAC_sexuality",
           "GRAC_violence",
           "GRAC_fear_horror_threatening",
@@ -6786,8 +6786,8 @@
           1
         ],
         "x-enum-varnames": [
-          "boolean",
-          "description"
+          "BOOLEAN",
+          "DESCRIPTION"
         ],
         "x-enum-descriptions": [
           "boolean",
