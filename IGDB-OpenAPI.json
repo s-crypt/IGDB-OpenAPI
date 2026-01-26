@@ -3927,7 +3927,8 @@
                   "type": "string"
                 },
                 "status": {
-                  "type": "number"
+                  "type": "integer",
+                  "format": "int32"
                 },
                 "cause": {
                   "type": "string"
@@ -3995,7 +3996,8 @@
                   "type": "string"
                 },
                 "status": {
-                  "type": "number"
+                  "type": "integer",
+                  "format": "int32"
                 },
                 "cause": {
                   "type": "string"
@@ -4026,7 +4028,8 @@
                   "type": "string"
                 },
                 "status": {
-                  "type": "number"
+                  "type": "integer",
+                  "format": "int32"
                 },
                 "type": {
                   "type": "string"
@@ -4051,9 +4054,7 @@
         "type": "object",
         "properties": {
           "id": {
-            "type": "integer",
-            "format": "int32",
-            "description": "The IGDB object unique identifier"
+            "$ref": "#/components/schemas/Id"
           },
           "category": {
             "$ref": "#/components/schemas/AgeRatingCategoryEnums"
@@ -4084,9 +4085,7 @@
             "description": "A free text motivating a rating"
           },
           "checksum": {
-            "type": "string",
-            "format": "uuid",
-            "description": "Hash of the object"
+            "$ref": "#/components/schemas/Checksum"
           }
         }
       },
@@ -4095,31 +4094,23 @@
         "description": "The rating category from the organization",
         "properties": {
           "id": {
-            "type": "integer",
-            "format": "int32",
-            "description": "The IGDB object unique identifier"
+            "$ref": "#/components/schemas/Id"
           },
           "rating": {
             "type": "string",
             "description": "The rating name"
           },
           "organization": {
-            "$ref": "#/components/schemas/AgeRatingOrganization/properties/id"
+            "$ref": "#/components/schemas/Id"
           },
           "updated_at": {
-            "type": "number",
-            "format": "timestamp",
-            "description": "The last date this entry was updated in the IGDB database"
+            "$ref": "#/components/schemas/UpdatedAt"
           },
           "created_at": {
-            "type": "number",
-            "format": "timestamp",
-            "description": "Date this was initally added to the IGDB database"
+            "$ref": "#/components/schemas/CreatedAt"
           },
           "checksum": {
-            "type": "string",
-            "format": "uuid",
-            "description": "Hash of the object"
+            "$ref": "#/components/schemas/Checksum"
           }
         }
       },
@@ -4161,28 +4152,20 @@
         "description": "Age Rating according to various rating organisations",
         "properties": {
           "id": {
-            "type": "integer",
-            "format": "int32",
-            "description": "The IGDB object unique identifier"
+            "$ref": "#/components/schemas/Id"
           },
           "name": {
             "type": "string",
             "description": "The title of an age rating organization"
           },
           "updated_at": {
-            "type": "number",
-            "format": "timestamp",
-            "description": "The last date this entry was updated in the IGDB database"
+            "$ref": "#/components/schemas/UpdatedAt"
           },
           "created_at": {
-            "type": "number",
-            "format": "timestamp",
-            "description": "Date this was initally added to the IGDB database"
+            "$ref": "#/components/schemas/CreatedAt"
           },
           "checksum": {
-            "type": "string",
-            "format": "uuid",
-            "description": "Hash of the object"
+            "$ref": "#/components/schemas/Checksum"
           }
         }
       },
@@ -4320,9 +4303,7 @@
         "type": "object",
         "properties": {
           "id": {
-            "type": "integer",
-            "format": "int32",
-            "description": "The IGDB object unique identifier"
+            "$ref": "#/components/schemas/Id"
           },
           "category": {
             "$ref": "#/components/schemas/AgeRatingContentDescriptionCategoryEnums"
@@ -4332,8 +4313,7 @@
             "description": "A string containing the age rating content descriptions"
           },
           "checksum": {
-            "type": "string",
-            "description": "Hash of the object"
+            "$ref": "#/components/schemas/Checksum"
           }
         }
       },
@@ -4341,9 +4321,7 @@
         "type": "object",
         "properties": {
           "id": {
-            "type": "integer",
-            "format": "int32",
-            "description": "The IGDB object unique identifier"
+            "$ref": "#/components/schemas/Id"
           },
           "organization": {
             "$ref": "#/components/schemas/AgeRatingOrganization/properties/id"
@@ -4353,18 +4331,13 @@
             "description": "A string containing the age rating content descriptions"
           },
           "updated_at": {
-            "type": "number",
-            "format": "timestamp",
-            "description": "The last date this entry was updated in the IGDB database"
+            "$ref": "#/components/schemas/UpdatedAt"
           },
           "created_at": {
-            "type": "number",
-            "format": "timestamp",
-            "description": "Date this was initally added to the IGDB database"
+            "$ref": "#/components/schemas/CreatedAt"
           },
           "checksum": {
-            "format": "uuid",
-            "description": "Hash of the object"
+            "$ref": "#/components/schemas/Checksum"
           }
         }
       },
@@ -4640,9 +4613,7 @@
         "description": "Alternative and international game titles",
         "properties": {
           "id": {
-            "type": "integer",
-            "format": "int32",
-            "description": "The IGDB object unique identifier"
+            "$ref": "#/components/schemas/Id"
           },
           "comment": {
             "type": "string",
@@ -4656,9 +4627,7 @@
             "description": "An alternative name"
           },
           "checksum": {
-            "type": "string",
-            "format": "uuid",
-            "description": "Hash of the object"
+            "$ref": "#/components/schemas/Checksum"
           }
         }
       },
@@ -4667,9 +4636,7 @@
         "description": "Official artworks. Resolution and aspect ratio may vary",
         "properties": {
           "id": {
-            "type": "integer",
-            "format": "int32",
-            "description": "The IGDB object unique identifier"
+            "$ref": "#/components/schemas/Id"
           },
           "alpha_channel": {
             "type": "boolean"
@@ -4700,9 +4667,7 @@
             "description": "The width of the image in pixels"
           },
           "checksum": {
-            "type": "string",
-            "format": "uuid",
-            "description": "Hash of the object"
+            "$ref": "#/components/schemas/Checksum"
           }
         }
       },
@@ -4711,9 +4676,7 @@
         "description": "Official artworks. Resolution and aspect ratio may vary",
         "properties": {
           "created_at": {
-            "type": "number",
-            "format": "timestamp",
-            "description": "Date this was initally added to the IGDB database"
+            "$ref": "#/components/schemas/CreatedAt"
           },
           "name": {
             "type": "string",
@@ -4724,14 +4687,10 @@
             "description": "A url-safe, unique, lower-case version of the name"
           },
           "updated_at": {
-            "type": "number",
-            "format": "timestamp",
-            "description": "The last date this entry was updated in the IGDB database"
+            "$ref": "#/components/schemas/UpdatedAt"
           },
           "checksum": {
-            "type": "string",
-            "format": "uuid",
-            "description": "Hash of the object"
+            "$ref": "#/components/schemas/Checksum"
           }
         }
       },
@@ -4740,9 +4699,7 @@
         "description": "Video game characters",
         "properties": {
           "id": {
-            "type": "integer",
-            "format": "int32",
-            "description": "The IGDB object unique identifier"
+            "$ref": "#/components/schemas/Id"
           },
           "akas": {
             "type": "array",
@@ -4756,9 +4713,7 @@
             "description": "A Character's country of origin"
           },
           "created_at": {
-            "type": "number",
-            "format": "timestamp",
-            "description": "Date this was initally added to the IGDB database"
+            "$ref": "#/components/schemas/CreatedAt"
           },
           "description": {
             "type": "string",
@@ -4794,9 +4749,7 @@
             "$ref": "#/components/schemas/CharacterSpecies/properties/id"
           },
           "updated_at": {
-            "type": "number",
-            "format": "timestamp",
-            "description": "The last date this entry was updated in the IGDB database"
+            "$ref": "#/components/schemas/UpdatedAt"
           },
           "url": {
             "type": "string",
@@ -4804,9 +4757,7 @@
             "description": "The website address (URL) of the item"
           },
           "checksum": {
-            "type": "string",
-            "format": "uuid",
-            "description": "Hash of the object"
+            "$ref": "#/components/schemas/Checksum"
           }
         }
       },
@@ -4815,28 +4766,20 @@
         "description": "Character Genders",
         "properties": {
           "id": {
-            "type": "integer",
-            "format": "int32",
-            "description": "The IGDB object unique identifier"
+            "$ref": "#/components/schemas/Id"
           },
           "name": {
             "type": "string",
             "description": "The gender"
           },
           "updated_at": {
-            "type": "number",
-            "format": "timestamp",
-            "description": "The last date this entry was updated in the IGDB database"
+            "$ref": "#/components/schemas/UpdatedAt"
           },
           "created_at": {
-            "type": "number",
-            "format": "timestamp",
-            "description": "Date this was initally added to the IGDB database"
+            "$ref": "#/components/schemas/CreatedAt"
           },
           "checksum": {
-            "type": "string",
-            "format": "uuid",
-            "description": "Hash of the object"
+            "$ref": "#/components/schemas/Checksum"
           }
         }
       },
@@ -4845,28 +4788,20 @@
         "description": "Character Species",
         "properties": {
           "id": {
-            "type": "integer",
-            "format": "int32",
-            "description": "The IGDB object unique identifier"
+            "$ref": "#/components/schemas/Id"
           },
           "name": {
             "type": "string",
             "description": "The species"
           },
           "updated_at": {
-            "type": "number",
-            "format": "timestamp",
-            "description": "The last date this entry was updated in the IGDB database"
+            "$ref": "#/components/schemas/UpdatedAt"
           },
           "created_at": {
-            "type": "number",
-            "format": "timestamp",
-            "description": "Date this was initally added to the IGDB database"
+            "$ref": "#/components/schemas/CreatedAt"
           },
           "checksum": {
-            "type": "string",
-            "format": "uuid",
-            "description": "Hash of the object"
+            "$ref": "#/components/schemas/Checksum"
           }
         }
       },
@@ -4917,9 +4852,7 @@
         "description": "Images depicting game characters",
         "properties": {
           "id": {
-            "type": "integer",
-            "format": "int32",
-            "description": "The IGDB object unique identifier"
+            "$ref": "#/components/schemas/Id"
           },
           "alpha_channel": {
             "type": "boolean"
@@ -4947,20 +4880,21 @@
             "description": "The width of the image in pixels"
           },
           "checksum": {
-            "type": "string",
-            "format": "uuid",
-            "description": "Hash of the object"
+            "$ref": "#/components/schemas/Checksum"
           }
         }
+      },
+      "Checksum": {
+        "type": "string",
+        "format": "uuid",
+        "description": "Hash of the object"
       },
       "Collection": {
         "type": "object",
         "description": "Collection, AKA Series",
         "properties": {
           "id": {
-            "type": "integer",
-            "format": "int32",
-            "description": "The IGDB object unique identifier"
+            "$ref": "#/components/schemas/Id"
           },
           "as_child_relations": {
             "type": "array",
@@ -4975,9 +4909,7 @@
             }
           },
           "created_at": {
-            "type": "number",
-            "format": "timestamp",
-            "description": "Date this was initally added to the IGDB database"
+            "$ref": "#/components/schemas/CreatedAt"
           },
           "games": {
             "type": "array",
@@ -4997,9 +4929,7 @@
             "$ref": "#/components/schemas/CollectionType/properties/id"
           },
           "updated_at": {
-            "type": "number",
-            "format": "timestamp",
-            "description": "The last date this entry was updated in the IGDB database"
+            "$ref": "#/components/schemas/UpdatedAt"
           },
           "url": {
             "type": "string",
@@ -5007,9 +4937,7 @@
             "description": "The website address (URL) of the item"
           },
           "checksum": {
-            "type": "string",
-            "format": "uuid",
-            "description": "Hash of the object"
+            "$ref": "#/components/schemas/Checksum"
           }
         }
       },
@@ -5018,9 +4946,7 @@
         "description": "The collection memberships",
         "properties": {
           "id": {
-            "type": "integer",
-            "format": "int32",
-            "description": "The IGDB object unique identifier"
+            "$ref": "#/components/schemas/Id"
           },
           "game": {
             "$ref": "#/components/schemas/Games/properties/id"
@@ -5033,19 +4959,13 @@
             "$ref": "#/components/schemas/CollectionMembershipType/properties/id"
           },
           "updated_at": {
-            "type": "number",
-            "format": "timestamp",
-            "description": "The last date this entry was updated in the IGDB database"
+            "$ref": "#/components/schemas/UpdatedAt"
           },
           "created_at": {
-            "type": "number",
-            "format": "timestamp",
-            "description": "Date this was initally added to the IGDB database"
+            "$ref": "#/components/schemas/CreatedAt"
           },
           "checksum": {
-            "type": "string",
-            "format": "uuid",
-            "description": "Hash of the object"
+            "$ref": "#/components/schemas/Checksum"
           }
         }
       },
@@ -5054,20 +4974,16 @@
         "description": "Enums for collection membership type",
         "properties": {
           "id": {
-            "type": "integer",
-            "format": "int32",
-            "description": "The IGDB object unique identifier"
+            "$ref": "#/components/schemas/Id"
           },
           "allowed_collection_type": {
             "$ref": "#/components/schemas/CollectionType/properties/id"
           },
           "checksum": {
-            "type": "string",
-            "description": "Hash of the object"
+            "$ref": "#/components/schemas/Checksum"
           },
           "created_at": {
-            "type": "number",
-            "description": "Date this was initally added to the IGDB database"
+            "$ref": "#/components/schemas/CreatedAt"
           },
           "description": {
             "type": "string",
@@ -5078,8 +4994,7 @@
             "description": "The membership type name"
           },
           "updated_at": {
-            "type": "number",
-            "description": "The last date this entry was updated in the IGDB database"
+            "$ref": "#/components/schemas/UpdatedAt"
           }
         }
       },
@@ -5088,17 +5003,13 @@
         "description": "Describes relationship between collections",
         "properties": {
           "id": {
-            "type": "integer",
-            "format": "int32",
-            "description": "The IGDB object unique identifier"
+            "$ref": "#/components/schemas/Id"
           },
           "child_collection": {
             "$ref": "#/components/schemas/Collection/properties/id"
           },
           "created_at": {
-            "type": "number",
-            "format": "timestamp",
-            "description": "Date this was initally added to the IGDB database"
+            "$ref": "#/components/schemas/CreatedAt"
           },
           "parent_collection": {
             "$ref": "#/components/schemas/Collection/properties/id"
@@ -5107,14 +5018,10 @@
             "$ref": "#/components/schemas/CollectionRelationType/properties/id"
           },
           "updated_at": {
-            "type": "number",
-            "format": "timestamp",
-            "description": "The last date this entry was updated in the IGDB database"
+            "$ref": "#/components/schemas/UpdatedAt"
           },
           "checksum": {
-            "type": "string",
-            "format": "uuid",
-            "description": "Hash of the object"
+            "$ref": "#/components/schemas/Checksum"
           }
         }
       },
@@ -5142,19 +5049,13 @@
             "$ref": "#/components/schemas/CollectionType/properties/id"
           },
           "updated_at": {
-            "type": "number",
-            "format": "timestamp",
-            "description": "The last date this entry was updated in the IGDB database"
+            "$ref": "#/components/schemas/UpdatedAt"
           },
           "created_at": {
-            "type": "number",
-            "format": "timestamp",
-            "description": "Date this was initally added to the IGDB database"
+            "$ref": "#/components/schemas/CreatedAt"
           },
           "checksum": {
-            "type": "string",
-            "format": "uuid",
-            "description": "Hash of the object"
+            "$ref": "#/components/schemas/Checksum"
           }
         }
       },
@@ -5163,9 +5064,7 @@
         "description": "Enums for collection membership type",
         "properties": {
           "id": {
-            "type": "integer",
-            "format": "int32",
-            "description": "The IGDB object unique identifier"
+            "$ref": "#/components/schemas/Id"
           },
           "name": {
             "type": "string",
@@ -5176,19 +5075,13 @@
             "description": "Description of the membership type"
           },
           "updated_at": {
-            "type": "number",
-            "format": "timestamp",
-            "description": "The last date this entry was updated in the IGDB database"
+            "$ref": "#/components/schemas/UpdatedAt"
           },
           "created_at": {
-            "type": "number",
-            "format": "timestamp",
-            "description": "Date this was initally added to the IGDB database"
+            "$ref": "#/components/schemas/CreatedAt"
           },
           "checksum": {
-            "type": "string",
-            "format": "uuid",
-            "description": "Hash of the object"
+            "$ref": "#/components/schemas/Checksum"
           }
         }
       },
@@ -5197,9 +5090,7 @@
         "description": "Video game companies, both publishers and developers",
         "properties": {
           "id": {
-            "type": "integer",
-            "format": "int32",
-            "description": "The IGDB object unique identifier"
+            "$ref": "#/components/schemas/Id"
           },
           "change_date_category": {
             "$ref": "#/components/schemas/ChangeDateCategoryEnum"
@@ -5208,8 +5099,8 @@
             "$ref": "#/components/schemas/DateFormat/properties/id"
           },
           "change_date": {
-            "type": "number",
-            "format": "timestamp",
+            "type": "integer",
+            "format": "int64",
             "description": "The date when a compnay got a new ID"
           },
           "changed_company_id": {
@@ -5222,9 +5113,7 @@
             "description": "ISO 3166-1 numeric country code"
           },
           "created_at": {
-            "type": "number",
-            "format": "timestamp",
-            "description": "Date this was initally added to the IGDB database"
+            "$ref": "#/components/schemas/CreatedAt"
           },
           "description": {
             "type": "string",
@@ -5257,8 +5146,8 @@
             "description": "A url-safe, unique, lower-case version of the name"
           },
           "start_date": {
-            "type": "number",
-            "format": "timestamp",
+            "type": "integer",
+            "format": "int64",
             "description": "The date that the company was founded"
           },
           "start_date_category": {
@@ -5268,9 +5157,7 @@
             "$ref": "#/components/schemas/DateFormat/properties/id"
           },
           "updated_at": {
-            "type": "number",
-            "format": "timestamp",
-            "description": "The last date this entry was updated in the IGDB database"
+            "$ref": "#/components/schemas/UpdatedAt"
           },
           "url": {
             "type": "string",
@@ -5284,9 +5171,7 @@
             }
           },
           "checksum": {
-            "type": "string",
-            "format": "uuid",
-            "description": "Hash of the object"
+            "$ref": "#/components/schemas/Checksum"
           }
         }
       },
@@ -5367,9 +5252,7 @@
         "description": "The logos of developers and publishers",
         "properties": {
           "id": {
-            "type": "integer",
-            "format": "int32",
-            "description": "The IGDB object unique identifier"
+            "$ref": "#/components/schemas/Id"
           },
           "alpha_channel": {
             "type": "boolean"
@@ -5397,9 +5280,7 @@
             "description": "The width of the image in pixels"
           },
           "checksum": {
-            "type": "string",
-            "format": "uuid",
-            "description": "Hash of the object"
+            "$ref": "#/components/schemas/Checksum"
           }
         }
       },
@@ -5408,9 +5289,7 @@
         "description": "A company's website links",
         "properties": {
           "id": {
-            "type": "integer",
-            "format": "int32",
-            "description": "The IGDB object unique identifier"
+            "$ref": "#/components/schemas/Id"
           },
           "category": {
             "$ref": "#/components/schemas/CompanyWebsiteEnums"
@@ -5427,9 +5306,7 @@
             "description": "The website address (URL) of the item"
           },
           "checksum": {
-            "type": "string",
-            "format": "uuid",
-            "description": "Hash of the object"
+            "$ref": "#/components/schemas/Checksum"
           }
         }
       },
@@ -5501,9 +5378,7 @@
         "description": "The cover art of games",
         "properties": {
           "id": {
-            "type": "integer",
-            "format": "int32",
-            "description": "The IGDB object unique identifier"
+            "$ref": "#/components/schemas/Id"
           },
           "alpha_channel": {
             "type": "boolean"
@@ -5539,39 +5414,34 @@
             "description": "The width of the image in pixels"
           },
           "checksum": {
-            "type": "string",
-            "format": "uuid",
-            "description": "Hash of the object"
+            "$ref": "#/components/schemas/Checksum"
           }
         }
+      },
+      "CreatedAt": {
+        "type": "integer",
+        "format": "int64",
+        "description": "Date this was initially added to the IGDB database"
       },
       "DateFormat": {
         "type": "object",
         "description": "The date format",
         "properties": {
           "id": {
-            "type": "integer",
-            "format": "int32",
-            "description": "The IGDB object unique identifier"
+            "$ref": "#/components/schemas/Id"
           },
           "format": {
             "type": "string",
             "description": "The date format"
           },
           "updated_at": {
-            "type": "number",
-            "format": "timestamp",
-            "description": "The last date this entry was updated in the IGDB database"
+            "$ref": "#/components/schemas/UpdatedAt"
           },
           "created_at": {
-            "type": "number",
-            "format": "timestamp",
-            "description": "Date this was initally added to the IGDB database"
+            "$ref": "#/components/schemas/CreatedAt"
           },
           "checksum": {
-            "type": "string",
-            "format": "uuid",
-            "description": "Hash of the object"
+            "$ref": "#/components/schemas/Checksum"
           }
         }
       },
@@ -5580,9 +5450,7 @@
         "description": "Gaming events like GamesCom, Tokyo Game Show, PAX, or GSL",
         "properties": {
           "id": {
-            "type": "integer",
-            "format": "int32",
-            "description": "The IGDB object unique identifier"
+            "$ref": "#/components/schemas/Id"
           },
           "name": {
             "type": "string",
@@ -5600,13 +5468,13 @@
             "$ref": "#/components/schemas/EventLogo/properties/id"
           },
           "start_time": {
-            "type": "number",
-            "format": "timestamp",
+            "type": "integer",
+            "format": "int64",
             "description": "Start time of the event in UTC"
           },
           "end_time": {
-            "type": "number",
-            "format": "timestamp",
+            "type": "integer",
+            "format": "int64",
             "description": "End time of the event in UTC"
           },
           "time_zone": {
@@ -5637,19 +5505,13 @@
             }
           },
           "created_at": {
-            "type": "number",
-            "format": "timestamp",
-            "description": "Date this was initially added to the IGDB database"
+            "$ref": "#/components/schemas/CreatedAt"
           },
           "updated_at": {
-            "type": "number",
-            "format": "timestamp",
-            "description": "The last date this entry was updated in the IGDB database"
+            "$ref": "#/components/schemas/UpdatedAt"
           },
           "checksum": {
-            "type": "string",
-            "format": "uuid",
-            "description": "Hash of the object"
+            "$ref": "#/components/schemas/Checksum"
           }
         }
       },
@@ -5658,9 +5520,7 @@
         "description": "Logo for the event",
         "properties": {
           "id": {
-            "type": "integer",
-            "format": "int32",
-            "description": "The IGDB object unique identifier"
+            "$ref": "#/components/schemas/Id"
           },
           "event": {
             "$ref": "#/components/schemas/Event/properties/id"
@@ -5691,19 +5551,13 @@
             "description": "The width of the image in pixels"
           },
           "updated_at": {
-            "type": "number",
-            "format": "timestamp",
-            "description": "The last date this entry was updated in the IGDB database"
+            "$ref": "#/components/schemas/UpdatedAt"
           },
           "created_at": {
-            "type": "number",
-            "format": "timestamp",
-            "description": "Date this was initially added to the IGDB database"
+            "$ref": "#/components/schemas/CreatedAt"
           },
           "checksum": {
-            "type": "string",
-            "format": "uuid",
-            "description": "Hash of the object"
+            "$ref": "#/components/schemas/Checksum"
           }
         }
       },
@@ -5712,9 +5566,7 @@
         "description": "URLs related to the event like Twitter, Facebook, and Youtube",
         "properties": {
           "id": {
-            "type": "integer",
-            "format": "int32",
-            "description": "The IGDB object unique identifier"
+            "$ref": "#/components/schemas/Id"
           },
           "event": {
             "$ref": "#/components/schemas/Event/properties/id"
@@ -5728,19 +5580,13 @@
             "$ref": "#/components/schemas/NetworkType/properties/id"
           },
           "created_at": {
-            "type": "number",
-            "format": "timestamp",
-            "description": "Date this was initially added to the IGDB database"
+            "$ref": "#/components/schemas/CreatedAt"
           },
           "updated_at": {
-            "type": "number",
-            "format": "timestamp",
-            "description": "The last date this entry was updated in the IGDB database"
+            "$ref": "#/components/schemas/UpdatedAt"
           },
           "checksum": {
-            "type": "string",
-            "format": "uuid",
-            "description": "Hash of the object"
+            "$ref": "#/components/schemas/Checksum"
           }
         }
       },
@@ -5749,14 +5595,10 @@
         "description": "A list of video game franchises such as Star Wars",
         "properties": {
           "id": {
-            "type": "integer",
-            "format": "int32",
-            "description": "The IGDB object unique identifier"
+            "$ref": "#/components/schemas/Id"
           },
           "created_at": {
-            "type": "number",
-            "format": "timestamp",
-            "description": "Date this was initially added to the IGDB database"
+            "$ref": "#/components/schemas/CreatedAt"
           },
           "games": {
             "type": "array",
@@ -5773,9 +5615,7 @@
             "description": "A url-safe, unique, lower-case version of the name"
           },
           "updated_at": {
-            "type": "number",
-            "format": "timestamp",
-            "description": "The last date this entry was updated in the IGDB database"
+            "$ref": "#/components/schemas/UpdatedAt"
           },
           "url": {
             "type": "string",
@@ -5783,9 +5623,7 @@
             "description": "The website address (URL) of the item"
           },
           "checksum": {
-            "type": "string",
-            "format": "uuid",
-            "description": "Hash of the object"
+            "$ref": "#/components/schemas/Checksum"
           }
         }
       },
@@ -5794,9 +5632,7 @@
         "description": "Video Games!",
         "properties": {
           "id": {
-            "type": "integer",
-            "format": "int32",
-            "description": "The IGDB object unique identifier"
+            "$ref": "#/components/schemas/Id"
           },
           "age_ratings": {
             "type": "array",
@@ -5848,9 +5684,7 @@
             "$ref": "#/components/schemas/Cover/properties/id"
           },
           "created_at": {
-            "type": "number",
-            "format": "timestamp",
-            "description": "Date this was initially added to the IGDB database"
+            "$ref": "#/components/schemas/CreatedAt"
           },
           "dlcs": {
             "type": "array",
@@ -5877,8 +5711,8 @@
             }
           },
           "first_release_date": {
-            "type": "number",
-            "format": "timestamp",
+            "type": "integer",
+            "format": "int64",
             "description": "The first release date for this game"
           },
           "forks": {
@@ -6061,7 +5895,8 @@
           "tags": {
             "type": "array",
             "items": {
-              "type": "number"
+              "type": "integer",
+              "format": "int32"
             },
             "description": "Related entities in the IGDB API"
           },
@@ -6083,9 +5918,7 @@
             "description": "Total number of user and external critic scores"
           },
           "updated_at": {
-            "type": "number",
-            "format": "timestamp",
-            "description": "The last date this entry was updated in the IGDB database"
+            "$ref": "#/components/schemas/UpdatedAt"
           },
           "url": {
             "type": "string",
@@ -6118,9 +5951,7 @@
             "description": "Websites associated with this game"
           },
           "checksum": {
-            "type": "string",
-            "format": "uuid",
-            "description": "Hash of the object"
+            "$ref": "#/components/schemas/Checksum"
           }
         }
       },
@@ -6129,28 +5960,20 @@
         "description": "The release status of the game",
         "properties": {
           "id": {
-            "type": "integer",
-            "format": "int32",
-            "description": "The IGDB object unique identifier"
+            "$ref": "#/components/schemas/Id"
           },
           "status": {
             "type": "string",
             "description": "The release status of the game"
           },
           "updated_at": {
-            "type": "number",
-            "format": "timestamp",
-            "description": "The last date this entry was updated in the IGDB database"
+            "$ref": "#/components/schemas/UpdatedAt"
           },
           "created_at": {
-            "type": "number",
-            "format": "timestamp",
-            "description": "Date this was initally added to the IGDB database"
+            "$ref": "#/components/schemas/CreatedAt"
           },
           "checksum": {
-            "type": "string",
-            "format": "uuid",
-            "description": "Hash of the object"
+            "$ref": "#/components/schemas/Checksum"
           }
         }
       },
@@ -6159,28 +5982,20 @@
         "description": "The format/medium of the game release",
         "properties": {
           "id": {
-            "type": "integer",
-            "format": "int32",
-            "description": "The IGDB object unique identifier"
+            "$ref": "#/components/schemas/Id"
           },
           "format": {
             "type": "string",
             "description": "The format/medium of the game release"
           },
           "updated_at": {
-            "type": "number",
-            "format": "timestamp",
-            "description": "The last date this entry was updated in the IGDB database"
+            "$ref": "#/components/schemas/UpdatedAt"
           },
           "created_at": {
-            "type": "number",
-            "format": "timestamp",
-            "description": "Date this was initally added to the IGDB database"
+            "$ref": "#/components/schemas/CreatedAt"
           },
           "checksum": {
-            "type": "string",
-            "format": "uuid",
-            "description": "Hash of the object"
+            "$ref": "#/components/schemas/Checksum"
           }
         }
       },
@@ -6282,28 +6097,20 @@
         "description": "The type that this game is",
         "properties": {
           "id": {
-            "type": "integer",
-            "format": "int32",
-            "description": "The IGDB object unique identifier"
+            "$ref": "#/components/schemas/Id"
           },
           "type": {
             "type": "string",
             "description": "The type that this game is"
           },
           "updated_at": {
-            "type": "number",
-            "format": "timestamp",
-            "description": "The last date this entry was updated in the IGDB database"
+            "$ref": "#/components/schemas/UpdatedAt"
           },
           "created_at": {
-            "type": "number",
-            "format": "timestamp",
-            "description": "Date this was initally added to the IGDB database"
+            "$ref": "#/components/schemas/CreatedAt"
           },
           "checksum": {
-            "type": "string",
-            "format": "uuid",
-            "description": "Hash of the object"
+            "$ref": "#/components/schemas/Checksum"
           }
         }
       },
@@ -6312,9 +6119,7 @@
         "description": "Video game engines such as unreal engine",
         "properties": {
           "id": {
-            "type": "integer",
-            "format": "int32",
-            "description": "The IGDB object unique identifier"
+            "$ref": "#/components/schemas/Id"
           },
           "companies": {
             "type": "array",
@@ -6323,9 +6128,7 @@
             }
           },
           "created_at": {
-            "type": "number",
-            "format": "timestamp",
-            "description": "Date this was initially added to the IGDB database"
+            "$ref": "#/components/schemas/CreatedAt"
           },
           "description": {
             "type": "string",
@@ -6351,9 +6154,7 @@
             "description": "A url-safe, unique, lower-case version of the name"
           },
           "updated_at": {
-            "type": "number",
-            "format": "timestamp",
-            "description": "The last date this entry was updated in the IGDB database"
+            "$ref": "#/components/schemas/UpdatedAt"
           },
           "url": {
             "type": "string",
@@ -6361,9 +6162,7 @@
             "description": "The website address (URL) of the item"
           },
           "checksum": {
-            "type": "string",
-            "format": "uuid",
-            "description": "Hash of the object"
+            "$ref": "#/components/schemas/Checksum"
           }
         }
       },
@@ -6372,9 +6171,7 @@
         "description": "The logos of developers and publishers",
         "properties": {
           "id": {
-            "type": "integer",
-            "format": "int32",
-            "description": "The IGDB object unique identifier"
+            "$ref": "#/components/schemas/Id"
           },
           "alpha_channel": {
             "type": "boolean"
@@ -6402,9 +6199,7 @@
             "description": "The width of the image in pixels"
           },
           "checksum": {
-            "type": "string",
-            "format": "uuid",
-            "description": "Hash of the object"
+            "$ref": "#/components/schemas/Checksum"
           }
         }
       },
@@ -6413,9 +6208,7 @@
         "description": "Game IDs on other services",
         "properties": {
           "id": {
-            "type": "integer",
-            "format": "int32",
-            "description": "The IGDB object unique identifier"
+            "$ref": "#/components/schemas/Id"
           },
           "category": {
             "$ref": "#/components/schemas/ExternalGameCategoryEnums",
@@ -6433,9 +6226,7 @@
             "description": "The ISO country code of the external game product."
           },
           "created_at": {
-            "type": "number",
-            "format": "timestamp",
-            "description": "Date this was initially added to the IGDB database"
+            "$ref": "#/components/schemas/CreatedAt"
           },
           "game": {
             "$ref": "#/components/schemas/Games/properties/id"
@@ -6460,9 +6251,7 @@
             "description": "The other services ID for this game"
           },
           "updated_at": {
-            "type": "number",
-            "format": "timestamp",
-            "description": "The last date this entry was updated in the IGDB database"
+            "$ref": "#/components/schemas/UpdatedAt"
           },
           "url": {
             "type": "string",
@@ -6475,9 +6264,7 @@
             "description": "The year in full (2018)"
           },
           "checksum": {
-            "type": "string",
-            "format": "uuid",
-            "description": "Hash of the object"
+            "$ref": "#/components/schemas/Checksum"
           }
         }
       },
@@ -6486,28 +6273,20 @@
         "description": "Sources for the external games",
         "properties": {
           "id": {
-            "type": "integer",
-            "format": "int32",
-            "description": "The IGDB object unique identifier"
+            "$ref": "#/components/schemas/Id"
           },
           "name": {
             "type": "string",
             "description": "The game source"
           },
           "updated_at": {
-            "type": "number",
-            "format": "timestamp",
-            "description": "The last date this entry was updated in the IGDB database"
+            "$ref": "#/components/schemas/UpdatedAt"
           },
           "created_at": {
-            "type": "number",
-            "format": "timestamp",
-            "description": "Date this was initally added to the IGDB database"
+            "$ref": "#/components/schemas/CreatedAt"
           },
           "checksum": {
-            "type": "string",
-            "format": "uuid",
-            "description": "Hash of the object"
+            "$ref": "#/components/schemas/Checksum"
           }
         }
       },
@@ -6606,14 +6385,10 @@
         "description": "Details about game editions and versions. (DLC and more)",
         "properties": {
           "id": {
-            "type": "integer",
-            "format": "int32",
-            "description": "The IGDB object unique identifier"
+            "$ref": "#/components/schemas/Id"
           },
           "created_at": {
-            "type": "number",
-            "format": "timestamp",
-            "description": "Date this was initially added to the IGDB database"
+            "$ref": "#/components/schemas/CreatedAt"
           },
           "features": {
             "type": "array",
@@ -6634,9 +6409,7 @@
             "description": "Game Versions and Editions"
           },
           "updated_at": {
-            "type": "number",
-            "format": "timestamp",
-            "description": "The last date this entry was updated in the IGDB database"
+            "$ref": "#/components/schemas/UpdatedAt"
           },
           "url": {
             "type": "string",
@@ -6644,9 +6417,7 @@
             "description": "The website address (URL) of the item"
           },
           "checksum": {
-            "type": "string",
-            "format": "uuid",
-            "description": "Hash of the object"
+            "$ref": "#/components/schemas/Checksum"
           }
         }
       },
@@ -6655,14 +6426,10 @@
         "description": "Single player, Multiplayer, etc.",
         "properties": {
           "id": {
-            "type": "integer",
-            "format": "int32",
-            "description": "The IGDB object unique identifier"
+            "$ref": "#/components/schemas/Id"
           },
           "created_at": {
-            "type": "number",
-            "format": "timestamp",
-            "description": "Date this was initially added to the IGDB database"
+            "$ref": "#/components/schemas/CreatedAt"
           },
           "name": {
             "type": "string",
@@ -6673,9 +6440,7 @@
             "description": "A url-safe, unique, lower-case version of the name"
           },
           "updated_at": {
-            "type": "number",
-            "format": "timestamp",
-            "description": "The last date this entry was updated in the IGDB database"
+            "$ref": "#/components/schemas/UpdatedAt"
           },
           "url": {
             "type": "string",
@@ -6683,9 +6448,7 @@
             "description": "The website address (URL) of the item"
           },
           "checksum": {
-            "type": "string",
-            "format": "uuid",
-            "description": "Hash of the object"
+            "$ref": "#/components/schemas/Checksum"
           }
         }
       },
@@ -6694,9 +6457,7 @@
         "description": "Average time to beat times for a game.",
         "properties": {
           "id": {
-            "type": "integer",
-            "format": "int32",
-            "description": "The IGDB object unique identifier"
+            "$ref": "#/components/schemas/Id"
           },
           "game_id": {
             "$ref": "#/components/schemas/Games/properties/id"
@@ -6722,19 +6483,13 @@
             "description": "Total number of time to beat submissions for this game"
           },
           "created_at": {
-            "type": "number",
-            "format": "timestamp",
-            "description": "Date this was initially added to the IGDB database"
+            "$ref": "#/components/schemas/CreatedAt"
           },
           "updated_at": {
-            "type": "number",
-            "format": "timestamp",
-            "description": "The last date this entry was updated in the IGDB database"
+            "$ref": "#/components/schemas/UpdatedAt"
           },
           "checksum": {
-            "type": "string",
-            "format": "uuid",
-            "description": "Hash of the object"
+            "$ref": "#/components/schemas/Checksum"
           }
         }
       },
@@ -6743,9 +6498,7 @@
         "description": "Features and descriptions of what makes each version/edition different from the main game",
         "properties": {
           "id": {
-            "type": "integer",
-            "format": "int32",
-            "description": "The IGDB object unique identifier"
+            "$ref": "#/components/schemas/Id"
           },
           "category": {
             "$ref": "#/components/schemas/GameVersionFeatureCategoryEnums",
@@ -6772,9 +6525,7 @@
             "description": "The bool/text value of the feature"
           },
           "checksum": {
-            "type": "string",
-            "format": "uuid",
-            "description": "Hash of the object"
+            "$ref": "#/components/schemas/Checksum"
           }
         }
       },
@@ -6800,9 +6551,7 @@
         "description": "The bool/text value of the feature",
         "properties": {
           "id": {
-            "type": "integer",
-            "format": "int32",
-            "description": "The IGDB object unique identifier"
+            "$ref": "#/components/schemas/Id"
           },
           "game": {
             "$ref": "#/components/schemas/Games/properties/id"
@@ -6818,9 +6567,7 @@
             "description": "The text value of this feature"
           },
           "checksum": {
-            "type": "string",
-            "format": "uuid",
-            "description": "Hash of the object"
+            "$ref": "#/components/schemas/Checksum"
           }
         }
       },
@@ -6849,14 +6596,10 @@
         "description": "Genres of video games",
         "properties": {
           "id": {
-            "type": "integer",
-            "format": "int32",
-            "description": "The IGDB object unique identifier"
+            "$ref": "#/components/schemas/Id"
           },
           "created_at": {
-            "type": "number",
-            "format": "timestamp",
-            "description": "Date this was initially added to the IGDB database"
+            "$ref": "#/components/schemas/CreatedAt"
           },
           "name": {
             "type": "string",
@@ -6867,9 +6610,7 @@
             "description": "A url-safe, unique, lower-case version of the name"
           },
           "updated_at": {
-            "type": "number",
-            "format": "timestamp",
-            "description": "The last date this entry was updated in the IGDB database"
+            "$ref": "#/components/schemas/UpdatedAt"
           },
           "url": {
             "type": "string",
@@ -6877,9 +6618,7 @@
             "description": "The website address (URL) of the item"
           },
           "checksum": {
-            "type": "string",
-            "format": "uuid",
-            "description": "Hash of the object"
+            "$ref": "#/components/schemas/Checksum"
           }
         }
       },
@@ -6888,17 +6627,13 @@
         "description": "Involved companies",
         "properties": {
           "id": {
-            "type": "integer",
-            "format": "int32",
-            "description": "The IGDB object unique identifier"
+            "$ref": "#/components/schemas/Id"
           },
           "company": {
             "$ref": "#/components/schemas/Company/properties/id"
           },
           "created_at": {
-            "type": "number",
-            "format": "timestamp",
-            "description": "Date this was initally added to the IGDB database"
+            "$ref": "#/components/schemas/CreatedAt"
           },
           "developer": {
             "type": "boolean",
@@ -6920,14 +6655,10 @@
             "description": "Did the company suppport the game?"
           },
           "updated_at": {
-            "type": "number",
-            "format": "timestamp",
-            "description": "The last date this entry was updated in the IGDB database"
+            "$ref": "#/components/schemas/UpdatedAt"
           },
           "checksum": {
-            "type": "string",
-            "format": "uuid",
-            "description": "Hash of the object"
+            "$ref": "#/components/schemas/Checksum"
           }
         }
       },
@@ -6936,9 +6667,7 @@
         "description": "A video associated with a game",
         "properties": {
           "id": {
-            "type": "integer",
-            "format": "int32",
-            "description": "The IGDB object unique identifier"
+            "$ref": "#/components/schemas/Id"
           },
           "game": {
             "$ref": "#/components/schemas/Games/properties/id"
@@ -6952,25 +6681,24 @@
             "description": "The external ID of the video (usually youtube)"
           },
           "checksum": {
-            "type": "string",
-            "format": "uuid",
-            "description": "Hash of the object"
+            "$ref": "#/components/schemas/Checksum"
           }
         }
+      },
+      "Id": {
+        "type": "integer",
+        "format": "int32",
+        "description": "The IGDB object unique identifier"
       },
       "Keyword": {
         "type": "object",
         "description": "Keywords are words or phrases that get tagged to a game such as “world war 2” or “steampunk”.",
         "properties": {
           "id": {
-            "type": "integer",
-            "format": "int32",
-            "description": "The IGDB object unique identifier"
+            "$ref": "#/components/schemas/Id"
           },
           "created_at": {
-            "type": "number",
-            "format": "timestamp",
-            "description": "Date this was initially added to the IGDB database"
+            "$ref": "#/components/schemas/CreatedAt"
           },
           "name": {
             "type": "string",
@@ -6981,9 +6709,7 @@
             "description": "A url-safe, unique, lower-case version of the name"
           },
           "updated_at": {
-            "type": "number",
-            "format": "timestamp",
-            "description": "The last date this entry was updated in the IGDB database"
+            "$ref": "#/components/schemas/UpdatedAt"
           },
           "url": {
             "type": "string",
@@ -6991,9 +6717,7 @@
             "description": "The website address (URL) of the item"
           },
           "checksum": {
-            "type": "string",
-            "format": "uuid",
-            "description": "Hash of the object"
+            "$ref": "#/components/schemas/Checksum"
           }
         }
       },
@@ -7002,9 +6726,7 @@
         "description": "Languages that are used in the Language Support endpoint.",
         "properties": {
           "id": {
-            "type": "integer",
-            "format": "int32",
-            "description": "The IGDB object unique identifier"
+            "$ref": "#/components/schemas/Id"
           },
           "name": {
             "type": "string",
@@ -7019,19 +6741,13 @@
             "description": "The combination of Language code and Country code (en-US)"
           },
           "created_at": {
-            "type": "number",
-            "format": "timestamp",
-            "description": "Date this was initially added to the IGDB database"
+            "$ref": "#/components/schemas/CreatedAt"
           },
           "updated_at": {
-            "type": "number",
-            "format": "timestamp",
-            "description": "Date this was last updated in the IGDB database"
+            "$ref": "#/components/schemas/UpdatedAt"
           },
           "checksum": {
-            "type": "string",
-            "format": "uuid",
-            "description": "Hash of the object"
+            "$ref": "#/components/schemas/Checksum"
           }
         }
       },
@@ -7040,9 +6756,7 @@
         "description": "Game localization for a game",
         "properties": {
           "id": {
-            "type": "integer",
-            "format": "int32",
-            "description": "The IGDB object unique identifier"
+            "$ref": "#/components/schemas/Id"
           },
           "name": {
             "type": "string",
@@ -7060,18 +6774,13 @@
             "description": "The region ID"
           },
           "created_at": {
-            "type": "number",
-            "format": "timestamp"
+            "$ref": "#/components/schemas/CreatedAt"
           },
           "updated_at": {
-            "type": "number",
-            "format": "timestamp",
-            "description": "Date this was last updated in the IGDB database"
+            "$ref": "#/components/schemas/UpdatedAt"
           },
           "checksum": {
-            "type": "string",
-            "format": "uuid",
-            "description": "Hash of the object"
+            "$ref": "#/components/schemas/Checksum"
           }
         }
       },
@@ -7089,19 +6798,13 @@
             "description": "The name of the method of support. (Audio, Subtitles, etc)"
           },
           "created_at": {
-            "type": "number",
-            "format": "timestamp",
-            "description": "Date this was initially added to the IGDB database"
+            "$ref": "#/components/schemas/CreatedAt"
           },
           "updated_at": {
-            "type": "number",
-            "format": "timestamp",
-            "description": "Date this was last updated in the IGDB database"
+            "$ref": "#/components/schemas/UpdatedAt"
           },
           "checksum": {
-            "type": "string",
-            "format": "uuid",
-            "description": "Hash of the object"
+            "$ref": "#/components/schemas/Checksum"
           }
         }
       },
@@ -7110,9 +6813,7 @@
         "description": "Data about the supported multiplayer types",
         "properties": {
           "id": {
-            "type": "integer",
-            "format": "int32",
-            "description": "The IGDB object unique identifier"
+            "$ref": "#/components/schemas/Id"
           },
           "camapigncoop": {
             "type": "boolean",
@@ -7134,7 +6835,7 @@
             "description": "True if the game supports offline coop"
           },
           "offliencoopmax": {
-            "type": "number",
+            "type": "integer",
             "format": "int32",
             "description": "Maximum number of offline players in offline coop"
           },
@@ -7169,9 +6870,7 @@
             "description": "True if the game supports split screen, online multiplayer"
           },
           "checksum": {
-            "type": "string",
-            "format": "uuid",
-            "description": "Hash of the object"
+            "$ref": "#/components/schemas/Checksum"
           }
         }
       },
@@ -7180,9 +6879,7 @@
         "description": "Games can be played with different languages for voice acting, subtitles, or the interface language.",
         "properties": {
           "id": {
-            "type": "integer",
-            "format": "int32",
-            "description": "The IGDB object unique identifier"
+            "$ref": "#/components/schemas/Id"
           },
           "game": {
             "$ref": "#/components/schemas/Games/properties/id"
@@ -7194,19 +6891,13 @@
             "$ref": "#/components/schemas/LanguageSupportType/properties/id"
           },
           "created_at": {
-            "type": "number",
-            "format": "timestamp",
-            "description": "Date this was initially added to the IGDB database"
+            "$ref": "#/components/schemas/CreatedAt"
           },
           "updated_at": {
-            "type": "number",
-            "format": "timestamp",
-            "description": "Date this was last updated in the IGDB database"
+            "$ref": "#/components/schemas/UpdatedAt"
           },
           "checksum": {
-            "type": "string",
-            "format": "uuid",
-            "description": "Hash of the object"
+            "$ref": "#/components/schemas/Checksum"
           }
         }
       },
@@ -7215,9 +6906,7 @@
         "description": "Social networks related to the event like twitter, facebook and youtube",
         "properties": {
           "id": {
-            "type": "integer",
-            "format": "int32",
-            "description": "The IGDB object unique identifier"
+            "$ref": "#/components/schemas/Id"
           },
           "name": {
             "type": "string",
@@ -7230,19 +6919,13 @@
             }
           },
           "created_at": {
-            "type": "number",
-            "format": "timestamp",
-            "description": "Date this was initially added to the IGDB database"
+            "$ref": "#/components/schemas/CreatedAt"
           },
           "updated_at": {
-            "type": "number",
-            "format": "timestamp",
-            "description": "Date this was last updated in the IGDB database"
+            "$ref": "#/components/schemas/UpdatedAt"
           },
           "checksum": {
-            "type": "string",
-            "format": "uuid",
-            "description": "Hash of the object"
+            "$ref": "#/components/schemas/Checksum"
           }
         }
       },
@@ -7251,9 +6934,7 @@
         "description": "A collection of closely related platforms",
         "properties": {
           "id": {
-            "type": "integer",
-            "format": "int32",
-            "description": "The IGDB object unique identifier"
+            "$ref": "#/components/schemas/Id"
           },
           "name": {
             "type": "string",
@@ -7264,9 +6945,7 @@
             "description": "A url-safe, unique, lower-case version of the name"
           },
           "checksum": {
-            "type": "string",
-            "format": "uuid",
-            "description": "Hash of the object"
+            "$ref": "#/components/schemas/Checksum"
           }
         }
       },
@@ -7275,28 +6954,20 @@
         "description": "TThe hardware used to run the game or game delivery network",
         "properties": {
           "id": {
-            "type": "integer",
-            "format": "int32",
-            "description": "The IGDB object unique identifier"
+            "$ref": "#/components/schemas/Id"
           },
           "name": {
             "type": "string",
             "description": "The hardware used to run the game or game delivery network"
           },
           "updated_at": {
-            "type": "number",
-            "format": "timestamp",
-            "description": "The last date this entry was updated in the IGDB database"
+            "$ref": "#/components/schemas/UpdatedAt"
           },
           "created_at": {
-            "type": "number",
-            "format": "timestamp",
-            "description": "Date this was initally added to the IGDB database"
+            "$ref": "#/components/schemas/CreatedAt"
           },
           "checksum": {
-            "type": "string",
-            "format": "uuid",
-            "description": "Hash of the object"
+            "$ref": "#/components/schemas/Checksum"
           }
         }
       },
@@ -7305,9 +6976,7 @@
         "description": "Logo for a platform",
         "properties": {
           "id": {
-            "type": "integer",
-            "format": "int32",
-            "description": "The IGDB object unique identifier"
+            "$ref": "#/components/schemas/Id"
           },
           "alpha_channel": {
             "type": "boolean"
@@ -7335,9 +7004,7 @@
             "description": "The width of the image in pixels"
           },
           "checksum": {
-            "type": "string",
-            "format": "uuid",
-            "description": "Hash of the object"
+            "$ref": "#/components/schemas/Checksum"
           }
         }
       },
@@ -7346,9 +7013,7 @@
         "description": "The specific platform and the specifications (Xbox Series X, Playstation 5)",
         "properties": {
           "id": {
-            "type": "integer",
-            "format": "int32",
-            "description": "The IGDB object unique identifier"
+            "$ref": "#/components/schemas/Id"
           },
           "companies": {
             "type": "array",
@@ -7430,9 +7095,7 @@
             "description": "The website address (URL) of the item"
           },
           "checksum": {
-            "type": "string",
-            "format": "uuid",
-            "description": "Hash of the object"
+            "$ref": "#/components/schemas/Checksum"
           }
         }
       },
@@ -7441,9 +7104,7 @@
         "description": "A platform developer",
         "properties": {
           "id": {
-            "type": "integer",
-            "format": "int32",
-            "description": "The IGDB object unique identifier"
+            "$ref": "#/components/schemas/Id"
           },
           "comment": {
             "type": "string",
@@ -7461,9 +7122,7 @@
             "description": "If the company is the manufactuer"
           },
           "checksum": {
-            "type": "string",
-            "format": "uuid",
-            "description": "Hash of the object"
+            "$ref": "#/components/schemas/Checksum"
           }
         }
       },
@@ -7472,9 +7131,7 @@
         "description": "The hardware used to run the game or game delivery network",
         "properties": {
           "id": {
-            "type": "integer",
-            "format": "int32",
-            "description": "The IGDB object unique identifier"
+            "$ref": "#/components/schemas/Id"
           },
           "abbreviation": {
             "type": "string",
@@ -7491,9 +7148,7 @@
             "$ref": "#/components/schemas/PlatformType/properties/id"
           },
           "created_at": {
-            "type": "number",
-            "format": "timestamp",
-            "description": "Date this was initially added to the IGDB database"
+            "$ref": "#/components/schemas/CreatedAt"
           },
           "generation": {
             "type": "integer",
@@ -7519,9 +7174,7 @@
             "description": "The summary of the first Version of this platform"
           },
           "updated_at": {
-            "type": "number",
-            "format": "timestamp",
-            "description": "Date this was last updated in the IGDB database"
+            "$ref": "#/components/schemas/UpdatedAt"
           },
           "url": {
             "type": "string",
@@ -7541,9 +7194,7 @@
             }
           },
           "checksum": {
-            "type": "string",
-            "format": "uuid",
-            "description": "Hash of the object"
+            "$ref": "#/components/schemas/Checksum"
           }
         }
       },
@@ -7582,9 +7233,7 @@
         "description": "A handy endpoint that extends platform release dates. Used to dig deeper into release dates, platforms and versions.",
         "properties": {
           "id": {
-            "type": "integer",
-            "format": "int32",
-            "description": "The IGDB object unique identifier"
+            "$ref": "#/components/schemas/Id"
           },
           "category": {
             "$ref": "#/components/schemas/PlatformVersionReleaseDateEnums"
@@ -7593,13 +7242,11 @@
             "$ref": "#/components/schemas/DateFormat/properties/id"
           },
           "created_at": {
-            "type": "number",
-            "format": "timestamp",
-            "description": "Date this was initially added to the IGDB database"
+            "$ref": "#/components/schemas/CreatedAt"
           },
           "date": {
-            "type": "string",
-            "format": "timestamp",
+            "type": "integer",
+            "format": "int64",
             "description": "The release date"
           },
           "human": {
@@ -7621,9 +7268,7 @@
             "$ref": "#/components/schemas/ReleaseDateRegion/properties/id"
           },
           "updated_at": {
-            "type": "number",
-            "format": "timestamp",
-            "description": "Date this was last updated in the IGDB database"
+            "$ref": "#/components/schemas/UpdatedAt"
           },
           "y": {
             "type": "integer",
@@ -7631,9 +7276,7 @@
             "description": "The year in full (2018)"
           },
           "checksum": {
-            "type": "string",
-            "format": "uuid",
-            "description": "Hash of the object"
+            "$ref": "#/components/schemas/Checksum"
           }
         }
       },
@@ -7736,9 +7379,7 @@
             "description": "The main platform address (URL) of the platform"
           },
           "checksum": {
-            "type": "string",
-            "format": "uuid",
-            "description": "Hash of the object"
+            "$ref": "#/components/schemas/Checksum"
           }
         }
       },
@@ -7815,14 +7456,10 @@
         "description": "Player perspectives describe the view/perspective of the player in a video game.",
         "properties": {
           "id": {
-            "type": "integer",
-            "format": "int32",
-            "description": "The IGDB object unique identifier"
+            "$ref": "#/components/schemas/Id"
           },
           "created_at": {
-            "type": "number",
-            "format": "timestamp",
-            "description": "Date this was initially added to the IGDB database"
+            "$ref": "#/components/schemas/CreatedAt"
           },
           "name": {
             "type": "string",
@@ -7833,9 +7470,7 @@
             "description": "A url-safe, unique, lower-case version of the name"
           },
           "updated_at": {
-            "type": "number",
-            "format": "timestamp",
-            "description": "Date this was last updated in the IGDB database"
+            "$ref": "#/components/schemas/UpdatedAt"
           },
           "url": {
             "type": "string",
@@ -7843,9 +7478,7 @@
             "description": "The website address (URL) of the item"
           },
           "checksum": {
-            "type": "string",
-            "format": "uuid",
-            "description": "Hash of the object"
+            "$ref": "#/components/schemas/Checksum"
           }
         }
       },
@@ -7854,9 +7487,7 @@
         "description": "Lists abailable primatives with their source and popularity type",
         "properties": {
           "id": {
-            "type": "integer",
-            "format": "int32",
-            "description": "The IGDB object unique identifier"
+            "$ref": "#/components/schemas/Id"
           },
           "game_id": {
             "$ref": "#/components/schemas/Games/properties/id"
@@ -7871,24 +7502,20 @@
             "$ref": "#/components/schemas/ExternalGameSource/properties/id"
           },
           "value": {
-            "type": "number",
+            "type": "integer",
             "format": "int32",
             "description": "The rating value"
           },
           "calculated_at": {
-            "type": "number",
-            "format": "timestamp",
+            "type": "integer",
+            "format": "int64",
             "description": "Timestamp of when the primatives were calculated"
           },
           "created_at": {
-            "type": "number",
-            "format": "timestamp",
-            "description": "Date this was initially added to the IGDB database"
+            "$ref": "#/components/schemas/CreatedAt"
           },
           "updated_at": {
-            "type": "number",
-            "format": "timestamp",
-            "description": "Date this was last updated in the IGDB database"
+            "$ref": "#/components/schemas/UpdatedAt"
           }
         }
       },
@@ -7912,9 +7539,7 @@
         "description": "Describes what type of popularity primative or popularity indicator the popularity indicator the popularity value is",
         "properties": {
           "id": {
-            "type": "integer",
-            "format": "int32",
-            "description": "The IGDB object unique identifier"
+            "$ref": "#/components/schemas/Id"
           },
           "popularity_source": {
             "$ref": "#/components/schemas/PopularityTypeEnum"
@@ -7927,14 +7552,10 @@
             "description": "The name of the type of popularity from the source"
           },
           "created_at": {
-            "type": "number",
-            "format": "timestamp",
-            "description": "Date this was initially added to the IGDB database"
+            "$ref": "#/components/schemas/CreatedAt"
           },
           "updated_at": {
-            "type": "number",
-            "format": "timestamp",
-            "description": "Date this was last updated in the IGDB database"
+            "$ref": "#/components/schemas/UpdatedAt"
           },
           "checksum": {
             "type": "string",
@@ -7963,9 +7584,7 @@
         "description": "Region for game localization",
         "properties": {
           "id": {
-            "type": "integer",
-            "format": "int32",
-            "description": "The IGDB object unique identifier"
+            "$ref": "#/components/schemas/Id"
           },
           "name": {
             "type": "string",
@@ -7984,19 +7603,13 @@
             "description": "This is the identifier of each region"
           },
           "created_at": {
-            "type": "number",
-            "format": "timestamp",
-            "description": "Date this was initially added to the IGDB database"
+            "$ref": "#/components/schemas/CreatedAt"
           },
           "updated_at": {
-            "type": "number",
-            "format": "timestamp",
-            "description": "Date this was last updated in the IGDB database"
+            "$ref": "#/components/schemas/UpdatedAt"
           },
           "checksum": {
-            "type": "string",
-            "format": "uuid",
-            "description": "Hash of the object"
+            "$ref": "#/components/schemas/Checksum"
           }
         }
       },
@@ -8005,9 +7618,7 @@
         "description": "A handy endpoint that extends platform release dates. Used to dig deeper into release dates, platforms and versions.",
         "properties": {
           "id": {
-            "type": "integer",
-            "format": "int32",
-            "description": "The IGDB object unique identifier"
+            "$ref": "#/components/schemas/Id"
           },
           "category": {
             "$ref": "#/components/schemas/ReleaseDateCategoryEnums"
@@ -8016,13 +7627,11 @@
             "$ref": "#/components/schemas/DateFormat/properties/id"
           },
           "created_at": {
-            "type": "number",
-            "format": "timestamp",
-            "description": "Date this was initially added to the IGDB database"
+            "$ref": "#/components/schemas/CreatedAt"
           },
           "date": {
-            "type": "string",
-            "format": "timestamp",
+            "type": "integer",
+            "format": "int64",
             "description": "The release date"
           },
           "game": {
@@ -8047,9 +7656,7 @@
             "$ref": "#/components/schemas/ReleaseDateRegion/properties/id"
           },
           "updated_at": {
-            "type": "number",
-            "format": "timestamp",
-            "description": "Date this was last updated in the IGDB database"
+            "$ref": "#/components/schemas/UpdatedAt"
           },
           "y": {
             "type": "integer",
@@ -8057,9 +7664,7 @@
             "description": "The year in full (2018)"
           },
           "checksum": {
-            "type": "string",
-            "format": "uuid",
-            "description": "Hash of the object"
+            "$ref": "#/components/schemas/Checksum"
           }
         }
       },
@@ -8146,9 +7751,7 @@
         "description": "An endpoint to provide definition of all of the current release date statuses.",
         "properties": {
           "id": {
-            "type": "integer",
-            "format": "int32",
-            "description": "The IGDB object unique identifier"
+            "$ref": "#/components/schemas/Id"
           },
           "name": {
             "type": "string",
@@ -8159,19 +7762,13 @@
             "description": "The description of the release date status."
           },
           "created_at": {
-            "type": "number",
-            "format": "date",
-            "description": "Date this was initially added to the IGDB database"
+            "$ref": "#/components/schemas/CreatedAt"
           },
           "updated_at": {
-            "type": "number",
-            "format": "timestamp",
-            "description": "Date this was last updated in the IGDB database"
+            "$ref": "#/components/schemas/UpdatedAt"
           },
           "checksum": {
-            "type": "string",
-            "format": "uuid",
-            "description": "Hash of the object"
+            "$ref": "#/components/schemas/Checksum"
           }
         }
       },
@@ -8180,28 +7777,20 @@
         "description": "An endpoint to provide definition of all of the current release date statuses.",
         "properties": {
           "id": {
-            "type": "integer",
-            "format": "int32",
-            "description": "The IGDB object unique identifier"
+            "$ref": "#/components/schemas/Id"
           },
           "region": {
             "type": "string",
             "description": "Regions for release dates"
           },
           "created_at": {
-            "type": "number",
-            "format": "date",
-            "description": "Date this was initially added to the IGDB database"
+            "$ref": "#/components/schemas/CreatedAt"
           },
           "updated_at": {
-            "type": "number",
-            "format": "timestamp",
-            "description": "Date this was last updated in the IGDB database"
+            "$ref": "#/components/schemas/UpdatedAt"
           },
           "checksum": {
-            "type": "string",
-            "format": "uuid",
-            "description": "Hash of the object"
+            "$ref": "#/components/schemas/Checksum"
           }
         }
       },
@@ -8210,9 +7799,7 @@
         "description": "Screenshots of games",
         "properties": {
           "id": {
-            "type": "integer",
-            "format": "int32",
-            "description": "The IGDB object unique identifier"
+            "$ref": "#/components/schemas/Id"
           },
           "alpha_channel": {
             "type": "boolean"
@@ -8243,9 +7830,7 @@
             "description": "The width of the image in pixels"
           },
           "checksum": {
-            "type": "string",
-            "format": "uuid",
-            "description": "Hash of the object"
+            "$ref": "#/components/schemas/Checksum"
           }
         }
       },
@@ -8254,9 +7839,7 @@
         "description": "Search IGDB and get the IDs of items matching your search",
         "properties": {
           "id": {
-            "type": "integer",
-            "format": "int32",
-            "description": "The IGDB object unique identifier"
+            "$ref": "#/components/schemas/Id"
           },
           "alternative_name": {
             "type": "string"
@@ -8283,21 +7866,20 @@
             "$ref": "#/components/schemas/Platform/properties/id"
           },
           "published_at": {
-            "type": "number",
-            "format": "timestamp",
+            "type": "integer",
+            "format": "int64",
             "description": "The date this item was initally published by the third party"
           },
           "test_dummy": {
-            "type": "number",
+            "type": "integer",
+            "format": "int32",
             "description": "Reference ID for Test Dummy"
           },
           "theme": {
             "$ref": "#/components/schemas/Theme/properties/id"
           },
           "checksum": {
-            "type": "string",
-            "format": "uuid",
-            "description": "Hash of the object"
+            "$ref": "#/components/schemas/Checksum"
           }
         }
       },
@@ -8306,9 +7888,7 @@
         "description": "Video game themes",
         "properties": {
           "id": {
-            "type": "integer",
-            "format": "int32",
-            "description": "The IGDB object unique identifier"
+            "$ref": "#/components/schemas/Id"
           },
           "name": {
             "type": "string",
@@ -8319,9 +7899,7 @@
             "description": "A url-safe, unique, lower-case version of the name"
           },
           "updated_at": {
-            "type": "number",
-            "format": "timestamp",
-            "description": "Date this was last updated in the IGDB database"
+            "$ref": "#/components/schemas/UpdatedAt"
           },
           "url": {
             "type": "string",
@@ -8329,20 +7907,21 @@
             "description": "The website address (URL) of the item"
           },
           "checksum": {
-            "type": "string",
-            "format": "uuid",
-            "description": "Hash of the object"
+            "$ref": "#/components/schemas/Checksum"
           }
         }
+      },
+      "UpdatedAt": {
+        "type": "integer",
+        "format": "int64",
+        "description": "The last date this entry was updated in the IGDB database"
       },
       "Website": {
         "type": "object",
         "description": "A website URL, usually associated with a game",
         "properties": {
           "id": {
-            "type": "integer",
-            "format": "int32",
-            "description": "The IGDB object unique identifier"
+            "$ref": "#/components/schemas/Id"
           },
           "category": {
             "$ref": "#/components/schemas/WebsiteCategoryEnums"
@@ -8362,9 +7941,7 @@
             "description": "The main platform address (URL) of the platform"
           },
           "checksum": {
-            "type": "string",
-            "format": "uuid",
-            "description": "Hash of the object"
+            "$ref": "#/components/schemas/Checksum"
           }
         }
       },
@@ -8373,28 +7950,20 @@
         "description": "A website type, usually the name of the website",
         "properties": {
           "id": {
-            "type": "integer",
-            "format": "int32",
-            "description": "The IGDB object unique identifier"
+            "$ref": "#/components/schemas/Id"
           },
           "type": {
             "type": "string",
             "description": "The website type"
           },
           "updated_at": {
-            "type": "number",
-            "format": "timestamp",
-            "description": "The last date this entry was updated in the IGDB database"
+            "$ref": "#/components/schemas/UpdatedAt"
           },
           "created_at": {
-            "type": "number",
-            "format": "timestamp",
-            "description": "Date this was initally added to the IGDB database"
+            "$ref": "#/components/schemas/CreatedAt"
           },
           "checksum": {
-            "type": "string",
-            "format": "uuid",
-            "description": "Hash of the object"
+            "$ref": "#/components/schemas/Checksum"
           }
         }
       },
