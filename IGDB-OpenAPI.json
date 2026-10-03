@@ -1534,6 +1534,64 @@
         }
       }
     },
+    "/executables": {
+      "post": {
+        "security": [
+          {
+            "TwitchOAuth": [],
+            "Client-ID": []
+          }
+        ],
+        "summary": "The executable file information for a game (e.g. game.exe), including its store and platform.",
+        "tags": [
+          "Endpoints"
+        ],
+        "parameters": [],
+        "requestBody": {
+          "required": false,
+          "content": {
+            "text/plain": {
+              "schema": {
+                "type": "string"
+              },
+              "example": "fields checksum,file_path,game,name,platform,store;"
+            }
+          }
+        },
+        "operationId": "RetrieveExecutable",
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Executable"
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "$ref": "#/components/responses/BadRequest"
+          },
+          "401": {
+            "$ref": "#/components/responses/AuthFailure"
+          },
+          "403": {
+            "$ref": "#/components/responses/Forbidden"
+          },
+          "404": {
+            "$ref": "#/components/responses/NotFound"
+          }
+        },
+        "externalDocs": {
+          "description": "Official documentation:",
+          "url": "https://api-docs.igdb.com/#executable"
+        }
+      }
+    },
     "/franchises": {
       "post": {
         "security": [
@@ -5590,6 +5648,38 @@
           }
         }
       },
+      "Executable": {
+        "type": "object",
+        "description": "The executable file information for a game (e.g. game.exe), including its store and platform.",
+        "properties": {
+          "id": {
+            "$ref": "#/components/schemas/Id"
+          },
+          "file_path": {
+            "type": "string",
+            "description": "The file path of the executable"
+          },
+          "game": {
+            "$ref": "#/components/schemas/Games/properties/id",
+            "description": "The game this executable belongs to"
+          },
+          "name": {
+            "type": "string",
+            "description": "The name of the executable file"
+          },
+          "platform": {
+            "$ref": "#/components/schemas/Platform/properties/id",
+            "description": "The platform this executable runs on"
+          },
+          "store": {
+            "type": "string",
+            "description": "The store this executable is distributed through"
+          },
+          "checksum": {
+            "$ref": "#/components/schemas/Checksum"
+          }
+        }
+      },
       "Franchise": {
         "type": "object",
         "description": "A list of video game franchises such as Star Wars",
@@ -8050,10 +8140,5 @@
         "in": "header"
       }
     }
-  },
-  "tags": [
-    {
-      "name": "Endpoints"
-    }
-  ]
+  }
 }
